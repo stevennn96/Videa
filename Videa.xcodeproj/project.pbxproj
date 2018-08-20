@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		760FD2F7775061EB8091E2DB /* Pods_Videa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BFEB76E52A41DF9AB347DFC /* Pods_Videa.framework */; };
+		77A3FACF212AC604009A1BC4 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3FACE212AC604009A1BC4 /* ChallengeViewController.swift */; };
+		77A3FAD1212AC8C7009A1BC4 /* ViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3FAD0212AC8C6009A1BC4 /* ViewControllerTableViewCell.swift */; };
 		77E523FE2122D8C000EE54FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E523FD2122D8C000EE54FD /* AppDelegate.swift */; };
 		77E524052122D8C000EE54FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E524032122D8C000EE54FD /* Main.storyboard */; };
 		77E524072122D8C100EE54FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77E524062122D8C100EE54FD /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		3BFEB76E52A41DF9AB347DFC /* Pods_Videa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Videa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77A3FACE212AC604009A1BC4 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
+		77A3FAD0212AC8C6009A1BC4 /* ViewControllerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell.swift; sourceTree = "<group>"; };
 		77E523FA2122D8C000EE54FD /* Videa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Videa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77E523FD2122D8C000EE54FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77E524042122D8C000EE54FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 				EDF24A87212ABE3C0081AE5F /* GoogleService-Info.plist */,
 				77E523FD2122D8C000EE54FD /* AppDelegate.swift */,
 				77E524032122D8C000EE54FD /* Main.storyboard */,
+				77A3FAD0212AC8C6009A1BC4 /* ViewControllerTableViewCell.swift */,
+				77A3FACE212AC604009A1BC4 /* ChallengeViewController.swift */,
 				77E524372124248900EE54FD /* IntroductionViewController.swift */,
 				77E524062122D8C100EE54FD /* Assets.xcassets */,
 				77E524082122D8C100EE54FD /* LaunchScreen.storyboard */,
@@ -207,6 +213,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				77E524382124248900EE54FD /* IntroductionViewController.swift in Sources */,
+				77A3FACF212AC604009A1BC4 /* ChallengeViewController.swift in Sources */,
+				77A3FAD1212AC8C7009A1BC4 /* ViewControllerTableViewCell.swift in Sources */,
 				77E523FE2122D8C000EE54FD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
