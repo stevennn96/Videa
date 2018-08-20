@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B5A58F5212ADB3D00B05DFB /* SantosStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B5A58F4212ADB3D00B05DFB /* SantosStoryboard.storyboard */; };
 		760FD2F7775061EB8091E2DB /* Pods_Videa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BFEB76E52A41DF9AB347DFC /* Pods_Videa.framework */; };
 		77A3FACF212AC604009A1BC4 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3FACE212AC604009A1BC4 /* ChallengeViewController.swift */; };
 		77A3FAD1212AC8C7009A1BC4 /* ViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3FAD0212AC8C6009A1BC4 /* ViewControllerTableViewCell.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		3BFEB76E52A41DF9AB347DFC /* Pods_Videa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Videa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B5A58F4212ADB3D00B05DFB /* SantosStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SantosStoryboard.storyboard; sourceTree = "<group>"; };
 		77A3FACE212AC604009A1BC4 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
 		77A3FAD0212AC8C6009A1BC4 /* ViewControllerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell.swift; sourceTree = "<group>"; };
 		77E523FA2122D8C000EE54FD /* Videa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Videa.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +65,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6B5A58F6212ADC0100B05DFB /* Santos */ = {
+			isa = PBXGroup;
+			children = (
+				6B5A58F4212ADB3D00B05DFB /* SantosStoryboard.storyboard */,
+			);
+			path = Santos;
+			sourceTree = "<group>";
+		};
 		77E523F12122D8C000EE54FD = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +94,7 @@
 		77E523FC2122D8C000EE54FD /* Videa */ = {
 			isa = PBXGroup;
 			children = (
+				6B5A58F6212ADC0100B05DFB /* Santos */,
 				EDF24A87212ABE3C0081AE5F /* GoogleService-Info.plist */,
 				77E523FD2122D8C000EE54FD /* AppDelegate.swift */,
 				77E524032122D8C000EE54FD /* Main.storyboard */,
@@ -160,6 +171,7 @@
 				77E5240A2122D8C100EE54FD /* LaunchScreen.storyboard in Resources */,
 				EDF24A88212ABE3C0081AE5F /* GoogleService-Info.plist in Resources */,
 				77E524072122D8C100EE54FD /* Assets.xcassets in Resources */,
+				6B5A58F5212ADB3D00B05DFB /* SantosStoryboard.storyboard in Resources */,
 				77E524052122D8C000EE54FD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
