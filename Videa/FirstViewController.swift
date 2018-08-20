@@ -10,9 +10,12 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    @IBAction func introduction(_ sender: Any) {
+        performSegue(withIdentifier: "introduction", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //hello
         
         // Do any additional setup after loading the view, typically from a nib.
     }

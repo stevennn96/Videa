@@ -14,6 +14,7 @@
 		77E524072122D8C100EE54FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77E524062122D8C100EE54FD /* Assets.xcassets */; };
 		77E5240A2122D8C100EE54FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E524082122D8C100EE54FD /* LaunchScreen.storyboard */; };
 		77E524122122D93600EE54FD /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E524112122D93600EE54FD /* ThirdViewController.swift */; };
+		77E524382124248900EE54FD /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E524372124248900EE54FD /* IntroductionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		77E524092122D8C100EE54FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77E5240B2122D8C100EE54FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77E524112122D93600EE54FD /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		77E524372124248900EE54FD /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				77E524012122D8C000EE54FD /* SecondViewController.swift */,
 				77E524112122D93600EE54FD /* ThirdViewController.swift */,
 				77E524032122D8C000EE54FD /* Main.storyboard */,
+				77E524372124248900EE54FD /* IntroductionViewController.swift */,
 				77E524062122D8C100EE54FD /* Assets.xcassets */,
 				77E524082122D8C100EE54FD /* LaunchScreen.storyboard */,
 				77E5240B2122D8C100EE54FD /* Info.plist */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77E524022122D8C000EE54FD /* SecondViewController.swift in Sources */,
+				77E524382124248900EE54FD /* IntroductionViewController.swift in Sources */,
 				77E523FE2122D8C000EE54FD /* AppDelegate.swift in Sources */,
 				77E524122122D93600EE54FD /* ThirdViewController.swift in Sources */,
 				77E524002122D8C000EE54FD /* FirstViewController.swift in Sources */,
