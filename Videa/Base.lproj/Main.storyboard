@@ -34,9 +34,6 @@
                                 <state key="normal" title="Introduction">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
-                                <connections>
-                                    <action selector="introduction:" destination="9pv-A4-QxB" eventType="touchUpInside" id="YdH-Oo-kkP"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

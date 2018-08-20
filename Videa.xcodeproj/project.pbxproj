@@ -7,33 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B45A4B8212ABAFB00B1D2C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B45A4B7212ABAFA00B1D2C7 /* GoogleService-Info.plist */; };
 		760FD2F7775061EB8091E2DB /* Pods_Videa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BFEB76E52A41DF9AB347DFC /* Pods_Videa.framework */; };
 		77E523FE2122D8C000EE54FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E523FD2122D8C000EE54FD /* AppDelegate.swift */; };
-		77E524002122D8C000EE54FD /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E523FF2122D8C000EE54FD /* FirstViewController.swift */; };
-		77E524022122D8C000EE54FD /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E524012122D8C000EE54FD /* SecondViewController.swift */; };
 		77E524052122D8C000EE54FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E524032122D8C000EE54FD /* Main.storyboard */; };
 		77E524072122D8C100EE54FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77E524062122D8C100EE54FD /* Assets.xcassets */; };
 		77E5240A2122D8C100EE54FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E524082122D8C100EE54FD /* LaunchScreen.storyboard */; };
-		77E524122122D93600EE54FD /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E524112122D93600EE54FD /* ThirdViewController.swift */; };
 		77E524382124248900EE54FD /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E524372124248900EE54FD /* IntroductionViewController.swift */; };
+		EDF24A88212ABE3C0081AE5F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDF24A87212ABE3C0081AE5F /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3BFEB76E52A41DF9AB347DFC /* Pods_Videa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Videa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B45A4B7212ABAFA00B1D2C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		77E523FA2122D8C000EE54FD /* Videa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Videa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77E523FD2122D8C000EE54FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		77E523FF2122D8C000EE54FD /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		77E524012122D8C000EE54FD /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		77E524042122D8C000EE54FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77E524062122D8C100EE54FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77E524092122D8C100EE54FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77E5240B2122D8C100EE54FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		77E524112122D93600EE54FD /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		77E524372124248900EE54FD /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 		D5A344EF856C85A0C716FFB6 /* Pods-Videa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Videa.release.xcconfig"; path = "Pods/Target Support Files/Pods-Videa/Pods-Videa.release.xcconfig"; sourceTree = "<group>"; };
 		DFCE25A618B497E284265DC2 /* Pods-Videa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Videa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Videa/Pods-Videa.debug.xcconfig"; sourceTree = "<group>"; };
+		EDF24A87212ABE3C0081AE5F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,11 +80,8 @@
 		77E523FC2122D8C000EE54FD /* Videa */ = {
 			isa = PBXGroup;
 			children = (
-				6B45A4B7212ABAFA00B1D2C7 /* GoogleService-Info.plist */,
+				EDF24A87212ABE3C0081AE5F /* GoogleService-Info.plist */,
 				77E523FD2122D8C000EE54FD /* AppDelegate.swift */,
-				77E523FF2122D8C000EE54FD /* FirstViewController.swift */,
-				77E524012122D8C000EE54FD /* SecondViewController.swift */,
-				77E524112122D93600EE54FD /* ThirdViewController.swift */,
 				77E524032122D8C000EE54FD /* Main.storyboard */,
 				77E524372124248900EE54FD /* IntroductionViewController.swift */,
 				77E524062122D8C100EE54FD /* Assets.xcassets */,
@@ -161,7 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77E5240A2122D8C100EE54FD /* LaunchScreen.storyboard in Resources */,
-				6B45A4B8212ABAFB00B1D2C7 /* GoogleService-Info.plist in Resources */,
+				EDF24A88212ABE3C0081AE5F /* GoogleService-Info.plist in Resources */,
 				77E524072122D8C100EE54FD /* Assets.xcassets in Resources */,
 				77E524052122D8C000EE54FD /* Main.storyboard in Resources */,
 			);
@@ -215,11 +206,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77E524022122D8C000EE54FD /* SecondViewController.swift in Sources */,
 				77E524382124248900EE54FD /* IntroductionViewController.swift in Sources */,
 				77E523FE2122D8C000EE54FD /* AppDelegate.swift in Sources */,
-				77E524122122D93600EE54FD /* ThirdViewController.swift in Sources */,
-				77E524002122D8C000EE54FD /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
