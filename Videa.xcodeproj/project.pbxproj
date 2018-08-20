@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		760FD2F7775061EB8091E2DB /* Pods_Videa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BFEB76E52A41DF9AB347DFC /* Pods_Videa.framework */; };
+		77E2E894212ABE92002ABD9F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77E2E893212ABE92002ABD9F /* GoogleService-Info.plist */; };
 		77E523FE2122D8C000EE54FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E523FD2122D8C000EE54FD /* AppDelegate.swift */; };
 		77E524002122D8C000EE54FD /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E523FF2122D8C000EE54FD /* FirstViewController.swift */; };
 		77E524022122D8C000EE54FD /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E524012122D8C000EE54FD /* SecondViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3BFEB76E52A41DF9AB347DFC /* Pods_Videa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Videa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77E2E893212ABE92002ABD9F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		77E523FA2122D8C000EE54FD /* Videa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Videa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77E523FD2122D8C000EE54FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77E523FF2122D8C000EE54FD /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +32,8 @@
 		77E5240B2122D8C100EE54FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77E524112122D93600EE54FD /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		77E524372124248900EE54FD /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
+		D5A344EF856C85A0C716FFB6 /* Pods-Videa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Videa.release.xcconfig"; path = "Pods/Target Support Files/Pods-Videa/Pods-Videa.release.xcconfig"; sourceTree = "<group>"; };
+		DFCE25A618B497E284265DC2 /* Pods-Videa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Videa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Videa/Pods-Videa.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				760FD2F7775061EB8091E2DB /* Pods_Videa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03C06C19A7640E14338BBA8F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DFCE25A618B497E284265DC2 /* Pods-Videa.debug.xcconfig */,
+				D5A344EF856C85A0C716FFB6 /* Pods-Videa.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4CDECDEC693DAAAC851F7032 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BFEB76E52A41DF9AB347DFC /* Pods_Videa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		77E523F12122D8C000EE54FD = {
 			isa = PBXGroup;
 			children = (
 				77E523FC2122D8C000EE54FD /* Videa */,
 				77E523FB2122D8C000EE54FD /* Products */,
+				03C06C19A7640E14338BBA8F /* Pods */,
+				4CDECDEC693DAAAC851F7032 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +86,7 @@
 		77E523FC2122D8C000EE54FD /* Videa */ = {
 			isa = PBXGroup;
 			children = (
+				77E2E893212ABE92002ABD9F /* GoogleService-Info.plist */,
 				77E523FD2122D8C000EE54FD /* AppDelegate.swift */,
 				77E523FF2122D8C000EE54FD /* FirstViewController.swift */,
 				77E524012122D8C000EE54FD /* SecondViewController.swift */,
@@ -80,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77E5240E2122D8C100EE54FD /* Build configuration list for PBXNativeTarget "Videa" */;
 			buildPhases = (
+				78CD471292BA53073A5B9C6F /* [CP] Check Pods Manifest.lock */,
 				77E523F62122D8C000EE54FD /* Sources */,
 				77E523F72122D8C000EE54FD /* Frameworks */,
 				77E523F82122D8C000EE54FD /* Resources */,
+				3CCB12BB207FF74BC00E5A58 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,12 +161,54 @@
 			buildActionMask = 2147483647;
 			files = (
 				77E5240A2122D8C100EE54FD /* LaunchScreen.storyboard in Resources */,
+				77E2E894212ABE92002ABD9F /* GoogleService-Info.plist in Resources */,
 				77E524072122D8C100EE54FD /* Assets.xcassets in Resources */,
 				77E524052122D8C000EE54FD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3CCB12BB207FF74BC00E5A58 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Videa/Pods-Videa-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Videa/Pods-Videa-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78CD471292BA53073A5B9C6F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Videa-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		77E523F62122D8C000EE54FD /* Sources */ = {
@@ -290,6 +361,7 @@
 		};
 		77E5240F2122D8C100EE54FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFCE25A618B497E284265DC2 /* Pods-Videa.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -308,6 +380,7 @@
 		};
 		77E524102122D8C100EE54FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5A344EF856C85A0C716FFB6 /* Pods-Videa.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

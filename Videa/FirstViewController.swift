@@ -8,12 +8,19 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class FirstViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBAction func introduction(_ sender: Any) {
         performSegue(withIdentifier: "introduction", sender: self)
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
