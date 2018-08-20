@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B2060DD212AC66D007B75C8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2060DC212AC66D007B75C8 /* LoginViewController.swift */; };
 		760FD2F7775061EB8091E2DB /* Pods_Videa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BFEB76E52A41DF9AB347DFC /* Pods_Videa.framework */; };
+		77A3FACF212AC604009A1BC4 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3FACE212AC604009A1BC4 /* ChallengeViewController.swift */; };
+		77A3FAD1212AC8C7009A1BC4 /* ViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3FAD0212AC8C6009A1BC4 /* ViewControllerTableViewCell.swift */; };
 		77E523FE2122D8C000EE54FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E523FD2122D8C000EE54FD /* AppDelegate.swift */; };
 		77E524052122D8C000EE54FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E524032122D8C000EE54FD /* Main.storyboard */; };
 		77E524072122D8C100EE54FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77E524062122D8C100EE54FD /* Assets.xcassets */; };
@@ -19,7 +20,8 @@
 
 /* Begin PBXFileReference section */
 		3BFEB76E52A41DF9AB347DFC /* Pods_Videa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Videa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B2060DC212AC66D007B75C8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		77A3FACE212AC604009A1BC4 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
+		77A3FAD0212AC8C6009A1BC4 /* ViewControllerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell.swift; sourceTree = "<group>"; };
 		77E523FA2122D8C000EE54FD /* Videa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Videa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77E523FD2122D8C000EE54FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77E524042122D8C000EE54FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,14 +63,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6B2060D9212AC60E007B75C8 /* Login Register */ = {
-			isa = PBXGroup;
-			children = (
-				6B2060DC212AC66D007B75C8 /* LoginViewController.swift */,
-			);
-			path = "Login Register";
-			sourceTree = "<group>";
-		};
 		77E523F12122D8C000EE54FD = {
 			isa = PBXGroup;
 			children = (
@@ -90,10 +84,11 @@
 		77E523FC2122D8C000EE54FD /* Videa */ = {
 			isa = PBXGroup;
 			children = (
-				6B2060D9212AC60E007B75C8 /* Login Register */,
 				EDF24A87212ABE3C0081AE5F /* GoogleService-Info.plist */,
 				77E523FD2122D8C000EE54FD /* AppDelegate.swift */,
 				77E524032122D8C000EE54FD /* Main.storyboard */,
+				77A3FAD0212AC8C6009A1BC4 /* ViewControllerTableViewCell.swift */,
+				77A3FACE212AC604009A1BC4 /* ChallengeViewController.swift */,
 				77E524372124248900EE54FD /* IntroductionViewController.swift */,
 				77E524062122D8C100EE54FD /* Assets.xcassets */,
 				77E524082122D8C100EE54FD /* LaunchScreen.storyboard */,
@@ -179,28 +174,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Videa/Pods-Videa-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,8 +212,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B2060DD212AC66D007B75C8 /* LoginViewController.swift in Sources */,
 				77E524382124248900EE54FD /* IntroductionViewController.swift in Sources */,
+				77A3FACF212AC604009A1BC4 /* ChallengeViewController.swift in Sources */,
+				77A3FAD1212AC8C7009A1BC4 /* ViewControllerTableViewCell.swift in Sources */,
 				77E523FE2122D8C000EE54FD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
