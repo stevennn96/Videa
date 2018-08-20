@@ -29,7 +29,7 @@ class ChallengeViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let mainSB = UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(withIdentifier: <#T##String#>)
+        //        let mainSB = UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(withIdenti <#type#>fier: <#T##String#>)
         
     
         
