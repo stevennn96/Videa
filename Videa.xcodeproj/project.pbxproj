@@ -99,6 +99,7 @@
 		77E523FC2122D8C000EE54FD /* Videa */ = {
 			isa = PBXGroup;
 			children = (
+				EDF24A8D212C02990081AE5F /* Kensen */,
 				6B5A58F6212ADC0100B05DFB /* Santos */,
 				EDF24A8B212BFC160081AE5F /* GoogleService-Info.plist */,
 				77E523FD2122D8C000EE54FD /* AppDelegate.swift */,
@@ -109,9 +110,16 @@
 				77E524062122D8C100EE54FD /* Assets.xcassets */,
 				77E524082122D8C100EE54FD /* LaunchScreen.storyboard */,
 				77E5240B2122D8C100EE54FD /* Info.plist */,
-				EDF24A89212BED800081AE5F /* KensenStoryboard.storyboard */,
 			);
 			path = Videa;
+			sourceTree = "<group>";
+		};
+		EDF24A8D212C02990081AE5F /* Kensen */ = {
+			isa = PBXGroup;
+			children = (
+				EDF24A89212BED800081AE5F /* KensenStoryboard.storyboard */,
+			);
+			path = Kensen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

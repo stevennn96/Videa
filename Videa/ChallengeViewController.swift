@@ -17,7 +17,7 @@ class ChallengeViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ViewControllerTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ChallengeTableViewCell
         
             cell.myImage.image = UIImage(named: (challenges[indexPath.row] + ".jpg"))
             cell.myLabel.text = challenges[indexPath.row]
