@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewControllerTableViewCell: UITableViewCell {
+class ChallengeTableViewCell: UITableViewCell {
 
     @IBOutlet weak var myImage: UIImageView!
     @IBOutlet weak var myLabel: UILabel!

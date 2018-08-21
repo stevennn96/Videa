@@ -10,20 +10,21 @@
 		6B5A58F5212ADB3D00B05DFB /* SantosStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B5A58F4212ADB3D00B05DFB /* SantosStoryboard.storyboard */; };
 		760FD2F7775061EB8091E2DB /* Pods_Videa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BFEB76E52A41DF9AB347DFC /* Pods_Videa.framework */; };
 		77A3FACF212AC604009A1BC4 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3FACE212AC604009A1BC4 /* ChallengeViewController.swift */; };
-		77A3FAD1212AC8C7009A1BC4 /* ViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3FAD0212AC8C6009A1BC4 /* ViewControllerTableViewCell.swift */; };
+		77A3FAD1212AC8C7009A1BC4 /* ChallengeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A3FAD0212AC8C6009A1BC4 /* ChallengeTableViewCell.swift */; };
 		77E523FE2122D8C000EE54FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E523FD2122D8C000EE54FD /* AppDelegate.swift */; };
 		77E524052122D8C000EE54FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E524032122D8C000EE54FD /* Main.storyboard */; };
 		77E524072122D8C100EE54FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77E524062122D8C100EE54FD /* Assets.xcassets */; };
 		77E5240A2122D8C100EE54FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E524082122D8C100EE54FD /* LaunchScreen.storyboard */; };
 		77E524382124248900EE54FD /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E524372124248900EE54FD /* IntroductionViewController.swift */; };
-		EDF24A88212ABE3C0081AE5F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDF24A87212ABE3C0081AE5F /* GoogleService-Info.plist */; };
+		EDF24A8A212BED800081AE5F /* KensenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDF24A89212BED800081AE5F /* KensenStoryboard.storyboard */; };
+		EDF24A8C212BFC160081AE5F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDF24A8B212BFC160081AE5F /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3BFEB76E52A41DF9AB347DFC /* Pods_Videa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Videa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B5A58F4212ADB3D00B05DFB /* SantosStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SantosStoryboard.storyboard; sourceTree = "<group>"; };
 		77A3FACE212AC604009A1BC4 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
-		77A3FAD0212AC8C6009A1BC4 /* ViewControllerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell.swift; sourceTree = "<group>"; };
+		77A3FAD0212AC8C6009A1BC4 /* ChallengeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeTableViewCell.swift; sourceTree = "<group>"; };
 		77E523FA2122D8C000EE54FD /* Videa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Videa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77E523FD2122D8C000EE54FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77E524042122D8C000EE54FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -33,7 +34,8 @@
 		77E524372124248900EE54FD /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 		D5A344EF856C85A0C716FFB6 /* Pods-Videa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Videa.release.xcconfig"; path = "Pods/Target Support Files/Pods-Videa/Pods-Videa.release.xcconfig"; sourceTree = "<group>"; };
 		DFCE25A618B497E284265DC2 /* Pods-Videa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Videa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Videa/Pods-Videa.debug.xcconfig"; sourceTree = "<group>"; };
-		EDF24A87212ABE3C0081AE5F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EDF24A89212BED800081AE5F /* KensenStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KensenStoryboard.storyboard; sourceTree = "<group>"; };
+		EDF24A8B212BFC160081AE5F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,15 +97,16 @@
 			isa = PBXGroup;
 			children = (
 				6B5A58F6212ADC0100B05DFB /* Santos */,
-				EDF24A87212ABE3C0081AE5F /* GoogleService-Info.plist */,
+				EDF24A8B212BFC160081AE5F /* GoogleService-Info.plist */,
 				77E523FD2122D8C000EE54FD /* AppDelegate.swift */,
 				77E524032122D8C000EE54FD /* Main.storyboard */,
-				77A3FAD0212AC8C6009A1BC4 /* ViewControllerTableViewCell.swift */,
+				77A3FAD0212AC8C6009A1BC4 /* ChallengeTableViewCell.swift */,
 				77A3FACE212AC604009A1BC4 /* ChallengeViewController.swift */,
 				77E524372124248900EE54FD /* IntroductionViewController.swift */,
 				77E524062122D8C100EE54FD /* Assets.xcassets */,
 				77E524082122D8C100EE54FD /* LaunchScreen.storyboard */,
 				77E5240B2122D8C100EE54FD /* Info.plist */,
+				EDF24A89212BED800081AE5F /* KensenStoryboard.storyboard */,
 			);
 			path = Videa;
 			sourceTree = "<group>";
@@ -169,10 +172,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				77E5240A2122D8C100EE54FD /* LaunchScreen.storyboard in Resources */,
-				EDF24A88212ABE3C0081AE5F /* GoogleService-Info.plist in Resources */,
 				77E524072122D8C100EE54FD /* Assets.xcassets in Resources */,
 				6B5A58F5212ADB3D00B05DFB /* SantosStoryboard.storyboard in Resources */,
 				77E524052122D8C000EE54FD /* Main.storyboard in Resources */,
+				EDF24A8A212BED800081AE5F /* KensenStoryboard.storyboard in Resources */,
+				EDF24A8C212BFC160081AE5F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,7 +230,7 @@
 			files = (
 				77E524382124248900EE54FD /* IntroductionViewController.swift in Sources */,
 				77A3FACF212AC604009A1BC4 /* ChallengeViewController.swift in Sources */,
-				77A3FAD1212AC8C7009A1BC4 /* ViewControllerTableViewCell.swift in Sources */,
+				77A3FAD1212AC8C7009A1BC4 /* ChallengeTableViewCell.swift in Sources */,
 				77E523FE2122D8C000EE54FD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

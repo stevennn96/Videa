@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>319885871848-69kl5lpmjuhh3jfq99dh0n0964hrricl.apps.googleusercontent.com</string>
+	<string>773537442427-f120ueslfvl3k68lmt1e513ca2sr20fm.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.319885871848-69kl5lpmjuhh3jfq99dh0n0964hrricl</string>
+	<string>com.googleusercontent.apps.773537442427-f120ueslfvl3k68lmt1e513ca2sr20fm</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDZtqN75Gu_4xhwOYraahkM45s3kIZZuyU</string>
+	<string>AIzaSyAkEWVahXSgJmB4PrgMrF_fSq1I6P4B0yQ</string>
 	<key>GCM_SENDER_ID</key>
-	<string>319885871848</string>
+	<string>773537442427</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>Kent.YoutubeData</string>
+	<string>Sowate.Register</string>
 	<key>PROJECT_ID</key>
-	<string>data-309a3</string>
+	<string>fir-tryon</string>
 	<key>STORAGE_BUCKET</key>
-	<string>data-309a3.appspot.com</string>
+	<string>fir-tryon.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:319885871848:ios:bd5cacc58c0f73c1</string>
+	<string>1:773537442427:ios:ec1ad3bfdd1f75c6</string>
 	<key>DATABASE_URL</key>
-	<string>https://data-309a3.firebaseio.com</string>
+	<string>https://fir-tryon.firebaseio.com</string>
 </dict>
 </plist>
