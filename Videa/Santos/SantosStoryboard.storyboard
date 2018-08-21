@@ -100,10 +100,10 @@
             </objects>
             <point key="canvasLocation" x="-663.20000000000005" y="-784.72906403940885"/>
         </scene>
-        <!--View Controller-->
+        <!--For Login View Controller-->
         <scene sceneID="aCv-rl-dvo">
             <objects>
-                <viewController id="Pnj-et-7mb" sceneMemberID="viewController">
+                <viewController id="Pnj-et-7mb" customClass="ForLoginViewController" customModule="Videa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="03B-aF-034">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -136,14 +136,50 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Nc-Qg-ivS">
+                                <rect key="frame" x="168" y="391" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="LoginButton:" destination="Pnj-et-7mb" eventType="touchUpInside" id="x5b-Ph-iN1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p38-JQ-42S">
+                                <rect key="frame" x="16" y="330" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ojz-Td-Oyk"/>
                     </view>
+                    <connections>
+                        <outlet property="emailOutlet" destination="9fl-o9-KRy" id="VFB-qj-v1j"/>
+                        <outlet property="errorMessage" destination="p38-JQ-42S" id="wXR-9W-aC4"/>
+                        <outlet property="passwordOutlet" destination="ft0-TQ-3tS" id="Fnb-c7-WQg"/>
+                        <segue destination="YB5-0M-RE8" kind="show" identifier="LoginSucces" id="Xtv-Up-qIo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XOb-IS-S2J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="185" y="-785"/>
+            <point key="canvasLocation" x="184.80000000000001" y="-785.46798029556658"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Xh4-ue-tM8">
+            <objects>
+                <viewController id="YB5-0M-RE8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GqK-v8-Unp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="U3S-CR-yDV"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YwW-cS-P4K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="962" y="-785"/>
         </scene>
     </scenes>
 </document>
