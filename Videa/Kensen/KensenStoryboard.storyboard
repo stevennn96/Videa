@@ -56,7 +56,7 @@
                     <tabBarItem key="tabBarItem" title="Analytics" image="first" id="Vv5-wH-RAJ" userLabel="Statistics"/>
                     <navigationItem key="navigationItem" id="mwO-7s-X9Y"/>
                     <connections>
-                        <outlet property="usernameTextField" destination="tNE-2n-q6C" id="wmz-AZ-GMG"/>
+                        <outlet property="usernameTextField" destination="tNE-2n-q6C" id="kLc-D3-ydk"/>
                         <segue destination="njZ-Z3-ikz" kind="show" identifier="StatisticsToStatisticsData" id="11f-M0-m30"/>
                     </connections>
                 </viewController>

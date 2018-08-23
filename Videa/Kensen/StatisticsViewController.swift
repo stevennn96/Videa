@@ -27,6 +27,7 @@ class StatisticsViewController: UIViewController {
     
     @IBAction func connectButton(_ sender: Any) {
         username = usernameTextField.text!
+//        username = ""
         let channelUrl = URL(string: "https://www.googleapis.com/youtube/v3/channels?key=\(apiKey)&forUsername=\(username)&part=snippet,contentDetails,statistics")
         
         var channelDetail: ChannelDetail?
