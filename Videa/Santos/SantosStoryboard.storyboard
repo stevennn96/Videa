@@ -199,11 +199,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="87y-fR-PrT">
-                                <rect key="frame" x="0.0" y="88" width="375" height="929"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="1022"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="et1-g8-Oex">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1100"/>
                                         <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background Register" translatesAutoresizingMaskIntoConstraints="NO" id="GMk-6G-rZ8">
+                                                <rect key="frame" x="0.0" y="0.0" width="367" height="1100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WvH-Bq-bzf">
+                                                <rect key="frame" x="8" y="150" width="359" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.26723922459999999" green="0.27444876270000002" blue="0.2480744097" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Introduction" image="Introduction">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="introduction:" destination="mXJ-B4-okb" eventType="touchUpInside" id="PAd-Bq-nKb"/>
+                                                </connections>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1n-Mj-HV2">
                                                 <rect key="frame" x="8" y="300" width="359" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -235,17 +250,6 @@
                                                 <state key="normal" title="How To" image="How To lock">
                                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WvH-Bq-bzf">
-                                                <rect key="frame" x="8" y="150" width="359" height="100"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.26723922459999999" green="0.27444876270000002" blue="0.2480744097" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <state key="normal" title="Introduction" image="Introduction">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="introduction:" destination="mXJ-B4-okb" eventType="touchUpInside" id="PAd-Bq-nKb"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -347,7 +351,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dP1-Im-aQs">
-                                <rect key="frame" x="0.0" y="88" width="375" height="829"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="922"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OYE-v1-YAL">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
@@ -538,7 +542,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IO0-v7-cOd">
-                                <rect key="frame" x="0.0" y="88" width="375" height="829"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="922"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eH8-eK-bXd">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
@@ -758,72 +762,60 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YAG-T1-wLN">
-                                <rect key="frame" x="0.0" y="88" width="375" height="929"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="1022"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tpH-eH-H3D">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1100"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Challenges" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvy-km-WCH">
-                                                <rect key="frame" x="95" y="38" width="184" height="64"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="40"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mqg-yf-RjW">
-                                                <rect key="frame" x="8" y="143" width="359" height="100"/>
+                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mqg-yf-RjW">
+                                                <rect key="frame" x="8" y="150" width="359" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.26723922459999999" green="0.27444876270000002" blue="0.2480744097" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
-                                                <state key="normal" title="Introduction">
+                                                <state key="normal" title="Introduction" image="Introduction">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="introduction:" destination="QP5-d5-XUX" eventType="touchUpInside" id="mS6-bW-SBV"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOA-K9-L8b">
-                                                <rect key="frame" x="8" y="293" width="359" height="100"/>
+                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOA-K9-L8b">
+                                                <rect key="frame" x="8" y="300" width="359" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.99371103199999999" green="0.72756176910000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
-                                                <state key="normal" title="Music">
+                                                <state key="normal" title="Music" image="Music">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="music:" destination="QP5-d5-XUX" eventType="touchUpInside" id="tNs-37-Fzd"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSo-VY-FrI">
-                                                <rect key="frame" x="8" y="443" width="359" height="100"/>
+                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSo-VY-FrI">
+                                                <rect key="frame" x="8" y="450" width="359" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.44792980869999999" green="0.91326623480000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
-                                                <state key="normal" title="Comedy">
+                                                <state key="normal" title="Comedy" image="Comedy">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="comedy:" destination="QP5-d5-XUX" eventType="touchUpInside" id="hF8-QB-e5D"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYJ-HI-D5J">
-                                                <rect key="frame" x="8" y="593" width="359" height="100"/>
+                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYJ-HI-D5J">
+                                                <rect key="frame" x="8" y="600" width="359" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.57408759220000005" green="1" blue="0.53885524370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
-                                                <state key="normal" title="Food">
+                                                <state key="normal" title="Food" image="Food">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="food:" destination="QP5-d5-XUX" eventType="touchUpInside" id="Gdk-7r-Dav"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJY-pB-O0n">
-                                                <rect key="frame" x="8" y="743" width="359" height="100"/>
+                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJY-pB-O0n">
+                                                <rect key="frame" x="8" y="750" width="359" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="1" green="0.62467217419999999" blue="0.5836036336" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
-                                                <state key="normal" title="How To">
+                                                <state key="normal" title="How To" image="How To">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -869,12 +861,16 @@
     </scenes>
     <resources>
         <image name="Background Register" width="1125" height="2436"/>
+        <image name="Comedy" width="867" height="291"/>
         <image name="Comedy lock" width="867" height="291"/>
+        <image name="Food" width="867" height="291"/>
         <image name="Food lock" width="867" height="291"/>
+        <image name="How To" width="867" height="291"/>
         <image name="How To lock" width="867" height="291"/>
         <image name="Introduction" width="867" height="291"/>
         <image name="Line" width="931" height="1"/>
         <image name="Login Button" width="260" height="83"/>
+        <image name="Music" width="867" height="291"/>
         <image name="Music lock" width="867" height="291"/>
         <image name="Register Button" width="260" height="83"/>
         <image name="Videa logo white" width="508" height="209"/>
@@ -886,7 +882,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="UtH-Mz-kmx"/>
-        <segue reference="oix-JE-vo3"/>
+        <segue reference="7zx-SM-amA"/>
         <segue reference="WPd-px-5HE"/>
     </inferredMetricsTieBreakers>
 </document>
