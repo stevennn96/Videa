@@ -15,6 +15,41 @@ class LoginAccountViewController: UIViewController {
     @IBOutlet weak var emailOutlet: UITextField!
     @IBOutlet weak var passwordOutlet: UITextField!
     @IBOutlet weak var errorMessage: UILabel!
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    
+    @IBOutlet weak var VisualEffectBlur: UIVisualEffectView!
+    @IBOutlet weak var registerButtonOutlet: UIButton!
+    
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        backgroundImageView.alpha = 1
+        registerButtonOutlet.alpha = 0.0
+        VisualEffectBlur.alpha = 0.0
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        UIView.animate(withDuration: 1.0) {
+            self.backgroundImageView.alpha = 1.0
+        }
+        
+        UIView.animate(withDuration: 2.0) {
+            self.VisualEffectBlur.alpha = 0.8
+        }
+        
+        UIView.animate(withDuration: 2.0) {
+            self.registerButtonOutlet.alpha = 1.0
+            self.registerButtonOutlet.center.y -= 30
+        }
+        
+        
+    }
+    
+    
+    
     
     @IBAction func registerSucces(_ sender: Any) {
         guard let username = usernameOutlet.text else {return}
@@ -40,6 +75,7 @@ class LoginAccountViewController: UIViewController {
         }
         
     }
+    
     
     
     override func viewDidLoad() {
