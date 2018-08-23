@@ -193,7 +193,7 @@
         <!--Home-->
         <scene sceneID="yIc-QA-abN">
             <objects>
-                <viewController id="mXJ-B4-okb" customClass="ChallengesViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mXJ-B4-okb" customClass="ChallengesViewController" customModule="Videa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iol-YH-7M0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -303,7 +303,7 @@
         <!--Second-->
         <scene sceneID="Xek-AK-08i">
             <objects>
-                <viewController id="1Dd-EY-uTt" customClass="SecondViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1Dd-EY-uTt" customClass="SecondViewController" customModule="Videa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kyB-Er-O6T">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -341,7 +341,7 @@
         <!--Introduction View Controller-->
         <scene sceneID="ckE-2W-rR3">
             <objects>
-                <viewController id="78C-Ir-hgA" customClass="IntroductionViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="78C-Ir-hgA" customClass="IntroductionViewController" customModule="Videa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gYu-gy-y1V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -421,7 +421,7 @@
         <!--Music View Controller-->
         <scene sceneID="C8i-re-KHz">
             <objects>
-                <viewController id="hCD-aD-WnU" customClass="MusicViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hCD-aD-WnU" customClass="MusicViewController" customModule="Videa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UPh-js-Fvo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -532,7 +532,7 @@
         <!--Music Level1 View Controller-->
         <scene sceneID="JzA-Hh-PdL">
             <objects>
-                <viewController id="AzH-h2-4Lh" customClass="MusicLevel1ViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="AzH-h2-4Lh" customClass="MusicLevel1ViewController" customModule="Videa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3ua-4d-Ajf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -613,7 +613,7 @@
         <!--Home View Controller-->
         <scene sceneID="9Et-Cp-shN">
             <objects>
-                <viewController id="GQI-g2-nYz" customClass="HomeViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GQI-g2-nYz" customClass="HomeViewController" customModule="Videa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P2p-s9-fh3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -714,7 +714,7 @@
         <!--Third-->
         <scene sceneID="W1l-xu-GYb">
             <objects>
-                <viewController title="Third" id="E0j-97-wjG" customClass="ThirdViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Third" id="E0j-97-wjG" customClass="ThirdViewController" customModule="Videa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0re-ds-Vkf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -752,7 +752,7 @@
         <!--Home-->
         <scene sceneID="PNU-wO-sqd">
             <objects>
-                <viewController id="QP5-d5-XUX" customClass="ChallengesListViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QP5-d5-XUX" customClass="ChallengesListViewController" customModule="Videa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qvv-q1-qMC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
