@@ -205,7 +205,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1100"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background Register" translatesAutoresizingMaskIntoConstraints="NO" id="GMk-6G-rZ8">
-                                                <rect key="frame" x="0.0" y="0.0" width="367" height="1100"/>
+                                                <rect key="frame" x="0.0" y="-89" width="375" height="1189"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WvH-Bq-bzf">
