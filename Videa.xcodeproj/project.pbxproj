@@ -21,7 +21,6 @@
 		77E524072122D8C100EE54FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77E524062122D8C100EE54FD /* Assets.xcassets */; };
 		77E5240A2122D8C100EE54FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E524082122D8C100EE54FD /* LaunchScreen.storyboard */; };
 		EDF24A8A212BED800081AE5F /* KensenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDF24A89212BED800081AE5F /* KensenStoryboard.storyboard */; };
-		EDF24A8C212BFC160081AE5F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDF24A8B212BFC160081AE5F /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +45,6 @@
 		D5A344EF856C85A0C716FFB6 /* Pods-Videa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Videa.release.xcconfig"; path = "Pods/Target Support Files/Pods-Videa/Pods-Videa.release.xcconfig"; sourceTree = "<group>"; };
 		DFCE25A618B497E284265DC2 /* Pods-Videa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Videa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Videa/Pods-Videa.debug.xcconfig"; sourceTree = "<group>"; };
 		EDF24A89212BED800081AE5F /* KensenStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KensenStoryboard.storyboard; sourceTree = "<group>"; };
-		EDF24A8B212BFC160081AE5F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +125,6 @@
 				6B9858A5212EA8920081E017 /* Stven */,
 				EDF24A8D212C02990081AE5F /* Kensen */,
 				6B5A58F6212ADC0100B05DFB /* Santos */,
-				EDF24A8B212BFC160081AE5F /* GoogleService-Info.plist */,
 				77E523FD2122D8C000EE54FD /* AppDelegate.swift */,
 				77E524032122D8C000EE54FD /* Main.storyboard */,
 				77E524062122D8C100EE54FD /* Assets.xcassets */,
@@ -210,7 +207,6 @@
 				6B5A58F5212ADB3D00B05DFB /* SantosStoryboard.storyboard in Resources */,
 				77E524052122D8C000EE54FD /* Main.storyboard in Resources */,
 				EDF24A8A212BED800081AE5F /* KensenStoryboard.storyboard in Resources */,
-				EDF24A8C212BFC160081AE5F /* GoogleService-Info.plist in Resources */,
 				6B9858AA212EA8E00081E017 /* Stven.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
