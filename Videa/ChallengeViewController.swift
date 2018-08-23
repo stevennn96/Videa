@@ -8,24 +8,15 @@
 
 import UIKit
 
-class ChallengeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
-    let challenges = ["Introduction", "Music", "Comedy", "Food", "How To"]
+class ChallengeViewController: UIViewController{
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (challenges.count)
+    @IBAction func a(_ sender: Any) {
+        print("a")
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ChallengeTableViewCell
-        
-            cell.myImage.image = UIImage(named: (challenges[indexPath.row] + ".jpg"))
-            cell.myLabel.text = challenges[indexPath.row]
-        
-            return (cell)
+    @IBAction func b(_ sender: Any) {
+        print("b")
     }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

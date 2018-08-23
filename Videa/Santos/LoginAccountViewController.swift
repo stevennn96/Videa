@@ -41,9 +41,9 @@ class LoginAccountViewController: UIViewController {
         
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     
