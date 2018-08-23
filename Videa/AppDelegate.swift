@@ -20,9 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
-        let storyboard = UIStoryboard(name: "SantosStoryboard", bundle: nil)
+        let storyboard = UIStoryboard(name: "KensenStoryboard", bundle: nil)
         
-        let initialViewController = storyboard.instantiateViewController(withIdentifier: "LoginSignupVC")
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "StatisticsVC")
         
         self.window?.rootViewController = initialViewController
         self.window?.makeKeyAndVisible()

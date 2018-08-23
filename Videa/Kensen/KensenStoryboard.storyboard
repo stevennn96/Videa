@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Analytics-->
+        <!--Statistics-->
         <scene sceneID="1rh-Eu-xvh">
             <objects>
-                <viewController id="bHH-4q-kyb" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StatisticsVC" id="bHH-4q-kyb" userLabel="Statistics" customClass="StatisticsViewController" customModule="Videa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ije-ww-AfR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,6 +35,9 @@
                                 <rect key="frame" x="164" y="274" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="connectButton:" destination="bHH-4q-kyb" eventType="touchUpInside" id="XNO-5n-HST"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -50,10 +53,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="n7O-c1-fl5"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Analytics" image="first" id="Vv5-wH-RAJ"/>
+                    <tabBarItem key="tabBarItem" title="Analytics" image="first" id="Vv5-wH-RAJ" userLabel="Statistics"/>
                     <navigationItem key="navigationItem" id="mwO-7s-X9Y"/>
                     <connections>
-                        <segue destination="njZ-Z3-ikz" kind="show" id="11f-M0-m30"/>
+                        <outlet property="usernameTextField" destination="tNE-2n-q6C" id="wmz-AZ-GMG"/>
+                        <segue destination="njZ-Z3-ikz" kind="show" identifier="StatisticsToStatisticsData" id="11f-M0-m30"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lg2-Bk-iN8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -94,10 +98,10 @@
             </objects>
             <point key="canvasLocation" x="1406" y="-397"/>
         </scene>
-        <!--View Controller-->
+        <!--Statistics Data View Controller-->
         <scene sceneID="COX-Zs-fe7">
             <objects>
-                <viewController id="njZ-Z3-ikz" sceneMemberID="viewController">
+                <viewController id="njZ-Z3-ikz" customClass="StatisticsDataViewController" customModule="Videa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tHe-HY-cos">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -121,6 +125,27 @@
                                 <rect key="frame" x="45" y="132" width="60" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1300 Subscribers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8W-8e-cu2">
+                                <rect key="frame" x="113" y="167" width="114" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="13000 Total Views" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crr-ko-Mas">
+                                <rect key="frame" x="245" y="207" width="119" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Antony" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4O-vy-oRg">
+                                <rect key="frame" x="166" y="132" width="46" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="DTV-MO-aoj"/>

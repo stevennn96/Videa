@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6B09711D212BF4F800CD9878 /* LoginAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B09711C212BF4F800CD9878 /* LoginAccountViewController.swift */; };
 		6B5A58F5212ADB3D00B05DFB /* SantosStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B5A58F4212ADB3D00B05DFB /* SantosStoryboard.storyboard */; };
+		6B6157DD212D998C00961212 /* StevenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B6157DC212D998C00961212 /* StevenStoryboard.storyboard */; };
 		6B663521212C000E001137AD /* ForLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B663520212C000E001137AD /* ForLoginViewController.swift */; };
 		6B689571212EBE4F0096CC8B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B689570212EBE4F0096CC8B /* GoogleService-Info.plist */; };
 		6B9858A2212EA7B80081E017 /* ChallengesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B98589F212EA7B80081E017 /* ChallengesListViewController.swift */; };
@@ -44,6 +45,9 @@
 		77E5240B2122D8C100EE54FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5A344EF856C85A0C716FFB6 /* Pods-Videa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Videa.release.xcconfig"; path = "Pods/Target Support Files/Pods-Videa/Pods-Videa.release.xcconfig"; sourceTree = "<group>"; };
 		DFCE25A618B497E284265DC2 /* Pods-Videa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Videa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Videa/Pods-Videa.debug.xcconfig"; sourceTree = "<group>"; };
+		ED90904B212E9BFA00E11589 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		ED90904D212EA3FE00E11589 /* ChannelDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelDetail.swift; sourceTree = "<group>"; };
+		ED909050212EA6E000E11589 /* StatisticsDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsDataViewController.swift; sourceTree = "<group>"; };
 		EDF24A89212BED800081AE5F /* KensenStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KensenStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,10 +138,21 @@
 			path = Videa;
 			sourceTree = "<group>";
 		};
+		ED90904F212EA40E00E11589 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				ED90904D212EA3FE00E11589 /* ChannelDetail.swift */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 		EDF24A8D212C02990081AE5F /* Kensen */ = {
 			isa = PBXGroup;
 			children = (
+				ED90904F212EA40E00E11589 /* JSON */,
 				EDF24A89212BED800081AE5F /* KensenStoryboard.storyboard */,
+				ED90904B212E9BFA00E11589 /* StatisticsViewController.swift */,
+				ED909050212EA6E000E11589 /* StatisticsDataViewController.swift */,
 			);
 			path = Kensen;
 			sourceTree = "<group>";
