@@ -10,11 +10,11 @@
 		6B09711D212BF4F800CD9878 /* LoginAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B09711C212BF4F800CD9878 /* LoginAccountViewController.swift */; };
 		6B5A58F5212ADB3D00B05DFB /* SantosStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B5A58F4212ADB3D00B05DFB /* SantosStoryboard.storyboard */; };
 		6B663521212C000E001137AD /* ForLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B663520212C000E001137AD /* ForLoginViewController.swift */; };
-		6B985896212E99040081E017 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B985894212E99040081E017 /* Main.storyboard */; };
-		6B985898212E99150081E017 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B985897212E99150081E017 /* HomeViewController.swift */; };
+		6B985896212E99040081E017 /* Stven.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B985894212E99040081E017 /* Stven.storyboard */; };
 		6B98589C212E99260081E017 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B985899212E99260081E017 /* IntroductionViewController.swift */; };
-		6B98589D212E99260081E017 /* ChallengesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B98589A212E99260081E017 /* ChallengesListViewController.swift */; };
-		6B98589E212E99260081E017 /* ChallengesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B98589B212E99260081E017 /* ChallengesViewController.swift */; };
+		6B9858A2212EA7B80081E017 /* ChallengesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B98589F212EA7B80081E017 /* ChallengesListViewController.swift */; };
+		6B9858A3212EA7B80081E017 /* ChallengesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9858A0212EA7B80081E017 /* ChallengesViewController.swift */; };
+		6B9858A4212EA7B80081E017 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9858A1212EA7B80081E017 /* HomeViewController.swift */; };
 		760FD2F7775061EB8091E2DB /* Pods_Videa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BFEB76E52A41DF9AB347DFC /* Pods_Videa.framework */; };
 		77E523FE2122D8C000EE54FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E523FD2122D8C000EE54FD /* AppDelegate.swift */; };
 		77E524052122D8C000EE54FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E524032122D8C000EE54FD /* Main.storyboard */; };
@@ -31,11 +31,11 @@
 		6B663520212C000E001137AD /* ForLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForLoginViewController.swift; sourceTree = "<group>"; };
 		6B985892212E98D20081E017 /* MusicLevel1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicLevel1ViewController.swift; sourceTree = "<group>"; };
 		6B985893212E98D20081E017 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
-		6B985895212E99040081E017 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../Desktop/HAPUS AJA/test/test/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
-		6B985897212E99150081E017 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = "../../../Desktop/HAPUS AJA/test/test/HomeViewController.swift"; sourceTree = "<group>"; };
+		6B985895212E99040081E017 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../Desktop/HAPUS AJA/test/test/Base.lproj/Stven.storyboard"; sourceTree = "<group>"; };
 		6B985899212E99260081E017 /* IntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntroductionViewController.swift; path = "../../../Desktop/HAPUS AJA/test/test/IntroductionViewController.swift"; sourceTree = "<group>"; };
-		6B98589A212E99260081E017 /* ChallengesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChallengesListViewController.swift; path = "../../../Desktop/HAPUS AJA/test/test/ChallengesListViewController.swift"; sourceTree = "<group>"; };
-		6B98589B212E99260081E017 /* ChallengesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChallengesViewController.swift; path = "../../../Desktop/HAPUS AJA/test/test/ChallengesViewController.swift"; sourceTree = "<group>"; };
+		6B98589F212EA7B80081E017 /* ChallengesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengesListViewController.swift; sourceTree = "<group>"; };
+		6B9858A0212EA7B80081E017 /* ChallengesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengesViewController.swift; sourceTree = "<group>"; };
+		6B9858A1212EA7B80081E017 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		77E523FA2122D8C000EE54FD /* Videa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Videa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77E523FD2122D8C000EE54FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77E524042122D8C000EE54FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -90,11 +90,11 @@
 		6B985891212E98AB0081E017 /* Steven */ = {
 			isa = PBXGroup;
 			children = (
-				6B985897212E99150081E017 /* HomeViewController.swift */,
-				6B985894212E99040081E017 /* Main.storyboard */,
+				6B985894212E99040081E017 /* Stven.storyboard */,
+				6B98589F212EA7B80081E017 /* ChallengesListViewController.swift */,
+				6B9858A0212EA7B80081E017 /* ChallengesViewController.swift */,
+				6B9858A1212EA7B80081E017 /* HomeViewController.swift */,
 				6B985892212E98D20081E017 /* MusicLevel1ViewController.swift */,
-				6B98589A212E99260081E017 /* ChallengesListViewController.swift */,
-				6B98589B212E99260081E017 /* ChallengesViewController.swift */,
 				6B985899212E99260081E017 /* IntroductionViewController.swift */,
 				6B985893212E98D20081E017 /* MusicViewController.swift */,
 			);
@@ -204,7 +204,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B985896212E99040081E017 /* Main.storyboard in Resources */,
+				6B985896212E99040081E017 /* Stven.storyboard in Resources */,
 				77E5240A2122D8C100EE54FD /* LaunchScreen.storyboard in Resources */,
 				77E524072122D8C100EE54FD /* Assets.xcassets in Resources */,
 				6B5A58F5212ADB3D00B05DFB /* SantosStoryboard.storyboard in Resources */,
@@ -262,12 +262,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B98589E212E99260081E017 /* ChallengesViewController.swift in Sources */,
 				6B09711D212BF4F800CD9878 /* LoginAccountViewController.swift in Sources */,
-				6B985898212E99150081E017 /* HomeViewController.swift in Sources */,
 				6B98589C212E99260081E017 /* IntroductionViewController.swift in Sources */,
 				6B663521212C000E001137AD /* ForLoginViewController.swift in Sources */,
-				6B98589D212E99260081E017 /* ChallengesListViewController.swift in Sources */,
+				6B9858A2212EA7B80081E017 /* ChallengesListViewController.swift in Sources */,
+				6B9858A3212EA7B80081E017 /* ChallengesViewController.swift in Sources */,
+				6B9858A4212EA7B80081E017 /* HomeViewController.swift in Sources */,
 				77E523FE2122D8C000EE54FD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,12 +275,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6B985894212E99040081E017 /* Main.storyboard */ = {
+		6B985894212E99040081E017 /* Stven.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				6B985895212E99040081E017 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Stven.storyboard;
 			sourceTree = "<group>";
 		};
 		77E524032122D8C000EE54FD /* Main.storyboard */ = {
