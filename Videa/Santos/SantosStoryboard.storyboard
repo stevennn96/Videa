@@ -231,7 +231,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1100"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WvH-Bq-bzf">
-                                                <rect key="frame" x="41" y="249" width="293" height="96"/>
+                                                <rect key="frame" x="0.0" y="10" width="376" height="151"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.26723922459999999" green="0.27444876270000002" blue="0.2480744097" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Introduction" image="Introduction">
@@ -241,32 +241,31 @@
                                                     <action selector="introduction:" destination="mXJ-B4-okb" eventType="touchUpInside" id="PAd-Bq-nKb"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1n-Mj-HV2">
-                                                <rect key="frame" x="41" y="378" width="293" height="98"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Music" image="Music lock">
-                                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZg-tk-HG1">
-                                                <rect key="frame" x="41" y="509" width="293" height="97"/>
+                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZg-tk-HG1">
+                                                <rect key="frame" x="0.0" y="312" width="376" height="151"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Comedy" image="Comedy lock">
                                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="256-0B-7UP">
-                                                <rect key="frame" x="41" y="639" width="293" height="97"/>
+                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="256-0B-7UP">
+                                                <rect key="frame" x="0.0" y="463" width="376" height="151"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Food" image="Food lock">
+                                                <state key="normal" image="Food lock">
                                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtB-a7-eQK">
-                                                <rect key="frame" x="41" y="769" width="293" height="97"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1n-Mj-HV2">
+                                                <rect key="frame" x="0.0" y="161" width="376" height="151"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Music" image="Music lock">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtB-a7-eQK">
+                                                <rect key="frame" x="0.0" y="614" width="375" height="152"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="How To" image="How To lock">
@@ -883,17 +882,17 @@
     </scenes>
     <resources>
         <image name="Background Register without blur" width="1125" height="2436"/>
-        <image name="Comedy" width="867" height="291"/>
-        <image name="Comedy lock" width="867" height="291"/>
-        <image name="Food" width="867" height="291"/>
-        <image name="Food lock" width="867" height="291"/>
+        <image name="Comedy" width="1125" height="450"/>
+        <image name="Comedy lock" width="1125" height="450"/>
+        <image name="Food" width="1125" height="450"/>
+        <image name="Food lock" width="1125" height="450"/>
         <image name="How To" width="867" height="291"/>
-        <image name="How To lock" width="867" height="291"/>
-        <image name="Introduction" width="867" height="291"/>
+        <image name="How To lock" width="1125" height="450"/>
+        <image name="Introduction" width="1124" height="450"/>
         <image name="Line black" width="931" height="1"/>
         <image name="Login Button" width="260" height="83"/>
-        <image name="Music" width="867" height="291"/>
-        <image name="Music lock" width="867" height="291"/>
+        <image name="Music" width="1125" height="450"/>
+        <image name="Music lock" width="1125" height="450"/>
         <image name="Register Button" width="260" height="83"/>
         <image name="Videa logo white" width="508" height="209"/>
         <image name="email black" width="64" height="46"/>
