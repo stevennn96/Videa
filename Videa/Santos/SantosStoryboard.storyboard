@@ -293,7 +293,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PqV-BA-TKh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1543.2" y="635.46798029556658"/>
+            <point key="canvasLocation" x="-1548" y="575"/>
         </scene>
         <!--Item-->
         <scene sceneID="7qN-mc-YZx">
@@ -428,7 +428,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ovm-W1-e53" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3604" y="1544"/>
+            <point key="canvasLocation" x="-3601" y="1507"/>
         </scene>
         <!--Music View Controller-->
         <scene sceneID="C8i-re-KHz">
