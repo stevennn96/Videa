@@ -51,7 +51,7 @@ class ForLoginViewController: UIViewController {
         Auth.auth().signIn(withEmail: email, password: pass) {user, error in
             if error == nil && user != nil{
              print("Login Berhasil")
-            self.performSegue(withIdentifier: "LoginSucces", sender: self)
+            self.performSegue(withIdentifier: "LoginToProfile", sender: self)
             }else {
                 self.errorMessage.text = ("error login \(error!.localizedDescription)")
             }

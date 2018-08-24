@@ -8,7 +8,7 @@ pod 'Firebase/Core'
 pod 'Firebase/Firestore'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
-pod 'Firebase/Storage'
+pod 'Firebase/Storage', '~> 4.0'
 
   # Pods for Videa
 

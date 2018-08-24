@@ -210,6 +210,7 @@
                         <outlet property="errorMessage" destination="p38-JQ-42S" id="wXR-9W-aC4"/>
                         <outlet property="passwordOutlet" destination="ft0-TQ-3tS" id="Fnb-c7-WQg"/>
                         <segue destination="mXJ-B4-okb" kind="show" identifier="LoginSucces" id="7zx-SM-amA"/>
+                        <segue destination="h1w-tM-quA" kind="show" identifier="LoginToProfile" id="CIk-rg-Vn3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XOb-IS-S2J" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -307,6 +308,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PqV-BA-TKh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1548" y="575"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="1Ae-rK-BJh">
+            <objects>
+                <viewController id="h1w-tM-quA" customClass="ProfileViewController" customModule="Videa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rYA-YX-n7T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UFF-HU-qBT">
+                                <rect key="frame" x="67" y="44" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NXX-Ei-kZa">
+                                <rect key="frame" x="16" y="234" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdd-Ew-YQ8">
+                                <rect key="frame" x="145" y="650" width="86" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="h1w-tM-quA" eventType="touchUpInside" id="cMN-sQ-tFZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6t0-m9-b5m">
+                                <rect key="frame" x="137" y="180" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Tap to Change"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="h1w-tM-quA" eventType="touchUpInside" id="9uO-6P-Qi0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="c5T-SI-MY8"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="UFF-HU-qBT" id="w4k-jY-cxR"/>
+                        <outlet property="tapTochangeImage" destination="6t0-m9-b5m" id="vmo-Ar-8US"/>
+                        <outlet property="usernameOutlet" destination="NXX-Ei-kZa" id="8OY-6D-SJN"/>
+                        <segue destination="mXJ-B4-okb" kind="show" identifier="ProfileToChallenge" id="Ay7-wb-EFp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FZp-T0-Dd1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2543.1999999999998" y="-140.39408866995075"/>
         </scene>
         <!--Item-->
         <scene sceneID="7qN-mc-YZx">
@@ -903,6 +954,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="UtH-Mz-kmx"/>
-        <segue reference="7zx-SM-amA"/>
+        <segue reference="Ay7-wb-EFp"/>
     </inferredMetricsTieBreakers>
 </document>
