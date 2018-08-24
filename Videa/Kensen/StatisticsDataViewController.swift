@@ -10,17 +10,21 @@ import UIKit
 
 class StatisticsDataViewController: UIViewController {
 
+    @IBOutlet weak var channelTitleLabel: UILabel!
+    @IBOutlet weak var totalSubscribersLabel: UILabel!
+    @IBOutlet weak var totalViewsLabel: UILabel!
+    
+    var channelTitle: String = ""
+    var totalSubscribers: String = ""
+    var totalViews: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        channelTitleLabel.text = channelTitle
+        totalSubscribersLabel.text = "\(totalSubscribers) Subscribers"
+        totalViewsLabel.text = "\(totalViews) Views"
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
     /*
     // MARK: - Navigation
