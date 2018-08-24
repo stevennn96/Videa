@@ -67,7 +67,7 @@ class LoginAccountViewController: UIViewController {
                         print("Error: \(error!.localizedDescription)")
                     }
                 }
-                self.performSegue(withIdentifier: "RegisterSucces", sender: self)
+                self.performSegue(withIdentifier: "RegisterSuccess", sender: self)
             } else {
                 self.errorMessage.text = ("Error: \(error!.localizedDescription)")
             }
@@ -76,6 +76,10 @@ class LoginAccountViewController: UIViewController {
         
     }
     
+    @IBAction func registerToLogin(_ sender: Any) {
+        performSegue(withIdentifier: "RegisterSuccess", sender: nil)
+        //oik
+    }
     
     
     override func viewDidLoad() {
