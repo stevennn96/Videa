@@ -24,6 +24,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let initialViewController = storyboard.instantiateViewController(withIdentifier: "LoginSignupVC")
         
+        //Ganti Background Navigation Bar pake Image
+        let img:UIImage = UIImage(named: "nav bar red.png")!
+        UINavigationBar.appearance().setBackgroundImage(img, for: .default)
+        
         self.window?.rootViewController = initialViewController
         self.window?.makeKeyAndVisible()
         return true
