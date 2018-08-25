@@ -1,41 +1,24 @@
 //
-//  IntroductionViewController.swift
-//  test
+//  ChallengesListFirstTimeVC.swift
+//  Videa
 //
-//  Created by Sia Feri Santos on 22/08/18.
-//  Copyright © 2018 Sia Feri Santos. All rights reserved.
+//  Created by Steven on 24/08/18.
+//  Copyright © 2018 Steven. All rights reserved.
 //
 
 import UIKit
 
-class IntroductionViewController: UIViewController {
+class ChallengesListFirstTimeVC: UIViewController {
 
-    @IBAction func submitButton(_ sender: Any) {
-        performSegue(withIdentifier: "goToHome", sender: self)
+    @IBAction func introduction(_ sender: Any) {
+        performSegue(withIdentifier: "goToIntroduction", sender: self)
     }
-    
-    @IBOutlet weak var embedYoutube: UIWebView!
-    
-    
-    func getVideo(videoCode:String){
-        let url = URL(string: "https://www.youtube.com/embed/\(videoCode)")
-        embedYoutube.loadRequest(URLRequest(url: url!))
-    }
-    
-    
-    
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        getVideo(videoCode: "K1u0QvZD4v0")
+
         // Do any additional setup after loading the view.
     }
 
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

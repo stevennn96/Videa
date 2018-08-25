@@ -1,32 +1,30 @@
 //
-//  MusicLevel1ViewController.swift
-//  test
+//  ContentViewController.swift
+//  Videa
 //
-//  Created by Sia Feri Santos on 22/08/18.
-//  Copyright © 2018 Sia Feri Santos. All rights reserved.
+//  Created by Steven on 24/08/18.
+//  Copyright © 2018 Steven. All rights reserved.
 //
 
 import UIKit
 
-class MusicLevel1ViewController: UIViewController {
+class ContentViewController: UIViewController {
 
     
-    @IBAction func goToHome(_ sender: Any) {
-        performSegue(withIdentifier: "level1ToHome", sender: self)
+    @IBAction func letsDoItPressed(_ sender: Any) {
+        performSegue(withIdentifier: "goToHome", sender: self)
     }
-    
     
     @IBOutlet weak var embedYoutube: UIWebView!
     
-    
     func getVideo(videoCode:String){
-        let url = URL(string: "https://www.youtube.com/embed/\(videoCode)")
+        let url = URL(string: "http://www.youtube.com/embed/\(videoCode)")
         embedYoutube.loadRequest(URLRequest(url: url!))
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getVideo(videoCode: "g69RW4vmSK4")
+        getVideo(videoCode: "K1u0QvZD4v0")
         // Do any additional setup after loading the view.
     }
 
