@@ -1,0 +1,531 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6B09711D212BF4F800CD9878 /* LoginAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B09711C212BF4F800CD9878 /* LoginAccountViewController.swift */; };
+		6B2D62C8213003EA0032EC74 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2D62C7213003EA0032EC74 /* ProfileViewController.swift */; };
+		6B5A58F5212ADB3D00B05DFB /* SantosStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B5A58F4212ADB3D00B05DFB /* SantosStoryboard.storyboard */; };
+		6B663521212C000E001137AD /* ForLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B663520212C000E001137AD /* ForLoginViewController.swift */; };
+		6B689571212EBE4F0096CC8B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B689570212EBE4F0096CC8B /* GoogleService-Info.plist */; };
+		6B9858A4212EA7B80081E017 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9858A1212EA7B80081E017 /* HomeViewController.swift */; };
+		760FD2F7775061EB8091E2DB /* Pods_Videa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BFEB76E52A41DF9AB347DFC /* Pods_Videa.framework */; };
+		77E523FE2122D8C000EE54FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E523FD2122D8C000EE54FD /* AppDelegate.swift */; };
+		77E524052122D8C000EE54FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E524032122D8C000EE54FD /* Main.storyboard */; };
+		77E524072122D8C100EE54FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77E524062122D8C100EE54FD /* Assets.xcassets */; };
+		77E5240A2122D8C100EE54FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E524082122D8C100EE54FD /* LaunchScreen.storyboard */; };
+		B0CF2115213009F900825CD5 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF2114213009F900825CD5 /* ContentViewController.swift */; };
+		B0CF2119213012A300825CD5 /* ChallengesListFirstTimeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF2118213012A300825CD5 /* ChallengesListFirstTimeVC.swift */; };
+		B0CF211B213018CF00825CD5 /* ChallengesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF211A213018CF00825CD5 /* ChallengesListViewController.swift */; };
+		ED909054212EC07700E11589 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED90904B212E9BFA00E11589 /* StatisticsViewController.swift */; };
+		ED909055212EC0BE00E11589 /* ChannelDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED90904D212EA3FE00E11589 /* ChannelDetail.swift */; };
+		ED909056212EC0D400E11589 /* StatisticsDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED909050212EA6E000E11589 /* StatisticsDataViewController.swift */; };
+		ED909058212FF66F00E11589 /* StatisticsDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED909057212FF66F00E11589 /* StatisticsDataTableViewCell.swift */; };
+		ED90905A212FFEE300E11589 /* StatisticsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED909059212FFEE300E11589 /* StatisticsData.swift */; };
+		EDF24A8A212BED800081AE5F /* KensenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDF24A89212BED800081AE5F /* KensenStoryboard.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3BFEB76E52A41DF9AB347DFC /* Pods_Videa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Videa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B09711C212BF4F800CD9878 /* LoginAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAccountViewController.swift; sourceTree = "<group>"; };
+		6B2D62C7213003EA0032EC74 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		6B5A58F4212ADB3D00B05DFB /* SantosStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SantosStoryboard.storyboard; sourceTree = "<group>"; };
+		6B663520212C000E001137AD /* ForLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForLoginViewController.swift; sourceTree = "<group>"; };
+		6B689570212EBE4F0096CC8B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6B9858A1212EA7B80081E017 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		77E523FA2122D8C000EE54FD /* Videa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Videa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		77E523FD2122D8C000EE54FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		77E524042122D8C000EE54FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		77E524062122D8C100EE54FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		77E524092122D8C100EE54FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		77E5240B2122D8C100EE54FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0CF2114213009F900825CD5 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		B0CF2118213012A300825CD5 /* ChallengesListFirstTimeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesListFirstTimeVC.swift; sourceTree = "<group>"; };
+		B0CF211A213018CF00825CD5 /* ChallengesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesListViewController.swift; sourceTree = "<group>"; };
+		D5A344EF856C85A0C716FFB6 /* Pods-Videa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Videa.release.xcconfig"; path = "Pods/Target Support Files/Pods-Videa/Pods-Videa.release.xcconfig"; sourceTree = "<group>"; };
+		DFCE25A618B497E284265DC2 /* Pods-Videa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Videa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Videa/Pods-Videa.debug.xcconfig"; sourceTree = "<group>"; };
+		ED90904B212E9BFA00E11589 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		ED90904D212EA3FE00E11589 /* ChannelDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelDetail.swift; sourceTree = "<group>"; };
+		ED909050212EA6E000E11589 /* StatisticsDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsDataViewController.swift; sourceTree = "<group>"; };
+		ED909057212FF66F00E11589 /* StatisticsDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsDataTableViewCell.swift; sourceTree = "<group>"; };
+		ED909059212FFEE300E11589 /* StatisticsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsData.swift; sourceTree = "<group>"; };
+		EDF24A89212BED800081AE5F /* KensenStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KensenStoryboard.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		77E523F72122D8C000EE54FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				760FD2F7775061EB8091E2DB /* Pods_Videa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03C06C19A7640E14338BBA8F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DFCE25A618B497E284265DC2 /* Pods-Videa.debug.xcconfig */,
+				D5A344EF856C85A0C716FFB6 /* Pods-Videa.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4CDECDEC693DAAAC851F7032 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BFEB76E52A41DF9AB347DFC /* Pods_Videa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B5A58F6212ADC0100B05DFB /* Santos */ = {
+			isa = PBXGroup;
+			children = (
+				6B5A58F4212ADB3D00B05DFB /* SantosStoryboard.storyboard */,
+				6B663520212C000E001137AD /* ForLoginViewController.swift */,
+				6B09711C212BF4F800CD9878 /* LoginAccountViewController.swift */,
+				6B2D62C7213003EA0032EC74 /* ProfileViewController.swift */,
+			);
+			path = Santos;
+			sourceTree = "<group>";
+		};
+		77E523F12122D8C000EE54FD = {
+			isa = PBXGroup;
+			children = (
+				77E523FC2122D8C000EE54FD /* Videa */,
+				77E523FB2122D8C000EE54FD /* Products */,
+				03C06C19A7640E14338BBA8F /* Pods */,
+				4CDECDEC693DAAAC851F7032 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		77E523FB2122D8C000EE54FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				77E523FA2122D8C000EE54FD /* Videa.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		77E523FC2122D8C000EE54FD /* Videa */ = {
+			isa = PBXGroup;
+			children = (
+				B0CF21132130099200825CD5 /* Steven */,
+				EDF24A8D212C02990081AE5F /* Kensen */,
+				6B5A58F6212ADC0100B05DFB /* Santos */,
+				77E523FD2122D8C000EE54FD /* AppDelegate.swift */,
+				77E524032122D8C000EE54FD /* Main.storyboard */,
+				6B689570212EBE4F0096CC8B /* GoogleService-Info.plist */,
+				77E524062122D8C100EE54FD /* Assets.xcassets */,
+				77E524082122D8C100EE54FD /* LaunchScreen.storyboard */,
+				77E5240B2122D8C100EE54FD /* Info.plist */,
+			);
+			path = Videa;
+			sourceTree = "<group>";
+		};
+		B0CF21112130093900825CD5 /* Steven */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Steven;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		B0CF21132130099200825CD5 /* Steven */ = {
+			isa = PBXGroup;
+			children = (
+				B0CF2114213009F900825CD5 /* ContentViewController.swift */,
+				6B9858A1212EA7B80081E017 /* HomeViewController.swift */,
+				B0CF2118213012A300825CD5 /* ChallengesListFirstTimeVC.swift */,
+				B0CF211A213018CF00825CD5 /* ChallengesListViewController.swift */,
+			);
+			path = Steven;
+			sourceTree = "<group>";
+		};
+		ED90904F212EA40E00E11589 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				ED90904D212EA3FE00E11589 /* ChannelDetail.swift */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		EDF24A8D212C02990081AE5F /* Kensen */ = {
+			isa = PBXGroup;
+			children = (
+				ED90904F212EA40E00E11589 /* JSON */,
+				EDF24A89212BED800081AE5F /* KensenStoryboard.storyboard */,
+				ED90904B212E9BFA00E11589 /* StatisticsViewController.swift */,
+				ED909050212EA6E000E11589 /* StatisticsDataViewController.swift */,
+<<<<<<< HEAD
+				B0CF21112130093900825CD5 /* Steven */,
+=======
+				ED909057212FF66F00E11589 /* StatisticsDataTableViewCell.swift */,
+				ED909059212FFEE300E11589 /* StatisticsData.swift */,
+>>>>>>> dca802b35bf8bed4df87cab7d3b494cb05434572
+			);
+			path = Kensen;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		77E523F92122D8C000EE54FD /* Videa */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77E5240E2122D8C100EE54FD /* Build configuration list for PBXNativeTarget "Videa" */;
+			buildPhases = (
+				78CD471292BA53073A5B9C6F /* [CP] Check Pods Manifest.lock */,
+				77E523F62122D8C000EE54FD /* Sources */,
+				77E523F72122D8C000EE54FD /* Frameworks */,
+				77E523F82122D8C000EE54FD /* Resources */,
+				3CCB12BB207FF74BC00E5A58 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Videa;
+			productName = Videa;
+			productReference = 77E523FA2122D8C000EE54FD /* Videa.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		77E523F22122D8C000EE54FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Steven;
+				TargetAttributes = {
+					77E523F92122D8C000EE54FD = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 77E523F52122D8C000EE54FD /* Build configuration list for PBXProject "Videa" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 77E523F12122D8C000EE54FD;
+			productRefGroup = 77E523FB2122D8C000EE54FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				77E523F92122D8C000EE54FD /* Videa */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		77E523F82122D8C000EE54FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77E5240A2122D8C100EE54FD /* LaunchScreen.storyboard in Resources */,
+				77E524072122D8C100EE54FD /* Assets.xcassets in Resources */,
+				6B689571212EBE4F0096CC8B /* GoogleService-Info.plist in Resources */,
+				6B5A58F5212ADB3D00B05DFB /* SantosStoryboard.storyboard in Resources */,
+				77E524052122D8C000EE54FD /* Main.storyboard in Resources */,
+				EDF24A8A212BED800081AE5F /* KensenStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3CCB12BB207FF74BC00E5A58 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Videa/Pods-Videa-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Videa/Pods-Videa-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78CD471292BA53073A5B9C6F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Videa-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		77E523F62122D8C000EE54FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0CF2115213009F900825CD5 /* ContentViewController.swift in Sources */,
+				ED909055212EC0BE00E11589 /* ChannelDetail.swift in Sources */,
+				6B09711D212BF4F800CD9878 /* LoginAccountViewController.swift in Sources */,
+				6B2D62C8213003EA0032EC74 /* ProfileViewController.swift in Sources */,
+				6B663521212C000E001137AD /* ForLoginViewController.swift in Sources */,
+				ED909054212EC07700E11589 /* StatisticsViewController.swift in Sources */,
+<<<<<<< HEAD
+				6B9858A4212EA7B80081E017 /* HomeViewController.swift in Sources */,
+				77E523FE2122D8C000EE54FD /* AppDelegate.swift in Sources */,
+				B0CF2119213012A300825CD5 /* ChallengesListFirstTimeVC.swift in Sources */,
+				B0CF211B213018CF00825CD5 /* ChallengesListViewController.swift in Sources */,
+=======
+				6B9858A2212EA7B80081E017 /* ChallengesListViewController.swift in Sources */,
+				ED90905A212FFEE300E11589 /* StatisticsData.swift in Sources */,
+				6B9858A3212EA7B80081E017 /* ChallengesViewController.swift in Sources */,
+				6B9858A4212EA7B80081E017 /* HomeViewController.swift in Sources */,
+				77E523FE2122D8C000EE54FD /* AppDelegate.swift in Sources */,
+				ED909058212FF66F00E11589 /* StatisticsDataTableViewCell.swift in Sources */,
+>>>>>>> dca802b35bf8bed4df87cab7d3b494cb05434572
+				ED909056212EC0D400E11589 /* StatisticsDataViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		77E524032122D8C000EE54FD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77E524042122D8C000EE54FD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		77E524082122D8C100EE54FD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77E524092122D8C100EE54FD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		77E5240C2122D8C100EE54FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		77E5240D2122D8C100EE54FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		77E5240F2122D8C100EE54FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFCE25A618B497E284265DC2 /* Pods-Videa.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9UGU468ZC7;
+				INFOPLIST_FILE = Videa/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.binus.Videa;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		77E524102122D8C100EE54FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5A344EF856C85A0C716FFB6 /* Pods-Videa.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9UGU468ZC7;
+				INFOPLIST_FILE = Videa/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.binus.Videa;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		77E523F52122D8C000EE54FD /* Build configuration list for PBXProject "Videa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77E5240C2122D8C100EE54FD /* Debug */,
+				77E5240D2122D8C100EE54FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77E5240E2122D8C100EE54FD /* Build configuration list for PBXNativeTarget "Videa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77E5240F2122D8C100EE54FD /* Debug */,
+				77E524102122D8C100EE54FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 77E523F22122D8C000EE54FD /* Project object */;
+}

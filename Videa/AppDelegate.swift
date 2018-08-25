@@ -17,12 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+        let db = Firestore.firestore()
         // Override point for customization after application launch.
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
-        let storyboard = UIStoryboard(name: "SantosStoryboard", bundle: nil)
+        let storyboard = UIStoryboard(name: "KensenStoryboard", bundle: nil)
         
-        let initialViewController = storyboard.instantiateViewController(withIdentifier: "LoginSignupVC")
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "TabBarController")
         
         //Ganti Background Navigation Bar pake Image
         let img:UIImage = UIImage(named: "nav bar red.png")!
