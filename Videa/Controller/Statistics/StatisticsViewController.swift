@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StatisticsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class StatisticsViewController: UIViewController {
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var connectUIButton: UIButton!
@@ -18,13 +18,15 @@ class StatisticsViewController: UIViewController, UITableViewDelegate, UITableVi
     var channelTitle: String = ""
     var totalSubscribers: String = ""
     var totalViews: String = ""
-    var statisticsData: [StatisticsData] = []
     
     var getChannelTask: URLSessionDataTask?
+    var urlData: Data?
+    var reloadCounter: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        reloadCounter = 0
         apiKey = "AIzaSyA614LZH2YQaHu3_hyXnEkOq2d9p0Bd0x8"
     }
     
@@ -38,31 +40,47 @@ class StatisticsViewController: UIViewController, UITableViewDelegate, UITableVi
         getChannelTask = URLSession.shared.dataTask(with: channelUrl!) { (data, response, error) in
             do {
                 channelDetail = try JSONDecoder().decode(ChannelDetail.self, from: data!)
+                self.urlData = data
             } catch let error as NSError {
                 print(error)
             }
             
-            self.channelTitle = channelDetail!.items[0].snippet.title
-            self.totalSubscribers = channelDetail!.items[0].statistics.subscriberCount
-            self.totalViews = channelDetail!.items[0].statistics.viewCount
+            if (channelDetail?.items.isEmpty)! == false {
+//                print(channelDetail!.items)
+                self.channelTitle = channelDetail!.items[0].snippet.title
+                self.totalSubscribers = channelDetail!.items[0].statistics.subscriberCount
+                self.totalViews = channelDetail!.items[0].statistics.viewCount
+            }
+            else {
+                print("WOWOWO")
+            }
         }
         
         getChannelTask?.resume()
         
         if self.channelTitle == "" {
             DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
-                self.connectUIButton.sendActions(for: .touchUpInside)
+                self.reloadCounter += 1
+                if(self.reloadCounter > 10){
+                    print("Damn bro")
+                }
+                else{
+                    self.connectUIButton.sendActions(for: .touchUpInside)
+                }
             }
         }
         
-        print(apiKey)
-        print(username)
-        print(self.channelTitle)
-        print(self.totalSubscribers)
-        print(self.totalViews)
+//        print(apiKey)
+//        print(username)
+//        print(self.channelTitle)
+//        print(self.totalSubscribers)
+//        print(self.totalViews)
         
         if self.channelTitle != "" {
             performSegue(withIdentifier: "StatisticsToStatisticsData", sender: nil)
+        }
+        else {
+            print("Damnnnnn")
         }
     }
     
@@ -72,18 +90,6 @@ class StatisticsViewController: UIViewController, UITableViewDelegate, UITableVi
             destination.totalSubscribers = self.totalSubscribers
             destination.totalViews = self.totalViews
         }
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return statisticsData.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let data = statisticsData[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "StatisticsDataCell") as! StatisticsDataTableViewCell
-        
-        cell.setStatisticsData(statisticsData: data)
-        return cell
     }
 
 }

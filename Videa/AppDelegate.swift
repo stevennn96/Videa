@@ -19,18 +19,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         let db = Firestore.firestore()
         // Override point for customization after application launch.
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        
-        let storyboard = UIStoryboard(name: "StevenStoryboard", bundle: nil)
-        
-        let initialViewController = storyboard.instantiateViewController(withIdentifier: "ChallengePage")
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+//
+//        let storyboard = UIStoryboard(name: "KensenStoryboard", bundle: nil)
+//
+//        let initialViewController = storyboard.instantiateViewController(withIdentifier: "StatisticsVC")
         
         //Ganti Background Navigation Bar pake Image
         let img:UIImage = UIImage(named: "nav bar red.png")!
         UINavigationBar.appearance().setBackgroundImage(img, for: .default)
         
-        self.window?.rootViewController = initialViewController
-        self.window?.makeKeyAndVisible()
+//        self.window?.rootViewController = initialViewController
+//        self.window?.makeKeyAndVisible()
         return true
     }
 

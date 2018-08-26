@@ -135,6 +135,7 @@
 		77E523FC2122D8C000EE54FD /* Videa */ = {
 			isa = PBXGroup;
 			children = (
+				ED90905B2132FCF600E11589 /* Controller */,
 				B0CF21132130099200825CD5 /* Steven */,
 				EDF24A8D212C02990081AE5F /* Kensen */,
 				6B5A58F6212ADC0100B05DFB /* Santos */,
@@ -176,15 +177,30 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
+		ED90905B2132FCF600E11589 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ED90905C2132FD2400E11589 /* Statistics */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ED90905C2132FD2400E11589 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				ED90904B212E9BFA00E11589 /* StatisticsViewController.swift */,
+				ED909050212EA6E000E11589 /* StatisticsDataViewController.swift */,
+				ED909057212FF66F00E11589 /* StatisticsDataTableViewCell.swift */,
+				ED909059212FFEE300E11589 /* StatisticsData.swift */,
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
 		EDF24A8D212C02990081AE5F /* Kensen */ = {
 			isa = PBXGroup;
 			children = (
 				ED90904F212EA40E00E11589 /* JSON */,
 				EDF24A89212BED800081AE5F /* KensenStoryboard.storyboard */,
-				ED90904B212E9BFA00E11589 /* StatisticsViewController.swift */,
-				ED909050212EA6E000E11589 /* StatisticsDataViewController.swift */,
-				ED909057212FF66F00E11589 /* StatisticsDataTableViewCell.swift */,
-				ED909059212FFEE300E11589 /* StatisticsData.swift */,
 			);
 			path = Kensen;
 			sourceTree = "<group>";

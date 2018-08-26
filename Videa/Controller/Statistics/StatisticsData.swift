@@ -11,10 +11,10 @@ import Foundation
 class StatisticsData {
     
     var date: String
-    var totalSubscribers: Int
-    var totalViews: Int
+    var totalSubscribers: String
+    var totalViews: String
     
-    init(date: String, totalSubscribers: Int, totalViews: Int) {
+    init(date: String, totalSubscribers: String, totalViews: String) {
         self.date = date
         self.totalSubscribers = totalSubscribers
         self.totalViews = totalViews

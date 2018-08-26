@@ -149,6 +149,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="njZ-Z3-ikz" id="Yv5-WS-gzP"/>
+                                    <outlet property="delegate" destination="njZ-Z3-ikz" id="pq6-Dn-J5B"/>
+                                </connections>
                             </tableView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="Qfh-HT-6bs">
                                 <rect key="frame" x="45" y="132" width="60" height="61"/>
@@ -202,6 +206,7 @@
                     </view>
                     <connections>
                         <outlet property="channelTitleLabel" destination="C4O-vy-oRg" id="O8L-xP-5vs"/>
+                        <outlet property="statisticsDataTableView" destination="mHh-Zd-xPg" id="3HH-Sx-Fk8"/>
                         <outlet property="totalSubscribersLabel" destination="A8W-8e-cu2" id="nx5-HC-aUm"/>
                         <outlet property="totalViewsLabel" destination="crr-ko-Mas" id="x8m-hK-Nyc"/>
                     </connections>

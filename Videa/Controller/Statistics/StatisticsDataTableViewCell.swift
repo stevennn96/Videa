@@ -16,7 +16,7 @@ class StatisticsDataTableViewCell: UITableViewCell {
     
     func setStatisticsData(statisticsData: StatisticsData) {
         dateLabel.text = statisticsData.date
-        totalSubscribersLabel.text = "\(statisticsData.totalSubscribers)"
-        totalViewsLabel.text = "\(statisticsData.totalViews)"
+        totalSubscribersLabel.text = statisticsData.totalSubscribers
+        totalViewsLabel.text = statisticsData.totalViews
     }
 }
