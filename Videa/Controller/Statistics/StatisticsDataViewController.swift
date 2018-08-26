@@ -13,7 +13,6 @@ class StatisticsDataViewController: UIViewController, UITableViewDataSource, UIT
     @IBOutlet weak var statisticsDataTableView: UITableView!
     @IBOutlet weak var channelTitleLabel: UILabel!
     @IBOutlet weak var totalSubscribersLabel: UILabel!
-    @IBOutlet weak var totalViewsLabel: UILabel!
     
     var statisticsData: [StatisticsData] = []
     
@@ -23,9 +22,11 @@ class StatisticsDataViewController: UIViewController, UITableViewDataSource, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("CH: \(channelTitle)")
+        print("CH: \(totalSubscribers)")
         channelTitleLabel.text = channelTitle
-        totalSubscribersLabel.text = "\(totalSubscribers) Subscribers"
-        totalViewsLabel.text = "\(totalViews) Views"
+        totalSubscribersLabel.text = "\(totalSubscribers)"
         
         statisticsData.append(StatisticsData(date: "20/08/2018", totalSubscribers: "2000", totalViews: "30000"))
         statisticsData.append(StatisticsData(date: "21/08/2018", totalSubscribers: "2100", totalViews: "35000"))
@@ -39,6 +40,7 @@ class StatisticsDataViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let data = statisticsData[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "StatisticsDataCell") as! StatisticsDataTableViewCell
         

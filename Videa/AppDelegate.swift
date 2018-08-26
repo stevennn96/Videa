@@ -26,8 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let initialViewController = storyboard.instantiateViewController(withIdentifier: "StatisticsVC")
         
         //Ganti Background Navigation Bar pake Image
-        let img:UIImage = UIImage(named: "nav bar red.png")!
+        let img:UIImage = UIImage(named: "navbarbg.png")!
         UINavigationBar.appearance().setBackgroundImage(img, for: .default)
+        UITabBar.appearance().autoresizesSubviews = false
+        UITabBar.appearance().clipsToBounds = true
         
 //        self.window?.rootViewController = initialViewController
 //        self.window?.makeKeyAndVisible()

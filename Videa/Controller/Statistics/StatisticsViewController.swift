@@ -26,6 +26,7 @@ class StatisticsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        connectUIButton.layer.cornerRadius = 5
         reloadCounter = 0
         apiKey = "AIzaSyA614LZH2YQaHu3_hyXnEkOq2d9p0Bd0x8"
     }
@@ -45,14 +46,20 @@ class StatisticsViewController: UIViewController {
                 print(error)
             }
             
-            if (channelDetail?.items.isEmpty)! == false {
-//                print(channelDetail!.items)
-                self.channelTitle = channelDetail!.items[0].snippet.title
-                self.totalSubscribers = channelDetail!.items[0].statistics.subscriberCount
-                self.totalViews = channelDetail!.items[0].statistics.viewCount
+            if channelDetail != nil {
+                print(channelDetail!.items.count)
+                
+                if channelDetail!.items.count != 0 {
+                    self.channelTitle = channelDetail!.items[0].snippet.title
+                    self.totalSubscribers = channelDetail!.items[0].statistics.subscriberCount
+                    self.totalViews = channelDetail!.items[0].statistics.viewCount
+                }
+                else {
+                    print("Channel detail empty")
+                }
             }
             else {
-                print("WOWOWO")
+                print("No channel detail found")
             }
         }
         
@@ -62,7 +69,8 @@ class StatisticsViewController: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
                 self.reloadCounter += 1
                 if(self.reloadCounter > 10){
-                    print("Damn bro")
+                    print("Reloaded 10 times but no result")
+                    self.reloadCounter = 0
                 }
                 else{
                     self.connectUIButton.sendActions(for: .touchUpInside)
@@ -77,10 +85,15 @@ class StatisticsViewController: UIViewController {
 //        print(self.totalViews)
         
         if self.channelTitle != "" {
+            print(apiKey)
+            print(username)
+            print(self.channelTitle)
+            print(self.totalSubscribers)
+            print(self.totalViews)
             performSegue(withIdentifier: "StatisticsToStatisticsData", sender: nil)
         }
         else {
-            print("Damnnnnn")
+            print("Cannot pass")
         }
     }
     
@@ -88,7 +101,6 @@ class StatisticsViewController: UIViewController {
         if let destination = segue.destination as? StatisticsDataViewController {
             destination.channelTitle = self.channelTitle
             destination.totalSubscribers = self.totalSubscribers
-            destination.totalViews = self.totalViews
         }
     }
 
