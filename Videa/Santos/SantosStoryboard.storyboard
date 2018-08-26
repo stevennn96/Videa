@@ -128,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OrE-AP-lTp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3602.4000000000001" y="574.8768472906404"/>
+            <point key="canvasLocation" x="-3391" y="-964"/>
         </scene>
         <!--For Login View Controller-->
         <scene sceneID="aCv-rl-dvo">
@@ -263,7 +263,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FZp-T0-Dd1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2543.1999999999998" y="-140.39408866995075"/>
+            <point key="canvasLocation" x="-1438" y="-964"/>
         </scene>
     </scenes>
     <resources>
