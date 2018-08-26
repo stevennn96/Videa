@@ -2,7 +2,7 @@
 //  ChallengesListViewController.swift
 //  Videa
 //
-//  Created by Steven on 24/08/18.
+//  Created by Steven on 26/08/18.
 //  Copyright © 2018 Steven. All rights reserved.
 //
 
@@ -10,6 +10,29 @@ import UIKit
 
 class ChallengesListViewController: UIViewController {
 
+    @IBAction func introduction(_ sender: Any) {
+        performSegue(withIdentifier: "goToIntroduction", sender: self)
+    }
+    
+    @IBAction func music(_ sender: Any) {
+        performSegue(withIdentifier: "goToMusic", sender: self)
+    }
+    
+    @IBAction func comedy(_ sender: Any) {
+        performSegue(withIdentifier: "goToComedy", sender: self)
+    }
+    
+    @IBAction func food(_ sender: Any) {
+        performSegue(withIdentifier: "goToFood", sender: self)
+    }
+    
+    @IBAction func howTo(_ sender: Any) {
+        performSegue(withIdentifier: "goToHowTo", sender: self)
+    }
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

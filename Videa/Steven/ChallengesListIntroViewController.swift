@@ -1,18 +1,19 @@
 //
-//  ChallengesListFirstTimeVC.swift
+//  ChallengesListIntroViewController.swift
 //  Videa
 //
-//  Created by Steven on 24/08/18.
+//  Created by Steven on 26/08/18.
 //  Copyright © 2018 Steven. All rights reserved.
 //
 
 import UIKit
 
-class ChallengesListFirstTimeVC: UIViewController {
+class ChallengesListIntroViewController: UIViewController {
 
     @IBAction func introduction(_ sender: Any) {
         performSegue(withIdentifier: "goToIntroduction", sender: self)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

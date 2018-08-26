@@ -1,30 +1,40 @@
 //
-//  ContentViewController.swift
+//  MusicLevelListViewController.swift
 //  Videa
 //
-//  Created by Steven on 24/08/18.
+//  Created by Steven on 26/08/18.
 //  Copyright © 2018 Steven. All rights reserved.
 //
 
 import UIKit
 
-class ContentViewController: UIViewController {
+class MusicLevelListViewController: UIViewController {
 
+    @IBOutlet weak var titleImage: UIImageView!
     
-    @IBAction func letsDoItPressed(_ sender: Any) {
-        performSegue(withIdentifier: "goToHome", sender: self)
+    
+    var x: Int = 0
+    
+    @IBAction func chooseChallenge(_ sender: UIButton) {
+        x = sender.tag
+        performSegue(withIdentifier: "goToChallenge", sender: self)
     }
     
-    @IBOutlet weak var embedYoutube: UIWebView!
-    
-    func getVideo(videoCode:String){
-        let url = URL(string: "http://www.youtube.com/embed/\(videoCode)")
-        embedYoutube.loadRequest(URLRequest(url: url!))
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? MusicLevelContentViewController{
+            destination.tag = x
+        }
     }
+    
+    
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getVideo(videoCode: "K1u0QvZD4v0")
+
         // Do any additional setup after loading the view.
     }
 

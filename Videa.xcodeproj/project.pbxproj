@@ -18,9 +18,12 @@
 		77E524052122D8C000EE54FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E524032122D8C000EE54FD /* Main.storyboard */; };
 		77E524072122D8C100EE54FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77E524062122D8C100EE54FD /* Assets.xcassets */; };
 		77E5240A2122D8C100EE54FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E524082122D8C100EE54FD /* LaunchScreen.storyboard */; };
-		B0CF2115213009F900825CD5 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF2114213009F900825CD5 /* ContentViewController.swift */; };
-		B0CF2119213012A300825CD5 /* ChallengesListFirstTimeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF2118213012A300825CD5 /* ChallengesListFirstTimeVC.swift */; };
-		B0CF211B213018CF00825CD5 /* ChallengesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF211A213018CF00825CD5 /* ChallengesListViewController.swift */; };
+		B0E2B5BB2132133500B6860F /* StevenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E2B5BA2132133500B6860F /* StevenStoryboard.storyboard */; };
+		B0E2B5BF21321A1900B6860F /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5BE21321A1900B6860F /* IntroductionViewController.swift */; };
+		B0E2B5C121321D8200B6860F /* ChallengesListIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5C021321D8200B6860F /* ChallengesListIntroViewController.swift */; };
+		B0E2B5C32132232900B6860F /* ChallengesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5C22132232900B6860F /* ChallengesListViewController.swift */; };
+		B0E2B5C52132248900B6860F /* MusicLevelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5C42132248900B6860F /* MusicLevelListViewController.swift */; };
+		B0E2B5C72132256300B6860F /* MusicLevelContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5C62132256300B6860F /* MusicLevelContentViewController.swift */; };
 		ED909054212EC07700E11589 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED90904B212E9BFA00E11589 /* StatisticsViewController.swift */; };
 		ED909055212EC0BE00E11589 /* ChannelDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED90904D212EA3FE00E11589 /* ChannelDetail.swift */; };
 		ED909056212EC0D400E11589 /* StatisticsDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED909050212EA6E000E11589 /* StatisticsDataViewController.swift */; };
@@ -43,9 +46,12 @@
 		77E524062122D8C100EE54FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77E524092122D8C100EE54FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77E5240B2122D8C100EE54FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B0CF2114213009F900825CD5 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
-		B0CF2118213012A300825CD5 /* ChallengesListFirstTimeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesListFirstTimeVC.swift; sourceTree = "<group>"; };
-		B0CF211A213018CF00825CD5 /* ChallengesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesListViewController.swift; sourceTree = "<group>"; };
+		B0E2B5BA2132133500B6860F /* StevenStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StevenStoryboard.storyboard; sourceTree = "<group>"; };
+		B0E2B5BE21321A1900B6860F /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
+		B0E2B5C021321D8200B6860F /* ChallengesListIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesListIntroViewController.swift; sourceTree = "<group>"; };
+		B0E2B5C22132232900B6860F /* ChallengesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesListViewController.swift; sourceTree = "<group>"; };
+		B0E2B5C42132248900B6860F /* MusicLevelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicLevelListViewController.swift; sourceTree = "<group>"; };
+		B0E2B5C62132256300B6860F /* MusicLevelContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicLevelContentViewController.swift; sourceTree = "<group>"; };
 		D5A344EF856C85A0C716FFB6 /* Pods-Videa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Videa.release.xcconfig"; path = "Pods/Target Support Files/Pods-Videa/Pods-Videa.release.xcconfig"; sourceTree = "<group>"; };
 		DFCE25A618B497E284265DC2 /* Pods-Videa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Videa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Videa/Pods-Videa.debug.xcconfig"; sourceTree = "<group>"; };
 		ED90904B212E9BFA00E11589 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
@@ -130,21 +136,16 @@
 			path = Videa;
 			sourceTree = "<group>";
 		};
-		B0CF21112130093900825CD5 /* Steven */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Steven;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		B0CF21132130099200825CD5 /* Steven */ = {
 			isa = PBXGroup;
 			children = (
-				B0CF2114213009F900825CD5 /* ContentViewController.swift */,
+				B0E2B5BA2132133500B6860F /* StevenStoryboard.storyboard */,
 				6B9858A1212EA7B80081E017 /* HomeViewController.swift */,
-				B0CF2118213012A300825CD5 /* ChallengesListFirstTimeVC.swift */,
-				B0CF211A213018CF00825CD5 /* ChallengesListViewController.swift */,
+				B0E2B5C42132248900B6860F /* MusicLevelListViewController.swift */,
+				B0E2B5BE21321A1900B6860F /* IntroductionViewController.swift */,
+				B0E2B5C021321D8200B6860F /* ChallengesListIntroViewController.swift */,
+				B0E2B5C22132232900B6860F /* ChallengesListViewController.swift */,
+				B0E2B5C62132256300B6860F /* MusicLevelContentViewController.swift */,
 			);
 			path = Steven;
 			sourceTree = "<group>";
@@ -235,6 +236,7 @@
 				6B689571212EBE4F0096CC8B /* GoogleService-Info.plist in Resources */,
 				6B5A58F5212ADB3D00B05DFB /* SantosStoryboard.storyboard in Resources */,
 				77E524052122D8C000EE54FD /* Main.storyboard in Resources */,
+				B0E2B5BB2132133500B6860F /* StevenStoryboard.storyboard in Resources */,
 				EDF24A8A212BED800081AE5F /* KensenStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,16 +305,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0CF2115213009F900825CD5 /* ContentViewController.swift in Sources */,
+				B0E2B5C52132248900B6860F /* MusicLevelListViewController.swift in Sources */,
 				ED909055212EC0BE00E11589 /* ChannelDetail.swift in Sources */,
+				B0E2B5C72132256300B6860F /* MusicLevelContentViewController.swift in Sources */,
+				B0E2B5BF21321A1900B6860F /* IntroductionViewController.swift in Sources */,
 				6B09711D212BF4F800CD9878 /* LoginAccountViewController.swift in Sources */,
 				6B2D62C8213003EA0032EC74 /* ProfileViewController.swift in Sources */,
+				B0E2B5C121321D8200B6860F /* ChallengesListIntroViewController.swift in Sources */,
 				6B663521212C000E001137AD /* ForLoginViewController.swift in Sources */,
 				ED909054212EC07700E11589 /* StatisticsViewController.swift in Sources */,
-				6B9858A2212EA7B80081E017 /* ChallengesListViewController.swift in Sources */,
 				ED90905A212FFEE300E11589 /* StatisticsData.swift in Sources */,
-				6B9858A3212EA7B80081E017 /* ChallengesViewController.swift in Sources */,
 				6B9858A4212EA7B80081E017 /* HomeViewController.swift in Sources */,
+				B0E2B5C32132232900B6860F /* ChallengesListViewController.swift in Sources */,
 				77E523FE2122D8C000EE54FD /* AppDelegate.swift in Sources */,
 				ED909058212FF66F00E11589 /* StatisticsDataTableViewCell.swift in Sources */,
 				ED909056212EC0D400E11589 /* StatisticsDataViewController.swift in Sources */,
