@@ -9,18 +9,6 @@
 import UIKit
 
 class StatisticsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return statisticsData.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let data = statisticsData[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "StatisticsDataCell") as! StatisticsDataTableViewCell
-        
-        cell.setStatisticsData(statisticsData: data)
-        return cell
-    }
-    
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var connectUIButton: UIButton!
@@ -85,14 +73,17 @@ class StatisticsViewController: UIViewController, UITableViewDelegate, UITableVi
             destination.totalViews = self.totalViews
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return statisticsData.count
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let data = statisticsData[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "StatisticsDataCell") as! StatisticsDataTableViewCell
+        
+        cell.setStatisticsData(statisticsData: data)
+        return cell
+    }
 
 }
