@@ -26,10 +26,16 @@ class StatisticsDataViewController: UIViewController, UITableViewDataSource, UIT
         print("CH: \(channelTitle)")
         print("CH: \(totalSubscribers)")
         channelTitleLabel.text = channelTitle
+        
+        let subsInt: Int = Int(totalSubscribers)!
+        let fmt = NumberFormatter()
+        fmt.numberStyle = .decimal
+        fmt.locale = NSLocale(localeIdentifier: "id_ID") as Locale!
+        totalSubscribers = fmt.string(for: subsInt)!
         totalSubscribersLabel.text = "\(totalSubscribers)"
         
-        statisticsData.append(StatisticsData(date: "20/08/2018", totalSubscribers: "2000", totalViews: "30000"))
-        statisticsData.append(StatisticsData(date: "21/08/2018", totalSubscribers: "2100", totalViews: "35000"))
+        statisticsData.append(StatisticsData(date: "20/08/2018", totalSubscribers: "+2.000", totalViews: "+30.000"))
+        statisticsData.append(StatisticsData(date: "21/08/2018", totalSubscribers: "+2.100", totalViews: "+35.000"))
         
         statisticsDataTableView.reloadData()
         // Do any additional setup after loading the view.
