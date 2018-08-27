@@ -68,9 +68,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         //punya steven
-        let storyboard = UIStoryboard(name: "SantosStoryboard", bundle: nil)
+        let storyboard = UIStoryboard(name: "StevenStoryboard", bundle: nil)
         
-        let initialViewController = storyboard.instantiateViewController(withIdentifier: "SplashScreen")
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "ChallengePage")
         self.window = UIWindow(frame: UIScreen.main.bounds)
 
         
