@@ -24,6 +24,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let storyboard = UIStoryboard(name: "StevenStoryboard", bundle: nil)
 
         let initialViewController = storyboard.instantiateViewController(withIdentifier: "ChallengePage")
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+
+        let storyboard = UIStoryboard(name: "SantosStoryboard", bundle: nil)
+
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "LoginSignupVC")
         
         //Ganti Background Navigation Bar pake Image
         let img:UIImage = UIImage(named: "navbarbg.png")!
