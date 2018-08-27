@@ -21,9 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
-        let storyboard = UIStoryboard(name: "KensenStoryboard", bundle: nil)
+        let storyboard = UIStoryboard(name: "SantosStoryboard", bundle: nil)
         
-        let initialViewController = storyboard.instantiateViewController(withIdentifier: "TabBarController")
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "LoginSignupVC")
         
         //Ganti Background Navigation Bar pake Image
         let img:UIImage = UIImage(named: "nav bar red.png")!
