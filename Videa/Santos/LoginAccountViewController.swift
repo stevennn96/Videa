@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseDatabase
 
 class LoginAccountViewController: UIViewController {
     @IBOutlet weak var usernameOutlet: UITextField!
@@ -47,10 +48,7 @@ class LoginAccountViewController: UIViewController {
         
         
     }
-    
-    
-    
-    
+
     @IBAction func registerSucces(_ sender: Any) {
         guard let username = usernameOutlet.text else {return}
         guard let email = emailOutlet.text else {return}
@@ -58,11 +56,20 @@ class LoginAccountViewController: UIViewController {
         Auth.auth().createUser(withEmail: email, password: password) {user, error in
             if error == nil && user != nil {
                 print("Membuat Akun")
+                
                 let changerequest = Auth.auth().currentUser?.createProfileChangeRequest()
                 changerequest?.displayName = username
-                changerequest?.commitChanges {erorr in
+                changerequest?.commitChanges {error in
                     if error == nil {
                         print("username Changed")
+                        
+                        self.saveUsernameAndPassword(username: username, email: email, password: password) { succes in
+                            if succes {
+                                print("Berhasil")
+                                
+                            }
+                            
+                        }
                     }else {
                         print("Error: \(error!.localizedDescription)")
                     }
@@ -78,7 +85,21 @@ class LoginAccountViewController: UIViewController {
     
     @IBAction func registerToLogin(_ sender: Any) {
         performSegue(withIdentifier: "RegisterSuccess", sender: nil)
-        //oik
+    }
+    
+    func saveUsernameAndPassword(username: String, email: String, password:String, completion : @escaping ((_ success:Bool)->())) {
+        guard let uid = Auth.auth().currentUser?.uid else {return}
+        let databaseRef = Database.database().reference().child("Data User/\(uid)")
+        
+        let userData = [
+            "username" : username,
+            "email" : email,
+            "password" : password,
+            "timestamp" : [".sv":"timestamp"]
+        ]as [String:Any]
+        databaseRef.setValue(userData) { error, ref in
+            completion(error == nil)
+        }
     }
     
     

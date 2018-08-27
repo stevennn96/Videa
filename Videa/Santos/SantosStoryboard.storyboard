@@ -259,11 +259,53 @@
                         <outlet property="imageView" destination="UFF-HU-qBT" id="w4k-jY-cxR"/>
                         <outlet property="tapTochangeImage" destination="6t0-m9-b5m" id="vmo-Ar-8US"/>
                         <outlet property="usernameOutlet" destination="NXX-Ei-kZa" id="8OY-6D-SJN"/>
+                        <segue destination="FhA-yr-QMB" kind="show" identifier="ProfileToChallenge" id="waV-VJ-kKB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FZp-T0-Dd1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1438" y="-964"/>
+        </scene>
+        <!--Profile Account View Controller-->
+        <scene sceneID="jxi-fy-gsi">
+            <objects>
+                <viewController storyboardIdentifier="ProfileID" id="FhA-yr-QMB" customClass="ProfileAccountViewController" customModule="Videa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rfa-Ix-zqU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pay-JM-qzF">
+                                <rect key="frame" x="67" y="44" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T29-PD-QjW">
+                                <rect key="frame" x="166" y="250" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BjZ-D9-KqY">
+                                <rect key="frame" x="145" y="549" width="85" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="logOutButton:" destination="FhA-yr-QMB" eventType="touchUpInside" id="fSF-4C-3uj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="a86-0d-R6f"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="pay-JM-qzF" id="EWH-Ia-GpO"/>
+                        <outlet property="usernameOutlet" destination="T29-PD-QjW" id="f2M-RM-VSG"/>
+                        <segue destination="Lg0-K0-jkg" kind="show" identifier="LogOutButton" id="rWc-p4-Cml"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uaj-Og-gI8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-663.20000000000005" y="-958.37438423645324"/>
         </scene>
     </scenes>
     <resources>

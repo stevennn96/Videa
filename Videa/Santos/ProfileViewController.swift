@@ -72,7 +72,7 @@ class ProfileViewController: UIViewController {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         let storageRef = Storage.storage().reference().child("user/\(uid)")
         
-        guard let imageData = UIImageJPEGRepresentation(image, 0.95) else { return }
+        guard let imageData = UIImageJPEGRepresentation(image, 0.99) else { return }
         
         let metaData = StorageMetadata()
         metaData.contentType = "image/jpg"
