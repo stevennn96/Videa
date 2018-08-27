@@ -31,7 +31,7 @@
         <scene sceneID="DIy-DX-JPL">
             <objects>
                 <tabBarController storyboardIdentifier="ChallengePage" id="61j-Td-Dg9" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="tab bar blue" id="vw4-Yr-IQa">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="nav bar red" id="vw4-Yr-IQa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -58,40 +58,40 @@
                                 <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJJ-7k-tSl">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="850"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1300"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJL-jC-6sL">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                                <rect key="frame" x="12" y="10" width="350" height="200"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button" image="Introduction"/>
                                                 <connections>
                                                     <action selector="introduction:" destination="RNl-gg-krk" eventType="touchUpInside" id="YXK-T7-oLl"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sn2-uA-a0o">
-                                                <rect key="frame" x="0.0" y="150" width="375" height="150"/>
+                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0T-4A-Kn6">
+                                                <rect key="frame" x="12" y="410" width="350" height="200"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button" image="Music lock"/>
+                                                <state key="normal" image="Comedy lock"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0T-4A-Kn6">
-                                                <rect key="frame" x="0.0" y="300" width="375" height="150"/>
+                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUO-4k-UIa">
+                                                <rect key="frame" x="12" y="610" width="350" height="200"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button" image="Comedy lock"/>
+                                                <state key="normal" image="Food lock"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUO-4k-UIa">
-                                                <rect key="frame" x="0.0" y="450" width="375" height="150"/>
+                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sko-O5-Qwa">
+                                                <rect key="frame" x="12" y="810" width="350" height="200"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button" image="Food lock"/>
+                                                <state key="normal" image="How To lock"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sko-O5-Qwa">
-                                                <rect key="frame" x="0.0" y="600" width="375" height="150"/>
+                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sn2-uA-a0o">
+                                                <rect key="frame" x="12" y="210" width="350" height="200"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button" image="How To lock"/>
+                                                <state key="normal" image="Music lock"/>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.84313725490196079" green="0.17254901960784313" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" priority="850" constant="850" id="bb9-nC-cD9"/>
+                                            <constraint firstAttribute="height" constant="1300" id="bb9-nC-cD9"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -120,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZr-Cz-M6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2142" y="349"/>
+            <point key="canvasLocation" x="-2143" y="349"/>
         </scene>
         <!--Music Level Content View Controller-->
         <scene sceneID="okc-hN-y2T">
@@ -131,12 +131,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bi0-K0-V7B">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="udJ-sl-BxC">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1300"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hzo-LP-EZB">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="music title" translatesAutoresizingMaskIntoConstraints="NO" id="hzo-LP-EZB">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -212,7 +212,6 @@
                         <outlet property="description1Label" destination="mrh-Xy-aJq" id="WkE-nH-bGY"/>
                         <outlet property="description2Label" destination="B8m-vC-SO4" id="mhH-l7-lIw"/>
                         <outlet property="embedYoutube" destination="rLZ-5w-s6z" id="D9I-FX-cD2"/>
-                        <outlet property="titleImage" destination="hzo-LP-EZB" id="gdo-tT-3tx"/>
                         <outlet property="titleLabel" destination="xvD-Sy-Qbi" id="qK2-bP-1Fd"/>
                         <segue destination="E8g-uU-jUL" kind="show" identifier="goToHome" id="3NI-G8-ilx"/>
                     </connections>
@@ -263,7 +262,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PVz-qX-fcX">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1100"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nvT-Pd-WZB">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="introduction-1" translatesAutoresizingMaskIntoConstraints="NO" id="nvT-Pd-WZB">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -348,7 +347,7 @@
             </objects>
             <point key="canvasLocation" x="-1313" y="349"/>
         </scene>
-        <!--Home View Controller-->
+        <!--My Challenges-->
         <scene sceneID="EKe-rD-kxD">
             <objects>
                 <viewController id="E8g-uU-jUL" customClass="HomeViewController" customModule="Videa" customModuleProvider="target" sceneMemberID="viewController">
@@ -356,38 +355,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background Register" translatesAutoresizingMaskIntoConstraints="NO" id="3QZ-fl-d7S">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Videa logo white" translatesAutoresizingMaskIntoConstraints="NO" id="ymO-I3-h5X">
-                                <rect key="frame" x="87" y="130" width="200" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Challenges" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yi2-Fx-3u8">
-                                <rect key="frame" x="16" y="284" width="113" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6A3-QN-elh">
-                                <rect key="frame" x="164" y="645" width="47" height="49"/>
+                                <rect key="frame" x="165" y="648" width="45" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="add"/>
+                                <state key="normal" image="add red"/>
                                 <connections>
                                     <action selector="addChallenge:" destination="E8g-uU-jUL" eventType="touchUpInside" id="CG0-q6-hy4"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="3QZ-fl-d7S" firstAttribute="bottom" secondItem="ebs-oP-WbN" secondAttribute="bottom" id="3fX-xL-4BX"/>
-                            <constraint firstItem="3QZ-fl-d7S" firstAttribute="leading" secondItem="ebs-oP-WbN" secondAttribute="leading" id="NDf-VD-7Rx"/>
-                            <constraint firstItem="3QZ-fl-d7S" firstAttribute="top" secondItem="ebs-oP-WbN" secondAttribute="top" id="smD-vX-TeQ"/>
-                            <constraint firstItem="3QZ-fl-d7S" firstAttribute="trailing" secondItem="ebs-oP-WbN" secondAttribute="trailing" id="tpt-bl-KtX"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ebs-oP-WbN"/>
                     </view>
+                    <navigationItem key="navigationItem" title="My Challenges" id="gGt-VE-uBs"/>
                     <connections>
                         <segue destination="k6G-cH-7QP" kind="show" identifier="goToChallenges" id="5qA-Sk-Nrd"/>
                     </connections>
@@ -405,13 +385,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OPq-6g-ibE">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jj1-QS-XDR">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1300"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8g-eV-lMb">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                                <rect key="frame" x="12" y="10" width="350" height="200"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button" image="Introduction"/>
                                                 <connections>
@@ -419,7 +399,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJV-3e-1xw">
-                                                <rect key="frame" x="0.0" y="150" width="375" height="150"/>
+                                                <rect key="frame" x="12" y="210" width="350" height="200"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button" image="Music"/>
                                                 <connections>
@@ -427,7 +407,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaT-NL-Iki">
-                                                <rect key="frame" x="0.0" y="300" width="375" height="150"/>
+                                                <rect key="frame" x="12" y="410" width="350" height="200"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button" image="Comedy"/>
                                                 <connections>
@@ -435,7 +415,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIC-SH-oCL">
-                                                <rect key="frame" x="0.0" y="450" width="375" height="150"/>
+                                                <rect key="frame" x="12" y="610" width="350" height="200"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button" image="Food"/>
                                                 <connections>
@@ -443,7 +423,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLq-wh-se3">
-                                                <rect key="frame" x="0.0" y="600" width="375" height="150"/>
+                                                <rect key="frame" x="12" y="810" width="350" height="200"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button" image="How To"/>
                                                 <connections>
@@ -451,9 +431,9 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.84313725490000002" green="0.17254901959999999" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" priority="900" constant="900" id="jLB-i1-mgk"/>
+                                            <constraint firstAttribute="height" constant="1300" id="jLB-i1-mgk"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -485,7 +465,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W3u-jx-Ivu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1314" y="1122"/>
+            <point key="canvasLocation" x="-433" y="956"/>
         </scene>
         <!--Music Level List View Controller-->
         <scene sceneID="QBY-zL-fjb">
@@ -496,12 +476,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oje-B6-kOk">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y9u-Bn-ZlB">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sfw-OO-T3s">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Photo Tille Music" translatesAutoresizingMaskIntoConstraints="NO" id="Sfw-OO-T3s">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -771,12 +751,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btR-qk-38m">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Umz-UG-kVp">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FdB-32-apx">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Photo Tille Comedy" translatesAutoresizingMaskIntoConstraints="NO" id="FdB-32-apx">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1023,12 +1003,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kf9-i3-s9Y">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pWG-n9-xyn">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1300"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iG0-w7-8qu">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Photo Tille Comedy" translatesAutoresizingMaskIntoConstraints="NO" id="iG0-w7-8qu">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1104,7 +1084,6 @@
                         <outlet property="description1Label" destination="gqv-o3-j56" id="Iru-V6-0vU"/>
                         <outlet property="description2Label" destination="QLa-hx-4Vj" id="sOV-Lp-mBy"/>
                         <outlet property="embedYoutube" destination="idr-14-oEo" id="08M-nM-PbL"/>
-                        <outlet property="titleImage" destination="iG0-w7-8qu" id="zP4-rK-KpT"/>
                         <outlet property="titleLabel" destination="Vpe-Bf-5de" id="7YO-sS-Uos"/>
                         <segue destination="E8g-uU-jUL" kind="show" identifier="goToHome" id="bsZ-Ug-vGo"/>
                     </connections>
@@ -1122,12 +1101,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1r-ZU-gNg">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3yq-Na-JKe">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GrP-wQ-zCe">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Photo Tille Food" translatesAutoresizingMaskIntoConstraints="NO" id="GrP-wQ-zCe">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1374,12 +1353,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aB1-JW-yYy">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DkE-Qv-ac6">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1300"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6cr-1j-aa7">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Photo Tille Food" translatesAutoresizingMaskIntoConstraints="NO" id="6cr-1j-aa7">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1455,7 +1434,6 @@
                         <outlet property="description1Label" destination="aYc-eT-3iN" id="27P-Dx-2j0"/>
                         <outlet property="description2Label" destination="ush-H1-vOV" id="8Fb-KI-d75"/>
                         <outlet property="embedYoutube" destination="g5m-Fc-9EB" id="T5l-91-hE4"/>
-                        <outlet property="titleImage" destination="6cr-1j-aa7" id="ngk-MN-0f2"/>
                         <outlet property="titleLabel" destination="u4k-to-wPe" id="N8N-w2-fqQ"/>
                         <segue destination="E8g-uU-jUL" kind="show" identifier="goToHome" id="7YG-UH-Dcw"/>
                     </connections>
@@ -1473,12 +1451,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hmK-e2-oN9">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EOd-KR-4u3">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1100"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j3C-Sc-cat">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Photo Tille How To" translatesAutoresizingMaskIntoConstraints="NO" id="j3C-Sc-cat">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1751,12 +1729,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Auy-Ns-iny">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KZo-8s-ODY">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1300"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nby-CA-5Rp">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Photo Tille How To" translatesAutoresizingMaskIntoConstraints="NO" id="nby-CA-5Rp">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1832,7 +1810,6 @@
                         <outlet property="description1Label" destination="OQf-su-x05" id="7tO-FH-KoI"/>
                         <outlet property="description2Label" destination="Ydn-wa-yYg" id="pdM-Or-Ouv"/>
                         <outlet property="embedYoutube" destination="SYG-1K-Ztl" id="4rx-kE-FPG"/>
-                        <outlet property="titleImage" destination="nby-CA-5Rp" id="YZh-7k-bkT"/>
                         <outlet property="titleLabel" destination="tgi-Hv-w5W" id="3DM-51-Bby"/>
                         <segue destination="E8g-uU-jUL" kind="show" identifier="goToHome" id="aRk-qW-jKQ"/>
                     </connections>
@@ -1843,27 +1820,30 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Background Register" width="1125" height="2436"/>
         <image name="ChallengeBackground" width="376" height="80"/>
-        <image name="Comedy" width="1125" height="450"/>
-        <image name="Comedy lock" width="1125" height="450"/>
-        <image name="Food" width="1125" height="450"/>
-        <image name="Food lock" width="1125" height="450"/>
-        <image name="How To" width="867" height="291"/>
-        <image name="How To lock" width="1125" height="450"/>
-        <image name="Introduction" width="1124" height="450"/>
-        <image name="Music" width="1125" height="450"/>
-        <image name="Music lock" width="1125" height="450"/>
-        <image name="Videa logo white" width="508" height="209"/>
-        <image name="add" width="47" height="49"/>
+        <image name="Comedy" width="540" height="291"/>
+        <image name="Comedy lock" width="540" height="291"/>
+        <image name="Food" width="540" height="291"/>
+        <image name="Food lock" width="540" height="291"/>
+        <image name="How To" width="540" height="291"/>
+        <image name="How To lock" width="540" height="291"/>
+        <image name="Introduction" width="540" height="291"/>
+        <image name="Music" width="540" height="291"/>
+        <image name="Music lock" width="540" height="291"/>
+        <image name="Photo Tille Comedy" width="562" height="305"/>
+        <image name="Photo Tille Food" width="562" height="305"/>
+        <image name="Photo Tille How To" width="562" height="305"/>
+        <image name="Photo Tille Music" width="562" height="305"/>
+        <image name="add red" width="45" height="44"/>
         <image name="home black" width="20" height="22"/>
+        <image name="introduction-1" width="375" height="203"/>
         <image name="letsdoit" width="128" height="40"/>
+        <image name="music title" width="375" height="253"/>
+        <image name="nav bar red" width="562" height="132"/>
         <image name="profile black" width="23" height="23"/>
         <image name="statistic black" width="24" height="22"/>
-        <image name="tab bar blue" width="562" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JSF-Dp-fXV"/>
-        <segue reference="aRk-qW-jKQ"/>
+        <segue reference="sQP-xU-dwg"/>
     </inferredMetricsTieBreakers>
 </document>
