@@ -10,6 +10,7 @@ import UIKit
 
 class StatisticsDataViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var accountView: UIView!
     @IBOutlet weak var statisticsDataTableView: UITableView!
     @IBOutlet weak var channelTitleLabel: UILabel!
     @IBOutlet weak var totalSubscribersLabel: UILabel!
@@ -22,6 +23,11 @@ class StatisticsDataViewController: UIViewController, UITableViewDataSource, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        accountView.layer.shadowColor = UIColor.black.cgColor
+        accountView.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+        accountView.layer.shadowOpacity = 0.6
+        accountView.layer.shadowRadius = 0.8
         
         print("CH: \(channelTitle)")
         print("CH: \(totalSubscribers)")
