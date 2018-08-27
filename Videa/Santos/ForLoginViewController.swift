@@ -20,21 +20,35 @@ class ForLoginViewController: UIViewController {
     @IBOutlet weak var LoginVisualEffectBlur: UIVisualEffectView!
     @IBOutlet weak var LoginbakcgroundImageView: UIImageView!
     
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var backgroundBlurLogin: UIVisualEffectView!
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        loginButton.alpha = 0
         LoginbakcgroundImageView.alpha = 1
-        LoginVisualEffectBlur.alpha = 1
+        LoginVisualEffectBlur.alpha = 0
+        backgroundBlurLogin.alpha = 0
     }
     
     override func viewDidAppear(_ animated: Bool) {
         
+        UIView.animate(withDuration: 2.0) {
+            self.loginButton.alpha = 1.0
+            self.loginButton.center.y -= 30
+        }
         UIView.animate(withDuration: 0) {
             self.LoginbakcgroundImageView.alpha = 1.0
         }
         
         UIView.animate(withDuration: 0) {
-            self.LoginVisualEffectBlur.alpha = 1
+            self.LoginVisualEffectBlur.alpha = 0
+        }
+        
+        UIView.animate(withDuration: 1) {
+            self.backgroundBlurLogin.alpha = 1
         }
         
     }
