@@ -19,45 +19,59 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         let db = Firestore.firestore()
+<<<<<<< HEAD
         
         // Kalau mau pke storyboard sndiri comand punya gw
-        let authListener = Auth.auth().addStateDidChangeListener {auth, user in
-            let storyboard = UIStoryboard(name: "SantosStoryboard", bundle: nil)
-            
-            if user != nil {
-                let controller = storyboard.instantiateViewController(withIdentifier: "ProfileID")
-                self.window?.rootViewController = controller
-                self.window?.makeKeyAndVisible()
-                
-            }else {
-                //Menu Screen
-                let controller = storyboard.instantiateViewController(withIdentifier: "LoginSignupVC")
-                self.window?.rootViewController = controller
-                self.window?.makeKeyAndVisible()
-            }
-        }
+=======
+        //punya santos
+//        // Kalau mau pke storyboard sndiri comment punya gw
+>>>>>>> 5be85c4256aa0b2cce5a7b1d4d52846d7d54806e
+//        let authListener = Auth.auth().addStateDidChangeListener {auth, user in
+//            let storyboard = UIStoryboard(name: "SantosStoryboard", bundle: nil)
+//
+//            if user != nil {
+//                let controller = storyboard.instantiateViewController(withIdentifier: "ProfileID")
+//                self.window?.rootViewController = controller
+//                self.window?.makeKeyAndVisible()
+//
+//            }else {
+//                //Menu Screen
+//                let controller = storyboard.instantiateViewController(withIdentifier: "LoginSignupVC")
+//                self.window?.rootViewController = controller
+//                self.window?.makeKeyAndVisible()
+//            }
+//        }
+<<<<<<< HEAD
   // Sampai sini
         
         
         // Override point for customization after application launch.
-<<<<<<< HEAD
-//        self.window = UIWindow(frame: UIScreen.main.bounds)
-//        let storyboard = UIStoryboard(name: "SantosStoryboard", bundle: nil)
-//        let initialViewController = storyboard.instantiateViewController(withIdentifier: "LoginSignupVC")
 //        self.window = UIWindow(frame: UIScreen.main.bounds)
 //
+=======
+//  // Sampai sini
+        
+        
+        // Override point for customization after application launch.
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+
+        //punya kensen
+>>>>>>> 5be85c4256aa0b2cce5a7b1d4d52846d7d54806e
 //        let storyboard = UIStoryboard(name: "KensenStoryboard", bundle: nil)
 //
-//        let initialViewController = storyboard.instantiateViewController(withIdentifier: "StatisticsVC")
+//        let initialViewController = storyboard.instantiateViewController(withIdentifier: "onboardingVC")
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+<<<<<<< HEAD
 =======
+        
+        
+        //punya steven
+        let storyboard = UIStoryboard(name: "StevenStoryboard", bundle: nil)
+        
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "ChallengePage")
         self.window = UIWindow(frame: UIScreen.main.bounds)
+>>>>>>> 5be85c4256aa0b2cce5a7b1d4d52846d7d54806e
 
-        let storyboard = UIStoryboard(name: "KensenStoryboard", bundle: nil)
-
-        let initialViewController = storyboard.instantiateViewController(withIdentifier: "onboardingVC")
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-
->>>>>>> 078e0449de0a3463effd3686fd5ae798cb0627af
         
         //Ganti Background Navigation Bar pake Image
         let img:UIImage = UIImage(named: "navbarbg.png")!
@@ -68,12 +82,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 <<<<<<< HEAD
 //        self.window?.rootViewController = initialViewController
 //        self.window?.makeKeyAndVisible()
-   return true
 =======
+        
         self.window?.rootViewController = initialViewController
         self.window?.makeKeyAndVisible()
+>>>>>>> 5be85c4256aa0b2cce5a7b1d4d52846d7d54806e
         return true
->>>>>>> 078e0449de0a3463effd3686fd5ae798cb0627af
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

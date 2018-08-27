@@ -46,7 +46,7 @@ class HowToLevelContentViewController: UIViewController {
             titleLabel.text = "How to be a Selebgram"
             description1Label.text = "Kamu harus membuat video tentang apa yang harus dilakukan seseorang untuk menjadi seorang selebgram. Selebgram adalah istilah untuk mereka pengguna akun Instagram yang terkenal di situs jejaring sosial tersebut. Istilah selebgram berasal dari kata selebritis dan Instagram yang bisa berarti selebritis yang cuma ngetop di Instagram."
             description2Label.text = ""
-            getVideo(videoCode: "")
+            getVideo(videoCode: "Lvqc1BQW55g")
         } else if tag == 4{
             titleLabel.text = "How to make you favorite food!"
             description1Label.text = "Kamu buat video tentang bagaimana cara membuat makanan kesukaan kamu! Kamu bisa memulai video nya dengan belanja bahan nya ataupun langsung memulai membuat makanan kesukaan kamu. Dan kamu bisa membuat video nya menerupai vlog atau tutorial, jangan lupa kualitas video harus bagus ya"
