@@ -64,7 +64,7 @@ class LoginAccountViewController: UIViewController {
                 print("Membuat Akun")
                 let changerequest = Auth.auth().currentUser?.createProfileChangeRequest()
                 changerequest?.displayName = username
-                changerequest?.commitChanges {erorr in
+                changerequest?.commitChanges {error in
                     if error == nil {
                         print("username Changed")
                     }else {
