@@ -25,16 +25,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let initialViewController = storyboard.instantiateViewController(withIdentifier: "ChallengePage")
         self.window = UIWindow(frame: UIScreen.main.bounds)
-
-        let storyboard = UIStoryboard(name: "SantosStoryboard", bundle: nil)
-
-        let initialViewController = storyboard.instantiateViewController(withIdentifier: "LoginSignupVC")
         
         //Ganti Background Navigation Bar pake Image
         let img:UIImage = UIImage(named: "navbarbg.png")!
         UINavigationBar.appearance().setBackgroundImage(img, for: .default)
         UITabBar.appearance().autoresizesSubviews = false
         UITabBar.appearance().clipsToBounds = true
+        
         
         self.window?.rootViewController = initialViewController
         self.window?.makeKeyAndVisible()
