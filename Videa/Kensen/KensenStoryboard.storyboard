@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qk5-cr-u9g">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9hi-8Z-vjc">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -81,6 +81,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fvH-18-7Hj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1406" y="-1091"/>
+        </scene>
+        <!--Onboarding View Controller-->
+        <scene sceneID="KBh-g9-McT">
+            <objects>
+                <viewController storyboardIdentifier="onboardingVC" id="9hi-8Z-vjc" customClass="OnboardingViewController" customModule="Videa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bk1-Yg-aRA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="onboarding 1" translatesAutoresizingMaskIntoConstraints="NO" id="ajF-fZ-V3I">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uk5-Fz-ld9">
+                                <rect key="frame" x="147" y="704" width="81" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99696188679999997" green="0.78658274640000003" blue="0.34051252580000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" red="0.99727186322570893" green="1" blue="0.98500631870028699" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ZqU-L4-78u"/>
+                    </view>
+                    <connections>
+                        <outlet property="doneButton" destination="uk5-Fz-ld9" id="iOB-yJ-orn"/>
+                        <outlet property="onboardingImageView" destination="ajF-fZ-V3I" id="tWa-6O-crn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="exK-NC-emy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2424.8000000000002" y="-1094.3349753694581"/>
         </scene>
         <!--Item-->
         <scene sceneID="2On-z6-AXZ">
@@ -218,6 +252,7 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="onboarding 1" width="375" height="812"/>
         <image name="user" width="1600" height="1600"/>
     </resources>
 </document>
