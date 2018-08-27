@@ -21,14 +21,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         self.window = UIWindow(frame: UIScreen.main.bounds)
 
+<<<<<<< HEAD
         let storyboard = UIStoryboard(name: "StevenStoryboard", bundle: nil)
 
         let initialViewController = storyboard.instantiateViewController(withIdentifier: "ChallengePage")
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-
+=======
         let storyboard = UIStoryboard(name: "SantosStoryboard", bundle: nil)
 
         let initialViewController = storyboard.instantiateViewController(withIdentifier: "LoginSignupVC")
+>>>>>>> 391244ee55e1b8ffe0fd71dc1511d4566168cace
         
         //Ganti Background Navigation Bar pake Image
         let img:UIImage = UIImage(named: "navbarbg.png")!
