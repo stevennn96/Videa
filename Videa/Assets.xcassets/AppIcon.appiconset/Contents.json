@@ -33,7 +33,7 @@
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "appicon120.png",
+      "filename" : "finalAppIcon120.png",
       "scale" : "2x"
     },
     {
@@ -87,9 +87,8 @@
       "scale" : "2x"
     },
     {
-      "size" : "1024x1024",
       "idiom" : "ios-marketing",
-      "filename" : "appicon.png",
+      "size" : "1024x1024",
       "scale" : "1x"
     }
   ],

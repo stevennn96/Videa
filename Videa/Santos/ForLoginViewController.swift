@@ -17,7 +17,7 @@ class ForLoginViewController: UIViewController {
     @IBOutlet weak var emailOutlet: UITextField!
     @IBOutlet weak var passwordOutlet: UITextField!
     @IBOutlet weak var errorMessage: UILabel!
-    @IBOutlet weak var LoginVisualEffectBlur: UIVisualEffectView!
+
     @IBOutlet weak var LoginbakcgroundImageView: UIImageView!
     
     @IBOutlet weak var loginButton: UIButton!
