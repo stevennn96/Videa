@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,13 +19,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         let db = Firestore.firestore()
+        //punya santos
+//        // Kalau mau pke storyboard sndiri comment punya gw
+//        let authListener = Auth.auth().addStateDidChangeListener {auth, user in
+//            let storyboard = UIStoryboard(name: "SantosStoryboard", bundle: nil)
+//
+//            if user != nil {
+//                let controller = storyboard.instantiateViewController(withIdentifier: "ProfileID")
+//                self.window?.rootViewController = controller
+//                self.window?.makeKeyAndVisible()
+//
+//            }else {
+//                //Menu Screen
+//                let controller = storyboard.instantiateViewController(withIdentifier: "LoginSignupVC")
+//                self.window?.rootViewController = controller
+//                self.window?.makeKeyAndVisible()
+//            }
+//        }
+//  // Sampai sini
+        
+        
         // Override point for customization after application launch.
         self.window = UIWindow(frame: UIScreen.main.bounds)
 
+        //punya kensen
+//        let storyboard = UIStoryboard(name: "KensenStoryboard", bundle: nil)
+//
+//        let initialViewController = storyboard.instantiateViewController(withIdentifier: "onboardingVC")
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        
+        //punya steven
         let storyboard = UIStoryboard(name: "StevenStoryboard", bundle: nil)
-
+        
         let initialViewController = storyboard.instantiateViewController(withIdentifier: "ChallengePage")
         self.window = UIWindow(frame: UIScreen.main.bounds)
+
         
         //Ganti Background Navigation Bar pake Image
         let img:UIImage = UIImage(named: "navbarbg.png")!
