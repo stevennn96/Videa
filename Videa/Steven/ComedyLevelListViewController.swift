@@ -1,18 +1,40 @@
 //
-//  MusicViewController.swift
-//  test
+//  ComedyLevelListViewController.swift
+//  Videa
 //
-//  Created by Sia Feri Santos on 22/08/18.
-//  Copyright © 2018 Sia Feri Santos. All rights reserved.
+//  Created by Steven on 26/08/18.
+//  Copyright © 2018 Steven. All rights reserved.
 //
 
 import UIKit
 
-class MusicViewController: UIViewController {
+class ComedyLevelListViewController: UIViewController {
 
-    @IBAction func level1(_ sender: Any) {
-        performSegue(withIdentifier: "goToLevel1", sender: self)
+    @IBOutlet weak var titleImage: UIImageView!
+    
+    
+    var x: Int = 0
+    
+    @IBAction func chooseChallenge(_ sender: UIButton) {
+        x = sender.tag
+        performSegue(withIdentifier: "goToChallenge", sender: self)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? ComedyLevelContentViewController{
+            destination.tag = x
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

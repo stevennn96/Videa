@@ -8,19 +8,7 @@
 
 import UIKit
 
-class StatisticsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return statisticsData.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let data = statisticsData[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "StatisticsDataCell") as! StatisticsDataTableViewCell
-        
-        cell.setStatisticsData(statisticsData: data)
-        return cell
-    }
-    
+class StatisticsViewController: UIViewController {
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var connectUIButton: UIButton!
@@ -30,13 +18,16 @@ class StatisticsViewController: UIViewController, UITableViewDelegate, UITableVi
     var channelTitle: String = ""
     var totalSubscribers: String = ""
     var totalViews: String = ""
-    var statisticsData: [StatisticsData] = []
     
     var getChannelTask: URLSessionDataTask?
+    var urlData: Data?
+    var reloadCounter: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        connectUIButton.layer.cornerRadius = 5
+        reloadCounter = 0
         apiKey = "AIzaSyA614LZH2YQaHu3_hyXnEkOq2d9p0Bd0x8"
     }
     
@@ -50,31 +41,59 @@ class StatisticsViewController: UIViewController, UITableViewDelegate, UITableVi
         getChannelTask = URLSession.shared.dataTask(with: channelUrl!) { (data, response, error) in
             do {
                 channelDetail = try JSONDecoder().decode(ChannelDetail.self, from: data!)
+                self.urlData = data
             } catch let error as NSError {
                 print(error)
             }
             
-            self.channelTitle = channelDetail!.items[0].snippet.title
-            self.totalSubscribers = channelDetail!.items[0].statistics.subscriberCount
-            self.totalViews = channelDetail!.items[0].statistics.viewCount
+            if channelDetail != nil {
+                print(channelDetail!.items.count)
+                
+                if channelDetail!.items.count != 0 {
+                    self.channelTitle = channelDetail!.items[0].snippet.title
+                    self.totalSubscribers = channelDetail!.items[0].statistics.subscriberCount
+                    self.totalViews = channelDetail!.items[0].statistics.viewCount
+                }
+                else {
+                    print("Channel detail empty")
+                }
+            }
+            else {
+                print("No channel detail found")
+            }
         }
         
         getChannelTask?.resume()
         
         if self.channelTitle == "" {
             DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
-                self.connectUIButton.sendActions(for: .touchUpInside)
+                self.reloadCounter += 1
+                if(self.reloadCounter > 10){
+                    print("Reloaded 10 times but no result")
+                    self.reloadCounter = 0
+                }
+                else{
+                    self.connectUIButton.sendActions(for: .touchUpInside)
+                }
             }
         }
         
-        print(apiKey)
-        print(username)
-        print(self.channelTitle)
-        print(self.totalSubscribers)
-        print(self.totalViews)
+//        print(apiKey)
+//        print(username)
+//        print(self.channelTitle)
+//        print(self.totalSubscribers)
+//        print(self.totalViews)
         
         if self.channelTitle != "" {
+            print(apiKey)
+            print(username)
+            print(self.channelTitle)
+            print(self.totalSubscribers)
+            print(self.totalViews)
             performSegue(withIdentifier: "StatisticsToStatisticsData", sender: nil)
+        }
+        else {
+            print("Cannot pass")
         }
     }
     
@@ -82,17 +101,7 @@ class StatisticsViewController: UIViewController, UITableViewDelegate, UITableVi
         if let destination = segue.destination as? StatisticsDataViewController {
             destination.channelTitle = self.channelTitle
             destination.totalSubscribers = self.totalSubscribers
-            destination.totalViews = self.totalViews
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

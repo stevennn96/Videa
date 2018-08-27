@@ -24,13 +24,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let storyboard = UIStoryboard(name: "SantosStoryboard", bundle: nil)
         
         let initialViewController = storyboard.instantiateViewController(withIdentifier: "LoginSignupVC")
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+//
+//        let storyboard = UIStoryboard(name: "KensenStoryboard", bundle: nil)
+//
+//        let initialViewController = storyboard.instantiateViewController(withIdentifier: "StatisticsVC")
         
         //Ganti Background Navigation Bar pake Image
-        let img:UIImage = UIImage(named: "nav bar red.png")!
+        let img:UIImage = UIImage(named: "navbarbg.png")!
         UINavigationBar.appearance().setBackgroundImage(img, for: .default)
+        UITabBar.appearance().autoresizesSubviews = false
+        UITabBar.appearance().clipsToBounds = true
         
-        self.window?.rootViewController = initialViewController
-        self.window?.makeKeyAndVisible()
+//        self.window?.rootViewController = initialViewController
+//        self.window?.makeKeyAndVisible()
         return true
     }
 

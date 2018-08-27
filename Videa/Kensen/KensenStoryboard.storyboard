@@ -112,11 +112,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StatisticsDataCell" id="wGt-kc-Exr" customClass="StatisticsDataTableViewCell" customModule="Videa" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StatisticsDataCell" rowHeight="79" id="wGt-kc-Exr" customClass="StatisticsDataTableViewCell" customModule="Videa" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="79"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wGt-kc-Exr" id="qxz-JX-4VW">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="78.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20/08/2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIG-Vk-6U4">
@@ -149,6 +149,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="njZ-Z3-ikz" id="Yv5-WS-gzP"/>
+                                    <outlet property="delegate" destination="njZ-Z3-ikz" id="pq6-Dn-J5B"/>
+                                </connections>
                             </tableView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="Qfh-HT-6bs">
                                 <rect key="frame" x="45" y="132" width="60" height="61"/>
@@ -202,6 +206,7 @@
                     </view>
                     <connections>
                         <outlet property="channelTitleLabel" destination="C4O-vy-oRg" id="O8L-xP-5vs"/>
+                        <outlet property="statisticsDataTableView" destination="mHh-Zd-xPg" id="3HH-Sx-Fk8"/>
                         <outlet property="totalSubscribersLabel" destination="A8W-8e-cu2" id="nx5-HC-aUm"/>
                         <outlet property="totalViewsLabel" destination="crr-ko-Mas" id="x8m-hK-Nyc"/>
                     </connections>

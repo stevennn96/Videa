@@ -1,41 +1,38 @@
 //
-//  IntroductionViewController.swift
-//  test
+//  FoodLevelListViewController.swift
+//  Videa
 //
-//  Created by Sia Feri Santos on 22/08/18.
-//  Copyright © 2018 Sia Feri Santos. All rights reserved.
+//  Created by Steven on 26/08/18.
+//  Copyright © 2018 Steven. All rights reserved.
 //
 
 import UIKit
 
-class IntroductionViewController: UIViewController {
+class FoodLevelListViewController: UIViewController {
 
-    @IBAction func submitButton(_ sender: Any) {
-        performSegue(withIdentifier: "goToHome", sender: self)
+    @IBOutlet weak var titleImage: UIImageView!
+    
+    
+    var x: Int = 0
+    
+    @IBAction func chooseChallenge(_ sender: UIButton) {
+        x = sender.tag
+        performSegue(withIdentifier: "goToChallenge", sender: self)
     }
     
-    @IBOutlet weak var embedYoutube: UIWebView!
-    
-    
-    func getVideo(videoCode:String){
-        let url = URL(string: "https://www.youtube.com/embed/\(videoCode)")
-        embedYoutube.loadRequest(URLRequest(url: url!))
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? FoodLevelContentViewController{
+            destination.tag = x
+        }
     }
-    
-    
-    
-    
-    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getVideo(videoCode: "K1u0QvZD4v0")
+
         // Do any additional setup after loading the view.
     }
 
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
