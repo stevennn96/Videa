@@ -41,7 +41,6 @@ class IntroductionViewController: UIViewController {
         super.viewDidLoad()
         getVideo(videoCode: "K1u0QvZD4v0")
         
-        titleImage.image = UIImage(named: "")
         titleLabel.text = "Introduction"
         descriptionLabel1.text = "Buat video yang mengenalkan channel kamu itu apa. kamu bisa jelaskan konten yang akan kamu upload di channel kamu. Menjadi seorang youtuber sukses itu perlu usaha keras dan strategi pintar agar Anda bisa mencapai kesuksesan."
         descriptionLabel2.text = "Berikut beberapa tips yang bisa Anda lakukan untuk bisa menjadi youtuber yang sukses :\n1. Konsisten hanya pada Satu Kategori\n2. Menentukan siapa audience Anda\n3. Membuat video yang berkualitas dan kreatif\n4. Optimasi judul dan gambar thumbnail\n5. Memiliki Ciri Khas\n6. Berkomunikasi dengan Subscriber"
