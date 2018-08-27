@@ -114,7 +114,7 @@
                         <viewLayoutGuide key="safeArea" id="lq3-cW-ZPm"/>
                     </view>
                     <navigationItem key="navigationItem" title="Challenges" id="r5g-3y-t8X">
-                        <barButtonItem key="backBarButtonItem" title=" " id="aeX-Oq-UUd"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="2NV-DU-NuO"/>
                     </navigationItem>
                     <connections>
                         <segue destination="8lj-Wm-G1C" kind="show" identifier="goToIntroduction" id="gYy-9T-Dqu"/>
