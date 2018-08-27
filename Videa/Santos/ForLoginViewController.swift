@@ -21,16 +21,16 @@ class ForLoginViewController: UIViewController {
     @IBOutlet weak var LoginbakcgroundImageView: UIImageView!
     
     @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var backgroundBlurLogin: UIVisualEffectView!
-    
+
+    @IBOutlet weak var backgroundBlurLogin: UIImageView!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         loginButton.alpha = 0
         LoginbakcgroundImageView.alpha = 1
-        LoginVisualEffectBlur.alpha = 0
-        backgroundBlurLogin.alpha = 0
+
+        backgroundBlurLogin.alpha = 1
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -43,9 +43,7 @@ class ForLoginViewController: UIViewController {
             self.LoginbakcgroundImageView.alpha = 1.0
         }
         
-        UIView.animate(withDuration: 0) {
-            self.LoginVisualEffectBlur.alpha = 0
-        }
+
         
         UIView.animate(withDuration: 1) {
             self.backgroundBlurLogin.alpha = 1
@@ -65,7 +63,7 @@ class ForLoginViewController: UIViewController {
         Auth.auth().signIn(withEmail: email, password: pass) {user, error in
             if error == nil && user != nil{
              print("Login Berhasil")
-            self.performSegue(withIdentifier: "LoginToProfile", sender: self)
+            self.performSegue(withIdentifier: "LoginSuccess", sender: self)
             }else {
                 self.errorMessage.text = ("error login \(error!.localizedDescription)")
             }

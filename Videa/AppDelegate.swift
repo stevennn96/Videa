@@ -38,6 +38,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        }
 //  // Sampai sini
         
+        // Kalau mau pke storyboard sndiri comand punya gw
+//        let authListener = Auth.auth().addStateDidChangeListener {auth, user in
+//            let storyboard = UIStoryboard(name: "SantosStoryboard", bundle: nil)
+//
+//            if user != nil {
+//                let controller = storyboard.instantiateViewController(withIdentifier: "ProfileID")
+//                self.window?.rootViewController = controller
+//                self.window?.makeKeyAndVisible()
+//
+//            }else {
+//                //Menu Screen
+//                let controller = storyboard.instantiateViewController(withIdentifier: "LoginSignupVC")
+//                self.window?.rootViewController = controller
+//                self.window?.makeKeyAndVisible()
+//            }
+//        }
+  // Sampai sini
+        
         
         // Override point for customization after application launch.
         self.window = UIWindow(frame: UIScreen.main.bounds)
