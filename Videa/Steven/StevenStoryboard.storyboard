@@ -31,7 +31,7 @@
         <scene sceneID="DIy-DX-JPL">
             <objects>
                 <tabBarController storyboardIdentifier="ChallengePage" id="61j-Td-Dg9" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="nav bar red" id="vw4-Yr-IQa">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="tab bar red bawah" id="vw4-Yr-IQa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1839,9 +1839,9 @@
         <image name="introduction-1" width="375" height="203"/>
         <image name="letsdoit" width="128" height="40"/>
         <image name="music title" width="375" height="253"/>
-        <image name="nav bar red" width="562" height="132"/>
         <image name="profile black" width="23" height="23"/>
         <image name="statistic black" width="24" height="22"/>
+        <image name="tab bar red bawah" width="375" height="68"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="sQP-xU-dwg"/>
