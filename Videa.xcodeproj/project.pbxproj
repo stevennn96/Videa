@@ -37,6 +37,7 @@
 		B0E2B5CF2132C7FC00B6860F /* FoodLevelContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5CE2132C7FC00B6860F /* FoodLevelContentViewController.swift */; };
 		B0E2B5D12132DFF400B6860F /* HowToLevelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5D02132DFF400B6860F /* HowToLevelListViewController.swift */; };
 		B0E2B5D32132E00B00B6860F /* HowToLevelContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5D22132E00B00B6860F /* HowToLevelContentViewController.swift */; };
+		B0E2B5DD213408A800B6860F /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5DC213408A800B6860F /* LaunchScreenViewController.swift */; };
 		ED909054212EC07700E11589 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED90904B212E9BFA00E11589 /* StatisticsViewController.swift */; };
 		ED909055212EC0BE00E11589 /* ChannelDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED90904D212EA3FE00E11589 /* ChannelDetail.swift */; };
 		ED909056212EC0D400E11589 /* StatisticsDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED909050212EA6E000E11589 /* StatisticsDataViewController.swift */; };
@@ -78,6 +79,7 @@
 		B0E2B5CE2132C7FC00B6860F /* FoodLevelContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodLevelContentViewController.swift; sourceTree = "<group>"; };
 		B0E2B5D02132DFF400B6860F /* HowToLevelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToLevelListViewController.swift; sourceTree = "<group>"; };
 		B0E2B5D22132E00B00B6860F /* HowToLevelContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToLevelContentViewController.swift; sourceTree = "<group>"; };
+		B0E2B5DC213408A800B6860F /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		D5A344EF856C85A0C716FFB6 /* Pods-Videa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Videa.release.xcconfig"; path = "Pods/Target Support Files/Pods-Videa/Pods-Videa.release.xcconfig"; sourceTree = "<group>"; };
 		DFCE25A618B497E284265DC2 /* Pods-Videa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Videa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Videa/Pods-Videa.debug.xcconfig"; sourceTree = "<group>"; };
 		ED90904B212E9BFA00E11589 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			children = (
 				6B4713592133DD4600E86519 /* Model */,
 				6B5A58F4212ADB3D00B05DFB /* SantosStoryboard.storyboard */,
+				B0E2B5DC213408A800B6860F /* LaunchScreenViewController.swift */,
 				6B4713572133D0D000E86519 /* ProfileAccountViewController.swift */,
 				7B34DB6F213402750007C2B1 /* LaunchScreenViewController.swift */,
 				6B663520212C000E001137AD /* ForLoginViewController.swift */,
@@ -145,7 +148,7 @@
 				77E523FB2122D8C000EE54FD /* Products */,
 				03C06C19A7640E14338BBA8F /* Pods */,
 				4CDECDEC693DAAAC851F7032 /* Frameworks */,
-				7B34DB6E2133FF3D0007C2B1 /* Recovered References */,
+				B0E2B5D7213400C600B6860F /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -203,6 +206,14 @@
 				B0E2B5D22132E00B00B6860F /* HowToLevelContentViewController.swift */,
 			);
 			path = Steven;
+			sourceTree = "<group>";
+		};
+		B0E2B5D7213400C600B6860F /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				7B34DB652133EC310007C2B1 /* LaunchScreenViewController.swift */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		ED90904F212EA40E00E11589 /* JSON */ = {
@@ -397,12 +408,12 @@
 				ED90905A212FFEE300E11589 /* StatisticsData.swift in Sources */,
 				6B9858A4212EA7B80081E017 /* HomeViewController.swift in Sources */,
 				B0E2B5CB2132BA5300B6860F /* ComedyLevelContentViewController.swift in Sources */,
+				B0E2B5DD213408A800B6860F /* LaunchScreenViewController.swift in Sources */,
 				B0E2B5CD2132C7E900B6860F /* FoodLevelListViewController.swift in Sources */,
 				B0E2B5C32132232900B6860F /* ChallengesListViewController.swift in Sources */,
 				77E523FE2122D8C000EE54FD /* AppDelegate.swift in Sources */,
 				ED909058212FF66F00E11589 /* StatisticsDataTableViewCell.swift in Sources */,
 				ED909056212EC0D400E11589 /* StatisticsDataViewController.swift in Sources */,
-				7B34DB662133EC310007C2B1 /* LaunchScreenViewController.swift in Sources */,
 				B0E2B5D32132E00B00B6860F /* HowToLevelContentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

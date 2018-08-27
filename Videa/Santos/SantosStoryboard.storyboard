@@ -129,15 +129,9 @@
                                 <rect key="frame" x="18" y="461" width="343" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-<<<<<<< HEAD
-                                <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-=======
                                 <color key="textColor" red="1" green="0.93509466896638804" blue="0.009297379944635753" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
->>>>>>> 5a9871990b1f05b8a988925d65dc69b89b372852
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
                         </subviews>

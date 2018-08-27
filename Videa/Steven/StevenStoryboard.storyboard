@@ -114,7 +114,7 @@
                         <viewLayoutGuide key="safeArea" id="lq3-cW-ZPm"/>
                     </view>
                     <navigationItem key="navigationItem" title="Challenges" id="r5g-3y-t8X">
-                        <barButtonItem key="backBarButtonItem" title=" " id="aeX-Oq-UUd"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="2NV-DU-NuO"/>
                     </navigationItem>
                     <connections>
                         <segue destination="8lj-Wm-G1C" kind="show" identifier="goToIntroduction" id="gYy-9T-Dqu"/>
@@ -1228,7 +1228,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" backgroundImage="ChallengeBackground">
                                                     <attributedString key="attributedTitle">
-                                                        <fragment content="Vlog">
+                                                        <fragment content="Do Challenge">
                                                             <attributes>
                                                                 <font key="NSFont" size="11" name=".AppleSystemUIFont"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -1242,78 +1242,6 @@
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="143 people try this" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3C-UV-ImO">
                                                 <rect key="frame" x="158" y="620" width="99" height="14"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" tag="6" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jgo-SE-YjE">
-                                                <rect key="frame" x="8" y="650" width="359" height="73"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" backgroundImage="ChallengeBackground">
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="Stand Up Comedy">
-                                                            <attributes>
-                                                                <font key="NSFont" size="11" name=".AppleSystemUIFont"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
-                                                </state>
-                                                <connections>
-                                                    <action selector="chooseChallenge:" destination="hNx-P2-jqe" eventType="touchUpInside" id="X5B-1m-DK2"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="143 people try this" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nG-po-rf7">
-                                                <rect key="frame" x="158" y="695" width="99" height="14"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" tag="7" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fUS-jG-BB0">
-                                                <rect key="frame" x="16" y="725" width="359" height="73"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" backgroundImage="ChallengeBackground">
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="Impersonate Famous People">
-                                                            <attributes>
-                                                                <font key="NSFont" size="11" name=".AppleSystemUIFont"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
-                                                </state>
-                                                <connections>
-                                                    <action selector="chooseChallenge:" destination="hNx-P2-jqe" eventType="touchUpInside" id="diT-mW-HmK"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="143 people try this" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AnI-2C-325">
-                                                <rect key="frame" x="158" y="770" width="99" height="14"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" tag="8" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XyK-My-4pD">
-                                                <rect key="frame" x="8" y="800" width="359" height="73"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" backgroundImage="ChallengeBackground">
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="Do Challenge">
-                                                            <attributes>
-                                                                <font key="NSFont" size="11" name=".AppleSystemUIFont"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
-                                                </state>
-                                                <connections>
-                                                    <action selector="chooseChallenge:" destination="hNx-P2-jqe" eventType="touchUpInside" id="Tsh-5i-X5k"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="143 people try this" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nov-SK-zbY">
-                                                <rect key="frame" x="158" y="845" width="99" height="14"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1440,10 +1368,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="WRI-4S-q4S"/>
                     <connections>
-                        <outlet property="description1Label" destination="aYc-eT-3iN" id="27P-Dx-2j0"/>
-                        <outlet property="description2Label" destination="ush-H1-vOV" id="8Fb-KI-d75"/>
-                        <outlet property="embedYoutube" destination="g5m-Fc-9EB" id="T5l-91-hE4"/>
-                        <outlet property="titleLabel" destination="u4k-to-wPe" id="N8N-w2-fqQ"/>
+                        <outlet property="description1Label" destination="aYc-eT-3iN" id="vXh-Ad-jRm"/>
+                        <outlet property="description2Label" destination="ush-H1-vOV" id="sKy-D2-hvm"/>
+                        <outlet property="embedYoutube" destination="g5m-Fc-9EB" id="JEZ-f7-KiL"/>
+                        <outlet property="titleLabel" destination="u4k-to-wPe" id="lGE-8r-B3w"/>
                         <segue destination="E8g-uU-jUL" kind="show" identifier="goToHome" id="7YG-UH-Dcw"/>
                     </connections>
                 </viewController>
@@ -1853,7 +1781,7 @@
         <image name="tab bar red bawah" width="375" height="68"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3NI-G8-ilx"/>
+        <segue reference="7YG-UH-Dcw"/>
         <segue reference="gYy-9T-Dqu"/>
     </inferredMetricsTieBreakers>
 </document>
