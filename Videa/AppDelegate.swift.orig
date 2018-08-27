@@ -58,18 +58,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         // Override point for customization after application launch.
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-
-<<<<<<< HEAD
-//        let storyboard = UIStoryboard(name: "StevenStoryboard", bundle: nil)
-//
-//        let initialViewController = storyboard.instantiateViewController(withIdentifier: "ChallengePage")
 //        self.window = UIWindow(frame: UIScreen.main.bounds)
 
-        let storyboard = UIStoryboard(name: "SantosStoryboard", bundle: nil)
-
-        let initialViewController = storyboard.instantiateViewController(withIdentifier: "SplashScreen")
-=======
         //punya kensen
 //        let storyboard = UIStoryboard(name: "KensenStoryboard", bundle: nil)
 //
@@ -78,12 +68,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         //punya steven
+<<<<<<< HEAD
         let storyboard = UIStoryboard(name: "StevenStoryboard", bundle: nil)
         
         let initialViewController = storyboard.instantiateViewController(withIdentifier: "ChallengePage")
         self.window = UIWindow(frame: UIScreen.main.bounds)
+=======
+//        let storyboard = UIStoryboard(name: "SantosStoryboard", bundle: nil)
+//
+//        let initialViewController = storyboard.instantiateViewController(withIdentifier: "SplashScreen")
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+>>>>>>> f80852deaf452f4105fa5bf10d5dead20f81cdf0
 
->>>>>>> 5a9871990b1f05b8a988925d65dc69b89b372852
         
         //Ganti Background Navigation Bar pake Image
         let img:UIImage = UIImage(named: "navbarbg.png")!
@@ -92,8 +88,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().clipsToBounds = true
         
         
-        self.window?.rootViewController = initialViewController
-        self.window?.makeKeyAndVisible()
+//        self.window?.rootViewController = initialViewController
+//        self.window?.makeKeyAndVisible()
         return true
     }
 
