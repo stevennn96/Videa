@@ -20,7 +20,7 @@ class ProfileAccountViewController: UIViewController {
     
     @IBAction func logOutButton(_ sender: Any) {
         try! Auth.auth().signOut()
-        performSegue(withIdentifier: "LogOutButton", sender: self)
+        performSegue(withIdentifier: "LogOut", sender: self)
     }
     var profileuser: [UntukProfile] = []
     

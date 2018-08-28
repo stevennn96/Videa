@@ -54,7 +54,7 @@ class ProfileViewController: UIViewController {
                                 return
                             }
                         }
-                        self.performSegue(withIdentifier: "ProfileToChallenge", sender: self)
+                        self.performSegue(withIdentifier: "EditSuccess", sender: self)
                         
                     } else {
                         print("Error: \(error!.localizedDescription)")

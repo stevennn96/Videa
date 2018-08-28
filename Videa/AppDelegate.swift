@@ -23,20 +23,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //punya santos
 //        // Kalau mau pke storyboard sndiri comment punya gw
         let authListener = Auth.auth().addStateDidChangeListener {auth, user in
-            let storyboard = UIStoryboard(name: "SantosStoryboard", bundle: nil)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
 
             if user != nil {
-                
+
                 UserService.observeUserProfile(user!.uid) { userProfile in
                     UserService.currentUserProfile = userProfile
                 }
-                let controller = storyboard.instantiateViewController(withIdentifier: "ProfileID")
+                let controller = storyboard.instantiateViewController(withIdentifier: "MainView")
                 self.window?.rootViewController = controller
                 self.window?.makeKeyAndVisible()
 
             }else {
                 UserService.currentUserProfile = nil
-                
+
                 //Menu Screen
                 let controller = storyboard.instantiateViewController(withIdentifier: "LoginSignupVC")
                 self.window?.rootViewController = controller
@@ -82,8 +82,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         
         //Ganti Background Navigation Bar pake Image
-//        let img:UIImage = UIImage(named: "Top Tab Bar.pmg")!
-//        UINavigationBar.appearance().setBackgroundImage(img, for: .default)
+        let img:UIImage = UIImage(named: "Top Tab Bar.pmg")!
+        UINavigationBar.appearance().setBackgroundImage(img, for: .default)
 //
 //
 //        self.window?.rootViewController = initialViewController

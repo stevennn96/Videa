@@ -395,7 +395,6 @@
         <image name="profile icon" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="waV-VJ-kKB"/>
         <segue reference="rWc-p4-Cml"/>
     </inferredMetricsTieBreakers>
 </document>
