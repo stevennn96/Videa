@@ -22,6 +22,7 @@
 		77E5240A2122D8C100EE54FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E524082122D8C100EE54FD /* LaunchScreen.storyboard */; };
 		7B34DB642133E9E80007C2B1 /* logo videa new.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B34DB632133E9E70007C2B1 /* logo videa new.png */; };
 		7B34DB682133ED360007C2B1 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34DB672133ED360007C2B1 /* UIImage+Gif.swift */; };
+		7B99736521354A2800DE40A5 /* SettingPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B99736421354A2800DE40A5 /* SettingPageTableViewController.swift */; };
 		B0E2B5BB2132133500B6860F /* StevenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E2B5BA2132133500B6860F /* StevenStoryboard.storyboard */; };
 		B0E2B5BF21321A1900B6860F /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5BE21321A1900B6860F /* IntroductionViewController.swift */; };
 		B0E2B5C121321D8200B6860F /* ChallengesListIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5C021321D8200B6860F /* ChallengesListIntroViewController.swift */; };
@@ -64,6 +65,7 @@
 		7B34DB632133E9E70007C2B1 /* logo videa new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo videa new.png"; sourceTree = "<group>"; };
 		7B34DB652133EC310007C2B1 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		7B34DB672133ED360007C2B1 /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
+		7B99736421354A2800DE40A5 /* SettingPageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPageTableViewController.swift; sourceTree = "<group>"; };
 		B0E2B5BA2132133500B6860F /* StevenStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StevenStoryboard.storyboard; sourceTree = "<group>"; };
 		B0E2B5BE21321A1900B6860F /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 		B0E2B5C021321D8200B6860F /* ChallengesListIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesListIntroViewController.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 			children = (
 				ED90904F212EA40E00E11589 /* JSON */,
 				EDF24A89212BED800081AE5F /* KensenStoryboard.storyboard */,
+				7B99736421354A2800DE40A5 /* SettingPageTableViewController.swift */,
 				6997F7402133DE7300FA32E1 /* OnboardingViewController.swift */,
 			);
 			path = Kensen;
@@ -394,6 +397,7 @@
 				ED909055212EC0BE00E11589 /* ChannelDetail.swift in Sources */,
 				B0E2B5C92132BA3B00B6860F /* ComedyLevelListViewController.swift in Sources */,
 				7B34DB682133ED360007C2B1 /* UIImage+Gif.swift in Sources */,
+				7B99736521354A2800DE40A5 /* SettingPageTableViewController.swift in Sources */,
 				B0E2B5C72132256300B6860F /* MusicLevelContentViewController.swift in Sources */,
 				B0E2B5BF21321A1900B6860F /* IntroductionViewController.swift in Sources */,
 				6B09711D212BF4F800CD9878 /* LoginAccountViewController.swift in Sources */,
