@@ -202,6 +202,23 @@
 			children = (
 				B0E2B5BA2132133500B6860F /* StevenStoryboard.storyboard */,
 				6B9858A1212EA7B80081E017 /* HomeViewController.swift */,
+				B0E2B60E21355C1800B6860F /* ContentVC */,
+			);
+			path = Steven;
+			sourceTree = "<group>";
+		};
+		B0E2B5D7213400C600B6860F /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				7B34DB652133EC310007C2B1 /* LaunchScreenViewController.swift */,
+				B0E2B60A21354E3B00B6860F /* tab bar red bawah.png */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		B0E2B60E21355C1800B6860F /* ContentVC */ = {
+			isa = PBXGroup;
+			children = (
 				B0E2B5C42132248900B6860F /* MusicLevelListViewController.swift */,
 				B0E2B5BE21321A1900B6860F /* IntroductionViewController.swift */,
 				B0E2B5C021321D8200B6860F /* ChallengesListIntroViewController.swift */,
@@ -214,16 +231,7 @@
 				B0E2B5D02132DFF400B6860F /* HowToLevelListViewController.swift */,
 				B0E2B5D22132E00B00B6860F /* HowToLevelContentViewController.swift */,
 			);
-			path = Steven;
-			sourceTree = "<group>";
-		};
-		B0E2B5D7213400C600B6860F /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				7B34DB652133EC310007C2B1 /* LaunchScreenViewController.swift */,
-				B0E2B60A21354E3B00B6860F /* tab bar red bawah.png */,
-			);
-			name = "Recovered References";
+			path = ContentVC;
 			sourceTree = "<group>";
 		};
 		ED90904F212EA40E00E11589 /* JSON */ = {
