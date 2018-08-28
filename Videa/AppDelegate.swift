@@ -58,12 +58,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         // Override point for customization after application launch.
-//        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window = UIWindow(frame: UIScreen.main.bounds)
 
         //punya kensen
-//        let storyboard = UIStoryboard(name: "KensenStoryboard", bundle: nil)
-//
-//        let initialViewController = storyboard.instantiateViewController(withIdentifier: "onboardingVC")
+        let storyboard = UIStoryboard(name: "LevelStoryboard", bundle: nil)
+
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "LevelVC")
 //        self.window = UIWindow(frame: UIScreen.main.bounds)
         
         
@@ -79,8 +79,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().setBackgroundImage(img, for: .default)
         
         
-//        self.window?.rootViewController = initialViewController
-//        self.window?.makeKeyAndVisible()
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
         return true
     }
 
