@@ -58,7 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         // Override point for customization after application launch.
-        self.window = UIWindow(frame: UIScreen.main.bounds)
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
 
         //punya kensen
 //        let storyboard = UIStoryboard(name: "KensenStoryboard", bundle: nil)
@@ -75,10 +75,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         
         //Ganti Background Navigation Bar pake Image
-        let img:UIImage = UIImage(named: "navbarbg.png")!
+        let img:UIImage = UIImage(named: "Top Tab Bar.pmg")!
         UINavigationBar.appearance().setBackgroundImage(img, for: .default)
-        UITabBar.appearance().autoresizesSubviews = false
-        UITabBar.appearance().clipsToBounds = true
         
         
 //        self.window?.rootViewController = initialViewController
