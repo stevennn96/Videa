@@ -24,9 +24,8 @@
 		77E524052122D8C000EE54FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E524032122D8C000EE54FD /* Main.storyboard */; };
 		77E524072122D8C100EE54FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77E524062122D8C100EE54FD /* Assets.xcassets */; };
 		77E5240A2122D8C100EE54FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E524082122D8C100EE54FD /* LaunchScreen.storyboard */; };
-		7B34DB642133E9E80007C2B1 /* logo videa new.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B34DB632133E9E70007C2B1 /* logo videa new.png */; };
 		7B34DB682133ED360007C2B1 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34DB672133ED360007C2B1 /* UIImage+Gif.swift */; };
-		7B99736521354A2800DE40A5 /* SettingPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B99736421354A2800DE40A5 /* SettingPageTableViewController.swift */; };
+		7B99736721355FA300DE40A5 /* Videa Animation HD Final.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7B99736621355FA300DE40A5 /* Videa Animation HD Final.gif */; };
 		B0E2B5BB2132133500B6860F /* StevenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E2B5BA2132133500B6860F /* StevenStoryboard.storyboard */; };
 		B0E2B5BF21321A1900B6860F /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5BE21321A1900B6860F /* IntroductionViewController.swift */; };
 		B0E2B5C121321D8200B6860F /* ChallengesListIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5C021321D8200B6860F /* ChallengesListIntroViewController.swift */; };
@@ -45,7 +44,6 @@
 		ED909056212EC0D400E11589 /* StatisticsDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED909050212EA6E000E11589 /* StatisticsDataViewController.swift */; };
 		ED909058212FF66F00E11589 /* StatisticsDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED909057212FF66F00E11589 /* StatisticsDataTableViewCell.swift */; };
 		ED90905A212FFEE300E11589 /* StatisticsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED909059212FFEE300E11589 /* StatisticsData.swift */; };
-		ED90905F2135030A00E11589 /* Videa Animation HD.gif in Resources */ = {isa = PBXBuildFile; fileRef = ED90905E2135030900E11589 /* Videa Animation HD.gif */; };
 		ED90906221351BF300E11589 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED90906121351BF300E11589 /* TabBarViewController.swift */; };
 		ED90906421352B1700E11589 /* LevelStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED90906321352B1700E11589 /* LevelStoryboard.storyboard */; };
 		ED90906621352B7000E11589 /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED90906521352B7000E11589 /* LevelViewController.swift */; };
@@ -73,10 +71,10 @@
 		77E524062122D8C100EE54FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77E524092122D8C100EE54FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77E5240B2122D8C100EE54FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7B34DB632133E9E70007C2B1 /* logo videa new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo videa new.png"; sourceTree = "<group>"; };
 		7B34DB652133EC310007C2B1 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		7B34DB672133ED360007C2B1 /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		7B99736421354A2800DE40A5 /* SettingPageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPageTableViewController.swift; sourceTree = "<group>"; };
+		7B99736621355FA300DE40A5 /* Videa Animation HD Final.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Videa Animation HD Final.gif"; sourceTree = "<group>"; };
 		B0E2B5BA2132133500B6860F /* StevenStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StevenStoryboard.storyboard; sourceTree = "<group>"; };
 		B0E2B5BE21321A1900B6860F /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 		B0E2B5C021321D8200B6860F /* ChallengesListIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesListIntroViewController.swift; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 		ED909050212EA6E000E11589 /* StatisticsDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsDataViewController.swift; sourceTree = "<group>"; };
 		ED909057212FF66F00E11589 /* StatisticsDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsDataTableViewCell.swift; sourceTree = "<group>"; };
 		ED909059212FFEE300E11589 /* StatisticsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsData.swift; sourceTree = "<group>"; };
-		ED90905E2135030900E11589 /* Videa Animation HD.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Videa Animation HD.gif"; sourceTree = "<group>"; };
 		ED90906121351BF300E11589 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		ED90906321352B1700E11589 /* LevelStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LevelStoryboard.storyboard; sourceTree = "<group>"; };
 		ED90906521352B7000E11589 /* LevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
@@ -189,10 +186,9 @@
 				77E523FD2122D8C000EE54FD /* AppDelegate.swift */,
 				7B34DB672133ED360007C2B1 /* UIImage+Gif.swift */,
 				77E524032122D8C000EE54FD /* Main.storyboard */,
-				7B34DB632133E9E70007C2B1 /* logo videa new.png */,
+				7B99736621355FA300DE40A5 /* Videa Animation HD Final.gif */,
 				6B689570212EBE4F0096CC8B /* GoogleService-Info.plist */,
 				77E524062122D8C100EE54FD /* Assets.xcassets */,
-				ED90905E2135030900E11589 /* Videa Animation HD.gif */,
 				77E524082122D8C100EE54FD /* LaunchScreen.storyboard */,
 				77E5240B2122D8C100EE54FD /* Info.plist */,
 			);
@@ -340,10 +336,9 @@
 			files = (
 				77E5240A2122D8C100EE54FD /* LaunchScreen.storyboard in Resources */,
 				77E524072122D8C100EE54FD /* Assets.xcassets in Resources */,
+				7B99736721355FA300DE40A5 /* Videa Animation HD Final.gif in Resources */,
 				ED90906421352B1700E11589 /* LevelStoryboard.storyboard in Resources */,
-				7B34DB642133E9E80007C2B1 /* logo videa new.png in Resources */,
 				6B689571212EBE4F0096CC8B /* GoogleService-Info.plist in Resources */,
-				ED90905F2135030A00E11589 /* Videa Animation HD.gif in Resources */,
 				6B5A58F5212ADB3D00B05DFB /* SantosStoryboard.storyboard in Resources */,
 				77E524052122D8C000EE54FD /* Main.storyboard in Resources */,
 				B0E2B5BB2132133500B6860F /* StevenStoryboard.storyboard in Resources */,
@@ -601,7 +596,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.binus;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.binus.Videa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -621,7 +616,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.binus;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.binus.Videa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
