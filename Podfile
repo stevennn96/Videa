@@ -9,6 +9,7 @@ pod 'Firebase/Firestore'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
 pod 'Firebase/Storage', '~> 4.0'
+pod 'Kingfisher','~> 4.8'
 
   # Pods for Videa
 

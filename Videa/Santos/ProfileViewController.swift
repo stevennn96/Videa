@@ -16,12 +16,12 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var usernameOutlet: UITextField!
     @IBOutlet weak var tapTochangeImage: UIButton!
+    @IBOutlet weak var quotesOutlet: UITextField!
     
     var imagepicker: UIImagePickerController!
     
     override func viewDidLoad() {
         tapTochangeImage.addTarget(self, action: #selector(openImagePicker), for: .touchUpInside)
-        
         imagepicker = UIImagePickerController()
         imagepicker.allowsEditing = true
         imagepicker.sourceType = .photoLibrary
@@ -37,6 +37,7 @@ class ProfileViewController: UIViewController {
     @IBAction func saveButton(_ sender: Any) {
         guard let username = usernameOutlet.text else {return}
         guard let image = imageView.image else {return}
+        guard let quotes = quotesOutlet.text else {return}
         
         self.uploadProfileImage(image) { url in
             if url != nil {
@@ -48,12 +49,12 @@ class ProfileViewController: UIViewController {
                     if error == nil {
                         print("User display name changed!")
                         
-                        self.saveProfile(username: username, profileImageURL: url!) { success in
+                        self.saveProfile(username: username, profileImageURL: url! , quotes: quotes) { success in
                             if success {
-                                print("URLNYA ADALAH : \(url)")
+                                return
                             }
                         }
-                        self.performSegue(withIdentifier: "ProfileToChallenge", sender: self)
+                        self.performSegue(withIdentifier: "EditSuccess", sender: self)
                         
                     } else {
                         print("Error: \(error!.localizedDescription)")
@@ -92,13 +93,14 @@ class ProfileViewController: UIViewController {
         }
     }
     
-    func saveProfile(username:String, profileImageURL:URL, completion: @escaping ((_ success:Bool)->())) {
+    func saveProfile(username:String, profileImageURL:URL, quotes:String, completion: @escaping ((_ success:Bool)->())) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         let databaseRef = Database.database().reference().child("users/profile/\(uid)")
         
         let userObject = [
             "username": username,
-            "photoURL": profileImageURL.absoluteString
+            "photoURL": profileImageURL.absoluteString,
+            "quotes" : quotes
             ] as [String:Any]
         
         databaseRef.setValue(userObject) { error, ref in

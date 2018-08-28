@@ -31,7 +31,7 @@
         <scene sceneID="DIy-DX-JPL">
             <objects>
                 <tabBarController storyboardIdentifier="ChallengePage" id="61j-Td-Dg9" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="tab bar red bawah" id="vw4-Yr-IQa">
+                    <tabBar key="tabBar" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="tabbarbg" id="vw4-Yr-IQa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -214,6 +214,7 @@
                         <outlet property="description1Label" destination="mrh-Xy-aJq" id="WkE-nH-bGY"/>
                         <outlet property="description2Label" destination="B8m-vC-SO4" id="mhH-l7-lIw"/>
                         <outlet property="embedYoutube" destination="rLZ-5w-s6z" id="D9I-FX-cD2"/>
+                        <outlet property="titleImage" destination="hzo-LP-EZB" id="XrL-W9-8dJ"/>
                         <outlet property="titleLabel" destination="xvD-Sy-Qbi" id="qK2-bP-1Fd"/>
                         <segue destination="E8g-uU-jUL" kind="show" identifier="goToHome" id="3NI-G8-ilx"/>
                     </connections>
@@ -380,7 +381,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J7s-z9-6aI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2143" y="1122"/>
+            <point key="canvasLocation" x="-2143.1999999999998" y="1121.6748768472908"/>
         </scene>
         <!--Challenges-->
         <scene sceneID="f2c-b5-HXK">
@@ -481,11 +482,11 @@
             <objects>
                 <viewController id="84x-zw-c9C" customClass="MusicLevelListViewController" customModule="Videa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ec6-Ne-9cx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oje-B6-kOk">
-                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="1029"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y9u-Bn-ZlB">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
@@ -498,7 +499,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Join a challenge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7t-YL-tPz">
                                                 <rect key="frame" x="8" y="247" width="359" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -742,6 +743,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lNe-f5-f7P"/>
                     </view>
+                    <size key="freeformSize" width="375" height="1200"/>
                     <connections>
                         <outlet property="titleImage" destination="Sfw-OO-T3s" id="7R4-ju-vvP"/>
                         <segue destination="pBH-MC-HjA" kind="show" identifier="goToChallenge" id="Kgn-p0-f93"/>
@@ -773,7 +775,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Join a challenge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXT-n0-Bfb">
                                                 <rect key="frame" x="8" y="247" width="359" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1093,6 +1095,7 @@
                         <outlet property="description1Label" destination="gqv-o3-j56" id="Iru-V6-0vU"/>
                         <outlet property="description2Label" destination="QLa-hx-4Vj" id="sOV-Lp-mBy"/>
                         <outlet property="embedYoutube" destination="idr-14-oEo" id="08M-nM-PbL"/>
+                        <outlet property="titleImage" destination="iG0-w7-8qu" id="a26-dI-yRo"/>
                         <outlet property="titleLabel" destination="Vpe-Bf-5de" id="7YO-sS-Uos"/>
                         <segue destination="E8g-uU-jUL" kind="show" identifier="goToHome" id="bsZ-Ug-vGo"/>
                     </connections>
@@ -1123,7 +1126,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Join a challenge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMg-hw-5jA">
                                                 <rect key="frame" x="8" y="247" width="359" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1377,7 +1380,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aO1-Fs-IPQ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-383.19999999999999" y="2882.5123152709361"/>
+            <point key="canvasLocation" x="-383" y="2812"/>
         </scene>
         <!--How To Level List View Controller-->
         <scene sceneID="TCj-nN-WMP">
@@ -1401,7 +1404,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Join a challenge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Uu-oZ-3VU">
                                                 <rect key="frame" x="8" y="247" width="359" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1506,9 +1509,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" backgroundImage="ChallengeBackground">
                                                     <attributedString key="attributedTitle">
-                                                        <fragment>
-                                                            <string key="content">How to make your favorite Indonesian food!
-</string>
+                                                        <fragment content="How to make Indonesian food!">
                                                             <attributes>
                                                                 <font key="NSFont" metaFont="smallSystem"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -1655,7 +1656,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="88q-80-poa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="486" y="2001"/>
+            <point key="canvasLocation" x="485.60000000000002" y="2000.985221674877"/>
         </scene>
         <!--How To Level Content View Controller-->
         <scene sceneID="Q2D-IX-yfv">
@@ -1747,6 +1748,7 @@
                         <outlet property="description1Label" destination="OQf-su-x05" id="7tO-FH-KoI"/>
                         <outlet property="description2Label" destination="Ydn-wa-yYg" id="pdM-Or-Ouv"/>
                         <outlet property="embedYoutube" destination="SYG-1K-Ztl" id="4rx-kE-FPG"/>
+                        <outlet property="titleImage" destination="nby-CA-5Rp" id="RLs-hL-ZDn"/>
                         <outlet property="titleLabel" destination="tgi-Hv-w5W" id="3DM-51-Bby"/>
                         <segue destination="E8g-uU-jUL" kind="show" identifier="goToHome" id="aRk-qW-jKQ"/>
                     </connections>
@@ -1778,7 +1780,7 @@
         <image name="music title" width="375" height="253"/>
         <image name="profile black" width="23" height="23"/>
         <image name="statistic black" width="24" height="22"/>
-        <image name="tab bar red bawah" width="375" height="68"/>
+        <image name="tabbarbg" width="562" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="sQP-xU-dwg"/>

@@ -9,8 +9,12 @@
 /* Begin PBXBuildFile section */
 		6997F7412133DE7300FA32E1 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6997F7402133DE7300FA32E1 /* OnboardingViewController.swift */; };
 		6B09711D212BF4F800CD9878 /* LoginAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B09711C212BF4F800CD9878 /* LoginAccountViewController.swift */; };
+		6B2B888421352F97000C90D4 /* UntukProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2B888321352F97000C90D4 /* UntukProfile.swift */; };
+		6B2B8886213530FE000C90D4 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2B8885213530FE000C90D4 /* ImageService.swift */; };
 		6B2D62C8213003EA0032EC74 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2D62C7213003EA0032EC74 /* ProfileViewController.swift */; };
 		6B4713582133D0D000E86519 /* ProfileAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4713572133D0D000E86519 /* ProfileAccountViewController.swift */; };
+		6B47135D2134D41D00E86519 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B47135C2134D41D00E86519 /* UserService.swift */; };
+		6B47135F2134D4FD00E86519 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B47135E2134D4FD00E86519 /* UserProfile.swift */; };
 		6B5A58F5212ADB3D00B05DFB /* SantosStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B5A58F4212ADB3D00B05DFB /* SantosStoryboard.storyboard */; };
 		6B663521212C000E001137AD /* ForLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B663520212C000E001137AD /* ForLoginViewController.swift */; };
 		6B689571212EBE4F0096CC8B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B689570212EBE4F0096CC8B /* GoogleService-Info.plist */; };
@@ -22,8 +26,7 @@
 		77E5240A2122D8C100EE54FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E524082122D8C100EE54FD /* LaunchScreen.storyboard */; };
 		7B34DB642133E9E80007C2B1 /* logo videa new.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B34DB632133E9E70007C2B1 /* logo videa new.png */; };
 		7B34DB682133ED360007C2B1 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34DB672133ED360007C2B1 /* UIImage+Gif.swift */; };
-		7B34DB6C2133F7EC0007C2B1 /* Videa Animation HD.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7B34DB6B2133F7EC0007C2B1 /* Videa Animation HD.gif */; };
-		7B34DB70213402750007C2B1 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34DB6F213402750007C2B1 /* LaunchScreenViewController.swift */; };
+		7B99736521354A2800DE40A5 /* SettingPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B99736421354A2800DE40A5 /* SettingPageTableViewController.swift */; };
 		B0E2B5BB2132133500B6860F /* StevenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E2B5BA2132133500B6860F /* StevenStoryboard.storyboard */; };
 		B0E2B5BF21321A1900B6860F /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5BE21321A1900B6860F /* IntroductionViewController.swift */; };
 		B0E2B5C121321D8200B6860F /* ChallengesListIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5C021321D8200B6860F /* ChallengesListIntroViewController.swift */; };
@@ -42,6 +45,11 @@
 		ED909056212EC0D400E11589 /* StatisticsDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED909050212EA6E000E11589 /* StatisticsDataViewController.swift */; };
 		ED909058212FF66F00E11589 /* StatisticsDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED909057212FF66F00E11589 /* StatisticsDataTableViewCell.swift */; };
 		ED90905A212FFEE300E11589 /* StatisticsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED909059212FFEE300E11589 /* StatisticsData.swift */; };
+		ED90905F2135030A00E11589 /* Videa Animation HD.gif in Resources */ = {isa = PBXBuildFile; fileRef = ED90905E2135030900E11589 /* Videa Animation HD.gif */; };
+		ED90906221351BF300E11589 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED90906121351BF300E11589 /* TabBarViewController.swift */; };
+		ED90906421352B1700E11589 /* LevelStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED90906321352B1700E11589 /* LevelStoryboard.storyboard */; };
+		ED90906621352B7000E11589 /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED90906521352B7000E11589 /* LevelViewController.swift */; };
+		ED90906821353A0500E11589 /* LevelUpAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED90906721353A0500E11589 /* LevelUpAlertViewController.swift */; };
 		EDF24A8A212BED800081AE5F /* KensenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDF24A89212BED800081AE5F /* KensenStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -49,8 +57,12 @@
 		3BFEB76E52A41DF9AB347DFC /* Pods_Videa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Videa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6997F7402133DE7300FA32E1 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		6B09711C212BF4F800CD9878 /* LoginAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAccountViewController.swift; sourceTree = "<group>"; };
+		6B2B888321352F97000C90D4 /* UntukProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UntukProfile.swift; sourceTree = "<group>"; };
+		6B2B8885213530FE000C90D4 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		6B2D62C7213003EA0032EC74 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		6B4713572133D0D000E86519 /* ProfileAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAccountViewController.swift; sourceTree = "<group>"; };
+		6B47135C2134D41D00E86519 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		6B47135E2134D4FD00E86519 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		6B5A58F4212ADB3D00B05DFB /* SantosStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SantosStoryboard.storyboard; sourceTree = "<group>"; };
 		6B663520212C000E001137AD /* ForLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForLoginViewController.swift; sourceTree = "<group>"; };
 		6B689570212EBE4F0096CC8B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -64,8 +76,7 @@
 		7B34DB632133E9E70007C2B1 /* logo videa new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo videa new.png"; sourceTree = "<group>"; };
 		7B34DB652133EC310007C2B1 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		7B34DB672133ED360007C2B1 /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
-		7B34DB6B2133F7EC0007C2B1 /* Videa Animation HD.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Videa Animation HD.gif"; sourceTree = "<group>"; };
-		7B34DB6F213402750007C2B1 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		7B99736421354A2800DE40A5 /* SettingPageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPageTableViewController.swift; sourceTree = "<group>"; };
 		B0E2B5BA2132133500B6860F /* StevenStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StevenStoryboard.storyboard; sourceTree = "<group>"; };
 		B0E2B5BE21321A1900B6860F /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 		B0E2B5C021321D8200B6860F /* ChallengesListIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesListIntroViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +90,7 @@
 		B0E2B5D02132DFF400B6860F /* HowToLevelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToLevelListViewController.swift; sourceTree = "<group>"; };
 		B0E2B5D22132E00B00B6860F /* HowToLevelContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToLevelContentViewController.swift; sourceTree = "<group>"; };
 		B0E2B5DC213408A800B6860F /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		B0E2B60A21354E3B00B6860F /* tab bar red bawah.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab bar red bawah.png"; sourceTree = "<group>"; };
 		D5A344EF856C85A0C716FFB6 /* Pods-Videa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Videa.release.xcconfig"; path = "Pods/Target Support Files/Pods-Videa/Pods-Videa.release.xcconfig"; sourceTree = "<group>"; };
 		DFCE25A618B497E284265DC2 /* Pods-Videa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Videa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Videa/Pods-Videa.debug.xcconfig"; sourceTree = "<group>"; };
 		ED90904B212E9BFA00E11589 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +98,11 @@
 		ED909050212EA6E000E11589 /* StatisticsDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsDataViewController.swift; sourceTree = "<group>"; };
 		ED909057212FF66F00E11589 /* StatisticsDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsDataTableViewCell.swift; sourceTree = "<group>"; };
 		ED909059212FFEE300E11589 /* StatisticsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsData.swift; sourceTree = "<group>"; };
+		ED90905E2135030900E11589 /* Videa Animation HD.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Videa Animation HD.gif"; sourceTree = "<group>"; };
+		ED90906121351BF300E11589 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		ED90906321352B1700E11589 /* LevelStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LevelStoryboard.storyboard; sourceTree = "<group>"; };
+		ED90906521352B7000E11589 /* LevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
+		ED90906721353A0500E11589 /* LevelUpAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelUpAlertViewController.swift; sourceTree = "<group>"; };
 		EDF24A89212BED800081AE5F /* KensenStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KensenStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,9 +147,12 @@
 			children = (
 				6B4713592133DD4600E86519 /* Model */,
 				6B5A58F4212ADB3D00B05DFB /* SantosStoryboard.storyboard */,
+				6B2B888321352F97000C90D4 /* UntukProfile.swift */,
+				6B2B8885213530FE000C90D4 /* ImageService.swift */,
+				6B47135E2134D4FD00E86519 /* UserProfile.swift */,
+				6B47135C2134D41D00E86519 /* UserService.swift */,
 				B0E2B5DC213408A800B6860F /* LaunchScreenViewController.swift */,
 				6B4713572133D0D000E86519 /* ProfileAccountViewController.swift */,
-				7B34DB6F213402750007C2B1 /* LaunchScreenViewController.swift */,
 				6B663520212C000E001137AD /* ForLoginViewController.swift */,
 				6B09711C212BF4F800CD9878 /* LoginAccountViewController.swift */,
 				6B2D62C7213003EA0032EC74 /* ProfileViewController.swift */,
@@ -147,11 +167,7 @@
 				77E523FB2122D8C000EE54FD /* Products */,
 				03C06C19A7640E14338BBA8F /* Pods */,
 				4CDECDEC693DAAAC851F7032 /* Frameworks */,
-<<<<<<< HEAD
-				7B34DB6E2133FF3D0007C2B1 /* Recovered References */,
-=======
 				B0E2B5D7213400C600B6860F /* Recovered References */,
->>>>>>> 8ee6d90e1f68c20a764f37ce88d28641efbba65c
 			);
 			sourceTree = "<group>";
 		};
@@ -171,24 +187,16 @@
 				EDF24A8D212C02990081AE5F /* Kensen */,
 				6B5A58F6212ADC0100B05DFB /* Santos */,
 				77E523FD2122D8C000EE54FD /* AppDelegate.swift */,
-				7B34DB6B2133F7EC0007C2B1 /* Videa Animation HD.gif */,
 				7B34DB672133ED360007C2B1 /* UIImage+Gif.swift */,
 				77E524032122D8C000EE54FD /* Main.storyboard */,
 				7B34DB632133E9E70007C2B1 /* logo videa new.png */,
 				6B689570212EBE4F0096CC8B /* GoogleService-Info.plist */,
 				77E524062122D8C100EE54FD /* Assets.xcassets */,
+				ED90905E2135030900E11589 /* Videa Animation HD.gif */,
 				77E524082122D8C100EE54FD /* LaunchScreen.storyboard */,
 				77E5240B2122D8C100EE54FD /* Info.plist */,
 			);
 			path = Videa;
-			sourceTree = "<group>";
-		};
-		7B34DB6E2133FF3D0007C2B1 /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				7B34DB652133EC310007C2B1 /* LaunchScreenViewController.swift */,
-			);
-			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		B0CF21132130099200825CD5 /* Steven */ = {
@@ -215,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				7B34DB652133EC310007C2B1 /* LaunchScreenViewController.swift */,
+				B0E2B60A21354E3B00B6860F /* tab bar red bawah.png */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -230,6 +239,7 @@
 		ED90905B2132FCF600E11589 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				ED90906021351BD200E11589 /* TabBar */,
 				ED90905C2132FD2400E11589 /* Statistics */,
 			);
 			path = Controller;
@@ -246,12 +256,24 @@
 			path = Statistics;
 			sourceTree = "<group>";
 		};
+		ED90906021351BD200E11589 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				ED90906121351BF300E11589 /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		EDF24A8D212C02990081AE5F /* Kensen */ = {
 			isa = PBXGroup;
 			children = (
 				ED90904F212EA40E00E11589 /* JSON */,
 				EDF24A89212BED800081AE5F /* KensenStoryboard.storyboard */,
+				7B99736421354A2800DE40A5 /* SettingPageTableViewController.swift */,
 				6997F7402133DE7300FA32E1 /* OnboardingViewController.swift */,
+				ED90906321352B1700E11589 /* LevelStoryboard.storyboard */,
+				ED90906521352B7000E11589 /* LevelViewController.swift */,
+				ED90906721353A0500E11589 /* LevelUpAlertViewController.swift */,
 			);
 			path = Kensen;
 			sourceTree = "<group>";
@@ -318,9 +340,10 @@
 			files = (
 				77E5240A2122D8C100EE54FD /* LaunchScreen.storyboard in Resources */,
 				77E524072122D8C100EE54FD /* Assets.xcassets in Resources */,
+				ED90906421352B1700E11589 /* LevelStoryboard.storyboard in Resources */,
 				7B34DB642133E9E80007C2B1 /* logo videa new.png in Resources */,
-				7B34DB6C2133F7EC0007C2B1 /* Videa Animation HD.gif in Resources */,
 				6B689571212EBE4F0096CC8B /* GoogleService-Info.plist in Resources */,
+				ED90905F2135030A00E11589 /* Videa Animation HD.gif in Resources */,
 				6B5A58F5212ADB3D00B05DFB /* SantosStoryboard.storyboard in Resources */,
 				77E524052122D8C000EE54FD /* Main.storyboard in Resources */,
 				B0E2B5BB2132133500B6860F /* StevenStoryboard.storyboard in Resources */,
@@ -341,6 +364,7 @@
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
@@ -354,6 +378,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
@@ -395,24 +420,34 @@
 				B0E2B5C52132248900B6860F /* MusicLevelListViewController.swift in Sources */,
 				B0E2B5D12132DFF400B6860F /* HowToLevelListViewController.swift in Sources */,
 				6B4713582133D0D000E86519 /* ProfileAccountViewController.swift in Sources */,
+				ED90906621352B7000E11589 /* LevelViewController.swift in Sources */,
 				ED909055212EC0BE00E11589 /* ChannelDetail.swift in Sources */,
 				B0E2B5C92132BA3B00B6860F /* ComedyLevelListViewController.swift in Sources */,
 				7B34DB682133ED360007C2B1 /* UIImage+Gif.swift in Sources */,
+<<<<<<< HEAD
+				7B99736521354A2800DE40A5 /* SettingPageTableViewController.swift in Sources */,
+=======
+				6B47135D2134D41D00E86519 /* UserService.swift in Sources */,
+>>>>>>> 178da66b8116e971c655e7ba863c9aa017ec7c5b
 				B0E2B5C72132256300B6860F /* MusicLevelContentViewController.swift in Sources */,
 				B0E2B5BF21321A1900B6860F /* IntroductionViewController.swift in Sources */,
 				6B09711D212BF4F800CD9878 /* LoginAccountViewController.swift in Sources */,
 				6B2D62C8213003EA0032EC74 /* ProfileViewController.swift in Sources */,
+				ED90906221351BF300E11589 /* TabBarViewController.swift in Sources */,
 				B0E2B5CF2132C7FC00B6860F /* FoodLevelContentViewController.swift in Sources */,
 				6997F7412133DE7300FA32E1 /* OnboardingViewController.swift in Sources */,
 				B0E2B5C121321D8200B6860F /* ChallengesListIntroViewController.swift in Sources */,
 				6B663521212C000E001137AD /* ForLoginViewController.swift in Sources */,
-				7B34DB70213402750007C2B1 /* LaunchScreenViewController.swift in Sources */,
 				ED909054212EC07700E11589 /* StatisticsViewController.swift in Sources */,
+				6B2B8886213530FE000C90D4 /* ImageService.swift in Sources */,
 				ED90905A212FFEE300E11589 /* StatisticsData.swift in Sources */,
+				6B2B888421352F97000C90D4 /* UntukProfile.swift in Sources */,
+				6B47135F2134D4FD00E86519 /* UserProfile.swift in Sources */,
 				6B9858A4212EA7B80081E017 /* HomeViewController.swift in Sources */,
 				B0E2B5CB2132BA5300B6860F /* ComedyLevelContentViewController.swift in Sources */,
 				B0E2B5DD213408A800B6860F /* LaunchScreenViewController.swift in Sources */,
 				B0E2B5CD2132C7E900B6860F /* FoodLevelListViewController.swift in Sources */,
+				ED90906821353A0500E11589 /* LevelUpAlertViewController.swift in Sources */,
 				B0E2B5C32132232900B6860F /* ChallengesListViewController.swift in Sources */,
 				77E523FE2122D8C000EE54FD /* AppDelegate.swift in Sources */,
 				ED909058212FF66F00E11589 /* StatisticsDataTableViewCell.swift in Sources */,
@@ -563,7 +598,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 56ZF7DLJQY;
+				DEVELOPMENT_TEAM = 9UGU468ZC7;
 				INFOPLIST_FILE = Videa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -583,7 +618,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 56ZF7DLJQY;
+				DEVELOPMENT_TEAM = 9UGU468ZC7;
 				INFOPLIST_FILE = Videa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (

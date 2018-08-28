@@ -10,6 +10,8 @@ import UIKit
 
 class HowToLevelContentViewController: UIViewController {
     
+    @IBOutlet weak var titleImage: UIImageView!
+    
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var description1Label: UILabel!

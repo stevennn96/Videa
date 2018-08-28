@@ -30,13 +30,6 @@ class IntroductionViewController: UIViewController {
     }
     
     
-    
-    
-    
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         getVideo(videoCode: "K1u0QvZD4v0")

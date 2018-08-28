@@ -8,11 +8,13 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
-
+class HomeViewController: UIViewController{
+    
+    
     @IBAction func addChallenge(_ sender: Any) {
         performSegue(withIdentifier: "goToChallenges", sender: self)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
