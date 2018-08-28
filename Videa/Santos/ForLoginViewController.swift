@@ -55,6 +55,9 @@ class ForLoginViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    @IBAction func toRegister(_ sender: Any) {
+        performSegue(withIdentifier: "LoginToRegister", sender: nil)
+    }
     
     @IBAction func LoginButton(_ sender: Any) {
         guard let email = emailOutlet.text else {return}
