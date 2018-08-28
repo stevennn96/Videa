@@ -68,10 +68,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         //punya steven
-//        let storyboard = UIStoryboard(name: "SantosStoryboard", bundle: nil)
-//
-//        let initialViewController = storyboard.instantiateViewController(withIdentifier: "SplashScreen")
-//        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+
+        let storyboard = UIStoryboard(name: "KensenStoryboard", bundle: nil)
+
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "SettingPage")
+        
+
+
 
         
         //Ganti Background Navigation Bar pake Image
@@ -79,8 +83,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().setBackgroundImage(img, for: .default)
         
         
-//        self.window?.rootViewController = initialViewController
-//        self.window?.makeKeyAndVisible()
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
         return true
     }
 
