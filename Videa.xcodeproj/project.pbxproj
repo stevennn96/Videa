@@ -26,7 +26,6 @@
 		77E5240A2122D8C100EE54FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E524082122D8C100EE54FD /* LaunchScreen.storyboard */; };
 		7B34DB642133E9E80007C2B1 /* logo videa new.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B34DB632133E9E70007C2B1 /* logo videa new.png */; };
 		7B34DB682133ED360007C2B1 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34DB672133ED360007C2B1 /* UIImage+Gif.swift */; };
-		7B99736521354A2800DE40A5 /* SettingPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B99736421354A2800DE40A5 /* SettingPageTableViewController.swift */; };
 		B0E2B5BB2132133500B6860F /* StevenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E2B5BA2132133500B6860F /* StevenStoryboard.storyboard */; };
 		B0E2B5BF21321A1900B6860F /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5BE21321A1900B6860F /* IntroductionViewController.swift */; };
 		B0E2B5C121321D8200B6860F /* ChallengesListIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5C021321D8200B6860F /* ChallengesListIntroViewController.swift */; };
@@ -602,7 +601,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9UGU468ZC7;
+				DEVELOPMENT_TEAM = 56ZF7DLJQY;
 				INFOPLIST_FILE = Videa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -622,7 +621,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9UGU468ZC7;
+				DEVELOPMENT_TEAM = 56ZF7DLJQY;
 				INFOPLIST_FILE = Videa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (

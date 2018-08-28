@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -77,7 +78,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nRL-O2-hlC">
-                                <rect key="frame" x="0.0" y="376" width="375" height="353"/>
+                                <rect key="frame" x="0.0" y="376" width="375" height="402"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Achievement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vlc-0o-7P4">
                                         <rect key="frame" x="102" y="8" width="170" height="36"/>
@@ -609,6 +610,7 @@
                         <outlet property="description1Label" destination="Pbh-rF-fOO" id="vcw-OX-GjU"/>
                         <outlet property="description2Label" destination="NyL-l8-Izs" id="W4y-zs-Q2v"/>
                         <outlet property="embedYoutube" destination="yZs-1O-Fjp" id="aYJ-Hi-tfx"/>
+                        <outlet property="titleImage" destination="ZkL-uS-NiG" id="69h-gz-Oyg"/>
                         <outlet property="titleLabel" destination="utu-qY-FoJ" id="6Vd-Ax-qE0"/>
                         <segue destination="P2q-6T-PHh" kind="show" identifier="goToHome" id="JNh-T2-zgO"/>
                     </connections>
@@ -1460,6 +1462,7 @@
                         <outlet property="description1Label" destination="IMA-R1-PG0" id="jVM-2D-neJ"/>
                         <outlet property="description2Label" destination="0vI-EA-8Vs" id="D3U-1u-vpb"/>
                         <outlet property="embedYoutube" destination="JxU-ch-M8n" id="nc2-VU-I8s"/>
+                        <outlet property="titleImage" destination="ER6-0Y-OQa" id="Umm-sd-qYT"/>
                         <outlet property="titleLabel" destination="qZc-F9-q22" id="hyT-zc-UkG"/>
                         <segue destination="P2q-6T-PHh" kind="show" identifier="goToHome" id="B5a-LS-Wn8"/>
                     </connections>
@@ -2587,6 +2590,7 @@
         <image name="onboarding 1" width="375" height="812"/>
         <image name="password icon" width="58" height="58"/>
         <image name="profile icon" width="29" height="29"/>
+        <image name="second" width="30" height="30"/>
         <image name="statisticsIcon" width="16" height="16"/>
         <image name="user" width="1600" height="1600"/>
     </resources>
@@ -2594,7 +2598,7 @@
         <segue reference="8wM-ZO-u1x"/>
         <segue reference="DJk-ie-Gdp"/>
         <segue reference="aj5-j8-D3Q"/>
-        <segue reference="7Mu-QQ-4zW"/>
+        <segue reference="JNh-T2-zgO"/>
         <segue reference="AuF-Zj-eqO"/>
         <segue reference="fZ2-aV-B4E"/>
     </inferredMetricsTieBreakers>
