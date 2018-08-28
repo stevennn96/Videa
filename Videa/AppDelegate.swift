@@ -74,20 +74,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 ////        self.window = UIWindow(frame: UIScreen.main.bounds)
 //
 //
-////        punya steven
-//        let storyboard = UIStoryboard(name: "StevenStoryboard", bundle: nil)
-//
-//        let initialViewController = storyboard.instantiateViewController(withIdentifier: "ChallengePage")
-//        self.window = UIWindow(frame: UIScreen.main.bounds)
+//        punya steven
+        let storyboard = UIStoryboard(name: "StevenStoryboard", bundle: nil)
+
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "ChallengePage")
+        self.window = UIWindow(frame: UIScreen.main.bounds)
 
         
-        //Ganti Background Navigation Bar pake Image
+//        Ganti Background Navigation Bar pake Image
         let img:UIImage = UIImage(named: "Top Tab Bar.pmg")!
         UINavigationBar.appearance().setBackgroundImage(img, for: .default)
 //
 //
-//        self.window?.rootViewController = initialViewController
-//        self.window?.makeKeyAndVisible()
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 
