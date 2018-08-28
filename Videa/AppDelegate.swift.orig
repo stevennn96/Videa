@@ -19,45 +19,67 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         let db = Firestore.firestore()
+        //punya santos
+//        // Kalau mau pke storyboard sndiri comment punya gw
+//        let authListener = Auth.auth().addStateDidChangeListener {auth, user in
+//            let storyboard = UIStoryboard(name: "SantosStoryboard", bundle: nil)
+//
+//            if user != nil {
+//                let controller = storyboard.instantiateViewController(withIdentifier: "ProfileID")
+//                self.window?.rootViewController = controller
+//                self.window?.makeKeyAndVisible()
+//
+//            }else {
+//                //Menu Screen
+//                let controller = storyboard.instantiateViewController(withIdentifier: "LoginSignupVC")
+//                self.window?.rootViewController = controller
+//                self.window?.makeKeyAndVisible()
+//            }
+//        }
+//  // Sampai sini
         
         // Kalau mau pke storyboard sndiri comand punya gw
-        let authListener = Auth.auth().addStateDidChangeListener {auth, user in
-            let storyboard = UIStoryboard(name: "SantosStoryboard", bundle: nil)
-            
-            if user != nil {
-                let controller = storyboard.instantiateViewController(withIdentifier: "ProfileID")
-                self.window?.rootViewController = controller
-                self.window?.makeKeyAndVisible()
-                
-            }else {
-                //Menu Screen
-                let controller = storyboard.instantiateViewController(withIdentifier: "LoginSignupVC")
-                self.window?.rootViewController = controller
-                self.window?.makeKeyAndVisible()
-            }
-        }
+//        let authListener = Auth.auth().addStateDidChangeListener {auth, user in
+//            let storyboard = UIStoryboard(name: "SantosStoryboard", bundle: nil)
+//
+//            if user != nil {
+//                let controller = storyboard.instantiateViewController(withIdentifier: "ProfileID")
+//                self.window?.rootViewController = controller
+//                self.window?.makeKeyAndVisible()
+//
+//            }else {
+//                //Menu Screen
+//                let controller = storyboard.instantiateViewController(withIdentifier: "LoginSignupVC")
+//                self.window?.rootViewController = controller
+//                self.window?.makeKeyAndVisible()
+//            }
+//        }
   // Sampai sini
         
         
         // Override point for customization after application launch.
-<<<<<<< HEAD
 //        self.window = UIWindow(frame: UIScreen.main.bounds)
-//        let storyboard = UIStoryboard(name: "SantosStoryboard", bundle: nil)
-//        let initialViewController = storyboard.instantiateViewController(withIdentifier: "LoginSignupVC")
-//        self.window = UIWindow(frame: UIScreen.main.bounds)
-//
+
+        //punya kensen
 //        let storyboard = UIStoryboard(name: "KensenStoryboard", bundle: nil)
 //
-//        let initialViewController = storyboard.instantiateViewController(withIdentifier: "StatisticsVC")
+//        let initialViewController = storyboard.instantiateViewController(withIdentifier: "onboardingVC")
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        
+        //punya steven
+<<<<<<< HEAD
+        let storyboard = UIStoryboard(name: "StevenStoryboard", bundle: nil)
+        
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "ChallengePage")
+        self.window = UIWindow(frame: UIScreen.main.bounds)
 =======
-        self.window = UIWindow(frame: UIScreen.main.bounds)
+//        let storyboard = UIStoryboard(name: "SantosStoryboard", bundle: nil)
+//
+//        let initialViewController = storyboard.instantiateViewController(withIdentifier: "SplashScreen")
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+>>>>>>> f80852deaf452f4105fa5bf10d5dead20f81cdf0
 
-        let storyboard = UIStoryboard(name: "KensenStoryboard", bundle: nil)
-
-        let initialViewController = storyboard.instantiateViewController(withIdentifier: "onboardingVC")
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-
->>>>>>> 078e0449de0a3463effd3686fd5ae798cb0627af
         
         //Ganti Background Navigation Bar pake Image
         let img:UIImage = UIImage(named: "navbarbg.png")!
@@ -65,15 +87,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().autoresizesSubviews = false
         UITabBar.appearance().clipsToBounds = true
         
-<<<<<<< HEAD
+        
 //        self.window?.rootViewController = initialViewController
 //        self.window?.makeKeyAndVisible()
-   return true
-=======
-        self.window?.rootViewController = initialViewController
-        self.window?.makeKeyAndVisible()
         return true
->>>>>>> 078e0449de0a3463effd3686fd5ae798cb0627af
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

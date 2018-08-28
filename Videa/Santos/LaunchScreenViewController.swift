@@ -1,27 +1,36 @@
 //
-//  ChallengesListIntroViewController.swift
+//  LaunchScreenViewController.swift
 //  Videa
 //
-//  Created by Steven on 26/08/18.
+//  Created by anthony  yaputra on 27/08/18.
 //  Copyright © 2018 Steven. All rights reserved.
 //
 
 import UIKit
 
-class ChallengesListIntroViewController: UIViewController {
+class LaunchScreenViewController: UIViewController {
 
-    @IBAction func introduction(_ sender: Any) {
-        performSegue(withIdentifier: "goToIntroduction", sender: self)
-    }
+    @IBOutlet weak var gifBG: UIImageView!
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        gifBG.loadGif(name: "Videa Animation HD")
+        
+        let timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
+        // Do any additional setup after loading the view.
+        
+        
         
         
     }
-        // Do any additional setup after loading the view.
     
-
+    @objc func timeToMoveOn() {
+        self.performSegue(withIdentifier: "SplashScreenToMainMenu", sender: self)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
