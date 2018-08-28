@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vw8-lo-0OY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wc7-b7-A37">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -2021,7 +2020,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FC0-ip-GUB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2255" y="-2028"/>
+            <point key="canvasLocation" x="-2143" y="-2028"/>
         </scene>
         <!--Login Account View Controller-->
         <scene sceneID="bsy-lr-sQR">
@@ -2399,6 +2398,31 @@
             </objects>
             <point key="canvasLocation" x="617" y="262"/>
         </scene>
+        <!--Launch Screen View Controller-->
+        <scene sceneID="JdE-Ml-lUh">
+            <objects>
+                <viewController storyboardIdentifier="SplashScreen2" id="KJ1-kk-u2y" customClass="LaunchScreenViewController" customModule="Videa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bL4-9b-ueM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pem-CG-IKg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="826"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="78S-5l-ERl"/>
+                    </view>
+                    <connections>
+                        <outlet property="gifBG" destination="pem-CG-IKg" id="vgt-QX-scc"/>
+                        <segue destination="49e-Tb-3d3" kind="show" identifier="SplashScreenToMainMenu" id="fZ2-aV-B4E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x82-hU-xel" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-298" y="-1176"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Background App Red" width="1125" height="2435"/>
@@ -2442,8 +2466,11 @@
         <image name="user" width="1600" height="1600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="x8l-4r-2aa"/>
+        <segue reference="8wM-ZO-u1x"/>
+        <segue reference="DJk-ie-Gdp"/>
+        <segue reference="aj5-j8-D3Q"/>
         <segue reference="7Mu-QQ-4zW"/>
         <segue reference="AuF-Zj-eqO"/>
+        <segue reference="fZ2-aV-B4E"/>
     </inferredMetricsTieBreakers>
 </document>

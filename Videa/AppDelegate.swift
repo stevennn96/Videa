@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 UserService.observeUserProfile(user!.uid) { userProfile in
                     UserService.currentUserProfile = userProfile
                 }
-                let controller = storyboard.instantiateViewController(withIdentifier: "MainView")
+                let controller = storyboard.instantiateViewController(withIdentifier: "SplashScreen2")
                 self.window?.rootViewController = controller
                 self.window?.makeKeyAndVisible()
 
@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 UserService.currentUserProfile = nil
 
                 //Menu Screen
-                let controller = storyboard.instantiateViewController(withIdentifier: "LoginSignupVC")
+                let controller = storyboard.instantiateViewController(withIdentifier: "SplashScreen")
                 self.window?.rootViewController = controller
                 self.window?.makeKeyAndVisible()
             }
