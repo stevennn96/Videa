@@ -2451,7 +2451,6 @@
         <image name="user" width="1600" height="1600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="f9u-y0-XzD"/>
         <segue reference="x8l-4r-2aa"/>
         <segue reference="7Mu-QQ-4zW"/>
         <segue reference="AuF-Zj-eqO"/>

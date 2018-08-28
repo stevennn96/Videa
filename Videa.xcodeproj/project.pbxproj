@@ -88,7 +88,6 @@
 		B0E2B5D02132DFF400B6860F /* HowToLevelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToLevelListViewController.swift; sourceTree = "<group>"; };
 		B0E2B5D22132E00B00B6860F /* HowToLevelContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToLevelContentViewController.swift; sourceTree = "<group>"; };
 		B0E2B5DC213408A800B6860F /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
-		B0E2B5F42135445600B6860F /* HomeTaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTaskTableViewCell.swift; sourceTree = "<group>"; };
 		B0E2B60A21354E3B00B6860F /* tab bar red bawah.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab bar red bawah.png"; sourceTree = "<group>"; };
 		D5A344EF856C85A0C716FFB6 /* Pods-Videa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Videa.release.xcconfig"; path = "Pods/Target Support Files/Pods-Videa/Pods-Videa.release.xcconfig"; sourceTree = "<group>"; };
 		DFCE25A618B497E284265DC2 /* Pods-Videa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Videa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Videa/Pods-Videa.debug.xcconfig"; sourceTree = "<group>"; };
@@ -202,7 +201,6 @@
 			isa = PBXGroup;
 			children = (
 				B0E2B5BA2132133500B6860F /* StevenStoryboard.storyboard */,
-				B0E2B5F42135445600B6860F /* HomeTaskTableViewCell.swift */,
 				6B9858A1212EA7B80081E017 /* HomeViewController.swift */,
 				B0E2B5C42132248900B6860F /* MusicLevelListViewController.swift */,
 				B0E2B5BE21321A1900B6860F /* IntroductionViewController.swift */,
@@ -600,7 +598,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.binus.Videa;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.binus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -620,7 +618,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.binus.Videa;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.binus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
