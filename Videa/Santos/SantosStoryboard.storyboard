@@ -310,12 +310,20 @@
                                     <action selector="saveButton:" destination="h1w-tM-quA" eventType="touchUpInside" id="9uO-6P-Qi0"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wNd-Oa-Hch">
+                                <rect key="frame" x="16" y="286" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="c5T-SI-MY8"/>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="UFF-HU-qBT" id="w4k-jY-cxR"/>
+                        <outlet property="quotesOutlet" destination="wNd-Oa-Hch" id="Zrv-2a-lS5"/>
                         <outlet property="tapTochangeImage" destination="6t0-m9-b5m" id="vmo-Ar-8US"/>
                         <outlet property="usernameOutlet" destination="NXX-Ei-kZa" id="8OY-6D-SJN"/>
                         <segue destination="FhA-yr-QMB" kind="show" identifier="ProfileToChallenge" id="waV-VJ-kKB"/>
@@ -323,7 +331,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FZp-T0-Dd1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1438" y="-964"/>
+            <point key="canvasLocation" x="-1439.2" y="-964.28571428571433"/>
         </scene>
         <!--Profile Account View Controller-->
         <scene sceneID="jxi-fy-gsi">
@@ -334,11 +342,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pay-JM-qzF">
-                                <rect key="frame" x="67" y="44" width="240" height="128"/>
+                                <rect key="frame" x="67" y="44" width="242" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T29-PD-QjW">
-                                <rect key="frame" x="166" y="250" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T29-PD-QjW">
+                                <rect key="frame" x="119" y="180" width="137" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -352,12 +360,20 @@
                                     <action selector="logOutButton:" destination="FhA-yr-QMB" eventType="touchUpInside" id="fSF-4C-3uj"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6g-hc-o41">
+                                <rect key="frame" x="16" y="202" width="343" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="a86-0d-R6f"/>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="pay-JM-qzF" id="EWH-Ia-GpO"/>
+                        <outlet property="quotesOutlet" destination="i6g-hc-o41" id="diT-DG-6iF"/>
                         <outlet property="usernameOutlet" destination="T29-PD-QjW" id="f2M-RM-VSG"/>
                         <segue destination="Lg0-K0-jkg" kind="show" identifier="LogOutButton" id="rWc-p4-Cml"/>
                     </connections>
@@ -379,6 +395,7 @@
         <image name="profile icon" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="R4F-aw-4D8"/>
+        <segue reference="waV-VJ-kKB"/>
+        <segue reference="rWc-p4-Cml"/>
     </inferredMetricsTieBreakers>
 </document>
