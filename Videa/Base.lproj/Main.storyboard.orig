@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wc7-b7-A37">
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vw8-lo-0OY">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,6 +11,62 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+<<<<<<< HEAD
+        <!--Introduction View Controller-->
+        <scene sceneID="Vh4-Ei-bm8">
+            <objects>
+                <viewController id="oS4-9A-zNc" customClass="IntroductionViewController" customModule="Videa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7m4-pH-Wpo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Introduction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8G-0a-23p">
+                                <rect key="frame" x="62" y="137" width="251" height="92"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="57"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="757-Fe-9cP">
+                                <rect key="frame" x="16" y="237" width="343" height="169"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="169" id="dhY-gJ-vKU"/>
+                                </constraints>
+                                <string key="text">Media sosial Instagram sedang dipenuhi dengan tagar #KikiChallenge. Kiki Challenge atau yang juga kerap disebut In My Feelings Challenge sedang menjadi tarian yang kini menjadi tren. Jika kalian membuka tagar tersebut, kalian akan melihat banyak orang yang melakukan tarian dengan diiringi lagu hit dari Drake “In My Feelings.”</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <webView contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="7FS-TK-5wV">
+                                <rect key="frame" x="16" y="414" width="343" height="164"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="164" id="Nia-up-v4o"/>
+                                </constraints>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7FS-TK-5wV" firstAttribute="top" secondItem="757-Fe-9cP" secondAttribute="bottom" constant="8" id="EvP-G0-wu7"/>
+                            <constraint firstItem="757-Fe-9cP" firstAttribute="centerX" secondItem="C8G-0a-23p" secondAttribute="centerX" id="HcR-vt-5Zc"/>
+                            <constraint firstItem="7FS-TK-5wV" firstAttribute="leading" secondItem="q3h-pC-hTL" secondAttribute="leading" constant="16" id="Hhu-Ms-bFP"/>
+                            <constraint firstItem="q3h-pC-hTL" firstAttribute="bottom" secondItem="7FS-TK-5wV" secondAttribute="bottom" constant="200" id="Pv1-hk-eIM"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="757-Fe-9cP" secondAttribute="trailing" constant="16" id="R4G-LT-X0E"/>
+                            <constraint firstItem="q3h-pC-hTL" firstAttribute="trailing" secondItem="7FS-TK-5wV" secondAttribute="trailing" constant="16" id="Vlh-be-5ft"/>
+                            <constraint firstItem="757-Fe-9cP" firstAttribute="top" secondItem="C8G-0a-23p" secondAttribute="bottom" constant="8" symbolic="YES" id="bEg-68-6ca"/>
+                            <constraint firstItem="757-Fe-9cP" firstAttribute="leading" secondItem="7m4-pH-Wpo" secondAttribute="leading" constant="16" id="tva-4b-9k8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="q3h-pC-hTL"/>
+                    </view>
+                    <connections>
+                        <outlet property="embedYoutube" destination="7FS-TK-5wV" id="43J-Bs-FDC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uet-hv-xPw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1604" y="1012"/>
+        </scene>
+=======
+>>>>>>> a2c38de91f07a960b02b796cfac85b4e24d1f94c
         <!--View Controller-->
         <scene sceneID="WIP-9K-8r3">
             <objects>
