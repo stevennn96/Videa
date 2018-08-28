@@ -22,7 +22,6 @@
 		77E5240A2122D8C100EE54FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E524082122D8C100EE54FD /* LaunchScreen.storyboard */; };
 		7B34DB642133E9E80007C2B1 /* logo videa new.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B34DB632133E9E70007C2B1 /* logo videa new.png */; };
 		7B34DB682133ED360007C2B1 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34DB672133ED360007C2B1 /* UIImage+Gif.swift */; };
-		7B34DB7221340F340007C2B1 /* Videa Animation HD.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7B34DB7121340F340007C2B1 /* Videa Animation HD.gif */; };
 		B0E2B5BB2132133500B6860F /* StevenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E2B5BA2132133500B6860F /* StevenStoryboard.storyboard */; };
 		B0E2B5BF21321A1900B6860F /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5BE21321A1900B6860F /* IntroductionViewController.swift */; };
 		B0E2B5C121321D8200B6860F /* ChallengesListIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5C021321D8200B6860F /* ChallengesListIntroViewController.swift */; };
@@ -36,8 +35,8 @@
 		B0E2B5D12132DFF400B6860F /* HowToLevelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5D02132DFF400B6860F /* HowToLevelListViewController.swift */; };
 		B0E2B5D32132E00B00B6860F /* HowToLevelContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5D22132E00B00B6860F /* HowToLevelContentViewController.swift */; };
 		B0E2B5DD213408A800B6860F /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5DC213408A800B6860F /* LaunchScreenViewController.swift */; };
-		B0E2B5F52135445600B6860F /* HomeTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5F42135445600B6860F /* HomeTaskTableViewCell.swift */; };
 		B0E2B60B21354E3E00B6860F /* tab bar red bawah.png in Resources */ = {isa = PBXBuildFile; fileRef = B0E2B60A21354E3B00B6860F /* tab bar red bawah.png */; };
+		B0E2B60D2135533100B6860F /* tab bar red bawah.png in Resources */ = {isa = PBXBuildFile; fileRef = B0E2B60C2135532F00B6860F /* tab bar red bawah.png */; };
 		ED909054212EC07700E11589 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED90904B212E9BFA00E11589 /* StatisticsViewController.swift */; };
 		ED909055212EC0BE00E11589 /* ChannelDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED90904D212EA3FE00E11589 /* ChannelDetail.swift */; };
 		ED909056212EC0D400E11589 /* StatisticsDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED909050212EA6E000E11589 /* StatisticsDataViewController.swift */; };
@@ -85,6 +84,7 @@
 		B0E2B5DC213408A800B6860F /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		B0E2B5F42135445600B6860F /* HomeTaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTaskTableViewCell.swift; sourceTree = "<group>"; };
 		B0E2B60A21354E3B00B6860F /* tab bar red bawah.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab bar red bawah.png"; sourceTree = "<group>"; };
+		B0E2B60C2135532F00B6860F /* tab bar red bawah.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tab bar red bawah.png"; path = "../../tab bar red bawah.png"; sourceTree = "<group>"; };
 		D5A344EF856C85A0C716FFB6 /* Pods-Videa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Videa.release.xcconfig"; path = "Pods/Target Support Files/Pods-Videa/Pods-Videa.release.xcconfig"; sourceTree = "<group>"; };
 		DFCE25A618B497E284265DC2 /* Pods-Videa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Videa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Videa/Pods-Videa.debug.xcconfig"; sourceTree = "<group>"; };
 		ED90904B212E9BFA00E11589 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +182,7 @@
 				7B34DB632133E9E70007C2B1 /* logo videa new.png */,
 				6B689570212EBE4F0096CC8B /* GoogleService-Info.plist */,
 				77E524062122D8C100EE54FD /* Assets.xcassets */,
+				B0E2B60C2135532F00B6860F /* tab bar red bawah.png */,
 				ED90905E2135030900E11589 /* Videa Animation HD.gif */,
 				77E524082122D8C100EE54FD /* LaunchScreen.storyboard */,
 				77E5240B2122D8C100EE54FD /* Info.plist */,
@@ -214,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				7B34DB652133EC310007C2B1 /* LaunchScreenViewController.swift */,
+				B0E2B60A21354E3B00B6860F /* tab bar red bawah.png */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -333,6 +335,7 @@
 				ED90906421352B1700E11589 /* LevelStoryboard.storyboard in Resources */,
 				7B34DB642133E9E80007C2B1 /* logo videa new.png in Resources */,
 				6B689571212EBE4F0096CC8B /* GoogleService-Info.plist in Resources */,
+				B0E2B60D2135533100B6860F /* tab bar red bawah.png in Resources */,
 				ED90905F2135030A00E11589 /* Videa Animation HD.gif in Resources */,
 				6B5A58F5212ADB3D00B05DFB /* SantosStoryboard.storyboard in Resources */,
 				77E524052122D8C000EE54FD /* Main.storyboard in Resources */,

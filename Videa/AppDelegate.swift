@@ -61,9 +61,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
 
         //punya kensen
-        let storyboard = UIStoryboard(name: "LevelStoryboard", bundle: nil)
-
-        let initialViewController = storyboard.instantiateViewController(withIdentifier: "LevelVC")
+//        let storyboard = UIStoryboard(name: "LevelStoryboard", bundle: nil)
+//
+//        let initialViewController = storyboard.instantiateViewController(withIdentifier: "LevelVC")
 //        self.window = UIWindow(frame: UIScreen.main.bounds)
         
         
