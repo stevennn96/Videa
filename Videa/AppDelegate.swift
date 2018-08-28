@@ -22,27 +22,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let db = Firestore.firestore()
         //punya santos
 //        // Kalau mau pke storyboard sndiri comment punya gw
-//        let authListener = Auth.auth().addStateDidChangeListener {auth, user in
-//            let storyboard = UIStoryboard(name: "SantosStoryboard", bundle: nil)
-//
-//            if user != nil {
-//
-//                UserService.observeUserProfile(user!.uid) { userProfile in
-//                    UserService.currentUserProfile = userProfile
-//                }
-//                let controller = storyboard.instantiateViewController(withIdentifier: "ProfileID")
-//                self.window?.rootViewController = controller
-//                self.window?.makeKeyAndVisible()
-//
-//            }else {
-//                UserService.currentUserProfile = nil
-//
-//                //Menu Screen
-//                let controller = storyboard.instantiateViewController(withIdentifier: "LoginSignupVC")
-//                self.window?.rootViewController = controller
-//                self.window?.makeKeyAndVisible()
-//            }
-//        }
+        let authListener = Auth.auth().addStateDidChangeListener {auth, user in
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+
+            if user != nil {
+
+                UserService.observeUserProfile(user!.uid) { userProfile in
+                    UserService.currentUserProfile = userProfile
+                }
+                let controller = storyboard.instantiateViewController(withIdentifier: "SplashScreen2")
+                self.window?.rootViewController = controller
+                self.window?.makeKeyAndVisible()
+
+            }else {
+                UserService.currentUserProfile = nil
+
+                //Menu Screen
+                let controller = storyboard.instantiateViewController(withIdentifier: "SplashScreen")
+                self.window?.rootViewController = controller
+                self.window?.makeKeyAndVisible()
+            }
+        }
   // Sampai sini
         
         // Kalau mau pke storyboard sndiri comand punya gw
