@@ -518,11 +518,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oje-B6-kOk">
-<<<<<<< HEAD
                                 <rect key="frame" x="0.0" y="44" width="375" height="734"/>
-=======
-                                <rect key="frame" x="0.0" y="44" width="375" height="1122"/>
->>>>>>> 7ff21efa04b71ef4c76f1cc20b80e5dc6b3feb21
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y9u-Bn-ZlB">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
@@ -1819,11 +1815,8 @@
         <image name="tab bar red bawah" width="375" height="68"/>
     </resources>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
         <segue reference="7YG-UH-Dcw"/>
-=======
         <segue reference="3NI-G8-ilx"/>
->>>>>>> 7ff21efa04b71ef4c76f1cc20b80e5dc6b3feb21
         <segue reference="gYy-9T-Dqu"/>
     </inferredMetricsTieBreakers>
 </document>
