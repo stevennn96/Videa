@@ -10,6 +10,7 @@ import UIKit
 
 class ComedyLevelContentViewController: UIViewController {
 
+    @IBOutlet weak var titleImage: UIImageView!
     
     @IBOutlet weak var titleLabel: UILabel!
     
