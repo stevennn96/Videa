@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseDatabase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,22 +22,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let db = Firestore.firestore()
         //punya santos
 //        // Kalau mau pke storyboard sndiri comment punya gw
-//        let authListener = Auth.auth().addStateDidChangeListener {auth, user in
-//            let storyboard = UIStoryboard(name: "SantosStoryboard", bundle: nil)
-//
-//            if user != nil {
-//                let controller = storyboard.instantiateViewController(withIdentifier: "ProfileID")
-//                self.window?.rootViewController = controller
-//                self.window?.makeKeyAndVisible()
-//
-//            }else {
-//                //Menu Screen
-//                let controller = storyboard.instantiateViewController(withIdentifier: "LoginSignupVC")
-//                self.window?.rootViewController = controller
-//                self.window?.makeKeyAndVisible()
-//            }
-//        }
-//  // Sampai sini
+        let authListener = Auth.auth().addStateDidChangeListener {auth, user in
+            let storyboard = UIStoryboard(name: "SantosStoryboard", bundle: nil)
+
+            if user != nil {
+                
+                UserService.observeUserProfile(user!.uid) { userProfile in
+                    UserService.currentUserProfile = userProfile
+                }
+                let controller = storyboard.instantiateViewController(withIdentifier: "ProfileID")
+                self.window?.rootViewController = controller
+                self.window?.makeKeyAndVisible()
+
+            }else {
+                UserService.currentUserProfile = nil
+                
+                //Menu Screen
+                let controller = storyboard.instantiateViewController(withIdentifier: "LoginSignupVC")
+                self.window?.rootViewController = controller
+                self.window?.makeKeyAndVisible()
+            }
+        }
+  // Sampai sini
         
         // Kalau mau pke storyboard sndiri comand punya gw
 //        let authListener = Auth.auth().addStateDidChangeListener {auth, user in
@@ -58,29 +65,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         // Override point for customization after application launch.
-        self.window = UIWindow(frame: UIScreen.main.bounds)
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
 
         //punya kensen
 //        let storyboard = UIStoryboard(name: "LevelStoryboard", bundle: nil)
 //
 //        let initialViewController = storyboard.instantiateViewController(withIdentifier: "LevelVC")
+////        self.window = UIWindow(frame: UIScreen.main.bounds)
+//
+//
+////        punya steven
+//        let storyboard = UIStoryboard(name: "StevenStoryboard", bundle: nil)
+//
+//        let initialViewController = storyboard.instantiateViewController(withIdentifier: "ChallengePage")
 //        self.window = UIWindow(frame: UIScreen.main.bounds)
-        
-        
-//        punya steven
-        let storyboard = UIStoryboard(name: "StevenStoryboard", bundle: nil)
-
-        let initialViewController = storyboard.instantiateViewController(withIdentifier: "ChallengePage")
-        self.window = UIWindow(frame: UIScreen.main.bounds)
 
         
         //Ganti Background Navigation Bar pake Image
-        let img:UIImage = UIImage(named: "Top Tab Bar.pmg")!
-        UINavigationBar.appearance().setBackgroundImage(img, for: .default)
-        
-        
-        self.window?.rootViewController = initialViewController
-        self.window?.makeKeyAndVisible()
+//        let img:UIImage = UIImage(named: "Top Tab Bar.pmg")!
+//        UINavigationBar.appearance().setBackgroundImage(img, for: .default)
+//
+//
+//        self.window?.rootViewController = initialViewController
+//        self.window?.makeKeyAndVisible()
         return true
     }
 

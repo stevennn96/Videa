@@ -518,7 +518,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oje-B6-kOk">
-                                <rect key="frame" x="0.0" y="44" width="375" height="1122"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y9u-Bn-ZlB">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
@@ -1412,7 +1412,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aO1-Fs-IPQ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-383.19999999999999" y="2882.5123152709361"/>
+            <point key="canvasLocation" x="-383" y="2812"/>
         </scene>
         <!--How To Level List View Controller-->
         <scene sceneID="TCj-nN-WMP">
@@ -1815,6 +1815,7 @@
         <image name="tab bar red bawah.png" width="375" height="49"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="7YG-UH-Dcw"/>
         <segue reference="3NI-G8-ilx"/>
         <segue reference="gYy-9T-Dqu"/>
     </inferredMetricsTieBreakers>

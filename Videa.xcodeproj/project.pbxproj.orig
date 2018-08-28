@@ -9,8 +9,12 @@
 /* Begin PBXBuildFile section */
 		6997F7412133DE7300FA32E1 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6997F7402133DE7300FA32E1 /* OnboardingViewController.swift */; };
 		6B09711D212BF4F800CD9878 /* LoginAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B09711C212BF4F800CD9878 /* LoginAccountViewController.swift */; };
+		6B2B888421352F97000C90D4 /* UntukProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2B888321352F97000C90D4 /* UntukProfile.swift */; };
+		6B2B8886213530FE000C90D4 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2B8885213530FE000C90D4 /* ImageService.swift */; };
 		6B2D62C8213003EA0032EC74 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2D62C7213003EA0032EC74 /* ProfileViewController.swift */; };
 		6B4713582133D0D000E86519 /* ProfileAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4713572133D0D000E86519 /* ProfileAccountViewController.swift */; };
+		6B47135D2134D41D00E86519 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B47135C2134D41D00E86519 /* UserService.swift */; };
+		6B47135F2134D4FD00E86519 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B47135E2134D4FD00E86519 /* UserProfile.swift */; };
 		6B5A58F5212ADB3D00B05DFB /* SantosStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B5A58F4212ADB3D00B05DFB /* SantosStoryboard.storyboard */; };
 		6B663521212C000E001137AD /* ForLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B663520212C000E001137AD /* ForLoginViewController.swift */; };
 		6B689571212EBE4F0096CC8B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B689570212EBE4F0096CC8B /* GoogleService-Info.plist */; };
@@ -22,7 +26,6 @@
 		77E5240A2122D8C100EE54FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E524082122D8C100EE54FD /* LaunchScreen.storyboard */; };
 		7B34DB642133E9E80007C2B1 /* logo videa new.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B34DB632133E9E70007C2B1 /* logo videa new.png */; };
 		7B34DB682133ED360007C2B1 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34DB672133ED360007C2B1 /* UIImage+Gif.swift */; };
-		7B34DB7221340F340007C2B1 /* Videa Animation HD.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7B34DB7121340F340007C2B1 /* Videa Animation HD.gif */; };
 		B0E2B5BB2132133500B6860F /* StevenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E2B5BA2132133500B6860F /* StevenStoryboard.storyboard */; };
 		B0E2B5BF21321A1900B6860F /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5BE21321A1900B6860F /* IntroductionViewController.swift */; };
 		B0E2B5C121321D8200B6860F /* ChallengesListIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5C021321D8200B6860F /* ChallengesListIntroViewController.swift */; };
@@ -55,8 +58,12 @@
 		3BFEB76E52A41DF9AB347DFC /* Pods_Videa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Videa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6997F7402133DE7300FA32E1 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		6B09711C212BF4F800CD9878 /* LoginAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAccountViewController.swift; sourceTree = "<group>"; };
+		6B2B888321352F97000C90D4 /* UntukProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UntukProfile.swift; sourceTree = "<group>"; };
+		6B2B8885213530FE000C90D4 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		6B2D62C7213003EA0032EC74 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		6B4713572133D0D000E86519 /* ProfileAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAccountViewController.swift; sourceTree = "<group>"; };
+		6B47135C2134D41D00E86519 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		6B47135E2134D4FD00E86519 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		6B5A58F4212ADB3D00B05DFB /* SantosStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SantosStoryboard.storyboard; sourceTree = "<group>"; };
 		6B663520212C000E001137AD /* ForLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForLoginViewController.swift; sourceTree = "<group>"; };
 		6B689570212EBE4F0096CC8B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -141,6 +148,10 @@
 			children = (
 				6B4713592133DD4600E86519 /* Model */,
 				6B5A58F4212ADB3D00B05DFB /* SantosStoryboard.storyboard */,
+				6B2B888321352F97000C90D4 /* UntukProfile.swift */,
+				6B2B8885213530FE000C90D4 /* ImageService.swift */,
+				6B47135E2134D4FD00E86519 /* UserProfile.swift */,
+				6B47135C2134D41D00E86519 /* UserService.swift */,
 				B0E2B5DC213408A800B6860F /* LaunchScreenViewController.swift */,
 				6B4713572133D0D000E86519 /* ProfileAccountViewController.swift */,
 				6B663520212C000E001137AD /* ForLoginViewController.swift */,
@@ -182,7 +193,10 @@
 				7B34DB632133E9E70007C2B1 /* logo videa new.png */,
 				6B689570212EBE4F0096CC8B /* GoogleService-Info.plist */,
 				77E524062122D8C100EE54FD /* Assets.xcassets */,
+<<<<<<< HEAD
+=======
 				ED90905E2135030900E11589 /* Videa Animation HD.gif */,
+>>>>>>> 7ff21efa04b71ef4c76f1cc20b80e5dc6b3feb21
 				77E524082122D8C100EE54FD /* LaunchScreen.storyboard */,
 				77E5240B2122D8C100EE54FD /* Info.plist */,
 			);
@@ -333,7 +347,10 @@
 				ED90906421352B1700E11589 /* LevelStoryboard.storyboard in Resources */,
 				7B34DB642133E9E80007C2B1 /* logo videa new.png in Resources */,
 				6B689571212EBE4F0096CC8B /* GoogleService-Info.plist in Resources */,
+<<<<<<< HEAD
+=======
 				ED90905F2135030A00E11589 /* Videa Animation HD.gif in Resources */,
+>>>>>>> 7ff21efa04b71ef4c76f1cc20b80e5dc6b3feb21
 				6B5A58F5212ADB3D00B05DFB /* SantosStoryboard.storyboard in Resources */,
 				77E524052122D8C000EE54FD /* Main.storyboard in Resources */,
 				B0E2B5BB2132133500B6860F /* StevenStoryboard.storyboard in Resources */,
@@ -354,6 +371,7 @@
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
@@ -367,6 +385,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
@@ -408,14 +427,11 @@
 				B0E2B5C52132248900B6860F /* MusicLevelListViewController.swift in Sources */,
 				B0E2B5D12132DFF400B6860F /* HowToLevelListViewController.swift in Sources */,
 				6B4713582133D0D000E86519 /* ProfileAccountViewController.swift in Sources */,
-<<<<<<< HEAD
-				B0E2B5F52135445600B6860F /* HomeTaskTableViewCell.swift in Sources */,
-=======
 				ED90906621352B7000E11589 /* LevelViewController.swift in Sources */,
->>>>>>> 8d1fa88e256ec0098bbb168efec4d369a04d3c12
 				ED909055212EC0BE00E11589 /* ChannelDetail.swift in Sources */,
 				B0E2B5C92132BA3B00B6860F /* ComedyLevelListViewController.swift in Sources */,
 				7B34DB682133ED360007C2B1 /* UIImage+Gif.swift in Sources */,
+				6B47135D2134D41D00E86519 /* UserService.swift in Sources */,
 				B0E2B5C72132256300B6860F /* MusicLevelContentViewController.swift in Sources */,
 				B0E2B5BF21321A1900B6860F /* IntroductionViewController.swift in Sources */,
 				6B09711D212BF4F800CD9878 /* LoginAccountViewController.swift in Sources */,
@@ -426,7 +442,10 @@
 				B0E2B5C121321D8200B6860F /* ChallengesListIntroViewController.swift in Sources */,
 				6B663521212C000E001137AD /* ForLoginViewController.swift in Sources */,
 				ED909054212EC07700E11589 /* StatisticsViewController.swift in Sources */,
+				6B2B8886213530FE000C90D4 /* ImageService.swift in Sources */,
 				ED90905A212FFEE300E11589 /* StatisticsData.swift in Sources */,
+				6B2B888421352F97000C90D4 /* UntukProfile.swift in Sources */,
+				6B47135F2134D4FD00E86519 /* UserProfile.swift in Sources */,
 				6B9858A4212EA7B80081E017 /* HomeViewController.swift in Sources */,
 				B0E2B5CB2132BA5300B6860F /* ComedyLevelContentViewController.swift in Sources */,
 				B0E2B5DD213408A800B6860F /* LaunchScreenViewController.swift in Sources */,
@@ -589,7 +608,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.binus;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.binus.Videa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -609,7 +628,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.binus;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.binus.Videa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
