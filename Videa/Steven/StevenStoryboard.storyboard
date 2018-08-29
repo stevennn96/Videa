@@ -1783,7 +1783,6 @@
         <image name="tabbarbg" width="562" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5qA-Sk-Nrd"/>
         <segue reference="aRk-qW-jKQ"/>
         <segue reference="5N8-QY-krX"/>
     </inferredMetricsTieBreakers>
