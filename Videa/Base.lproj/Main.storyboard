@@ -2242,8 +2242,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cjC-eO-A6c">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="826"/>
+                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cjC-eO-A6c">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -2257,7 +2257,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FC0-ip-GUB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2143" y="-2028"/>
+            <point key="canvasLocation" x="-2143.1999999999998" y="-2028.3251231527095"/>
         </scene>
         <!--Login Account View Controller-->
         <scene sceneID="bsy-lr-sQR">
@@ -2275,15 +2275,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <visualEffectView opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HcC-P7-IN3">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="Y0v-dN-vve">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                </view>
-                                <blurEffect style="regular"/>
-                            </visualEffectView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b8e-Io-anL">
                                 <rect key="frame" x="36" y="427" width="306" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2388,7 +2379,6 @@
                         <viewLayoutGuide key="safeArea" id="nOJ-n0-V1B"/>
                     </view>
                     <connections>
-                        <outlet property="VisualEffectBlur" destination="HcC-P7-IN3" id="kWi-1Q-sFF"/>
                         <outlet property="backgroundBlur" destination="Wot-qe-il7" id="wED-OL-wBl"/>
                         <outlet property="backgroundImageView" destination="OgP-2a-V8W" id="Sq1-Lv-QcV"/>
                         <outlet property="emailOutlet" destination="Kml-fd-iV2" id="hNg-03-VBV"/>
@@ -2651,8 +2641,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pem-CG-IKg">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="826"/>
+                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pem-CG-IKg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -2666,7 +2656,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x82-hU-xel" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-298" y="-1176"/>
+            <point key="canvasLocation" x="-298.39999999999998" y="-1176.3546798029556"/>
         </scene>
         <!--Setting Page Table View Controller-->
         <scene sceneID="3QN-6c-x0e">
@@ -2818,7 +2808,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="kDT-RX-g8R"/>
         <segue reference="8wM-ZO-u1x"/>
-        <segue reference="DJk-ie-Gdp"/>
+        <segue reference="rsr-Xu-2bY"/>
         <segue reference="aj5-j8-D3Q"/>
         <segue reference="JNh-T2-zgO"/>
         <segue reference="c3k-nI-YVK"/>

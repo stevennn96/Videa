@@ -11,7 +11,7 @@ import Firebase
 import FirebaseAuth
 import FirebaseDatabase
 
-class LoginAccountViewController: UIViewController {
+class LoginAccountViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var usernameOutlet: UITextField!
     @IBOutlet weak var emailOutlet: UITextField!
     @IBOutlet weak var passwordOutlet: UITextField!
@@ -20,7 +20,7 @@ class LoginAccountViewController: UIViewController {
     
     @IBOutlet weak var backgroundBlur: UIImageView!
     
-    @IBOutlet weak var VisualEffectBlur: UIVisualEffectView!
+
     @IBOutlet weak var registerButtonOutlet: UIButton!
     
     
@@ -30,17 +30,14 @@ class LoginAccountViewController: UIViewController {
         
         backgroundImageView.alpha = 1
         registerButtonOutlet.alpha = 0.0
-        VisualEffectBlur.alpha = 0.0
+
         backgroundBlur.alpha = 0.0
     }
     
     override func viewDidAppear(_ animated: Bool) {
         
 
-        UIView.animate(withDuration: 2.0) {
-            self.VisualEffectBlur.alpha = 0
-        }
-        
+
         UIView.animate(withDuration: 1) {
             self.backgroundBlur.alpha = 1
         }
@@ -109,6 +106,20 @@ class LoginAccountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        usernameOutlet.delegate = self
+        emailOutlet.delegate = self
+        passwordOutlet.delegate = self
+        
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
     }
     
     

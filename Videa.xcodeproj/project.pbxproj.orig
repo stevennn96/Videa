@@ -24,9 +24,10 @@
 		77E524052122D8C000EE54FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E524032122D8C000EE54FD /* Main.storyboard */; };
 		77E524072122D8C100EE54FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77E524062122D8C100EE54FD /* Assets.xcassets */; };
 		77E5240A2122D8C100EE54FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E524082122D8C100EE54FD /* LaunchScreen.storyboard */; };
-		7B34DB642133E9E80007C2B1 /* logo videa new.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B34DB632133E9E70007C2B1 /* logo videa new.png */; };
+		7B154F4A2136513A00C12C8C /* videa splashscreen.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7B154F492136513A00C12C8C /* videa splashscreen.gif */; };
+		7B154F4C2136538B00C12C8C /* animationVidea.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7B154F4B2136538A00C12C8C /* animationVidea.gif */; };
 		7B34DB682133ED360007C2B1 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34DB672133ED360007C2B1 /* UIImage+Gif.swift */; };
-		7B99736521354A2800DE40A5 /* SettingPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B99736421354A2800DE40A5 /* SettingPageTableViewController.swift */; };
+		7B99736B213568BB00DE40A5 /* SplashScreen.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7B99736A213568B800DE40A5 /* SplashScreen.gif */; };
 		B0E2B5BB2132133500B6860F /* StevenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E2B5BA2132133500B6860F /* StevenStoryboard.storyboard */; };
 		B0E2B5BF21321A1900B6860F /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5BE21321A1900B6860F /* IntroductionViewController.swift */; };
 		B0E2B5C121321D8200B6860F /* ChallengesListIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5C021321D8200B6860F /* ChallengesListIntroViewController.swift */; };
@@ -40,12 +41,15 @@
 		B0E2B5D12132DFF400B6860F /* HowToLevelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5D02132DFF400B6860F /* HowToLevelListViewController.swift */; };
 		B0E2B5D32132E00B00B6860F /* HowToLevelContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5D22132E00B00B6860F /* HowToLevelContentViewController.swift */; };
 		B0E2B5DD213408A800B6860F /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5DC213408A800B6860F /* LaunchScreenViewController.swift */; };
+		ED364DDA2135A3A400460C5D /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED364DD92135A3A400460C5D /* Task.swift */; };
+		ED364DDC2135A45100460C5D /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED364DDB2135A45100460C5D /* TaskTableViewCell.swift */; };
+		ED364DDE2136459100460C5D /* TodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED364DDD2136459100460C5D /* TodoViewController.swift */; };
+		ED364DE021364F1100460C5D /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED364DDF21364F1100460C5D /* TodoTableViewCell.swift */; };
 		ED909054212EC07700E11589 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED90904B212E9BFA00E11589 /* StatisticsViewController.swift */; };
 		ED909055212EC0BE00E11589 /* ChannelDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED90904D212EA3FE00E11589 /* ChannelDetail.swift */; };
 		ED909056212EC0D400E11589 /* StatisticsDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED909050212EA6E000E11589 /* StatisticsDataViewController.swift */; };
 		ED909058212FF66F00E11589 /* StatisticsDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED909057212FF66F00E11589 /* StatisticsDataTableViewCell.swift */; };
 		ED90905A212FFEE300E11589 /* StatisticsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED909059212FFEE300E11589 /* StatisticsData.swift */; };
-		ED90905F2135030A00E11589 /* Videa Animation HD.gif in Resources */ = {isa = PBXBuildFile; fileRef = ED90905E2135030900E11589 /* Videa Animation HD.gif */; };
 		ED90906221351BF300E11589 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED90906121351BF300E11589 /* TabBarViewController.swift */; };
 		ED90906421352B1700E11589 /* LevelStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED90906321352B1700E11589 /* LevelStoryboard.storyboard */; };
 		ED90906621352B7000E11589 /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED90906521352B7000E11589 /* LevelViewController.swift */; };
@@ -73,10 +77,12 @@
 		77E524062122D8C100EE54FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77E524092122D8C100EE54FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77E5240B2122D8C100EE54FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7B34DB632133E9E70007C2B1 /* logo videa new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo videa new.png"; sourceTree = "<group>"; };
+		7B154F492136513A00C12C8C /* videa splashscreen.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "videa splashscreen.gif"; sourceTree = "<group>"; };
+		7B154F4B2136538A00C12C8C /* animationVidea.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animationVidea.gif; sourceTree = "<group>"; };
 		7B34DB652133EC310007C2B1 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		7B34DB672133ED360007C2B1 /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		7B99736421354A2800DE40A5 /* SettingPageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPageTableViewController.swift; sourceTree = "<group>"; };
+		7B99736A213568B800DE40A5 /* SplashScreen.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = SplashScreen.gif; sourceTree = "<group>"; };
 		B0E2B5BA2132133500B6860F /* StevenStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StevenStoryboard.storyboard; sourceTree = "<group>"; };
 		B0E2B5BE21321A1900B6860F /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 		B0E2B5C021321D8200B6860F /* ChallengesListIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesListIntroViewController.swift; sourceTree = "<group>"; };
@@ -93,12 +99,15 @@
 		B0E2B60A21354E3B00B6860F /* tab bar red bawah.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab bar red bawah.png"; sourceTree = "<group>"; };
 		D5A344EF856C85A0C716FFB6 /* Pods-Videa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Videa.release.xcconfig"; path = "Pods/Target Support Files/Pods-Videa/Pods-Videa.release.xcconfig"; sourceTree = "<group>"; };
 		DFCE25A618B497E284265DC2 /* Pods-Videa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Videa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Videa/Pods-Videa.debug.xcconfig"; sourceTree = "<group>"; };
+		ED364DD92135A3A400460C5D /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		ED364DDB2135A45100460C5D /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		ED364DDD2136459100460C5D /* TodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewController.swift; sourceTree = "<group>"; };
+		ED364DDF21364F1100460C5D /* TodoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
 		ED90904B212E9BFA00E11589 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		ED90904D212EA3FE00E11589 /* ChannelDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelDetail.swift; sourceTree = "<group>"; };
 		ED909050212EA6E000E11589 /* StatisticsDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsDataViewController.swift; sourceTree = "<group>"; };
 		ED909057212FF66F00E11589 /* StatisticsDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsDataTableViewCell.swift; sourceTree = "<group>"; };
 		ED909059212FFEE300E11589 /* StatisticsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsData.swift; sourceTree = "<group>"; };
-		ED90905E2135030900E11589 /* Videa Animation HD.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Videa Animation HD.gif"; sourceTree = "<group>"; };
 		ED90906121351BF300E11589 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		ED90906321352B1700E11589 /* LevelStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LevelStoryboard.storyboard; sourceTree = "<group>"; };
 		ED90906521352B7000E11589 /* LevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
@@ -187,12 +196,13 @@
 				EDF24A8D212C02990081AE5F /* Kensen */,
 				6B5A58F6212ADC0100B05DFB /* Santos */,
 				77E523FD2122D8C000EE54FD /* AppDelegate.swift */,
+				7B154F4B2136538A00C12C8C /* animationVidea.gif */,
+				7B154F492136513A00C12C8C /* videa splashscreen.gif */,
 				7B34DB672133ED360007C2B1 /* UIImage+Gif.swift */,
+				7B99736A213568B800DE40A5 /* SplashScreen.gif */,
 				77E524032122D8C000EE54FD /* Main.storyboard */,
-				7B34DB632133E9E70007C2B1 /* logo videa new.png */,
 				6B689570212EBE4F0096CC8B /* GoogleService-Info.plist */,
 				77E524062122D8C100EE54FD /* Assets.xcassets */,
-				ED90905E2135030900E11589 /* Videa Animation HD.gif */,
 				77E524082122D8C100EE54FD /* LaunchScreen.storyboard */,
 				77E5240B2122D8C100EE54FD /* Info.plist */,
 			);
@@ -202,8 +212,26 @@
 		B0CF21132130099200825CD5 /* Steven */ = {
 			isa = PBXGroup;
 			children = (
+				ED364DD82135A35D00460C5D /* Task */,
 				B0E2B5BA2132133500B6860F /* StevenStoryboard.storyboard */,
 				6B9858A1212EA7B80081E017 /* HomeViewController.swift */,
+				B0E2B60E21355C1800B6860F /* ContentVC */,
+			);
+			path = Steven;
+			sourceTree = "<group>";
+		};
+		B0E2B5D7213400C600B6860F /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				7B34DB652133EC310007C2B1 /* LaunchScreenViewController.swift */,
+				B0E2B60A21354E3B00B6860F /* tab bar red bawah.png */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		B0E2B60E21355C1800B6860F /* ContentVC */ = {
+			isa = PBXGroup;
+			children = (
 				B0E2B5C42132248900B6860F /* MusicLevelListViewController.swift */,
 				B0E2B5BE21321A1900B6860F /* IntroductionViewController.swift */,
 				B0E2B5C021321D8200B6860F /* ChallengesListIntroViewController.swift */,
@@ -216,16 +244,18 @@
 				B0E2B5D02132DFF400B6860F /* HowToLevelListViewController.swift */,
 				B0E2B5D22132E00B00B6860F /* HowToLevelContentViewController.swift */,
 			);
-			path = Steven;
+			path = ContentVC;
 			sourceTree = "<group>";
 		};
-		B0E2B5D7213400C600B6860F /* Recovered References */ = {
+		ED364DD82135A35D00460C5D /* Task */ = {
 			isa = PBXGroup;
 			children = (
-				7B34DB652133EC310007C2B1 /* LaunchScreenViewController.swift */,
-				B0E2B60A21354E3B00B6860F /* tab bar red bawah.png */,
+				ED364DD92135A3A400460C5D /* Task.swift */,
+				ED364DDB2135A45100460C5D /* TaskTableViewCell.swift */,
+				ED364DDD2136459100460C5D /* TodoViewController.swift */,
+				ED364DDF21364F1100460C5D /* TodoTableViewCell.swift */,
 			);
-			name = "Recovered References";
+			path = Task;
 			sourceTree = "<group>";
 		};
 		ED90904F212EA40E00E11589 /* JSON */ = {
@@ -341,10 +371,11 @@
 				77E5240A2122D8C100EE54FD /* LaunchScreen.storyboard in Resources */,
 				77E524072122D8C100EE54FD /* Assets.xcassets in Resources */,
 				ED90906421352B1700E11589 /* LevelStoryboard.storyboard in Resources */,
-				7B34DB642133E9E80007C2B1 /* logo videa new.png in Resources */,
+				7B99736B213568BB00DE40A5 /* SplashScreen.gif in Resources */,
 				6B689571212EBE4F0096CC8B /* GoogleService-Info.plist in Resources */,
-				ED90905F2135030A00E11589 /* Videa Animation HD.gif in Resources */,
+				7B154F4C2136538B00C12C8C /* animationVidea.gif in Resources */,
 				6B5A58F5212ADB3D00B05DFB /* SantosStoryboard.storyboard in Resources */,
+				7B154F4A2136513A00C12C8C /* videa splashscreen.gif in Resources */,
 				77E524052122D8C000EE54FD /* Main.storyboard in Resources */,
 				B0E2B5BB2132133500B6860F /* StevenStoryboard.storyboard in Resources */,
 				EDF24A8A212BED800081AE5F /* KensenStoryboard.storyboard in Resources */,
@@ -420,15 +451,13 @@
 				B0E2B5C52132248900B6860F /* MusicLevelListViewController.swift in Sources */,
 				B0E2B5D12132DFF400B6860F /* HowToLevelListViewController.swift in Sources */,
 				6B4713582133D0D000E86519 /* ProfileAccountViewController.swift in Sources */,
+				ED364DE021364F1100460C5D /* TodoTableViewCell.swift in Sources */,
 				ED90906621352B7000E11589 /* LevelViewController.swift in Sources */,
+				ED364DDA2135A3A400460C5D /* Task.swift in Sources */,
 				ED909055212EC0BE00E11589 /* ChannelDetail.swift in Sources */,
 				B0E2B5C92132BA3B00B6860F /* ComedyLevelListViewController.swift in Sources */,
 				7B34DB682133ED360007C2B1 /* UIImage+Gif.swift in Sources */,
-<<<<<<< HEAD
-				7B99736521354A2800DE40A5 /* SettingPageTableViewController.swift in Sources */,
-=======
 				6B47135D2134D41D00E86519 /* UserService.swift in Sources */,
->>>>>>> 178da66b8116e971c655e7ba863c9aa017ec7c5b
 				B0E2B5C72132256300B6860F /* MusicLevelContentViewController.swift in Sources */,
 				B0E2B5BF21321A1900B6860F /* IntroductionViewController.swift in Sources */,
 				6B09711D212BF4F800CD9878 /* LoginAccountViewController.swift in Sources */,
@@ -448,7 +477,9 @@
 				B0E2B5DD213408A800B6860F /* LaunchScreenViewController.swift in Sources */,
 				B0E2B5CD2132C7E900B6860F /* FoodLevelListViewController.swift in Sources */,
 				ED90906821353A0500E11589 /* LevelUpAlertViewController.swift in Sources */,
+				ED364DDC2135A45100460C5D /* TaskTableViewCell.swift in Sources */,
 				B0E2B5C32132232900B6860F /* ChallengesListViewController.swift in Sources */,
+				ED364DDE2136459100460C5D /* TodoViewController.swift in Sources */,
 				77E523FE2122D8C000EE54FD /* AppDelegate.swift in Sources */,
 				ED909058212FF66F00E11589 /* StatisticsDataTableViewCell.swift in Sources */,
 				ED909056212EC0D400E11589 /* StatisticsDataViewController.swift in Sources */,
@@ -598,14 +629,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+<<<<<<< HEAD
 				DEVELOPMENT_TEAM = 9UGU468ZC7;
+=======
+				DEVELOPMENT_TEAM = L2J3NC7X3D;
+>>>>>>> ee60c7ba03764292e802204848899601365377fc
 				INFOPLIST_FILE = Videa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.binus;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.binus.Videa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -618,14 +653,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+<<<<<<< HEAD
 				DEVELOPMENT_TEAM = 9UGU468ZC7;
+=======
+				DEVELOPMENT_TEAM = L2J3NC7X3D;
+>>>>>>> ee60c7ba03764292e802204848899601365377fc
 				INFOPLIST_FILE = Videa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.binus;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.binus.Videa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
