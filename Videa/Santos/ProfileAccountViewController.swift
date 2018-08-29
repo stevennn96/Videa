@@ -12,7 +12,7 @@ import FirebaseAuth
 import FirebaseDatabase
 import Kingfisher
 
-class ProfileAccountViewController: UIViewController {
+class ProfileAccountViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var usernameOutlet: UILabel!
     @IBOutlet weak var quotesOutlet: UILabel!
@@ -35,6 +35,7 @@ class ProfileAccountViewController: UIViewController {
         imageView.layer.cornerRadius = imageView.frame.size.width/2
         imageView.layer.cornerRadius = imageView.frame.size.height/2
         imageView.clipsToBounds = true
+        
     }
     
     func bacaData(){
@@ -56,3 +57,4 @@ class ProfileAccountViewController: UIViewController {
         
     }
 }
+

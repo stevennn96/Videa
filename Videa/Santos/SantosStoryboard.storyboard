@@ -442,11 +442,11 @@
         <image name="defaultprofilepicture" width="1524" height="976"/>
         <image name="email icon" width="64" height="46"/>
         <image name="password icon" width="58" height="58"/>
-        <image name="profile background" width="187" height="135"/>
+        <image name="profile background" width="188" height="135"/>
         <image name="profile icon" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="waV-VJ-kKB"/>
+        <segue reference="CIk-rg-Vn3"/>
         <segue reference="rWc-p4-Cml"/>
     </inferredMetricsTieBreakers>
 </document>
