@@ -38,6 +38,11 @@ class SettingPageTableViewController: UITableViewController, MFMailComposeViewCo
     }
     
     @IBAction func logout(_ sender: Any) {
+<<<<<<< HEAD
+=======
+        try! Auth.auth().signOut()
+//        performSegue(withIdentifier: String, sender: nil)
+>>>>>>> ee60c7ba03764292e802204848899601365377fc
     }
     
     func configureMailController() -> MFMailComposeViewController {
