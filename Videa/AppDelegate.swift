@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //punya santos
 //        // Kalau mau pke storyboard sndiri comment punya gw
         let authListener = Auth.auth().addStateDidChangeListener {auth, user in
-            let storyboard = UIStoryboard(name: "SantosStoryboard", bundle: nil)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
 
             if user != nil {
 
