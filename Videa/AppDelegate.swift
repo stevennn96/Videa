@@ -23,14 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //punya santos
 //        // Kalau mau pke storyboard sndiri comment punya gw
         let authListener = Auth.auth().addStateDidChangeListener {auth, user in
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let storyboard = UIStoryboard(name: "SantosStoryboard", bundle: nil)
 
             if user != nil {
 
                 UserService.observeUserProfile(user!.uid) { userProfile in
                     UserService.currentUserProfile = userProfile
                 }
-                let controller = storyboard.instantiateViewController(withIdentifier: "SplashScreen2")
+                let controller = storyboard.instantiateViewController(withIdentifier: "SplashScreen")
                 self.window?.rootViewController = controller
                 self.window?.makeKeyAndVisible()
 

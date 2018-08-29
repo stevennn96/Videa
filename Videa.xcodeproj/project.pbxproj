@@ -24,8 +24,10 @@
 		77E524052122D8C000EE54FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E524032122D8C000EE54FD /* Main.storyboard */; };
 		77E524072122D8C100EE54FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77E524062122D8C100EE54FD /* Assets.xcassets */; };
 		77E5240A2122D8C100EE54FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E524082122D8C100EE54FD /* LaunchScreen.storyboard */; };
-		7B34DB642133E9E80007C2B1 /* logo videa new.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B34DB632133E9E70007C2B1 /* logo videa new.png */; };
+		7B154F4A2136513A00C12C8C /* videa splashscreen.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7B154F492136513A00C12C8C /* videa splashscreen.gif */; };
+		7B154F4C2136538B00C12C8C /* animationVidea.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7B154F4B2136538A00C12C8C /* animationVidea.gif */; };
 		7B34DB682133ED360007C2B1 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34DB672133ED360007C2B1 /* UIImage+Gif.swift */; };
+		7B99736B213568BB00DE40A5 /* SplashScreen.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7B99736A213568B800DE40A5 /* SplashScreen.gif */; };
 		B0E2B5BB2132133500B6860F /* StevenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E2B5BA2132133500B6860F /* StevenStoryboard.storyboard */; };
 		B0E2B5BF21321A1900B6860F /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5BE21321A1900B6860F /* IntroductionViewController.swift */; };
 		B0E2B5C121321D8200B6860F /* ChallengesListIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5C021321D8200B6860F /* ChallengesListIntroViewController.swift */; };
@@ -71,10 +73,12 @@
 		77E524062122D8C100EE54FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77E524092122D8C100EE54FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77E5240B2122D8C100EE54FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B154F492136513A00C12C8C /* videa splashscreen.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "videa splashscreen.gif"; sourceTree = "<group>"; };
+		7B154F4B2136538A00C12C8C /* animationVidea.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animationVidea.gif; sourceTree = "<group>"; };
 		7B34DB652133EC310007C2B1 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		7B34DB672133ED360007C2B1 /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		7B99736421354A2800DE40A5 /* SettingPageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPageTableViewController.swift; sourceTree = "<group>"; };
-		7B99736621355FA300DE40A5 /* Videa Animation HD Final.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Videa Animation HD Final.gif"; sourceTree = "<group>"; };
+		7B99736A213568B800DE40A5 /* SplashScreen.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = SplashScreen.gif; sourceTree = "<group>"; };
 		B0E2B5BA2132133500B6860F /* StevenStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StevenStoryboard.storyboard; sourceTree = "<group>"; };
 		B0E2B5BE21321A1900B6860F /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 		B0E2B5C021321D8200B6860F /* ChallengesListIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesListIntroViewController.swift; sourceTree = "<group>"; };
@@ -184,9 +188,11 @@
 				EDF24A8D212C02990081AE5F /* Kensen */,
 				6B5A58F6212ADC0100B05DFB /* Santos */,
 				77E523FD2122D8C000EE54FD /* AppDelegate.swift */,
+				7B154F4B2136538A00C12C8C /* animationVidea.gif */,
+				7B154F492136513A00C12C8C /* videa splashscreen.gif */,
 				7B34DB672133ED360007C2B1 /* UIImage+Gif.swift */,
+				7B99736A213568B800DE40A5 /* SplashScreen.gif */,
 				77E524032122D8C000EE54FD /* Main.storyboard */,
-				7B99736621355FA300DE40A5 /* Videa Animation HD Final.gif */,
 				6B689570212EBE4F0096CC8B /* GoogleService-Info.plist */,
 				77E524062122D8C100EE54FD /* Assets.xcassets */,
 				77E524082122D8C100EE54FD /* LaunchScreen.storyboard */,
@@ -344,10 +350,12 @@
 			files = (
 				77E5240A2122D8C100EE54FD /* LaunchScreen.storyboard in Resources */,
 				77E524072122D8C100EE54FD /* Assets.xcassets in Resources */,
-				7B99736721355FA300DE40A5 /* Videa Animation HD Final.gif in Resources */,
 				ED90906421352B1700E11589 /* LevelStoryboard.storyboard in Resources */,
+				7B99736B213568BB00DE40A5 /* SplashScreen.gif in Resources */,
 				6B689571212EBE4F0096CC8B /* GoogleService-Info.plist in Resources */,
+				7B154F4C2136538B00C12C8C /* animationVidea.gif in Resources */,
 				6B5A58F5212ADB3D00B05DFB /* SantosStoryboard.storyboard in Resources */,
+				7B154F4A2136513A00C12C8C /* videa splashscreen.gif in Resources */,
 				77E524052122D8C000EE54FD /* Main.storyboard in Resources */,
 				B0E2B5BB2132133500B6860F /* StevenStoryboard.storyboard in Resources */,
 				EDF24A8A212BED800081AE5F /* KensenStoryboard.storyboard in Resources */,
@@ -597,7 +605,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 56ZF7DLJQY;
+				DEVELOPMENT_TEAM = 9UGU468ZC7;
 				INFOPLIST_FILE = Videa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -617,7 +625,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 56ZF7DLJQY;
+				DEVELOPMENT_TEAM = 9UGU468ZC7;
 				INFOPLIST_FILE = Videa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
