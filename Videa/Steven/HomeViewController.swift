@@ -8,11 +8,12 @@
 
 import UIKit
 
+var tasks: [Task] = []
+
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var taskTableView: UITableView!
     
-    var tasks: [Task] = []
     var selectedTask: Task!
     
     @IBAction func addChallenge(_ sender: Any) {
@@ -28,8 +29,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tasks.append(Task(taskName: "Introduction", taskDone: 0, taskReq: 3, todoList: [Todo(description: "Get 5 likes", targetNumber: 5), Todo(description: "Get 10 views", targetNumber: 10)]))
-        tasks.append(Task(taskName: "ANJING", taskDone: 0, taskReq: 3, todoList: [Todo(description: "Get 2 comments", targetNumber: 2)]))
         taskTableView.reloadData()
         // Do any additional setup after loading the view.
     }

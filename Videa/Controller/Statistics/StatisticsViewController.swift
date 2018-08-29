@@ -33,8 +33,11 @@ class StatisticsViewController: UIViewController {
     
     @IBAction func connectButton(_ sender: Any) {
         
+        if self.reloadCounter == 0 && self.getChannelTask != nil{
+            getChannelTask?.cancel()
+        }
         username = usernameTextField.text!
-        let channelUrl = URL(string: "https://www.googleapis.com/youtube/v3/channels?key=\(apiKey)&forUsername=\(username)&part=snippet,contentDetails,statistics")
+        let channelUrl = URL(string: "https://www.googleapis.com/youtube/v3/channels?key=\(apiKey)&id=\(username)&part=snippet,contentDetails,statistics")
         
         var channelDetail: ChannelDetail?
         
@@ -47,12 +50,12 @@ class StatisticsViewController: UIViewController {
             }
             
             if channelDetail != nil {
-                print(channelDetail!.items.count)
+                print(channelDetail!.items?.count)
                 
-                if channelDetail!.items.count != 0 {
-                    self.channelTitle = channelDetail!.items[0].snippet.title
-                    self.totalSubscribers = channelDetail!.items[0].statistics.subscriberCount
-                    self.totalViews = channelDetail!.items[0].statistics.viewCount
+                if channelDetail!.items?.count != 0 {
+                    self.channelTitle = (channelDetail!.items![0].snippet?.title)!
+                    self.totalSubscribers = (channelDetail!.items![0].statistics?.subscriberCount)!
+                    self.totalViews = (channelDetail!.items![0].statistics?.viewCount)!
                 }
                 else {
                     print("Channel detail empty")
@@ -90,6 +93,7 @@ class StatisticsViewController: UIViewController {
             print(self.channelTitle)
             print(self.totalSubscribers)
             print(self.totalViews)
+            self.reloadCounter = 0
             performSegue(withIdentifier: "StatisticsToStatisticsData", sender: nil)
         }
         else {
