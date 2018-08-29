@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StatisticsViewController: UIViewController {
+class StatisticsViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var connectUIButton: UIButton!
@@ -26,9 +26,20 @@ class StatisticsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        usernameTextField.delegate = self
         connectUIButton.layer.cornerRadius = 5
         reloadCounter = 0
         apiKey = "AIzaSyA614LZH2YQaHu3_hyXnEkOq2d9p0Bd0x8"
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
     }
     
     @IBAction func connectButton(_ sender: Any) {
