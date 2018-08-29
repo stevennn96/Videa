@@ -17,6 +17,8 @@ class ProfileAccountViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var usernameOutlet: UILabel!
     @IBOutlet weak var quotesOutlet: UILabel!
+    @IBOutlet weak var tapTochangeImage: UIButton!
+    
     
     
     @IBAction func editProfile(_ sender: Any) {
@@ -24,7 +26,7 @@ class ProfileAccountViewController: UIViewController {
     }
     @IBAction func logOutButton(_ sender: Any) {
         try! Auth.auth().signOut()
-        performSegue(withIdentifier: "LogOutButton", sender: self)
+        performSegue(withIdentifier: "LogOut", sender: self)
     }
     var profileuser: [UntukProfile] = []
     
@@ -36,6 +38,9 @@ class ProfileAccountViewController: UIViewController {
         
         roundImage()
         bacaData()
+        imageView.layer.cornerRadius = imageView.frame.size.width/2
+        imageView.layer.cornerRadius = imageView.frame.size.height/2
+        imageView.clipsToBounds = true
     }
     
     func bacaData(){
