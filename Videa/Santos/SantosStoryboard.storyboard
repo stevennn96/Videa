@@ -577,6 +577,7 @@
         <image name="profile icon" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="tfi-Fb-eKX"/>
         <segue reference="wgl-qc-vFa"/>
         <segue reference="rWc-p4-Cml"/>
     </inferredMetricsTieBreakers>
