@@ -31,7 +31,7 @@ class MusicLevelContentViewController: UIViewController {
     }
     
     @IBAction func letsDoItPressed(_ sender: Any) {
-        let task = Task(taskName: self.taskName!, taskDone: 0, taskReq: 3, todoList: todoList)
+        let task = Task(taskName: self.taskName!, taskDone: 0, taskReq: 3, todoList: todoList, videoLink: "")
         tasks.append(task)
         performSegue(withIdentifier: "goToHome", sender: self)
     }
@@ -42,9 +42,9 @@ class MusicLevelContentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         todoList = []
-        todoList.append(Todo(description: "Get 10 views", targetNumber: 10))
-        todoList.append(Todo(description: "Get 5 likes", targetNumber: 5))
-        todoList.append(Todo(description: "Get 2 comments", targetNumber: 2))
+        todoList.append(Todo(description: "Get 10 views", targetNumber: 10, completed: "false"))
+        todoList.append(Todo(description: "Get 5 likes", targetNumber: 5, completed: "false"))
+        todoList.append(Todo(description: "Get 2 comments", targetNumber: 2, completed: "false"))
         if tag == 1{
             titleImage.image = UIImage(named: "music title")
             titleLabel.text = "Cover Lagu"
