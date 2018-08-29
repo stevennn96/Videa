@@ -18,7 +18,11 @@ class ProfileAccountViewController: UIViewController {
     @IBOutlet weak var usernameOutlet: UILabel!
     @IBOutlet weak var quotesOutlet: UILabel!
     @IBOutlet weak var tapTochangeImage: UIButton!
+    @IBOutlet weak var levelOutlet: UILabel!
     
+    @IBAction func segueA(_ sender: Any) {
+        performSegue(withIdentifier: "Coba", sender: self)
+    }
     
     
     @IBAction func editProfile(_ sender: Any) {
@@ -29,18 +33,38 @@ class ProfileAccountViewController: UIViewController {
         performSegue(withIdentifier: "LogOut", sender: self)
     }
     var profileuser: [UntukProfile] = []
+    var gamnification: [gamificationData] = []
     
     private var postChildListener: UInt?
+    private var postChild: UInt?
+    
     var newProfile: UntukProfile?
+    var newGamification: gamificationData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         roundImage()
+        bacaLevel()
         bacaData()
         imageView.layer.cornerRadius = imageView.frame.size.width/2
         imageView.layer.cornerRadius = imageView.frame.size.height/2
         imageView.clipsToBounds = true
+    }
+    func bacaLevel() {
+        guard let uid = Auth.auth().currentUser?.uid else{return}
+        postChild = Database.database().reference().child("Gamification/user/\(uid)").observe(.value) {(snapshot: DataSnapshot)in
+            if snapshot.exists() {
+                let data = snapshot.value as! NSDictionary
+                let key = snapshot.key
+                
+                let levelUser = data["levelUser"] as! String
+                
+                self.levelOutlet.text = "Lv \(levelUser)"
+            }
+        }
+        
+        
     }
     
     func bacaData(){
@@ -65,8 +89,5 @@ class ProfileAccountViewController: UIViewController {
     func roundImage() {
         self.imageView.layer.cornerRadius = self.imageView.frame.size.width / 2
         self.imageView.clipsToBounds = true
-//        self.imageView.layer.borderWidth = 10.0
-//        self.imageView.layer.borderColor = Color.white.cgColor
-//        
     }
 }
