@@ -13,7 +13,6 @@ import FirebaseDatabase
 import Kingfisher
 
 
-class ProfileAccountViewController: UIViewController {
 class ProfileAccountViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var usernameOutlet: UILabel!
@@ -28,7 +27,7 @@ class ProfileAccountViewController: UIViewController, UICollectionViewDataSource
     }
     @IBAction func logOutButton(_ sender: Any) {
         try! Auth.auth().signOut()
-        performSegue(withIdentifier: "LogOut", sender: self)
+       
     }
     var profileuser: [UntukProfile] = []
     var gamnification: [gamificationData] = []
@@ -100,3 +99,4 @@ class ProfileAccountViewController: UIViewController, UICollectionViewDataSource
         self.imageView.clipsToBounds = true
     }
 }
+

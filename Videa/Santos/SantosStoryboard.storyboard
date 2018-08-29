@@ -243,7 +243,6 @@
                         <outlet property="loginButton" destination="0Nc-Qg-ivS" id="1y7-99-N0s"/>
                         <outlet property="passwordOutlet" destination="ft0-TQ-3tS" id="Fnb-c7-WQg"/>
                         <segue destination="FhA-yr-QMB" kind="show" identifier="LoginSuccess" id="pk4-kH-PGq"/>
-                        <segue destination="FhA-yr-QMB" kind="show" identifier="LoginToProfile" id="pk4-kH-PGq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XOb-IS-S2J" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -309,9 +308,6 @@
                                 <rect key="frame" x="233" y="236" width="28" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="camera"/>
-                                <connections>
-                                    <action selector="saveButton:" destination="h1w-tM-quA" eventType="touchUpInside" id="9uO-6P-Qi0"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdd-Ew-YQ8">
                                 <rect key="frame" x="273" y="677" width="86" height="30"/>
@@ -482,7 +478,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="xVZ-2k-knh"/>
                     <connections>
-                        <outlet property="imageView" destination="pay-JM-qzF" id="EWH-Ia-GpO"/>
+                        <outlet property="imageView" destination="pay-JM-qzF" id="OKf-uC-8WM"/>
                         <outlet property="levelOutlet" destination="mgF-0U-ORJ" id="OtZ-a7-kIa"/>
                         <outlet property="quotesOutlet" destination="i6g-hc-o41" id="diT-DG-6iF"/>
                         <outlet property="usernameOutlet" destination="T29-PD-QjW" id="f2M-RM-VSG"/>
@@ -564,7 +560,7 @@
         <image name="profile icon" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pk4-kH-PGq"/>
+        <segue reference="wgl-qc-vFa"/>
         <segue reference="rWc-p4-Cml"/>
     </inferredMetricsTieBreakers>
 </document>
