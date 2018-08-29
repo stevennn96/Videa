@@ -13,7 +13,7 @@ import FirebaseDatabase
 import Kingfisher
 
 
-class ProfileAccountViewController: UIViewController {
+
 class ProfileAccountViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var usernameOutlet: UILabel!

@@ -243,7 +243,6 @@
                         <outlet property="loginButton" destination="0Nc-Qg-ivS" id="1y7-99-N0s"/>
                         <outlet property="passwordOutlet" destination="ft0-TQ-3tS" id="Fnb-c7-WQg"/>
                         <segue destination="FhA-yr-QMB" kind="show" identifier="LoginSuccess" id="pk4-kH-PGq"/>
-                
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XOb-IS-S2J" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -302,9 +301,6 @@
                                 <rect key="frame" x="233" y="236" width="28" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="camera"/>
-                                <connections>
-                                    <action selector="saveButton:" destination="h1w-tM-quA" eventType="touchUpInside" id="9uO-6P-Qi0"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdd-Ew-YQ8">
                                 <rect key="frame" x="273" y="677" width="86" height="30"/>
