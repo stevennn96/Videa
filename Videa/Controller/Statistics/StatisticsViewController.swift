@@ -26,6 +26,8 @@ class StatisticsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         connectUIButton.layer.cornerRadius = 5
         reloadCounter = 0
         apiKey = "AIzaSyA614LZH2YQaHu3_hyXnEkOq2d9p0Bd0x8"

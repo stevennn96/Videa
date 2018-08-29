@@ -43,6 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 self.window?.makeKeyAndVisible()
             }
         }
+        
   // Sampai sini
         
         // Kalau mau pke storyboard sndiri comand punya gw

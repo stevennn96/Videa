@@ -41,6 +41,10 @@ class ProfileAccountViewController: UIViewController, UICollectionViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Buat ganti warna title navigation bar
+        let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
+        
         roundImage()
         bacaLevel()
         bacaData()

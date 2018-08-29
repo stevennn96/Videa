@@ -14,9 +14,14 @@ class ChallengesListIntroViewController: UIViewController {
         performSegue(withIdentifier: "goToIntroduction", sender: self)
     }
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //Buat ganti warna title navigation bar
+        let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
         
     }
         // Do any additional setup after loading the view.
