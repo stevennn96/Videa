@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import FirebaseDatabase
+import FirebaseStorage
 
 class IntroductionViewController: UIViewController {
 
@@ -20,16 +24,52 @@ class IntroductionViewController: UIViewController {
     
     @IBOutlet weak var embedYoutube: UIWebView!
     
+    var taskToSave: Task?
+    
     func getVideo(videoCode:String){
         let url = URL(string: "http://www.youtube.com/embed/\(videoCode)")
         embedYoutube.loadRequest(URLRequest(url: url!))
     }
     
     @IBAction func letsDoItPressed(_ sender: Any) {
-        tasks.append(Task(taskName: "Introduction", taskDone: 0, taskReq: 3, todoList: [Todo(description: "Get 10 views", targetNumber: 10, completed: "false"), Todo(description: "Get 5 likes", targetNumber: 5, completed: "false"), Todo(description: "Get 2 comments", targetNumber: 2, completed: "false")], videoLink: ""))
+        taskToSave = Task(taskName: "Introduction", taskDone: 0, taskReq: 3, todoList: [Todo(description: "Get 10 views", targetNumber: 10, completed: "false"), Todo(description: "Get 5 likes", targetNumber: 5, completed: "false"), Todo(description: "Get 2 comments", targetNumber: 2, completed: "false")], videoLink: "")
+        tasks.append(taskToSave!)
+        
+        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+        changeRequest?.commitChanges(completion: { error in
+            if error == nil {
+                print ("Success")
+                
+                self.saveTask(taskName: (self.taskToSave?.taskName)!, taskDone: (self.taskToSave?.taskDone)!, taskReq: (self.taskToSave?.taskReq)!, videoLink: (self.taskToSave?.videoLink)!) { success in
+                    if success {
+                        print("Berhasil")
+                    } else {
+                        print("Error")
+                    }
+                    
+                }
+            }
+        })
+        
         performSegue(withIdentifier: "goToHome", sender: self)
     }
     
+    func saveTask(taskName: String, taskDone: Int, taskReq: Int, videoLink: String, completion: @escaping ((_ success:Bool)->())) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let databaseRef = Database.database().reference().child("users/task/\(uid)")
+        
+        let taskObject = [
+            "taskName": taskName,
+            "taskReq": taskReq,
+            "taskDone": taskDone,
+//            "todoList": todoList,
+            "videoLink": videoLink
+        ] as [String:Any]
+        
+        databaseRef.setValue(taskObject) { error, ref in
+            completion(error == nil)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

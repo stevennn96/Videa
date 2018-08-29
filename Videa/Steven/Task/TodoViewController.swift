@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import FirebaseDatabase
+import FirebaseStorage
 
 class TodoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -54,6 +58,7 @@ class TodoViewController: UIViewController, UITableViewDelegate, UITableViewData
                 DispatchQueue.main.async {
                     self.todoTableView.cellForRow(at: IndexPath(row: 0, section: 0))?.accessoryType = .checkmark
                 }
+                self.task.taskDone! += 1
                 currXp += 25
             }
             
@@ -61,6 +66,7 @@ class TodoViewController: UIViewController, UITableViewDelegate, UITableViewData
                 DispatchQueue.main.async {
                     self.todoTableView.cellForRow(at: IndexPath(row: 1, section: 0))?.accessoryType = .checkmark
                 }
+                self.task.taskDone! += 1
                 currXp += 25
             }
             
@@ -68,6 +74,7 @@ class TodoViewController: UIViewController, UITableViewDelegate, UITableViewData
                 DispatchQueue.main.async {
                     self.todoTableView.cellForRow(at: IndexPath(row: 2, section: 0))?.accessoryType = .checkmark
                 }
+                self.task.taskDone! += 1
                 currXp += 25
             }
             
@@ -90,7 +97,43 @@ class TodoViewController: UIViewController, UITableViewDelegate, UITableViewData
             
         }
         
+        self.task.videoLink = videoLinkTextField.text
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+            let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+            changeRequest?.commitChanges(completion: { error in
+                if error == nil {
+                    print ("Success")
+                    
+                    self.saveTask(taskName: (self.task.taskName)!, taskDone: (self.task.taskDone)!, taskReq: (self.task.taskReq)!, videoLink: (self.task.videoLink)!) { success in
+                        if success {
+                            print("Berhasil")
+                        } else {
+                            print("Error")
+                        }
+                        
+                    }
+                }
+            })
+        })
+        
         getVideoTask.resume()
+    }
+    
+    func saveTask(taskName: String, taskDone: Int, taskReq: Int, videoLink: String, completion: @escaping ((_ success:Bool)->())) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let databaseRef = Database.database().reference().child("users/task/\(uid)")
+        
+        let taskObject = [
+            "taskName": taskName,
+            "taskDone": taskDone,
+            "taskReq": taskReq,
+            "videoLink": videoLink
+            ] as [String:Any]
+        
+        databaseRef.setValue(taskObject) { error, ref in
+            completion(error == nil)
+        }
     }
     
     @IBAction func dismissClicked(_ sender: Any) {
