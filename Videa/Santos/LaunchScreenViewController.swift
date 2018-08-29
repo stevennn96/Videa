@@ -20,7 +20,7 @@ class LaunchScreenViewController: UIViewController {
 
         gifBG.loadGif(name: "animationVidea")
         
-        let timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
+        let timer = Timer.scheduledTimer(timeInterval: 2.8, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
         
 
         // Do any additional setup after loading the view.
