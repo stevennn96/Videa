@@ -60,8 +60,9 @@ class MusicLevelContentViewController: UIViewController {
             description2Label.text = "Tapi ada beberapa hal yang harus kamu perhatikan terlebih dahulu:\n1. Jangan terlalu banyak improvisasi, Keep it Simple!\n2. Bikin versi yang outstanding"
             getVideo(videoCode: "F2EIMU3ZCqg")
         } else if tag == 3{
-            titleLabel.text = "collaborationcoverlagu"
-            taskName = "collaborationcoverlagu"
+            titleImage.image = UIImage(named: "collaborationcoverlagu")
+            titleLabel.text = "Collaboration Cover Lagu"
+            taskName = "Collaboration Cover Lagu"
             description1Label.text = "Kolaborasi musik adalah bentuk kerjasama, interaksi, kompromi dua orang atau lebih  pemusik  yang terkait dalam satu konten yang menerima akibat dan manfaat positif antar musik masing – masing agar memperoleh hasil musik yang lebih mengesankan."
             description2Label.text = "Ada beberapa hal yang harus kamu perhatikan terlebih dahulu:"
             getVideo(videoCode: "uzgp65UnPxA")

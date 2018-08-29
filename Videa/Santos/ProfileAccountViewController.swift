@@ -19,6 +19,7 @@ class ProfileAccountViewController: UIViewController, UICollectionViewDataSource
     @IBOutlet weak var usernameOutlet: UILabel!
     @IBOutlet weak var quotesOutlet: UILabel!
     @IBOutlet weak var levelOutlet: UILabel!
+    @IBOutlet weak var levelProgressBar: UIProgressView!
     
         let array: [String] = ["like 500 lock", "like3k lock", "like5k lock", "like10k lock", "sub1k lock", "sub1mi lock", "sub2k lock", "sub5k lock", "sub100k lock", "comment1 lock", "comment5 lock", "comment10 lock", "comment500 lock", "music5 lock", "music10 lock", "comedy5 lock", "comedy10 lock", "food5 lock", "food10 lock", "howto5 lock", "howto10 lock"]
     
@@ -41,9 +42,16 @@ class ProfileAccountViewController: UIViewController, UICollectionViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //progress bar size and color
+        levelProgressBar.transform = levelProgressBar.transform.scaledBy(x: 1, y: 3)
+        levelProgressBar.progressTintColor = UIColor.orange
+        
         //Buat ganti warna title navigation bar
         let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
+        
+        //Back Button Color
+        self.navigationController?.navigationBar.tintColor = UIColor.white
         
         roundImage()
         bacaLevel()

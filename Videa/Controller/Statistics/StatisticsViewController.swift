@@ -9,7 +9,6 @@
 import UIKit
 
 class StatisticsViewController: UIViewController, UITextFieldDelegate {
-class StatisticsViewController: UIViewController {
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var connectUIButton: UIButton!
@@ -26,8 +25,14 @@ class StatisticsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Buat ganti warna title navigation bar
+        let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
         
-        usernameTextField.delegate = self
+        //Back Button Color
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        
+        usernameTextField.delegate = self 
         connectUIButton.layer.cornerRadius = 5
         reloadCounter = 0
         apiKey = "AIzaSyA614LZH2YQaHu3_hyXnEkOq2d9p0Bd0x8"

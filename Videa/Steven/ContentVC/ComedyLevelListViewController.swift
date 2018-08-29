@@ -38,7 +38,8 @@ class ComedyLevelListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //Buat ngilangin tulisan back abis ambil challenge
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         // Do any additional setup after loading the view.
     }
 
