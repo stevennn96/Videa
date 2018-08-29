@@ -60,7 +60,6 @@ class ProfileAccountViewController: UIViewController, UICollectionViewDataSource
         layout.minimumInteritemSpacing = 3
         layout.minimumLineSpacing = 3
         
-        achievementCollectionView.collectionViewLayout = layout
     }
     
     func bacaLevel() {
