@@ -12,7 +12,7 @@ import FirebaseAuth
 import FirebaseDatabase
 import FirebaseStorage
 
-class TodoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TodoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
     @IBOutlet weak var embedYoutube: UIWebView!
     @IBOutlet weak var viewAlert: UIView!
@@ -148,10 +148,21 @@ class TodoViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
+        videoLinkTextField.delegate = self
         self.viewBgAlert.isHidden = true
         apiKey = "AIzaSyA614LZH2YQaHu3_hyXnEkOq2d9p0Bd0x8"
         todoList = (task?.todoList)!
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
     }
 
     override func didReceiveMemoryWarning() {

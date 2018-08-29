@@ -9,7 +9,6 @@
 import UIKit
 
 class StatisticsViewController: UIViewController, UITextFieldDelegate {
-class StatisticsViewController: UIViewController {
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var connectUIButton: UIButton!
@@ -27,7 +26,12 @@ class StatisticsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+<<<<<<< HEAD
+        
+        
+=======
         usernameTextField.delegate = self
+>>>>>>> d0e197b47e617ebf87cf7f88365b17b50183a251
         connectUIButton.layer.cornerRadius = 5
         reloadCounter = 0
         apiKey = "AIzaSyA614LZH2YQaHu3_hyXnEkOq2d9p0Bd0x8"
