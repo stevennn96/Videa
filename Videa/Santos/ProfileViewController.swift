@@ -27,6 +27,10 @@ class ProfileViewController: UIViewController {
         imagepicker.sourceType = .photoLibrary
         imagepicker.delegate = self
         
+        imageView.layer.cornerRadius = imageView.frame.size.width/2
+        imageView.layer.cornerRadius = imageView.frame.size.height/2
+        imageView.clipsToBounds = true
+        
         super.viewDidLoad()
     }
     @objc func openImagePicker(_ sender:Any){
