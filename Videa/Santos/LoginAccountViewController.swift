@@ -20,7 +20,7 @@ class LoginAccountViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var backgroundBlur: UIImageView!
     
-    @IBOutlet weak var VisualEffectBlur: UIVisualEffectView!
+
     @IBOutlet weak var registerButtonOutlet: UIButton!
     
     
@@ -30,17 +30,14 @@ class LoginAccountViewController: UIViewController, UITextFieldDelegate {
         
         backgroundImageView.alpha = 1
         registerButtonOutlet.alpha = 0.0
-        VisualEffectBlur.alpha = 0.0
+
         backgroundBlur.alpha = 0.0
     }
     
     override func viewDidAppear(_ animated: Bool) {
         
 
-        UIView.animate(withDuration: 2.0) {
-            self.VisualEffectBlur.alpha = 0
-        }
-        
+
         UIView.animate(withDuration: 1) {
             self.backgroundBlur.alpha = 1
         }

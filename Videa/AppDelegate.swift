@@ -22,45 +22,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let db = Firestore.firestore()
         //punya santos
 //        // Kalau mau pke storyboard sndiri comment punya gw
-//        let authListener = Auth.auth().addStateDidChangeListener {auth, user in
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//
-//            if user != nil {
-//
-//                UserService.observeUserProfile(user!.uid) { userProfile in
-//                    UserService.currentUserProfile = userProfile
-//                }
-//                let controller = storyboard.instantiateViewController(withIdentifier: "SplashScreen2")
-//                self.window?.rootViewController = controller
-//                self.window?.makeKeyAndVisible()
-//
-//            }else {
-//                UserService.currentUserProfile = nil
-//
-//                //Menu Screen
-//                let controller = storyboard.instantiateViewController(withIdentifier: "SplashScreen")
-//                self.window?.rootViewController = controller
-//                self.window?.makeKeyAndVisible()
-//            }
-//        }
-  // Sampai sini
-        
-//         Kalau mau pke storyboard sndiri comand punya gw
         let authListener = Auth.auth().addStateDidChangeListener {auth, user in
             let storyboard = UIStoryboard(name: "SantosStoryboard", bundle: nil)
 
             if user != nil {
-                let controller = storyboard.instantiateViewController(withIdentifier: "ProfileID")
+
+                UserService.observeUserProfile(user!.uid) { userProfile in
+                    UserService.currentUserProfile = userProfile
+                }
+                let controller = storyboard.instantiateViewController(withIdentifier: "SplashScreen")
                 self.window?.rootViewController = controller
                 self.window?.makeKeyAndVisible()
 
             }else {
+                UserService.currentUserProfile = nil
+
                 //Menu Screen
-                let controller = storyboard.instantiateViewController(withIdentifier: "LoginSignupVC")
+                let controller = storyboard.instantiateViewController(withIdentifier: "SplashScreen")
                 self.window?.rootViewController = controller
                 self.window?.makeKeyAndVisible()
             }
-    }
+        }
+  // Sampai sini
+        
+        // Kalau mau pke storyboard sndiri comand punya gw
+//        let authListener = Auth.auth().addStateDidChangeListener {auth, user in
+//            let storyboard = UIStoryboard(name: "SantosStoryboard", bundle: nil)
+//
+//            if user != nil {
+//                let controller = storyboard.instantiateViewController(withIdentifier: "ProfileID")
+//                self.window?.rootViewController = controller
+//                self.window?.makeKeyAndVisible()
+//
+//            }else {
+//                //Menu Screen
+//                let controller = storyboard.instantiateViewController(withIdentifier: "LoginSignupVC")
+//                self.window?.rootViewController = controller
+//                self.window?.makeKeyAndVisible()
+//            }
+//        }
   // Sampai sini
         
         
@@ -71,7 +71,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let storyboard = UIStoryboard(name: "LevelStoryboard", bundle: nil)
 //
 //        let initialViewController = storyboard.instantiateViewController(withIdentifier: "LevelVC")
-////        self.window = UIWindow(frame: UIScreen.main.bounds)
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
 //
 //
 //        punya steven
@@ -88,7 +88,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //
 //        self.window?.rootViewController = initialViewController
 //        self.window?.makeKeyAndVisible()
-    
+        
         return true
     }
 

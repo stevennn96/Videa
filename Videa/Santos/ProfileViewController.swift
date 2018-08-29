@@ -27,10 +27,6 @@ class ProfileViewController: UIViewController {
         imagepicker.sourceType = .photoLibrary
         imagepicker.delegate = self
         
-        imageView.layer.cornerRadius = imageView.frame.size.width/2
-        imageView.layer.cornerRadius = imageView.frame.size.height/2
-        imageView.clipsToBounds = true
-        
         super.viewDidLoad()
     }
     @objc func openImagePicker(_ sender:Any){
@@ -58,7 +54,7 @@ class ProfileViewController: UIViewController {
                                 return
                             }
                         }
-                        self.performSegue(withIdentifier: "EditSuccess", sender: self)
+                        self.performSegue(withIdentifier: "EditProfileSuccess", sender: self)
                         
                     } else {
                         print("Error: \(error!.localizedDescription)")
