@@ -12,7 +12,10 @@ import FirebaseAuth
 import FirebaseDatabase
 import FirebaseStorage
 
-class ProfileViewController: UIViewController, UITextFieldDelegate {
+class ProfileViewController: UIViewController, UITextFieldDelegate{
+    
+
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var usernameOutlet: UITextField!
     @IBOutlet weak var tapTochangeImage: UIButton!
@@ -122,6 +125,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
             completion(error == nil)
         }
     }
+    
 
 }
 

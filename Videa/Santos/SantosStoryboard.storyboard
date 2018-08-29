@@ -242,6 +242,7 @@
                         <outlet property="errorMessage" destination="p38-JQ-42S" id="wXR-9W-aC4"/>
                         <outlet property="loginButton" destination="0Nc-Qg-ivS" id="1y7-99-N0s"/>
                         <outlet property="passwordOutlet" destination="ft0-TQ-3tS" id="Fnb-c7-WQg"/>
+                        <segue destination="FhA-yr-QMB" kind="show" identifier="LoginSuccess" id="pk4-kH-PGq"/>
                         <segue destination="FhA-yr-QMB" kind="show" identifier="LoginToProfile" id="pk4-kH-PGq"/>
                     </connections>
                 </viewController>
@@ -300,7 +301,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UFF-HU-qBT">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultprofilepicture" translatesAutoresizingMaskIntoConstraints="NO" id="UFF-HU-qBT">
                                 <rect key="frame" x="112" y="116" width="152" height="152"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -382,7 +383,7 @@
                                 <rect key="frame" x="0.0" y="86" width="375" height="271"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pay-JM-qzF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultprofilepicture" translatesAutoresizingMaskIntoConstraints="NO" id="pay-JM-qzF">
                                 <rect key="frame" x="112" y="116" width="152" height="152"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -401,9 +402,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BjZ-D9-KqY">
-                                <rect key="frame" x="274" y="681" width="85" height="30"/>
+                                <rect key="frame" x="290" y="86" width="85" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Log Out"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="logOutButton:" destination="FhA-yr-QMB" eventType="touchUpInside" id="fSF-4C-3uj"/>
                                 </connections>
@@ -427,14 +430,52 @@
                                     <action selector="editProfile:" destination="FhA-yr-QMB" eventType="touchUpInside" id="Sy4-Jo-hMO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="893-Af-P7c">
-                                <rect key="frame" x="66" y="698" width="46" height="30"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GXV-qt-l83">
+                                <rect key="frame" x="0.0" y="406" width="375" height="406"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9ys-Z4-rAv">
+                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="4TG-xC-hbm" customClass="achievementCell" customModule="Videa" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gF2-0q-gnz">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="gF2-0q-gnz" secondAttribute="bottom" id="Rlg-7W-4w2"/>
+                                            <constraint firstItem="gF2-0q-gnz" firstAttribute="top" secondItem="4TG-xC-hbm" secondAttribute="top" id="VIW-dA-ar9"/>
+                                            <constraint firstItem="gF2-0q-gnz" firstAttribute="leading" secondItem="4TG-xC-hbm" secondAttribute="leading" id="mus-8d-CRW"/>
+                                            <constraint firstAttribute="trailing" secondItem="gF2-0q-gnz" secondAttribute="trailing" id="uJu-nV-HT8"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="gF2-0q-gnz" id="QqV-Px-xRu"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
                                 <connections>
-                                    <action selector="segueA:" destination="FhA-yr-QMB" eventType="touchUpInside" id="sXc-s1-LWB"/>
+                                    <outlet property="dataSource" destination="FhA-yr-QMB" id="cfx-i0-Cof"/>
+                                    <outlet property="delegate" destination="FhA-yr-QMB" id="bIs-u2-QQ1"/>
                                 </connections>
-                            </button>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Achievement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVi-pK-xgD">
+                                <rect key="frame" x="136" y="365" width="103" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="a86-0d-R6f"/>
@@ -516,13 +557,14 @@
         <image name="Videa logo white" width="508" height="209"/>
         <image name="backgroundProfile" width="375" height="275"/>
         <image name="camera" width="33" height="33"/>
+        <image name="defaultprofilepicture" width="1524" height="976"/>
         <image name="edit profile" width="700" height="700"/>
         <image name="email icon" width="64" height="46"/>
         <image name="password icon" width="58" height="58"/>
         <image name="profile icon" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5Eh-aP-wyI"/>
+        <segue reference="pk4-kH-PGq"/>
         <segue reference="rWc-p4-Cml"/>
     </inferredMetricsTieBreakers>
 </document>
