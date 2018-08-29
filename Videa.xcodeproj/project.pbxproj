@@ -19,6 +19,8 @@
 		6B663521212C000E001137AD /* ForLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B663520212C000E001137AD /* ForLoginViewController.swift */; };
 		6B689571212EBE4F0096CC8B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B689570212EBE4F0096CC8B /* GoogleService-Info.plist */; };
 		6B9858A4212EA7B80081E017 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9858A1212EA7B80081E017 /* HomeViewController.swift */; };
+		6BE40B6A21368D6000F978A7 /* TestSimpenDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE40B6921368D6000F978A7 /* TestSimpenDataViewController.swift */; };
+		6BE40B6C213696AE00F978A7 /* Gamification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE40B6B213696AE00F978A7 /* Gamification.swift */; };
 		760FD2F7775061EB8091E2DB /* Pods_Videa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BFEB76E52A41DF9AB347DFC /* Pods_Videa.framework */; };
 		77E523FE2122D8C000EE54FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E523FD2122D8C000EE54FD /* AppDelegate.swift */; };
 		77E524052122D8C000EE54FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E524032122D8C000EE54FD /* Main.storyboard */; };
@@ -73,6 +75,8 @@
 		6B663520212C000E001137AD /* ForLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForLoginViewController.swift; sourceTree = "<group>"; };
 		6B689570212EBE4F0096CC8B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6B9858A1212EA7B80081E017 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		6BE40B6921368D6000F978A7 /* TestSimpenDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSimpenDataViewController.swift; sourceTree = "<group>"; };
+		6BE40B6B213696AE00F978A7 /* Gamification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gamification.swift; sourceTree = "<group>"; };
 		77E523FA2122D8C000EE54FD /* Videa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Videa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77E523FD2122D8C000EE54FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77E524042122D8C000EE54FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -160,6 +164,8 @@
 			children = (
 				6B4713592133DD4600E86519 /* Model */,
 				6B5A58F4212ADB3D00B05DFB /* SantosStoryboard.storyboard */,
+				6BE40B6B213696AE00F978A7 /* Gamification.swift */,
+				6BE40B6921368D6000F978A7 /* TestSimpenDataViewController.swift */,
 				6B2B888321352F97000C90D4 /* UntukProfile.swift */,
 				6B2B8885213530FE000C90D4 /* ImageService.swift */,
 				6B47135E2134D4FD00E86519 /* UserProfile.swift */,
@@ -472,6 +478,7 @@
 				ED90906221351BF300E11589 /* TabBarViewController.swift in Sources */,
 				B0E2B5CF2132C7FC00B6860F /* FoodLevelContentViewController.swift in Sources */,
 				6997F7412133DE7300FA32E1 /* OnboardingViewController.swift in Sources */,
+				6BE40B6A21368D6000F978A7 /* TestSimpenDataViewController.swift in Sources */,
 				B0E2B5C121321D8200B6860F /* ChallengesListIntroViewController.swift in Sources */,
 				6B663521212C000E001137AD /* ForLoginViewController.swift in Sources */,
 				ED909054212EC07700E11589 /* StatisticsViewController.swift in Sources */,
@@ -481,6 +488,7 @@
 				6B2B888421352F97000C90D4 /* UntukProfile.swift in Sources */,
 				6B47135F2134D4FD00E86519 /* UserProfile.swift in Sources */,
 				6B9858A4212EA7B80081E017 /* HomeViewController.swift in Sources */,
+				6BE40B6C213696AE00F978A7 /* Gamification.swift in Sources */,
 				B0E2B5CB2132BA5300B6860F /* ComedyLevelContentViewController.swift in Sources */,
 				B0E2B5DD213408A800B6860F /* LaunchScreenViewController.swift in Sources */,
 				B0E2B5CD2132C7E900B6860F /* FoodLevelListViewController.swift in Sources */,

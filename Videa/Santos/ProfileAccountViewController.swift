@@ -13,10 +13,13 @@ import FirebaseDatabase
 import Kingfisher
 
 
+class ProfileAccountViewController: UIViewController {
 class ProfileAccountViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var usernameOutlet: UILabel!
     @IBOutlet weak var quotesOutlet: UILabel!
+    @IBOutlet weak var tapTochangeImage: UIButton!
+    @IBOutlet weak var levelOutlet: UILabel!
     
         let array: [String] = ["like 500 lock", "like3k lock", "like5k lock", "like10k lock", "sub1k lock", "sub1mi lock", "sub2k lock", "sub5k lock", "sub100k lock", "comment1 lock", "comment5 lock", "comment10 lock", "comment500 lock", "music5 lock", "music10 lock", "comedy5 lock", "comedy10 lock", "food5 lock", "food10 lock", "howto5 lock", "howto10 lock"]
     
@@ -28,18 +31,38 @@ class ProfileAccountViewController: UIViewController, UICollectionViewDataSource
         performSegue(withIdentifier: "LogOut", sender: self)
     }
     var profileuser: [UntukProfile] = []
+    var gamnification: [gamificationData] = []
     
     private var postChildListener: UInt?
+    private var postChild: UInt?
+    
     var newProfile: UntukProfile?
+    var newGamification: gamificationData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         roundImage()
+        bacaLevel()
         bacaData()
         imageView.layer.cornerRadius = imageView.frame.size.width/2
         imageView.layer.cornerRadius = imageView.frame.size.height/2
         imageView.clipsToBounds = true
+    }
+    func bacaLevel() {
+        guard let uid = Auth.auth().currentUser?.uid else{return}
+        postChild = Database.database().reference().child("Gamification/user/\(uid)").observe(.value) {(snapshot: DataSnapshot)in
+            if snapshot.exists() {
+                let data = snapshot.value as! NSDictionary
+                let key = snapshot.key
+                
+                let levelUser = data["levelUser"] as! String
+                
+                self.levelOutlet.text = "Lv \(levelUser)"
+            }
+        }
+        
+        
     }
     
     //Collection View
@@ -75,8 +98,5 @@ class ProfileAccountViewController: UIViewController, UICollectionViewDataSource
     func roundImage() {
         self.imageView.layer.cornerRadius = self.imageView.frame.size.width / 2
         self.imageView.clipsToBounds = true
-//        self.imageView.layer.borderWidth = 10.0
-//        self.imageView.layer.borderColor = Color.white.cgColor
-//        
     }
 }
