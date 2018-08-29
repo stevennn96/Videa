@@ -13,12 +13,12 @@ import FirebaseDatabase
 import Kingfisher
 
 
-class ProfileAccountViewController: UIViewController {
+class ProfileAccountViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var usernameOutlet: UILabel!
     @IBOutlet weak var quotesOutlet: UILabel!
     
-    
+        let array: [String] = ["like 500 lock", "like3k lock", "like5k lock", "like10k lock", "sub1k lock", "sub1mi lock", "sub2k lock", "sub5k lock", "sub100k lock", "comment1 lock", "comment5 lock", "comment10 lock", "comment500 lock", "music5 lock", "music10 lock", "comedy5 lock", "comedy10 lock", "food 5 lock", "food 10 lock", "howto5 lock", "howto10 lock"]
     
     @IBAction func editProfile(_ sender: Any) {
         performSegue(withIdentifier: "EditProfile", sender: self)
@@ -40,6 +40,17 @@ class ProfileAccountViewController: UIViewController {
         imageView.layer.cornerRadius = imageView.frame.size.width/2
         imageView.layer.cornerRadius = imageView.frame.size.height/2
         imageView.clipsToBounds = true
+    }
+    
+    //Collection View
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return array.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! achievementCell
+            cell.imageView.image = UIImage(named: array[indexPath.row] + ".PNG")
+        return cell
     }
     
     func bacaData(){
