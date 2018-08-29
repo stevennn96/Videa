@@ -12,12 +12,16 @@ import FirebaseAuth
 import FirebaseDatabase
 import Kingfisher
 
+
 class ProfileAccountViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var usernameOutlet: UILabel!
     @IBOutlet weak var quotesOutlet: UILabel!
     
     
+    @IBAction func editProfile(_ sender: Any) {
+        performSegue(withIdentifier: "EditProfile", sender: self)
+    }
     @IBAction func logOutButton(_ sender: Any) {
         try! Auth.auth().signOut()
         performSegue(withIdentifier: "LogOutButton", sender: self)
@@ -29,6 +33,8 @@ class ProfileAccountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        roundImage()
         bacaData()
     }
     
@@ -49,5 +55,13 @@ class ProfileAccountViewController: UIViewController {
             }
         }
         
+    }
+    
+    func roundImage() {
+        self.imageView.layer.cornerRadius = self.imageView.frame.size.width / 2
+        self.imageView.clipsToBounds = true
+//        self.imageView.layer.borderWidth = 10.0
+//        self.imageView.layer.borderColor = Color.white.cgColor
+//        
     }
 }
