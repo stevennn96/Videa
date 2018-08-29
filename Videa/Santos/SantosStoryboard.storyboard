@@ -242,7 +242,7 @@
                         <outlet property="errorMessage" destination="p38-JQ-42S" id="wXR-9W-aC4"/>
                         <outlet property="loginButton" destination="0Nc-Qg-ivS" id="1y7-99-N0s"/>
                         <outlet property="passwordOutlet" destination="ft0-TQ-3tS" id="Fnb-c7-WQg"/>
-                        <segue destination="FhA-yr-QMB" kind="show" identifier="LoginToProfile" id="pk4-kH-PGq"/>
+                        <segue destination="FhA-yr-QMB" kind="show" identifier="LoginSuccess" id="pk4-kH-PGq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XOb-IS-S2J" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -509,8 +509,7 @@
         <image name="profile icon" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tfi-Fb-eKX"/>
-        <segue reference="wgl-qc-vFa"/>
+        <segue reference="pk4-kH-PGq"/>
         <segue reference="rWc-p4-Cml"/>
     </inferredMetricsTieBreakers>
 </document>
