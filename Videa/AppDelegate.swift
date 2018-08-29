@@ -71,14 +71,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let storyboard = UIStoryboard(name: "LevelStoryboard", bundle: nil)
 //
 //        let initialViewController = storyboard.instantiateViewController(withIdentifier: "LevelVC")
-////        self.window = UIWindow(frame: UIScreen.main.bounds)
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
 //
 //
 //        punya steven
-        let storyboard = UIStoryboard(name: "StevenStoryboard", bundle: nil)
-
-        let initialViewController = storyboard.instantiateViewController(withIdentifier: "ChallengePage")
-        self.window = UIWindow(frame: UIScreen.main.bounds)
+//        let storyboard = UIStoryboard(name: "StevenStoryboard", bundle: nil)
+//
+//        let initialViewController = storyboard.instantiateViewController(withIdentifier: "ChallengePage")
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
 
         
 //        Ganti Background Navigation Bar pake Image
@@ -86,8 +86,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().setBackgroundImage(img, for: .default)
 //
 //
-        self.window?.rootViewController = initialViewController
-        self.window?.makeKeyAndVisible()
+//        self.window?.rootViewController = initialViewController
+//        self.window?.makeKeyAndVisible()
         
         return true
     }
