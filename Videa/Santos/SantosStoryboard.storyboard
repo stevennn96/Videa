@@ -247,7 +247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XOb-IS-S2J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2306" y="-964"/>
+            <point key="canvasLocation" x="-2450" y="-964"/>
         </scene>
         <!--Launch Screen View Controller-->
         <scene sceneID="DqS-30-6rN">
@@ -431,31 +431,45 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9ys-Z4-rAv">
-                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="itemSize" width="110" height="110"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="4TG-xC-hbm" customClass="achievementCell" customModule="Videa" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gF2-0q-gnz">
-                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <rect key="frame" x="15" y="0.0" width="80" height="80"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLv-rH-fLV">
+                                                    <rect key="frame" x="0.0" y="89" width="110" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="8"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="gF2-0q-gnz" secondAttribute="bottom" id="Rlg-7W-4w2"/>
+                                            <constraint firstAttribute="trailing" secondItem="nLv-rH-fLV" secondAttribute="trailing" id="5ri-Ta-9Tj"/>
+                                            <constraint firstItem="nLv-rH-fLV" firstAttribute="top" secondItem="gF2-0q-gnz" secondAttribute="bottom" constant="9" id="KoG-F6-72u"/>
+                                            <constraint firstItem="nLv-rH-fLV" firstAttribute="leading" secondItem="4TG-xC-hbm" secondAttribute="leading" id="PXu-3B-9MV"/>
+                                            <constraint firstItem="nLv-rH-fLV" firstAttribute="leading" secondItem="4TG-xC-hbm" secondAttribute="leading" id="R5f-g5-Frm"/>
+                                            <constraint firstAttribute="bottom" secondItem="gF2-0q-gnz" secondAttribute="bottom" constant="30" id="Rlg-7W-4w2"/>
                                             <constraint firstItem="gF2-0q-gnz" firstAttribute="top" secondItem="4TG-xC-hbm" secondAttribute="top" id="VIW-dA-ar9"/>
-                                            <constraint firstItem="gF2-0q-gnz" firstAttribute="leading" secondItem="4TG-xC-hbm" secondAttribute="leading" id="mus-8d-CRW"/>
-                                            <constraint firstAttribute="trailing" secondItem="gF2-0q-gnz" secondAttribute="trailing" id="uJu-nV-HT8"/>
+                                            <constraint firstItem="gF2-0q-gnz" firstAttribute="leading" secondItem="4TG-xC-hbm" secondAttribute="leading" constant="15" id="mus-8d-CRW"/>
+                                            <constraint firstAttribute="bottom" secondItem="nLv-rH-fLV" secondAttribute="bottom" id="sEn-fP-kMB"/>
+                                            <constraint firstAttribute="bottom" secondItem="nLv-rH-fLV" secondAttribute="bottom" id="u7S-ST-3Ji"/>
+                                            <constraint firstAttribute="trailing" secondItem="gF2-0q-gnz" secondAttribute="trailing" constant="15" id="uJu-nV-HT8"/>
+                                            <constraint firstAttribute="trailing" secondItem="nLv-rH-fLV" secondAttribute="trailing" id="vsa-e5-zia"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="achievementLabel" destination="nLv-rH-fLV" id="FrR-Te-ScP"/>
                                             <outlet property="imageView" destination="gF2-0q-gnz" id="QqV-Px-xRu"/>
                                         </connections>
                                     </collectionViewCell>
@@ -478,11 +492,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="xVZ-2k-knh"/>
                     <connections>
+                        <outlet property="achievementCollectionView" destination="GXV-qt-l83" id="Vxz-Xg-MDe"/>
                         <outlet property="imageView" destination="pay-JM-qzF" id="EWH-Ia-GpO"/>
                         <outlet property="levelOutlet" destination="mgF-0U-ORJ" id="OtZ-a7-kIa"/>
                         <outlet property="quotesOutlet" destination="i6g-hc-o41" id="diT-DG-6iF"/>
                         <outlet property="usernameOutlet" destination="T29-PD-QjW" id="f2M-RM-VSG"/>
-                        <segue destination="Lg0-K0-jkg" kind="show" identifier="LogOutButton" id="rWc-p4-Cml"/>
+                        <segue destination="Lg0-K0-jkg" kind="show" identifier="LogOut" id="rWc-p4-Cml"/>
                         <segue destination="h1w-tM-quA" kind="show" identifier="EditProfile" id="tfi-Fb-eKX"/>
                         <segue destination="zXz-HD-LKH" kind="show" identifier="Coba" id="2Lj-tE-2kD"/>
                     </connections>
@@ -560,7 +575,7 @@
         <image name="profile icon" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wgl-qc-vFa"/>
+        <segue reference="pk4-kH-PGq"/>
         <segue reference="rWc-p4-Cml"/>
     </inferredMetricsTieBreakers>
 </document>
