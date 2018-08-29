@@ -8,9 +8,7 @@
 
 import UIKit
 
-var level: Int = 0
-var currXp: Int = 0
-var maxXp: Int = 75
+
 
 class LevelViewController: UIViewController {
 
@@ -21,6 +19,10 @@ class LevelViewController: UIViewController {
     @IBOutlet weak var levelBar: UIProgressView!
     
     var alert: UIAlertController?
+    
+    var level: Int = 0
+    var currXp: Int = 0
+    var maxXp: Int = 75
     
     @IBAction func plusXp(_ sender: Any) {
         

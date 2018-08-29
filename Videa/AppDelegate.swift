@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 UserService.observeUserProfile(user!.uid) { userProfile in
                     UserService.currentUserProfile = userProfile
                 }
-                let controller = storyboard.instantiateViewController(withIdentifier: "SplashScreen")
+                let controller = storyboard.instantiateViewController(withIdentifier: "SplashScreen2")
                 self.window?.rootViewController = controller
                 self.window?.makeKeyAndVisible()
 

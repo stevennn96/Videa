@@ -26,7 +26,7 @@ class IntroductionViewController: UIViewController {
     }
     
     @IBAction func letsDoItPressed(_ sender: Any) {
-        tasks.append(Task(taskName: "Introduction", taskDone: 0, taskReq: 3, todoList: [Todo(description: "Get 10 views", targetNumber: 10), Todo(description: "Get 5 likes", targetNumber: 5), Todo(description: "Get 2 comments", targetNumber: 2)]))
+        tasks.append(Task(taskName: "Introduction", taskDone: 0, taskReq: 3, todoList: [Todo(description: "Get 10 views", targetNumber: 10, completed: "false"), Todo(description: "Get 5 likes", targetNumber: 5, completed: "false"), Todo(description: "Get 2 comments", targetNumber: 2, completed: "false")], videoLink: ""))
         performSegue(withIdentifier: "goToHome", sender: self)
     }
     

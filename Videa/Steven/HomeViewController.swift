@@ -10,6 +10,10 @@ import UIKit
 
 var tasks: [Task] = []
 
+var level: Int = 1
+var currXp: Int = 0
+var maxXp: Int = 50
+
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var taskTableView: UITableView!
@@ -29,6 +33,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        level = 1
+        currXp = 0
+        maxXp = 50
         taskTableView.reloadData()
         // Do any additional setup after loading the view.
     }

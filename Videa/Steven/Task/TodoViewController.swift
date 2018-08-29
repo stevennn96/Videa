@@ -10,6 +10,9 @@ import UIKit
 
 class TodoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var embedYoutube: UIWebView!
+    @IBOutlet weak var viewAlert: UIView!
+    @IBOutlet weak var viewBgAlert: UIView!
     @IBOutlet weak var videoLinkTextField: UITextField!
     @IBOutlet weak var todoTableView: UITableView!
     
@@ -21,9 +24,15 @@ class TodoViewController: UIViewController, UITableViewDelegate, UITableViewData
         return URLComponents(string: youtubeUrl)?.queryItems?.first(where: { $0.name == "v" })?.value
     }
     
+    func getVideo(videoCode:String){
+        let url = URL(string: "http://www.youtube.com/embed/\(videoCode)")
+        embedYoutube.loadRequest(URLRequest(url: url!))
+    }
+    
     @IBAction func generateButtonPressed(_ sender: Any) {
         let youtubeUrl = videoLinkTextField.text
         let youtubeId = self.getYoutubeId(youtubeUrl: youtubeUrl!)
+        getVideo(videoCode: youtubeId!)
         print(youtubeId!)
         
         let videoUrl = URL(string: "https://www.googleapis.com/youtube/v3/videos?key=\(apiKey)&id=\(youtubeId!)&part=snippet,contentDetails,statistics")
@@ -45,33 +54,59 @@ class TodoViewController: UIViewController, UITableViewDelegate, UITableViewData
                 DispatchQueue.main.async {
                     self.todoTableView.cellForRow(at: IndexPath(row: 0, section: 0))?.accessoryType = .checkmark
                 }
+                currXp += 25
             }
             
             if Int(likeCount!)! >= self.todoList[1].targetNumber! {
                 DispatchQueue.main.async {
                     self.todoTableView.cellForRow(at: IndexPath(row: 1, section: 0))?.accessoryType = .checkmark
                 }
+                currXp += 25
             }
             
             if Int(commentCount!)! >= self.todoList[2].targetNumber! {
                 DispatchQueue.main.async {
                     self.todoTableView.cellForRow(at: IndexPath(row: 2, section: 0))?.accessoryType = .checkmark
                 }
+                currXp += 25
             }
             
-            print("Title:\(videoName)")
-            print("View: \(viewCount)")
-            print("Like: \(likeCount)")
-            print("Comment: \(commentCount)")
-            //            print(NSString(data: data!, encoding: String.Encoding.utf8.rawValue)!)
+            print("Level \(level): \(currXp)/\(maxXp)")
+            
+            if currXp >= maxXp {
+                DispatchQueue.main.async {
+                    self.viewBgAlert.isHidden = false
+                    UIView.transition(with: self.viewAlert, duration: 1, options: .curveEaseOut, animations: {
+                        
+                        self.viewAlert.frame.origin = CGPoint(x: self.view.frame.width/2 - self.viewAlert.frame.width/2, y: self.view.frame.height/3)
+                        
+                    }, completion: nil)
+                }
+                
+                level += 1
+                currXp = currXp - maxXp
+                maxXp += 25
+            }
+            
         }
         
         getVideoTask.resume()
     }
     
+    @IBAction func dismissClicked(_ sender: Any) {
+        UIView.transition(with: viewAlert, duration: 1, options: .curveEaseOut, animations: {
+            
+            self.viewAlert.frame.origin = CGPoint(x: self.view.frame.width/2 - self.viewAlert.frame.width/2, y: self.view.frame.origin.y - self.viewAlert.frame.height)
+            
+        }, completion: { (false) in
+            self.viewBgAlert.isHidden = true
+        })
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        self.viewBgAlert.isHidden = true
         apiKey = "AIzaSyA614LZH2YQaHu3_hyXnEkOq2d9p0Bd0x8"
         todoList = (task?.todoList)!
     }
