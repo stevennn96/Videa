@@ -248,7 +248,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XOb-IS-S2J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2450" y="-964"/>
-            <point key="canvasLocation" x="-2306" y="-964"/>
         </scene>
         <!--Launch Screen View Controller-->
         <scene sceneID="DqS-30-6rN">
@@ -445,27 +444,27 @@
                                             <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gF2-0q-gnz">
-                                                    <rect key="frame" x="15" y="0.0" width="80" height="80"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLv-rH-fLV">
-                                                    <rect key="frame" x="0.0" y="89" width="110" height="21"/>
+                                                    <rect key="frame" x="0.0" y="80" width="110" height="21"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="8"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gF2-0q-gnz">
+                                                    <rect key="frame" x="15" y="0.0" width="80" height="80"/>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="nLv-rH-fLV" secondAttribute="trailing" id="5ri-Ta-9Tj"/>
-                                            <constraint firstItem="nLv-rH-fLV" firstAttribute="top" secondItem="gF2-0q-gnz" secondAttribute="bottom" constant="9" id="KoG-F6-72u"/>
+                                            <constraint firstItem="nLv-rH-fLV" firstAttribute="top" secondItem="gF2-0q-gnz" secondAttribute="bottom" id="KoG-F6-72u"/>
                                             <constraint firstItem="nLv-rH-fLV" firstAttribute="leading" secondItem="4TG-xC-hbm" secondAttribute="leading" id="PXu-3B-9MV"/>
                                             <constraint firstItem="nLv-rH-fLV" firstAttribute="leading" secondItem="4TG-xC-hbm" secondAttribute="leading" id="R5f-g5-Frm"/>
                                             <constraint firstAttribute="bottom" secondItem="gF2-0q-gnz" secondAttribute="bottom" constant="30" id="Rlg-7W-4w2"/>
                                             <constraint firstItem="gF2-0q-gnz" firstAttribute="top" secondItem="4TG-xC-hbm" secondAttribute="top" id="VIW-dA-ar9"/>
                                             <constraint firstItem="gF2-0q-gnz" firstAttribute="leading" secondItem="4TG-xC-hbm" secondAttribute="leading" constant="15" id="mus-8d-CRW"/>
-                                            <constraint firstAttribute="bottom" secondItem="nLv-rH-fLV" secondAttribute="bottom" id="sEn-fP-kMB"/>
-                                            <constraint firstAttribute="bottom" secondItem="nLv-rH-fLV" secondAttribute="bottom" id="u7S-ST-3Ji"/>
+                                            <constraint firstAttribute="bottom" secondItem="nLv-rH-fLV" secondAttribute="bottom" constant="9" id="sEn-fP-kMB"/>
+                                            <constraint firstAttribute="bottom" secondItem="nLv-rH-fLV" secondAttribute="bottom" constant="9" id="u7S-ST-3Ji"/>
                                             <constraint firstAttribute="trailing" secondItem="gF2-0q-gnz" secondAttribute="trailing" constant="15" id="uJu-nV-HT8"/>
                                             <constraint firstAttribute="trailing" secondItem="nLv-rH-fLV" secondAttribute="trailing" id="vsa-e5-zia"/>
                                         </constraints>
