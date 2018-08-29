@@ -16,6 +16,8 @@ class ProfileAccountViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var usernameOutlet: UILabel!
     @IBOutlet weak var quotesOutlet: UILabel!
+    @IBOutlet weak var tapTochangeImage: UIButton!
+    
     
     
     @IBAction func logOutButton(_ sender: Any) {
@@ -30,6 +32,9 @@ class ProfileAccountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bacaData()
+        imageView.layer.cornerRadius = imageView.frame.size.width/2
+        imageView.layer.cornerRadius = imageView.frame.size.height/2
+        imageView.clipsToBounds = true
     }
     
     func bacaData(){
