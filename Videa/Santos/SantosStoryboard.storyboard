@@ -248,6 +248,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XOb-IS-S2J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2450" y="-964"/>
+            <point key="canvasLocation" x="-2306" y="-964"/>
         </scene>
         <!--Launch Screen View Controller-->
         <scene sceneID="DqS-30-6rN">
@@ -492,8 +493,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="xVZ-2k-knh"/>
                     <connections>
-                        <outlet property="achievementCollectionView" destination="GXV-qt-l83" id="Vxz-Xg-MDe"/>
-                        <outlet property="imageView" destination="pay-JM-qzF" id="EWH-Ia-GpO"/>
+                        <outlet property="imageView" destination="pay-JM-qzF" id="OKf-uC-8WM"/>
                         <outlet property="levelOutlet" destination="mgF-0U-ORJ" id="OtZ-a7-kIa"/>
                         <outlet property="quotesOutlet" destination="i6g-hc-o41" id="diT-DG-6iF"/>
                         <outlet property="usernameOutlet" destination="T29-PD-QjW" id="f2M-RM-VSG"/>
