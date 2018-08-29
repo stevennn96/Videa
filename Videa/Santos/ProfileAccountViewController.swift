@@ -28,10 +28,7 @@ class ProfileAccountViewController: UIViewController, UICollectionViewDataSource
     @IBAction func editProfile(_ sender: Any) {
         performSegue(withIdentifier: "EditProfile", sender: self)
     }
-    @IBAction func logOutButton(_ sender: Any) {
-        try! Auth.auth().signOut()
-       
-    }
+    
     var profileuser: [UntukProfile] = []
     var gamnification: [gamificationData] = []
     
@@ -60,6 +57,11 @@ class ProfileAccountViewController: UIViewController, UICollectionViewDataSource
         layout.minimumInteritemSpacing = 3
         layout.minimumLineSpacing = 3
         
+//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "settingsIcon"), style: .plain, target: nil, action: #selector(toSettings))
+    }
+    
+    @IBAction func settingsButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "ProfileToSettings", sender: nil)
     }
     
     func bacaLevel() {
