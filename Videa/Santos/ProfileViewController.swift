@@ -12,7 +12,7 @@ import FirebaseAuth
 import FirebaseDatabase
 import FirebaseStorage
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var usernameOutlet: UITextField!
     @IBOutlet weak var tapTochangeImage: UIButton!
@@ -26,9 +26,24 @@ class ProfileViewController: UIViewController {
         imagepicker.allowsEditing = true
         imagepicker.sourceType = .photoLibrary
         imagepicker.delegate = self
-        
+        usernameOutlet.delegate = self
+        quotesOutlet.delegate = self
+        imageView.layer.cornerRadius = imageView.frame.size.width/2
+        imageView.layer.cornerRadius = imageView.frame.size.height/2
+        imageView.clipsToBounds = true
         super.viewDidLoad()
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
+    }
+    
     @objc func openImagePicker(_ sender:Any){
         self.present(imagepicker, animated: true, completion: nil)
     }
@@ -109,8 +124,6 @@ class ProfileViewController: UIViewController {
     }
 
 }
-    
-
 
 extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     

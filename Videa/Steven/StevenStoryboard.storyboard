@@ -1511,7 +1511,7 @@
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="How to make Indonesian food!">
                                                             <attributes>
-                                                                <font key="NSFont" metaFont="smallSystem"/>
+                                                                <font key="NSFont" size="11" name=".AppleSystemUIFont"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                             </attributes>
                                                         </fragment>
@@ -1783,7 +1783,6 @@
         <image name="tabbarbg" width="562" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5qA-Sk-Nrd"/>
         <segue reference="aRk-qW-jKQ"/>
         <segue reference="5N8-QY-krX"/>
     </inferredMetricsTieBreakers>

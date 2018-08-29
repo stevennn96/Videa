@@ -13,7 +13,7 @@ import Firebase
 
 
 
-class ForLoginViewController: UIViewController {
+class ForLoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailOutlet: UITextField!
     @IBOutlet weak var passwordOutlet: UITextField!
     @IBOutlet weak var errorMessage: UILabel!
@@ -53,6 +53,18 @@ class ForLoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailOutlet.delegate = self
+        passwordOutlet.delegate = self
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
     }
     
     @IBAction func toRegister(_ sender: Any) {
