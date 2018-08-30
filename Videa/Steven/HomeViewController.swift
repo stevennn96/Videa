@@ -32,7 +32,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+//        .transform = levelProgressBar.transform.scaledBy(x: 1, y: 3)
+//        levelProgressBar.progressTintColor = UIColor.orange
         level = 1
         currXp = 0
         maxXp = 50

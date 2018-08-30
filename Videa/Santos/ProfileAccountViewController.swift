@@ -12,6 +12,7 @@ import FirebaseAuth
 import FirebaseDatabase
 import Kingfisher
 
+var username1: String?
 
 class ProfileAccountViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
     @IBOutlet weak var achievementCollectionView: UICollectionView!
@@ -21,9 +22,9 @@ class ProfileAccountViewController: UIViewController, UICollectionViewDataSource
     @IBOutlet weak var levelOutlet: UILabel!
     @IBOutlet weak var levelProgressBar: UIProgressView!
     
-        let array: [String] = ["like 500 lock", "like3k lock", "like5k lock", "like10k lock", "sub1k lock", "sub1mi lock", "sub2k lock", "sub5k lock", "sub100k lock", "comment1 lock", "comment5 lock", "comment10 lock", "comment500 lock", "music5 lock", "music10 lock", "comedy5 lock", "comedy10 lock", "food5 lock", "food10 lock", "howto5 lock", "howto10 lock"]
+        let array: [String] = ["like 500", "like3k lock", "like5k lock", "like10k lock", "sub1k lock", "sub1mi lock", "sub2k lock", "sub5k lock", "sub100k lock", "comment1 lock", "comment5 lock", "comment10 lock", "comment500 lock", "music5 lock", "music10 lock", "comedy5 lock", "comedy10 lock", "food5 lock", "food10 lock", "howto5 lock", "howto10 lock"]
     
-    let arrayLbl: [String] = ["Reach 500 Likes", "Reach 3K Likes", "Reach 5K Likes", "Reach 10K Likes", "Reach 1K Subs", "Reach 1 Mil subs", "Reach 2K Subs", "Reach 5K Subs", "Reach 100K Subs", "Reach 1 Comment", "Reach 5 Comment", "Reach 10 Comment", "Reach 500 Comment", "Complete 5 Music Challenge", "Complete 10 Music Challenge", "Complete 5 Comedy Challenge", "Complete 10 Comedy Challenge", "Complete 5 Food Challenge", "Complete 10 Food Challenge", "Complete 5 How To Challenge", "Complete 10 How To Challenge"]
+    let arrayLbl: [String] = ["Reach 500 Likes", "Reach 3K Likes", "Reach 5K Likes", "Reach 10K Likes", "Reach 1K Subs", "Reach 1 Mil subs", "Reach 2K Subs", "Reach 5K Subs", "Reach 100K Subs", "Reach 1K Comment", "Reach 5K Comment", "Reach 10K Comment", "Reach 500K Comment", "Complete 5 Music Challenge", "Complete 10 Music Challenge", "Complete 5 Comedy Challenge", "Complete 10 Comedy Challenge", "Complete 5 Food Challenge", "Complete 10 Food Challenge", "Complete 5 How To Challenge", "Complete 10 How To Challenge"]
     
     
     @IBAction func editProfile(_ sender: Any) {
@@ -35,6 +36,7 @@ class ProfileAccountViewController: UIViewController, UICollectionViewDataSource
     
     private var postChildListener: UInt?
     private var postChild: UInt?
+    private var postChild2: UInt?
     
     var newProfile: UntukProfile?
     var newGamification: gamificationData?
@@ -52,7 +54,7 @@ class ProfileAccountViewController: UIViewController, UICollectionViewDataSource
         
         //Back Button Color
         self.navigationController?.navigationBar.tintColor = UIColor.white
-        
+        bacaUsername()
         roundImage()
         bacaLevel()
         bacaData()
@@ -102,6 +104,21 @@ class ProfileAccountViewController: UIViewController, UICollectionViewDataSource
             cell.imageView.image = UIImage(named: array[indexPath.row] + ".PNG")
             cell.achievementLabel.text = arrayLbl[indexPath.row]
         return cell
+    }
+    
+    func bacaUsername() {
+        guard let uid = Auth.auth().currentUser?.uid else{return}
+        postChild2 = Database.database().reference().child("Data User/\(uid)").observe(.value) { (snapshot: DataSnapshot) in
+            
+            if snapshot.exists() {
+                let data = snapshot.value as! NSDictionary
+                let key = snapshot.key
+                
+                username1 = data["username"] as! String
+                self.usernameOutlet.text = username1
+            }
+        }
+        
     }
     
     func bacaData(){
