@@ -65,14 +65,14 @@ class MusicLevelContentViewController: UIViewController {
             taskName = "Collaboration Cover Lagu"
             description1Label.text = "Kolaborasi musik adalah bentuk kerjasama, interaksi, kompromi dua orang atau lebih  pemusik  yang terkait dalam satu konten yang menerima akibat dan manfaat positif antar musik masing – masing agar memperoleh hasil musik yang lebih mengesankan."
             description2Label.text = "Ada beberapa hal yang harus kamu perhatikan terlebih dahulu:"
-            getVideo(videoCode: "uzgp65UnPxA")
+            getVideo(videoCode: "1VJjRN0YaR0")
         } else if tag == 4{
             taskName = "Cover Lagu yang sedang Trendy"
             titleImage.image = UIImage(named: "coverlaguyangsedangtrendy")
             titleLabel.text = "Cover Lagu yang sedang Trendy"
             description1Label.text = "Buatlah Cover lagu yang sedang hits/trendy di jaman sekarang! Kamu bisa cover lagu Indonesia atau lagu luar loh! Meng-cover lagu yang sedang trendy bisa menambah daya tarik viewers kalian juga karena lagu yang kalian cover sudah jelas mereka akan tahu!"
             description2Label.text = "Good Luck!"
-            getVideo(videoCode: "nH7gHCO3oik")
+            getVideo(videoCode: "JG-_JDOOBVo")
         } else if tag == 5{
             taskName = "MashUp / Medley Cover Lagu"
             titleImage.image = UIImage(named: "mashup:medley")
