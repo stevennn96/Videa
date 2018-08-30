@@ -20,6 +20,8 @@ class TaskTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        taskProgressView.transform = taskProgressView.transform.scaledBy(x: 1, y: 3)
+        taskProgressView.progressTintColor = UIColor.orange
         taskView.layer.cornerRadius = 5
         // Initialization code
     }
