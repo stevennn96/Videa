@@ -10,6 +10,7 @@ import UIKit
 
 class achievementCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var achievementLabel: UILabel!
     
     
     

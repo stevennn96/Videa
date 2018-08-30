@@ -31,7 +31,7 @@ class MusicLevelContentViewController: UIViewController {
     }
     
     @IBAction func letsDoItPressed(_ sender: Any) {
-        let task = Task(taskName: self.taskName!, taskDone: 0, taskReq: 3, todoList: todoList)
+        let task = Task(taskName: self.taskName!, taskDone: 0, taskReq: 3, todoList: todoList, videoLink: "")
         tasks.append(task)
         performSegue(withIdentifier: "goToHome", sender: self)
     }
@@ -42,9 +42,9 @@ class MusicLevelContentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         todoList = []
-        todoList.append(Todo(description: "Get 10 views", targetNumber: 10))
-        todoList.append(Todo(description: "Get 5 likes", targetNumber: 5))
-        todoList.append(Todo(description: "Get 2 comments", targetNumber: 2))
+        todoList.append(Todo(description: "Get 10 views", targetNumber: 10, completed: "false"))
+        todoList.append(Todo(description: "Get 5 likes", targetNumber: 5, completed: "false"))
+        todoList.append(Todo(description: "Get 2 comments", targetNumber: 2, completed: "false"))
         if tag == 1{
             titleImage.image = UIImage(named: "music title")
             titleLabel.text = "Cover Lagu"
@@ -60,8 +60,9 @@ class MusicLevelContentViewController: UIViewController {
             description2Label.text = "Tapi ada beberapa hal yang harus kamu perhatikan terlebih dahulu:\n1. Jangan terlalu banyak improvisasi, Keep it Simple!\n2. Bikin versi yang outstanding"
             getVideo(videoCode: "F2EIMU3ZCqg")
         } else if tag == 3{
-            titleLabel.text = "collaborationcoverlagu"
-            taskName = "collaborationcoverlagu"
+            titleImage.image = UIImage(named: "collaborationcoverlagu")
+            titleLabel.text = "Collaboration Cover Lagu"
+            taskName = "Collaboration Cover Lagu"
             description1Label.text = "Kolaborasi musik adalah bentuk kerjasama, interaksi, kompromi dua orang atau lebih  pemusik  yang terkait dalam satu konten yang menerima akibat dan manfaat positif antar musik masing – masing agar memperoleh hasil musik yang lebih mengesankan."
             description2Label.text = "Ada beberapa hal yang harus kamu perhatikan terlebih dahulu:"
             getVideo(videoCode: "uzgp65UnPxA")

@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "mashup:medley.jpeg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "mashup:medley.jpeg",
       "scale" : "2x"
     },
     {
