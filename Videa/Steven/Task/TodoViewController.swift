@@ -105,7 +105,7 @@ class TodoViewController: UIViewController, UITableViewDelegate, UITableViewData
                 if error == nil {
                     print ("Success")
                     
-                    self.saveTask(taskName: (self.task.taskName)!, taskDone: (self.task.taskDone)!, taskReq: (self.task.taskReq)!, videoLink: (self.task.videoLink)!) { success in
+                    self.saveTask(taskDone: (self.task.taskDone)!, taskReq: (self.task.taskReq)!, videoLink: (self.task.videoLink)!) { success in
                         if success {
                             print("Berhasil")
                         } else {
@@ -120,12 +120,11 @@ class TodoViewController: UIViewController, UITableViewDelegate, UITableViewData
         getVideoTask.resume()
     }
     
-    func saveTask(taskName: String, taskDone: Int, taskReq: Int, videoLink: String, completion: @escaping ((_ success:Bool)->())) {
+    func saveTask(taskDone: Int, taskReq: Int, videoLink: String, completion: @escaping ((_ success:Bool)->())) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
-        let databaseRef = Database.database().reference().child("users/task/\(uid)")
+        let databaseRef = Database.database().reference().child("users/task/\(uid)/\(task.taskName!)")
         
         let taskObject = [
-            "taskName": taskName,
             "taskDone": taskDone,
             "taskReq": taskReq,
             "videoLink": videoLink
