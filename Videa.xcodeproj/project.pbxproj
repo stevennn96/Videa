@@ -52,6 +52,9 @@
 		ED364DE22136774F00460C5D /* VideoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED364DE12136774F00460C5D /* VideoDetail.swift */; };
 		ED364DE42136C43600460C5D /* AllStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED364DE32136C43600460C5D /* AllStructs.swift */; };
 		ED364DE52136E54E00460C5D /* SettingPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B99736421354A2800DE40A5 /* SettingPageTableViewController.swift */; };
+		ED364DE821522E7D00460C5D /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED364DE721522E7D00460C5D /* Statistics.storyboard */; };
+		ED364DEA2152310500460C5D /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED364DE92152310500460C5D /* Profile.storyboard */; };
+		ED364DEC2152323100460C5D /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED364DEB2152323100460C5D /* Home.storyboard */; };
 		ED909054212EC07700E11589 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED90904B212E9BFA00E11589 /* StatisticsViewController.swift */; };
 		ED909055212EC0BE00E11589 /* ChannelDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED90904D212EA3FE00E11589 /* ChannelDetail.swift */; };
 		ED909056212EC0D400E11589 /* StatisticsDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED909050212EA6E000E11589 /* StatisticsDataViewController.swift */; };
@@ -116,6 +119,9 @@
 		ED364DDF21364F1100460C5D /* TodoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
 		ED364DE12136774F00460C5D /* VideoDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoDetail.swift; sourceTree = "<group>"; };
 		ED364DE32136C43600460C5D /* AllStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStructs.swift; sourceTree = "<group>"; };
+		ED364DE721522E7D00460C5D /* Statistics.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Statistics.storyboard; sourceTree = "<group>"; };
+		ED364DE92152310500460C5D /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		ED364DEB2152323100460C5D /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		ED90904B212E9BFA00E11589 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		ED90904D212EA3FE00E11589 /* ChannelDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelDetail.swift; sourceTree = "<group>"; };
 		ED909050212EA6E000E11589 /* StatisticsDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsDataViewController.swift; sourceTree = "<group>"; };
@@ -200,6 +206,7 @@
 		77E523FC2122D8C000EE54FD /* Videa */ = {
 			isa = PBXGroup;
 			children = (
+				ED364DE621522DD400460C5D /* View */,
 				ED90905B2132FCF600E11589 /* Controller */,
 				B0CF21132130099200825CD5 /* Steven */,
 				EDF24A8D212C02990081AE5F /* Kensen */,
@@ -209,7 +216,6 @@
 				7B154F492136513A00C12C8C /* videa splashscreen.gif */,
 				7B34DB672133ED360007C2B1 /* UIImage+Gif.swift */,
 				7B99736A213568B800DE40A5 /* SplashScreen.gif */,
-				77E524032122D8C000EE54FD /* Main.storyboard */,
 				6B689570212EBE4F0096CC8B /* GoogleService-Info.plist */,
 				77E524062122D8C100EE54FD /* Assets.xcassets */,
 				77E524082122D8C100EE54FD /* LaunchScreen.storyboard */,
@@ -266,6 +272,17 @@
 				ED364DE32136C43600460C5D /* AllStructs.swift */,
 			);
 			path = Task;
+			sourceTree = "<group>";
+		};
+		ED364DE621522DD400460C5D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				77E524032122D8C000EE54FD /* Main.storyboard */,
+				ED364DEB2152323100460C5D /* Home.storyboard */,
+				ED364DE92152310500460C5D /* Profile.storyboard */,
+				ED364DE721522E7D00460C5D /* Statistics.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		ED90904F212EA40E00E11589 /* JSON */ = {
@@ -382,8 +399,11 @@
 				77E5240A2122D8C100EE54FD /* LaunchScreen.storyboard in Resources */,
 				77E524072122D8C100EE54FD /* Assets.xcassets in Resources */,
 				ED90906421352B1700E11589 /* LevelStoryboard.storyboard in Resources */,
+				ED364DE821522E7D00460C5D /* Statistics.storyboard in Resources */,
 				7B99736B213568BB00DE40A5 /* SplashScreen.gif in Resources */,
+				ED364DEA2152310500460C5D /* Profile.storyboard in Resources */,
 				6B689571212EBE4F0096CC8B /* GoogleService-Info.plist in Resources */,
+				ED364DEC2152323100460C5D /* Home.storyboard in Resources */,
 				7B154F4C2136538B00C12C8C /* animationVidea.gif in Resources */,
 				6B5A58F5212ADB3D00B05DFB /* SantosStoryboard.storyboard in Resources */,
 				7B154F4A2136513A00C12C8C /* videa splashscreen.gif in Resources */,
