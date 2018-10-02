@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class ChallengeViewController: UIViewController {
 
@@ -16,9 +18,11 @@ class ChallengeViewController: UIViewController {
     var challenges = [[Challenge]]()
     var introChallenges = [Challenge]()
     var musicChallenges = [Challenge]()
+    private var postChildListener : UInt?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        bacaData()
         
         let intro = Challenge(image: UIImage(named: "introduction-1")!, desc: "Perkenalkan Dirimu!")
         introChallenges.append(intro)
@@ -39,6 +43,36 @@ class ChallengeViewController: UIViewController {
         challengeListTableView.dataSource = self
     }
 
+    func bacaData() {
+    guard let uid = Auth.auth().currentUser?.uid
+        else {return}
+        let dataRef = Database.database().reference().child("Fetch/Genre").observe(.value) {(snapshot: DataSnapshot) in
+            if snapshot.exists() {
+                let data = snapshot.value as! NSDictionary
+                let key = snapshot.key
+
+                for i in data {
+//                    print("\(i.key)")
+                    let dataRef2 = Database.database().reference().child("Fetch/Genre/\(i.key)").observe(.value){(snapshot2: DataSnapshot) in
+                        if snapshot2.exists() {
+                            let data2 = snapshot2.value as! NSDictionary
+                            let key2 = snapshot2.key
+                            
+                            print(data2.value(forKey: "JudulChallenge"))
+                            
+                            
+                        }
+                    }
+                }
+                
+
+                
+            }
+            
+        }
+        
+    
+    }
 }
 
 extension ChallengeViewController: UITableViewDelegate, UITableViewDataSource {
