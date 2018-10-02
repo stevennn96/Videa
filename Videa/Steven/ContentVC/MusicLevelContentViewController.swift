@@ -74,9 +74,9 @@ class MusicLevelContentViewController: UIViewController {
             description2Label.text = "Good Luck!"
             getVideo(videoCode: "JG-_JDOOBVo")
         } else if tag == 5{
-            taskName = "MashUp / Medley Cover Lagu"
+            taskName = "MashUp or Medley Cover Lagu"
             titleImage.image = UIImage(named: "mashup:medley")
-            titleLabel.text = "MashUp / Medley Cover Lagu"
+            titleLabel.text = "MashUp or Medley Cover Lagu"
             description1Label.text = "Sebuah lagu atau komposisi yang dikreasikan dengan mengabungkan dua atau lebih lagu-lagu, biasanya dengan melapisi jalur vokal dari satu lagu dan ditumpuk dengan lagu yang lainnya. Sehingga jika didengarkan dengan seksama dapat menghasilkan irama dan melodi yang harmoni"
             description2Label.text = "Ada tips nya nih!\n1. Tentukan genre lagu yang akan dibuat (lebih baik genre lagu yang disukai)\n2. Pilih 2 lagu atau lebih yang akan di mash up, cari lagu nya yang chordnya sama ya!\n Misal: lagu pertama dari G, maka cari lagu kedua yang memiliki chord dasar G\nGood Luck!"
             getVideo(videoCode: "7m3o5LuFKxg")
