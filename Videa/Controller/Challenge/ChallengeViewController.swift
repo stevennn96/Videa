@@ -27,7 +27,7 @@ class ChallengeViewController: UIViewController {
         let intro = Challenge(image: UIImage(named: "introduction-1")!, desc: "Perkenalkan Dirimu!")
         introChallenges.append(intro)
         
-        let music1 = Challenge(image: UIImage(named: "coverlagudenganimprovisasi")!, desc: "Cover Lagu dengan Improvisasi")
+        let music1 = Challenge(image: UIImage(named: "cover lagu")!, desc: "Cover Lagu dengan Improvisasi")
         musicChallenges.append(music1)
         let music2 = Challenge(image: UIImage(named: "coverlagudenganinstrumentsendiri")!, desc: "Cover Lagu dengan Instrumen Sendiri")
         musicChallenges.append(music2)
