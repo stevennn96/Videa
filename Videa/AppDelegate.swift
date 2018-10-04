@@ -83,8 +83,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         
 //        Ganti Background Navigation Bar pake Image
-        let img:UIImage = UIImage(named: "Top Tab Bar.pmg")!
-        UINavigationBar.appearance().setBackgroundImage(img, for: .default)
+//        let img:UIImage = UIImage(named: "Top Tab Bar.pmg")!
+//        UINavigationBar.appearance().setBackgroundImage(img, for: .default)
 //
 //
 //        self.window?.rootViewController = initialViewController
