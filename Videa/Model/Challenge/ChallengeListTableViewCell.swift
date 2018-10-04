@@ -13,11 +13,14 @@ class ChallengeListTableViewCell: UITableViewCell {
     @IBOutlet weak var challengeTitle: UILabel!
     @IBOutlet weak var challengeCollectionView: UICollectionView!
     var challengeCollection = [Challenge]()
+    var vc: ChallengeViewController?
     
     func setChallengeList(challengeList: ChallengeList) {
         challengeCollection = challengeList.challengeCollection
         challengeTitle.text = challengeList.challengeListTitle
         
+        self.challengeCollectionView.reloadData()
+        print("Collection Reloaded")
     }
     
     override func awakeFromNib() {
@@ -48,5 +51,11 @@ extension ChallengeListTableViewCell: UICollectionViewDataSource, UICollectionVi
         return cell!
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        vc?.destinationTitle = challengeCollection[indexPath.row].challengeDescription
+        print(self.challengeTitle.text)
+        vc?.destinationNavTitle = self.challengeTitle.text
+        vc?.goToDetail()
+    }
 }

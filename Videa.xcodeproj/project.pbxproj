@@ -49,6 +49,7 @@
 		ED11624B21635C0A00CEF6D5 /* ChallengeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED11624A21635C0A00CEF6D5 /* ChallengeCollectionViewCell.swift */; };
 		ED1162502163629D00CEF6D5 /* HomeViewControllerBackup.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED11624F2163629D00CEF6D5 /* HomeViewControllerBackup.strings */; };
 		ED116252216363E700CEF6D5 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED116251216363E700CEF6D5 /* ChallengeViewController.swift */; };
+		ED1162542164B90500CEF6D5 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1162532164B90500CEF6D5 /* DetailTableViewController.swift */; };
 		ED364DDA2135A3A400460C5D /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED364DD92135A3A400460C5D /* Task.swift */; };
 		ED364DDC2135A45100460C5D /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED364DDB2135A45100460C5D /* TaskTableViewCell.swift */; };
 		ED364DDE2136459100460C5D /* TodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED364DDD2136459100460C5D /* TodoViewController.swift */; };
@@ -119,6 +120,7 @@
 		ED11624A21635C0A00CEF6D5 /* ChallengeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeCollectionViewCell.swift; sourceTree = "<group>"; };
 		ED11624F2163629D00CEF6D5 /* HomeViewControllerBackup.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = HomeViewControllerBackup.strings; sourceTree = "<group>"; };
 		ED116251216363E700CEF6D5 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
+		ED1162532164B90500CEF6D5 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		ED364DD92135A3A400460C5D /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		ED364DDB2135A45100460C5D /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		ED364DDD2136459100460C5D /* TodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewController.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				ED116251216363E700CEF6D5 /* ChallengeViewController.swift */,
+				ED1162532164B90500CEF6D5 /* DetailTableViewController.swift */,
 			);
 			path = Challenge;
 			sourceTree = "<group>";
@@ -583,6 +586,7 @@
 				6BE40B6C213696AE00F978A7 /* Gamification.swift in Sources */,
 				B0E2B5CB2132BA5300B6860F /* ComedyLevelContentViewController.swift in Sources */,
 				B0E2B5DD213408A800B6860F /* LaunchScreenViewController.swift in Sources */,
+				ED1162542164B90500CEF6D5 /* DetailTableViewController.swift in Sources */,
 				B0E2B5CD2132C7E900B6860F /* FoodLevelListViewController.swift in Sources */,
 				ED11624B21635C0A00CEF6D5 /* ChallengeCollectionViewCell.swift in Sources */,
 				ED90906821353A0500E11589 /* LevelUpAlertViewController.swift in Sources */,
