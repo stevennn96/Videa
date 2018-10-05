@@ -156,7 +156,7 @@
         <scene sceneID="odV-WO-XOd">
             <objects>
                 <tableViewController id="EZ8-9A-67b" customClass="DetailTableViewController" customModule="Videa" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nE4-fL-Ot3">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nE4-fL-Ot3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -251,6 +251,14 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="bMN-PH-oN4">
+                                        <rect key="frame" x="0.0" y="224" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bMN-PH-oN4" id="cGP-V3-Znv">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -261,6 +269,8 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Detail" id="p0A-tR-ZGE"/>
                     <connections>
+                        <outlet property="desc1TextView" destination="rEq-O6-qe2" id="POg-zP-VYX"/>
+                        <outlet property="desc2TextView" destination="8zZ-1i-fbt" id="hk6-lf-KI3"/>
                         <outlet property="titleTextView" destination="urQ-Ro-uzC" id="jjG-Dv-QqX"/>
                         <outlet property="youtubeVideoWebView" destination="1Zt-hd-lqg" id="bGu-uE-mbJ"/>
                     </connections>

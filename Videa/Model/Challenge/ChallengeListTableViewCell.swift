@@ -46,15 +46,18 @@ extension ChallengeListTableViewCell: UICollectionViewDataSource, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = challengeCollectionView.dequeueReusableCell(withReuseIdentifier: "reuseCollection", for: indexPath) as? ChallengeCollectionViewCell
         
-        cell?.setChallenge(challenge: Challenge(image: challengeCollection[indexPath.row].challengeImage, desc: challengeCollection[indexPath.row].challengeDescription))
+        cell?.setChallenge(challenge: Challenge(image: challengeCollection[indexPath.row].challengeImageURL, title: challengeCollection[indexPath.row].challengeTitle, desc1: challengeCollection[indexPath.row].challengeDesc1, desc2: challengeCollection[indexPath.row].challengeDesc2, link: challengeCollection[indexPath.row].challengeVidLink))
         
         return cell!
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        vc?.destinationTitle = challengeCollection[indexPath.row].challengeDescription
-        print(self.challengeTitle.text)
+        vc?.destinationTitle = challengeCollection[indexPath.row].challengeTitle
+        vc?.destinationDesc1 = challengeCollection[indexPath.row].challengeDesc1
+        vc?.destinationDesc2 = challengeCollection[indexPath.row].challengeDesc2
+        vc?.destinationImageURL = challengeCollection[indexPath.row].challengeImageURL
+        vc?.destinationVidLink = challengeCollection[indexPath.row].challengeVidLink
         vc?.destinationNavTitle = self.challengeTitle.text
         vc?.goToDetail()
     }
