@@ -7,9 +7,19 @@
 //
 
 import UIKit
+import Firebase
+import GoogleSignIn
 
-class StatisticsViewController: UIViewController, UITextFieldDelegate {
+class StatisticsViewController: UIViewController, UITextFieldDelegate, GIDSignInUIDelegate {
+    
 
+    @IBOutlet weak var signInButton: GIDSignInButton!
+    
+    @IBAction func logOutButton(_ sender: Any) {
+       GIDSignIn.sharedInstance().signOut()
+    }
+    
+    
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var connectUIButton: UIButton!
     
@@ -25,6 +35,9 @@ class StatisticsViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().signIn()
         //Buat ganti warna title navigation bar
         let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
