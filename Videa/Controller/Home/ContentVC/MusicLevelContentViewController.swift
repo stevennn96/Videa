@@ -50,14 +50,14 @@ class MusicLevelContentViewController: UIViewController {
             titleLabel.text = "Cover Lagu"
             taskName = "Cover Lagu"
             description1Label.text = "Kategori ini cocok untuk Anda yang hobi bernyanyi atau memainkan alat musik bahkan menciptakan lagu. Youtube bisa dijadikan media untuk Anda menunjukan bakat Anda dalam bidang musik seperti membuat cover lagu favorit Anda baik dengan kemampuan bernyanyi Anda baik solo ataupun kolaborasi, bisa juga dengan bermain alat musik."
-            description2Label.text = "Tapi ada beberapa hal yang harus kamu perhatikan terlebih dahulu.\nSecara hukum, dan juga secara teknis:\n1. Biarkan lirik tetap orisinil, jangan ditambah, dikurang, atau diubah\n2. Nah ini yang paling penting guys! Sebenarnya, monetisasi (meng-uang-kan) video cover lagu yang kita upload di Youtube harus ada mechanical rights-nya (Lisensi atas Hak Mekanikal).\n3. Kualitas audio dan video harus bagus dan niat.\n4. Bikin versi yang outstanding"
+            description2Label.text = "Tapi ada beberapa hal yang harus kamu perhatikan terlebih dahulu.\nSecara hukum, dan juga secara teknis: 1. Biarkan lirik tetap orisinil, jangan ditambah, dikurang, atau diubah. 2.Nah ini yang paling penting guys! Sebenarnya, monetisasi (meng-uang-kan) video cover lagu yang kita upload di Youtube harus ada mechanical rights-nya (Lisensi atas Hak Mekanikal). 3.Kualitas audio dan video harus bagus dan niat. 4.Bikin versi yang outstanding"
             getVideo(videoCode: "g69RW4vmSK4")
         } else if tag == 2{
             titleImage.image = UIImage(named: "coverlagudenganimprovisasi")
             titleLabel.text = "Cover Lagu dengan Improvisasi"
             taskName = "Cover Lagu dengan Improvisasi"
             description1Label.text = "Improvisasi Musik adalah kemampuan seseorang melakukan atau mengembangkan sesuatu menjadi lebih dan lebih tanpa ada persiapan atau arahan sebelumnya, Biasanya, seorang musisi profesional mampu melakukan improvisasi dengan mengubah musik menjadi lebih bernilai."
-            description2Label.text = "Tapi ada beberapa hal yang harus kamu perhatikan terlebih dahulu:\n1. Jangan terlalu banyak improvisasi, Keep it Simple!\n2. Bikin versi yang outstanding"
+            description2Label.text = "Tapi ada beberapa hal yang harus kamu perhatikan terlebih dahulu: 1.Jangan terlalu banyak improvisasi, Keep it Simple!. 2.Bikin versi yang outstanding"
             getVideo(videoCode: "F2EIMU3ZCqg")
         } else if tag == 3{
             titleImage.image = UIImage(named: "collaborationcoverlagu")
@@ -78,14 +78,14 @@ class MusicLevelContentViewController: UIViewController {
             titleImage.image = UIImage(named: "mashup:medley")
             titleLabel.text = "MashUp or Medley Cover Lagu"
             description1Label.text = "Sebuah lagu atau komposisi yang dikreasikan dengan mengabungkan dua atau lebih lagu-lagu, biasanya dengan melapisi jalur vokal dari satu lagu dan ditumpuk dengan lagu yang lainnya. Sehingga jika didengarkan dengan seksama dapat menghasilkan irama dan melodi yang harmoni"
-            description2Label.text = "Ada tips nya nih!\n1. Tentukan genre lagu yang akan dibuat (lebih baik genre lagu yang disukai)\n2. Pilih 2 lagu atau lebih yang akan di mash up, cari lagu nya yang chordnya sama ya!\n Misal: lagu pertama dari G, maka cari lagu kedua yang memiliki chord dasar G\nGood Luck!"
+            description2Label.text = "Ada tips nya nih!. 1. Tentukan genre lagu yang akan dibuat (lebih baik genre lagu yang disukai). 2.Pilih 2 lagu atau lebih yang akan di mash up, cari lagu nya yang chordnya sama ya! Misal: lagu pertama dari G, maka cari lagu kedua yang memiliki chord dasar G\nGood Luck!"
             getVideo(videoCode: "7m3o5LuFKxg")
         } else if tag == 6{
             taskName = "Cover Lagu Instrument Sendiri"
             titleImage.image = UIImage(named: "coverlagudenganinstrumentsendiri")
             titleLabel.text = "Cover Lagu Instrument Sendiri"
             description1Label.text = "Buatlah cover lagu yang kalian minati dengan komposisi atau rekaman musik dalam bentuk apapun yang menghasilkan cover lagu yang berbeda dan memiliki ciri khas tersendiri."
-            description2Label.text = "Tips alat music yang dapat digunakan:\n1. Gitar\n2. Piano\n3. Disc jockey (DJ)\n4. Atau alat music lain nya."
+            description2Label.text = "Tips alat music yang dapat digunakan: 1.Gitar 2.Piano 3.Disc jockey (DJ) 4.Atau alat music lain nya."
             getVideo(videoCode: "AAsDUIxuPzE")
         } else if tag == 7{
             taskName = "Cover Translate Lagu"
@@ -99,14 +99,14 @@ class MusicLevelContentViewController: UIViewController {
             titleImage.image = UIImage(named: "acapella")
             titleLabel.text = "Cover Lagu Acapella"
             description1Label.text = "Acapella adalah musik yang dinyanyikan secara solo atau grup hanya dengan menggunakan vokal atau tanpa menggunakan instrumen musik pada umumnya. Pada acapella umumnya ditemui harmonisasi vokal dan beatbox."
-            description2Label.text = "Ada sedikit tips nih, Software yang bisa digunakan \n1. Audacity\n2. Acapella.exe"
+            description2Label.text = "Ada sedikit tips nih, Software yang bisa digunakan 1.Audacity 2. Acapella.exe"
             getVideo(videoCode: "dV0F8PNiBhE")
         } else if tag == 9{
             taskName = "Ciptain Lagu Sendiri"
             titleImage.image = UIImage(named: "ciptainlagusendiri")
             titleLabel.text = "Ciptain Lagu Sendiri"
             description1Label.text = "Kamu sudah berhasil melewati 8 challenge dan cukup mengcover banyak lagu, sekarang giliran kamu menciptakan lagu orisinil!"
-            description2Label.text = "Ini langkah - langkah membuat lagu ciptaan sendiri:\n1. Tentukan tipe lagu\n2. Tentukan genre lagu (pop, rock, hip hop, r&b, jazz, dll)\n3. Buatlah lirik lagu yang beralur dan memiliki arti kata - kata yang dalam dan bermakna.\n4. Tentukan struktur lagu (Intro, Verse, Chorus, dll)\n5. Tentukan kunci dasar sebagai patokan range nada – nada yang dapat dijangkau.\n6. Buatlah nada lagu (Intro, Middle, Outro)\n7. Finish, nyanyikanlah lagu secara penuh\n8. Review lagu yang telah kamu buat"
+            description2Label.text = "Ini langkah - langkah membuat lagu ciptaan sendiri: 1.Tentukan tipe lagu 2.Tentukan genre lagu (pop, rock, hip hop, r&b, jazz, dll) 3.Buatlah lirik lagu yang beralur dan memiliki arti kata - kata yang dalam dan bermakna. 4.Tentukan struktur lagu (Intro, Verse, Chorus, dll) 5.Tentukan kunci dasar sebagai patokan range nada – nada yang dapat dijangkau. 6.Buatlah nada lagu (Intro, Middle, Outro) 7.Finish, nyanyikanlah lagu secara penuh 8.Review lagu yang telah kamu buat"
             getVideo(videoCode: "M7E7QrFaffY")
         }
         // Do any additional setup after loading the view.
