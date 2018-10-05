@@ -156,7 +156,7 @@
         <scene sceneID="odV-WO-XOd">
             <objects>
                 <tableViewController id="EZ8-9A-67b" customClass="DetailTableViewController" customModule="Videa" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nE4-fL-Ot3">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nE4-fL-Ot3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -251,6 +251,14 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="bMN-PH-oN4">
+                                        <rect key="frame" x="0.0" y="224" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bMN-PH-oN4" id="cGP-V3-Znv">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -261,6 +269,8 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Detail" id="p0A-tR-ZGE"/>
                     <connections>
+                        <outlet property="desc1TextView" destination="rEq-O6-qe2" id="POg-zP-VYX"/>
+                        <outlet property="desc2TextView" destination="8zZ-1i-fbt" id="hk6-lf-KI3"/>
                         <outlet property="titleTextView" destination="urQ-Ro-uzC" id="jjG-Dv-QqX"/>
                         <outlet property="youtubeVideoWebView" destination="1Zt-hd-lqg" id="bGu-uE-mbJ"/>
                     </connections>
@@ -1473,7 +1483,7 @@ Improvisasi</string>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJe-gS-zXY">
-                                                <rect key="frame" x="59" y="593" width="257" height="499"/>
+                                                <rect key="frame" x="123.66666666666669" y="593" width="128" height="499"/>
                                                 <state key="normal" image="letsdoit"/>
                                                 <connections>
                                                     <action selector="letsDoItPressed:" destination="PWW-gg-R2t" eventType="touchUpInside" id="mSs-bD-ulQ"/>
@@ -2450,33 +2460,33 @@ Food!</string>
     </scenes>
     <resources>
         <image name="ChallengeBackground" width="376" height="80"/>
-        <image name="Comedy" width="1080" height="582"/>
-        <image name="Comedy lock" width="1080" height="582"/>
-        <image name="Food" width="1080" height="582"/>
-        <image name="Food lock" width="1080" height="582"/>
+        <image name="Comedy" width="540" height="291"/>
+        <image name="Comedy lock" width="540" height="291"/>
+        <image name="Food" width="540" height="291"/>
+        <image name="Food lock" width="540" height="291"/>
         <image name="HomeIcon" width="13" height="16"/>
         <image name="HomeIconSelected" width="13" height="16"/>
-        <image name="How To" width="1080" height="582"/>
-        <image name="How To lock" width="1080" height="582"/>
-        <image name="Introduction" width="1080" height="582"/>
+        <image name="How To" width="540" height="291"/>
+        <image name="How To lock" width="540" height="291"/>
+        <image name="Introduction" width="540" height="291"/>
         <image name="Join Challenge" width="281" height="43"/>
-        <image name="LevelUp" width="311.760009765625" height="311.760009765625"/>
-        <image name="Music" width="1080" height="582"/>
-        <image name="Music lock" width="1080" height="582"/>
-        <image name="Photo Tille Comedy" width="1125" height="610"/>
-        <image name="Photo Tille Food" width="1125" height="610"/>
-        <image name="Photo Tille How To" width="1125" height="610"/>
-        <image name="Photo Tille Music" width="1125" height="610"/>
+        <image name="LevelUp" width="1299" height="1299"/>
+        <image name="Music" width="540" height="291"/>
+        <image name="Music lock" width="540" height="291"/>
+        <image name="Photo Tille Comedy" width="562" height="305"/>
+        <image name="Photo Tille Food" width="562" height="305"/>
+        <image name="Photo Tille How To" width="562" height="305"/>
+        <image name="Photo Tille Music" width="562" height="305"/>
         <image name="add red" width="45" height="44"/>
         <image name="back white" width="8" height="13"/>
         <image name="generateButton" width="85" height="28"/>
         <image name="introduction-1" width="375" height="203"/>
-        <image name="letsdoit" width="257" height="80"/>
+        <image name="letsdoit" width="128" height="40"/>
         <image name="taskGoIcon" width="8" height="13"/>
         <image name="trending logo" width="114" height="144"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aaB-Ih-24G"/>
+        <segue reference="VoE-lf-diX"/>
         <segue reference="JaX-fN-xQv"/>
     </inferredMetricsTieBreakers>
 </document>

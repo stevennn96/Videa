@@ -11,11 +11,17 @@ import UIKit
 
 class Challenge {
     
-    var challengeImage: UIImage
-    var challengeDescription: String
+    var challengeImageURL: String
+    var challengeTitle: String
+    var challengeDesc1: String
+    var challengeDesc2: String
+    var challengeVidLink: String
     
-    init(image: UIImage, desc: String) {
-        self.challengeImage = image
-        self.challengeDescription = desc
+    init(image: String, title: String, desc1: String, desc2: String, link: String) {
+        self.challengeImageURL = image
+        self.challengeTitle = title
+        self.challengeDesc1 = desc1
+        self.challengeDesc2 = desc2
+        self.challengeVidLink = link
     }
 }

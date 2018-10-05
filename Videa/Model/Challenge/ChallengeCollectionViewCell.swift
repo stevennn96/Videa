@@ -15,8 +15,8 @@ class ChallengeCollectionViewCell: UICollectionViewCell {
     
     func setChallenge(challenge: Challenge) {
         
-        self.challengeImage.image = challenge.challengeImage
-        self.challengeDescription.text = challenge.challengeDescription
+        self.challengeImage.image = UIImage(named: "\(challenge.challengeImageURL)")
+        self.challengeDescription.text = challenge.challengeTitle
     }
     
     override func layoutSubviews() {

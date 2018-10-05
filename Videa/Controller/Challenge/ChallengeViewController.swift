@@ -9,17 +9,23 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import Kingfisher
 
 class ChallengeViewController: UIViewController {
 
     @IBOutlet weak var challengeListTableView: UITableView!
     
-    var genres = ["Introduction", "Music"]
+    var genres = [String]()
     var challenges = [[Challenge]]()
     var introChallenges = [Challenge]()
     var musicChallenges = [Challenge]()
     var destinationTitle: String?
     var destinationNavTitle: String?
+    var destinationDesc1: String?
+    var destinationDesc2: String?
+    var destinationImageURL: String?
+    var destinationVidLink: String?
+    
     private var postChildListener : UInt?
     
     override func viewDidLoad() {
@@ -38,29 +44,103 @@ class ChallengeViewController: UIViewController {
         if let destination = segue.destination as? DetailTableViewController {
             destination.challengeTitle = self.destinationTitle
             destination.navTitle = self.destinationNavTitle
+            destination.desc1 = self.destinationDesc1
+            destination.desc2 = self.destinationDesc2
+            destination.imageURL = self.destinationImageURL
+            destination.vidLink = self.destinationVidLink
         }
     }
     
     func bacaData() {
-        let intro = Challenge(image: UIImage(named: "introduction-1")!, desc: "Perkenalkan Dirimu!")
-        introChallenges.append(intro)
         
-        let music1 = Challenge(image: UIImage(named: "cover lagu")!, desc: "Cover Lagu dengan Improvisasi")
-        musicChallenges.append(music1)
-        let music2 = Challenge(image: UIImage(named: "coverlagudenganinstrumentsendiri")!, desc: "Cover Lagu dengan Instrumen Sendiri")
-        musicChallenges.append(music2)
-        let music3 = Challenge(image: UIImage(named: "coverlagutranslate")!, desc: "Cover Lagu Translate")
-        musicChallenges.append(music3)
-        let music4 = Challenge(image: UIImage(named: "coverlaguyangsedangtrendy")!, desc: "Cover Lagu yang sedang Trendy")
-        musicChallenges.append(music4)
+        let dataRef = Database.database().reference().child("Fetch/Genre").observe(.value) {(snapshot: DataSnapshot) in
+            if snapshot.exists() {
+                let data = snapshot.value as! NSDictionary
+                let key = snapshot.key
+
+                for i in data {
+                    self.genres.append("\(i.value)")
+
+                    let dataRef2 = Database.database().reference().child("Fetch/ListChallenge/\(i.key)").observe(.value) {(snapshot2: DataSnapshot) in
+                        if snapshot2.exists() {
+                            let data2 = snapshot2.value as! NSArray
+                            let key2 = snapshot2.key
+
+                            var x = [NSDictionary]()
+                            for j in data2 {
+                                if j is NSNull {
+                                    continue
+                                }
+                                x.append(j as! NSDictionary)
+                            }
+
+                            var data3 = Dictionary<String, Any>()
+                            for v in x {
+                                let keyv = v.allKeys[0]
+                                let value = v.allValues[0]
+                                data3.updateValue(value, forKey: keyv as! String)
+                            }
+                            
+                            print("DICT")
+                            self.challenges.append([])
+                            var newChallenges = self.challenges.popLast()
+                            for d in data3 {
+                                let dc = d.value as! NSDictionary
+                                let challengeTitle = d.key
+                                let challengeDesc1 = dc["Deskripsi1"] as! String
+                                let challengeDesc2 = dc["Deskripsi2"] as! String
+                                let challengeLink = dc["VideoLink"] as! String
+                                let newChallenge = Challenge(image: "cover lagu", title: challengeTitle, desc1: challengeDesc1, desc2: challengeDesc2, link: challengeLink)
+                                newChallenges?.append(newChallenge)
+                            }
+                            self.challenges.append(newChallenges!)
+                            
+                            print("Snapshot2 Exists")
+                            print("C \(self.challenges.count)")
+                            print("G \(self.genres.count)")
+                            
+                            if self.challenges.count == self.genres.count {
+                                DispatchQueue.main.async {
+                                    self.challengeListTableView.reloadData()
+                                }
+                            }
+                        }
+                        print("dataref2")
+                        print("C \(self.challenges.count)")
+                        print("G \(self.genres.count)")
+                    }
+                    print("for i in data")
+                    print("C \(self.challenges.count)")
+                    print("G \(self.genres.count)")
+                }
+                print("Snapshot Exists")
+                print("C \(self.challenges.count)")
+                print("G \(self.genres.count)")
+            }
+        }
+        print("Baca Data")
+        print("C \(self.challenges.count)")
+        print("G \(self.genres.count)")
+    }
+}
+
+extension ChallengeViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return genres.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = challengeListTableView.dequeueReusableCell(withIdentifier: "reuseTable") as? ChallengeListTableViewCell
         
-        challenges.append(introChallenges)
-        challenges.append(musicChallenges)
+        cell?.vc = self
         
-//        guard let uid = Auth.auth().currentUser?.uid
-//            else {return}
-//        let dataRef = Database.database().reference().child("Fetch/Genre").observe(.value) {(snapshot: DataSnapshot) in
-//            if snapshot.exists() {
+        cell?.setChallengeList(challengeList: ChallengeList(title: genres[indexPath.row], collection: challenges[indexPath.row]))
+        
+        return cell!
+    }
+    
+}
+
 //                let data = snapshot.value as! NSDictionary
 //                let key = snapshot.key
 //
@@ -92,30 +172,3 @@ class ChallengeViewController: UIViewController {
 //                        }
 //                    }
 //                }
-//
-//
-//
-//            }
-//
-//        }
-        
-    
-    }
-}
-
-extension ChallengeViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return genres.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = challengeListTableView.dequeueReusableCell(withIdentifier: "reuseTable") as? ChallengeListTableViewCell
-        
-        cell?.vc = self
-        
-        cell?.setChallengeList(challengeList: ChallengeList(title: genres[indexPath.row], collection: challenges[indexPath.row]))
-        
-        return cell!
-    }
-    
-}
