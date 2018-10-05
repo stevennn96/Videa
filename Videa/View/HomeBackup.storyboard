@@ -2238,7 +2238,7 @@ Food!</string>
         <image name="trending logo" width="114" height="144"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xHP-4i-z0i"/>
+        <segue reference="rbY-rd-Fso"/>
         <segue reference="Gfd-CS-kLw"/>
     </inferredMetricsTieBreakers>
 </document>

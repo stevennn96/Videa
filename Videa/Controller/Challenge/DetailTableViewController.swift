@@ -13,36 +13,55 @@ class DetailTableViewController: UITableViewController {
 
     var challengeTitle: String?
     var navTitle: String?
+    var desc1: String?
+    var desc2: String?
+    var vidLink: String?
+    var imageURL: String?
+    
+    @IBOutlet weak var desc1TextView: UITextView!
+    @IBOutlet weak var desc2TextView: UITextView!
     @IBOutlet weak var titleTextView: UITextView!
     @IBOutlet weak var youtubeVideoWebView: UIWebView!
-    var joinButton = UIButton()
+    var joinButton: UIButton?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("D1 \(desc1)")
+        print("D2 \(desc2)")
         titleTextView.text = challengeTitle
         self.navigationItem.title = navTitle
+        desc1TextView.text = desc1
+        desc2TextView.text = desc2
         
-        let url = URL(string: "https://www.youtube.com/embed/RmHqOSrkZnk")
+//        "https://www.youtube.com/embed/RmHqOSrkZnk"
+        
+        print("VL \(vidLink)")
+        let url = URL(string: "https://www.youtube.com/embed/\(vidLink!)")
         youtubeVideoWebView.loadRequest(URLRequest(url: url!))
         
         self.joinButton = UIButton(type: .custom)
-        self.joinButton.addTarget(self, action: #selector(joinButtonClicked), for: .touchUpInside)
-        self.navigationController?.view.addSubview(self.joinButton)
+        self.joinButton!.addTarget(self, action: #selector(joinButtonClicked), for: .touchUpInside)
+        self.navigationController?.view.addSubview(self.joinButton!)
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.estimatedRowHeight = 300
         tableView.rowHeight = UITableViewAutomaticDimension
+        
+        print(self.joinButton)
     }
     
     override func viewWillLayoutSubviews() {
-        self.joinButton.clipsToBounds = true
-        self.joinButton.setImage(UIImage(named: "JoinChallenge"), for: .normal)
-        self.joinButton.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([self.joinButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor), self.joinButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -20)])
-        
-//        , self.joinButton.widthAnchor.constraint(equalToConstant: 300), self.joinButton.heightAnchor.constraint(equalToConstant: 50)
+        self.joinButton!.clipsToBounds = true
+        self.joinButton!.setImage(UIImage(named: "JoinChallenge"), for: .normal)
+        self.joinButton?.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([self.joinButton!.centerXAnchor.constraint(equalTo: self.view.centerXAnchor), (self.joinButton?.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -20))!])
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+//        self.joinButton!.removeFromSuperview()
     }
     
     @objc func joinButtonClicked(_sender: UIButton) {
@@ -52,6 +71,8 @@ class DetailTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 2 {
             return 210
+        } else if indexPath.row == 4{
+            return 80
         } else {
             return UITableViewAutomaticDimension
         }
