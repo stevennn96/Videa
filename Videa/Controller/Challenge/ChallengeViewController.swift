@@ -90,7 +90,8 @@ class ChallengeViewController: UIViewController {
                                 let challengeDesc1 = dc["Deskripsi1"] as! String
                                 let challengeDesc2 = dc["Deskripsi2"] as! String
                                 let challengeLink = dc["VideoLink"] as! String
-                                let newChallenge = Challenge(image: "cover lagu", title: challengeTitle, desc1: challengeDesc1, desc2: challengeDesc2, link: challengeLink)
+                                let challengeImageURL = dc["GambarChallenge"] as! String
+                                let newChallenge = Challenge(image: challengeImageURL, title: challengeTitle, desc1: challengeDesc1, desc2: challengeDesc2, link: challengeLink)
                                 newChallenges?.append(newChallenge)
                             }
                             self.challenges.append(newChallenges!)
