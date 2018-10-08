@@ -23,6 +23,7 @@ class DetailTableViewController: UITableViewController {
     @IBOutlet weak var titleTextView: UITextView!
     @IBOutlet weak var youtubeVideoWebView: UIWebView!
     var joinButton: UIButton?
+    var joinButtonConstraints = [NSLayoutConstraint]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,32 +41,33 @@ class DetailTableViewController: UITableViewController {
         youtubeVideoWebView.loadRequest(URLRequest(url: url!))
         
         self.joinButton = UIButton(type: .custom)
+        self.joinButton?.tag = 100
         self.joinButton!.addTarget(self, action: #selector(joinButtonClicked), for: .touchUpInside)
         self.navigationController?.view.addSubview(self.joinButton!)
-        
+        joinButtonConstraints.append(self.joinButton!.centerXAnchor.constraint(equalTo: self.view.centerXAnchor))
+        joinButtonConstraints.append((self.joinButton?.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -20))!)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.estimatedRowHeight = 300
         tableView.rowHeight = UITableViewAutomaticDimension
-        
-        print(self.joinButton)
     }
     
     override func viewWillLayoutSubviews() {
         self.joinButton!.clipsToBounds = true
         self.joinButton!.setImage(UIImage(named: "JoinChallenge"), for: .normal)
         self.joinButton?.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([self.joinButton!.centerXAnchor.constraint(equalTo: self.view.centerXAnchor), (self.joinButton?.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -20))!])
+
+        NSLayoutConstraint.activate(joinButtonConstraints)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-//        self.joinButton!.removeFromSuperview()
+        self.joinButton?.isHidden = true
     }
     
     @objc func joinButtonClicked(_sender: UIButton) {
-        
+        performSegue(withIdentifier: "DetailToHome", sender: nil)
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

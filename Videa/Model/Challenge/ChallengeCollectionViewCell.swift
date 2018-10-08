@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ChallengeCollectionViewCell: UICollectionViewCell {
     
@@ -16,6 +17,9 @@ class ChallengeCollectionViewCell: UICollectionViewCell {
     func setChallenge(challenge: Challenge) {
         
         self.challengeImage.image = UIImage(named: "\(challenge.challengeImageURL)")
+        self.challengeImage.kf.setImage(with: URL(string: challenge.challengeImageURL), placeholder: nil, options: nil, progressBlock: nil) { (image, error, cacheType, imageUrl) in
+            
+        }
         self.challengeDescription.text = challenge.challengeTitle
     }
     
