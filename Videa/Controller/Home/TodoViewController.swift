@@ -29,7 +29,7 @@ class TodoViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func getVideo(videoCode:String){
-        let url = URL(string: "http://www.youtube.com/embed/\(videoCode)")
+        let url = URL(string: "\(videoCode)")
         embedYoutube.loadRequest(URLRequest(url: url!))
     }
     
