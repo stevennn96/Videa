@@ -30,6 +30,7 @@
 		7B34DB682133ED360007C2B1 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34DB672133ED360007C2B1 /* UIImage+Gif.swift */; };
 		7B99736B213568BB00DE40A5 /* SplashScreen.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7B99736A213568B800DE40A5 /* SplashScreen.gif */; };
 		B02235C92136972F00042526 /* achievementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02235C82136972F00042526 /* achievementCell.swift */; };
+		B0270E0B216CAF5B00D734A8 /* StatisticsBackup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0270E0A216CAF5B00D734A8 /* StatisticsBackup.storyboard */; };
 		B0E2B5BF21321A1900B6860F /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5BE21321A1900B6860F /* IntroductionViewController.swift */; };
 		B0E2B5C121321D8200B6860F /* ChallengesListIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5C021321D8200B6860F /* ChallengesListIntroViewController.swift */; };
 		B0E2B5C32132232900B6860F /* ChallengesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5C22132232900B6860F /* ChallengesListViewController.swift */; };
@@ -100,6 +101,7 @@
 		7B99736421354A2800DE40A5 /* SettingPageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPageTableViewController.swift; sourceTree = "<group>"; };
 		7B99736A213568B800DE40A5 /* SplashScreen.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = SplashScreen.gif; sourceTree = "<group>"; };
 		B02235C82136972F00042526 /* achievementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = achievementCell.swift; sourceTree = "<group>"; };
+		B0270E0A216CAF5B00D734A8 /* StatisticsBackup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StatisticsBackup.storyboard; sourceTree = "<group>"; };
 		B0E2B5BE21321A1900B6860F /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 		B0E2B5C021321D8200B6860F /* ChallengesListIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesListIntroViewController.swift; sourceTree = "<group>"; };
 		B0E2B5C22132232900B6860F /* ChallengesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesListViewController.swift; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 				ED364DEB2152323100460C5D /* Home.storyboard */,
 				ED364DE92152310500460C5D /* Profile.storyboard */,
 				ED364DE721522E7D00460C5D /* Statistics.storyboard */,
+				B0270E0A216CAF5B00D734A8 /* StatisticsBackup.storyboard */,
 				ED11621D21622BC900CEF6D5 /* HomeBackup.storyboard */,
 			);
 			path = View;
@@ -495,6 +498,7 @@
 				7B154F4C2136538B00C12C8C /* animationVidea.gif in Resources */,
 				7B154F4A2136513A00C12C8C /* videa splashscreen.gif in Resources */,
 				ED11621E21622BC900CEF6D5 /* HomeBackup.storyboard in Resources */,
+				B0270E0B216CAF5B00D734A8 /* StatisticsBackup.storyboard in Resources */,
 				77E524052122D8C000EE54FD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -784,7 +788,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L2J3NC7X3D;
+				DEVELOPMENT_TEAM = 56ZF7DLJQY;
 				INFOPLIST_FILE = Videa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -804,7 +808,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L2J3NC7X3D;
+				DEVELOPMENT_TEAM = 56ZF7DLJQY;
 				INFOPLIST_FILE = Videa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
