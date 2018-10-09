@@ -20,7 +20,7 @@ class ChallengeListTableViewCell: UITableViewCell {
         challengeTitle.text = challengeList.challengeListTitle
         
         self.challengeCollectionView.reloadData()
-        print("Collection Reloaded")
+//        print("Collection Reloaded")
     }
     
     override func awakeFromNib() {
