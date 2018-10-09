@@ -54,45 +54,37 @@ class ChallengeViewController: UIViewController {
     
     func bacaData() {
         
-        let dataRef = Database.database().reference().child("Fetch/Genre").observe(.value) {(snapshot: DataSnapshot) in
+        let ref = Database.database().reference().child("Fetch/Genre").queryOrderedByValue()
+        let dataRef = ref.observe(.value) {(snapshot: DataSnapshot) in
             if snapshot.exists() {
-                var data = snapshot.value as! NSDictionary
-                let key = snapshot.key
 
-                for i in data {
-                    self.genres.append("\(i.key)")
-                    print(i)
-
-                    let dataRef2 = Database.database().reference().child("Fetch/ListChallenge/\(i.value)").observe(.value) {(snapshot2: DataSnapshot) in
+                for i in snapshot.children.allObjects as! [DataSnapshot] {
+                   
+                    let data = i.value
+                    let key = i.key
+                    self.genres.append("\(key)")
+                    
+                    let dataRef2 = Database.database().reference().child("Fetch/ListChallenge/Genre\(data!)").queryOrderedByKey().observe(.value) {(snapshot2: DataSnapshot) in
                         if snapshot2.exists() {
-                            let data2 = snapshot2.value as! NSArray
-                            let key2 = snapshot2.key
 
                             var x = [NSDictionary]()
-                            for j in data2 {
-                                if j is NSNull {
-                                    continue
-                                }
-                                x.append(j as! NSDictionary)
-                            }
+                            for j in snapshot2.children.allObjects as! [DataSnapshot] {
 
-                            var data3 = Dictionary<String, Any>()
-                            for v in x {
-                                let keyv = v.allKeys[0]
-                                let value = v.allValues[0]
-                                data3.updateValue(value, forKey: keyv as! String)
+                                let data2 = j.value
+                                let key2 = j.key
+                                x.append(data2 as! NSDictionary)
                             }
                             
                             self.challenges.append([])
                             var newChallenges = self.challenges.popLast()
-                            for d in data3 {
-                                let dc = d.value as! NSDictionary
-                                let challengeTitle = d.key
+                            for d in x {
+                                let dc = d.allValues[0] as! NSDictionary
+                                let challengeTitle = d.allKeys[0]
                                 let challengeDesc1 = dc["Deskripsi1"] as! String
                                 let challengeDesc2 = dc["Deskripsi2"] as! String
                                 let challengeLink = dc["VideoLink"] as! String
                                 let challengeImageURL = dc["GambarChallenge"] as! String
-                                let newChallenge = Challenge(image: challengeImageURL, title: challengeTitle, desc1: challengeDesc1, desc2: challengeDesc2, link: challengeLink)
+                                let newChallenge = Challenge(image: challengeImageURL, title: challengeTitle as! String, desc1: challengeDesc1, desc2: challengeDesc2, link: challengeLink)
                                 newChallenges?.append(newChallenge)
                             }
                             self.challenges.append(newChallenges!)
