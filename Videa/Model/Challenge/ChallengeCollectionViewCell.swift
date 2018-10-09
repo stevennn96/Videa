@@ -12,7 +12,7 @@ import Kingfisher
 class ChallengeCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var challengeImage: UIImageView!
-    @IBOutlet weak var challengeDescription: UILabel!
+    @IBOutlet weak var challengeDescription: UITextView!
     
     func setChallenge(challenge: Challenge) {
         
@@ -21,10 +21,11 @@ class ChallengeCollectionViewCell: UICollectionViewCell {
             
         }
         self.challengeDescription.text = challenge.challengeTitle
+        self.challengeDescription.textContainer.lineFragmentPadding = 0
+        self.challengeDescription.textContainerInset = .zero
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        challengeDescription.sizeToFit()
     }
 }
