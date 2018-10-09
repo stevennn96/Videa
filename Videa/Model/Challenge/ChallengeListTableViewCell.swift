@@ -47,6 +47,7 @@ extension ChallengeListTableViewCell: UICollectionViewDataSource, UICollectionVi
         let cell = challengeCollectionView.dequeueReusableCell(withReuseIdentifier: "reuseCollection", for: indexPath) as? ChallengeCollectionViewCell
         
         cell?.setChallenge(challenge: Challenge(image: challengeCollection[indexPath.row].challengeImageURL, title: challengeCollection[indexPath.row].challengeTitle, desc1: challengeCollection[indexPath.row].challengeDesc1, desc2: challengeCollection[indexPath.row].challengeDesc2, link: challengeCollection[indexPath.row].challengeVidLink))
+
         
         return cell!
     }
