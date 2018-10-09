@@ -17,6 +17,7 @@ class DetailTableViewController: UITableViewController {
     var desc2: String?
     var vidLink: String?
     var imageURL: String?
+    var theChallenge: MyChallenge?
     
     @IBOutlet weak var desc1TextView: UITextView!
     @IBOutlet weak var desc2TextView: UITextView!
@@ -34,8 +35,8 @@ class DetailTableViewController: UITableViewController {
         desc1TextView.text = desc1
         desc2TextView.text = desc2
         
-//        "https://www.youtube.com/embed/RmHqOSrkZnk"
-        
+        theChallenge = MyChallenge(title: challengeTitle!, url: vidLink!, status: 0)
+            
         print("VL \(vidLink)")
         let url = URL(string: "\(vidLink!)")
         youtubeVideoWebView.loadRequest(URLRequest(url: url!))

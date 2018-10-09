@@ -16,6 +16,7 @@ class ChallengeViewController: UIViewController {
     @IBOutlet weak var challengeListTableView: UITableView!
     
     var genres = [String]()
+    var genresDictionary = Dictionary<String, Any>()
     var challenges = [[Challenge]]()
     var introChallenges = [Challenge]()
     var musicChallenges = [Challenge]()
@@ -55,13 +56,14 @@ class ChallengeViewController: UIViewController {
         
         let dataRef = Database.database().reference().child("Fetch/Genre").observe(.value) {(snapshot: DataSnapshot) in
             if snapshot.exists() {
-                let data = snapshot.value as! NSDictionary
+                var data = snapshot.value as! NSDictionary
                 let key = snapshot.key
 
                 for i in data {
-                    self.genres.append("\(i.value)")
+                    self.genres.append("\(i.key)")
+                    print(i)
 
-                    let dataRef2 = Database.database().reference().child("Fetch/ListChallenge/\(i.key)").observe(.value) {(snapshot2: DataSnapshot) in
+                    let dataRef2 = Database.database().reference().child("Fetch/ListChallenge/\(i.value)").observe(.value) {(snapshot2: DataSnapshot) in
                         if snapshot2.exists() {
                             let data2 = snapshot2.value as! NSArray
                             let key2 = snapshot2.key
@@ -81,7 +83,6 @@ class ChallengeViewController: UIViewController {
                                 data3.updateValue(value, forKey: keyv as! String)
                             }
                             
-                            print("DICT")
                             self.challenges.append([])
                             var newChallenges = self.challenges.popLast()
                             for d in data3 {
@@ -96,32 +97,16 @@ class ChallengeViewController: UIViewController {
                             }
                             self.challenges.append(newChallenges!)
                             
-                            print("Snapshot2 Exists")
-                            print("C \(self.challenges.count)")
-                            print("G \(self.genres.count)")
-                            
                             if self.challenges.count == self.genres.count {
                                 DispatchQueue.main.async {
                                     self.challengeListTableView.reloadData()
                                 }
                             }
                         }
-                        print("dataref2")
-                        print("C \(self.challenges.count)")
-                        print("G \(self.genres.count)")
                     }
-                    print("for i in data")
-                    print("C \(self.challenges.count)")
-                    print("G \(self.genres.count)")
                 }
-                print("Snapshot Exists")
-                print("C \(self.challenges.count)")
-                print("G \(self.genres.count)")
             }
         }
-        print("Baca Data")
-        print("C \(self.challenges.count)")
-        print("G \(self.genres.count)")
     }
 }
 
