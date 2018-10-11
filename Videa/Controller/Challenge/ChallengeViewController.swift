@@ -26,6 +26,7 @@ class ChallengeViewController: UIViewController {
     var destinationDesc2: String?
     var destinationImageURL: String?
     var destinationVidLink: String?
+    var largestIndex: Int?
     
     private var postChildListener : UInt?
     
@@ -49,6 +50,8 @@ class ChallengeViewController: UIViewController {
             destination.desc2 = self.destinationDesc2
             destination.imageURL = self.destinationImageURL
             destination.vidLink = self.destinationVidLink
+            destination.largestIndex = self.largestIndex
+            print("challenge \(self.largestIndex)")
         }
     }
     

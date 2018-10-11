@@ -18,6 +18,7 @@ class DetailTableViewController: UITableViewController {
     var vidLink: String?
     var imageURL: String?
     var theChallenge: MyChallenge?
+    var largestIndex: Int?
     
     @IBOutlet weak var desc1TextView: UITextView!
     @IBOutlet weak var desc2TextView: UITextView!
@@ -28,16 +29,14 @@ class DetailTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("D1 \(desc1)")
-        print("D2 \(desc2)")
         titleTextView.text = challengeTitle
         self.navigationItem.title = navTitle
         desc1TextView.text = desc1
         desc2TextView.text = desc2
         
-        theChallenge = MyChallenge(title: challengeTitle!, url: vidLink!, status: 0)
-            
-        print("VL \(vidLink)")
+        print("Detail \(largestIndex)")
+        theChallenge = MyChallenge(title: challengeTitle!, url: "", status: 0, task: Task(viewTarget: 100, viewCount: 0, likeTarget: 20, likeCount: 0, commentTarget: 5, commentCount: 0), index: largestIndex!+1)
+        
         let url = URL(string: "\(vidLink!)")
         youtubeVideoWebView.loadRequest(URLRequest(url: url!))
         
@@ -68,7 +67,7 @@ class DetailTableViewController: UITableViewController {
     }
     
     @objc func joinButtonClicked(_sender: UIButton) {
-        performSegue(withIdentifier: "DetailToHome", sender: nil)
+        performSegue(withIdentifier: "DetailToHome", sender: self)
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

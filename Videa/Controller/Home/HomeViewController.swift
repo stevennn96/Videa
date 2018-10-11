@@ -7,19 +7,20 @@
 //
 
 import UIKit
-
-var tasks: [Task] = []
-var level: Int = 1
-var currXp: Int = 0
-var maxXp: Int = 50
+import Firebase
+import FirebaseAuth
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var myChallengeTableView: UITableView!
+    var selectedChallenge: MyChallenge?
     var myChallenges = [MyChallenge]()
+    var largestIndex: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadChallengeData()
         
         myChallengeTableView.delegate = self
         myChallengeTableView.dataSource = self
@@ -29,10 +30,114 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         performSegue(withIdentifier: "HomeToChallenge", sender: nil)
     }
     
+    
+    
     @IBAction func unwindToHome(_ sender: UIStoryboardSegue) {
+
         if let source = sender.source as? DetailTableViewController {
+            
             myChallenges.append(source.theChallenge!)
+            myChallenges.removeAll()
+            
+            guard
+                let challengeName = source.theChallenge?.myChallengeTitle,
+                let videoLink = source.theChallenge?.myChallengeUrl,
+                let viewCount = source.theChallenge?.myChallengeTask.viewCount,
+                let viewTarget = source.theChallenge?.myChallengeTask.viewTarget,
+                let likeCount = source.theChallenge?.myChallengeTask.likeCount,
+                let likeTarget = source.theChallenge?.myChallengeTask.likeTarget,
+                let commentCount = source.theChallenge?.myChallengeTask.commentCount,
+                let commentTarget = source.theChallenge?.myChallengeTask.commentTarget,
+                let index = source.theChallenge?.index
+            else {
+                return
+            }
+            
+            saveChallengeData(index: index, title: challengeName, videoLink: videoLink, viewCount: viewCount, viewTarget: viewTarget, likeCount: likeCount, likeTarget: likeTarget, commentCount: commentCount, commentTarget: commentTarget) { (success) in
+                if success {
+                    print("Berhasil")
+                } else {
+                    print("Error")
+                }
+            }
+            
             myChallengeTableView.reloadData()
+        }
+    }
+    
+    func saveChallengeData(index: Int, title: String, videoLink: String, viewCount: Int, viewTarget: Int, likeCount: Int, likeTarget: Int, commentCount: Int, commentTarget: Int, completion: @escaping ((_ success: Bool)->())) {
+        
+        guard let uid = Auth.auth().currentUser?.uid else {return}
+        let databaseRef = Database.database().reference().child("users/challengeJoined/\(uid)/\(title)")
+        
+        let saveChallenge = [
+            "index": index,
+            "videoLink": videoLink,
+            "viewCount": viewCount,
+            "viewTarget": viewTarget,
+            "likeCount": likeCount,
+            "likeTarget": likeTarget,
+            "commentCount": commentCount,
+            "commentTarget": commentTarget
+            ] as [String : Any]
+        
+        databaseRef.setValue(saveChallenge) { (error, ref) in
+            completion(error == nil)
+        }
+    }
+    
+    func loadChallengeData() {
+        guard let uid = Auth.auth().currentUser?.uid else {return}
+        
+        let ref = Database.database().reference().child("users/challengeJoined/\(uid)").queryOrdered(byChild: "index")
+        let dataRef = ref.observe(.value) { (snapshot: DataSnapshot) in
+            if snapshot.exists() {
+                
+                for i in snapshot.children.allObjects as! [DataSnapshot] {
+                    let data = i.value
+                    let key = i.key
+                    
+                    let ref2 = Database.database().reference().child("users/challengeJoined/\(uid)/\(key)")
+                    let dataRef2 = ref2.observe(.value, with: { (snapshot2: DataSnapshot) in
+                        if snapshot2.exists() {
+                            let data2 = snapshot2.value as! NSDictionary
+                            let key2 = snapshot2.key
+                            
+                            let title = key2
+                            let viewCount = data2["viewCount"] as! Int
+                            let viewTarget = data2["viewTarget"] as! Int
+                            let likeCount = data2["likeCount"] as! Int
+                            let likeTarget = data2["likeTarget"] as! Int
+                            let commentCount = data2["commentCount"] as! Int
+                            let commentTarget = data2["commentTarget"] as! Int
+                            let videoLink = data2["videoLink"] as! String
+                            let index = data2["index"] as! Int
+                            print(index)
+                            
+                            var status = 0
+                            if viewCount == viewTarget {
+                                status += 1
+                            }
+                            if likeCount == likeTarget {
+                                status += 1
+                            }
+                            if commentCount == commentTarget {
+                                status += 1
+                            }
+                            
+                            let task = Task(viewTarget: viewTarget, viewCount: viewCount, likeTarget: likeTarget, likeCount: likeCount, commentTarget: commentTarget, commentCount: commentCount)
+                            
+                            let newChallenge = MyChallenge(title: title, url: videoLink, status: status, task: task, index: index)
+                            self.myChallenges.append(newChallenge)
+                            DispatchQueue.main.async {
+                                self.largestIndex = self.myChallenges.last!.index
+                                print("Largest \(self.largestIndex)")
+                                self.myChallengeTableView.reloadData()
+                            }
+                        }
+                    })
+                }
+            }
         }
     }
     
@@ -41,10 +146,26 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = myChallengeTableView.dequeueReusableCell(withIdentifier: "reuseMyChallenge") as! MyChallengeTableViewCell
+        let cell = myChallengeTableView.dequeueReusableCell(withIdentifier: "reuseMyChallenge") as! MyChallengeTableViewCell
         
-        cell.setMyChallenge(myChallenge: MyChallenge(title: myChallenges[indexPath.row].myChallengeTitle, url: myChallenges[indexPath.row].myChallengeUrl, status: myChallenges[indexPath.row].myChallengeStatus))
+        cell.setMyChallenge(myChallenge: MyChallenge(title: myChallenges[indexPath.row].myChallengeTitle, url: myChallenges[indexPath.row].myChallengeUrl, status: myChallenges[indexPath.row].myChallengeStatus, task: myChallenges[indexPath.row].myChallengeTask, index: myChallenges[indexPath.row].index))
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedChallenge = myChallenges[indexPath.row]
+        performSegue(withIdentifier: "HomeToTask", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? TaskViewController {
+            destination.myChallenge = selectedChallenge
+        }
+        
+        if let destination = segue.destination as? ChallengeViewController {
+            destination.largestIndex = largestIndex
+            print("Home \(largestIndex)")
+        }
     }
 }
