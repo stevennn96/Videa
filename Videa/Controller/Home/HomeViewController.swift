@@ -20,6 +20,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if myChallenges.isEmpty {
+            largestIndex = 0
+        }
+        
         loadChallengeData()
         
         myChallengeTableView.delegate = self

@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--A-->
         <scene sceneID="iOi-xE-Tkg">
             <objects>
-                <navigationController id="sWw-Im-xUx" sceneMemberID="viewController">
+                <navigationController title="A" id="sWw-Im-xUx" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="HomeIcon" selectedImage="HomeIconSelected" id="bfb-ac-nMB"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="E4f-hm-aUs">
