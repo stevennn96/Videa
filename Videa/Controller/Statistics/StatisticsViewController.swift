@@ -12,8 +12,12 @@ import GoogleSignIn
 
 class StatisticsViewController: UIViewController, UITextFieldDelegate, GIDSignInUIDelegate {
     
-
-    @IBOutlet weak var signInButton: GIDSignInButton!
+    
+    @IBAction func signInButton(_ sender: Any) {
+        GIDSignIn.sharedInstance().signIn()
+    }
+    
+    
     
     @IBAction func logOutButton(_ sender: Any) {
        GIDSignIn.sharedInstance().signOut()
@@ -37,7 +41,6 @@ class StatisticsViewController: UIViewController, UITextFieldDelegate, GIDSignIn
         super.viewDidLoad()
         
         GIDSignIn.sharedInstance().uiDelegate = self
-        GIDSignIn.sharedInstance().signIn()
         //Buat ganti warna title navigation bar
         let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
@@ -45,10 +48,10 @@ class StatisticsViewController: UIViewController, UITextFieldDelegate, GIDSignIn
         //Back Button Color
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
-        usernameTextField.delegate = self 
-        connectUIButton.layer.cornerRadius = 5
-        reloadCounter = 0
-        apiKey = "AIzaSyA614LZH2YQaHu3_hyXnEkOq2d9p0Bd0x8"
+//        usernameTextField.delegate = self 
+//        connectUIButton.layer.cornerRadius = 5
+//        reloadCounter = 0
+//        apiKey = "AIzaSyA614LZH2YQaHu3_hyXnEkOq2d9p0Bd0x8"
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
