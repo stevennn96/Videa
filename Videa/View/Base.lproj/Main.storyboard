@@ -169,7 +169,8 @@
                     <connections>
                         <outlet property="doneButton" destination="rRH-cM-UWN" id="iEp-cJ-WcV"/>
                         <outlet property="onboardingImageView" destination="eFb-nq-pxZ" id="CLb-sd-UOD"/>
-                        <segue destination="imj-FA-pIE" kind="show" identifier="OnboardingDone" id="aj5-j8-D3Q"/>
+                        <segue destination="imj-FA-pIE" kind="show" identifier="OnboardingDon" id="aj5-j8-D3Q"/>
+                        <segue destination="071-UZ-AYa" kind="show" identifier="OnboardingDone" id="IGa-A0-ePf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uwQ-bc-O1g" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -450,6 +451,39 @@
             </objects>
             <point key="canvasLocation" x="662" y="-2028"/>
         </scene>
+        <!--Sign In View Controller-->
+        <scene sceneID="hMm-Cf-jv6">
+            <objects>
+                <viewController id="071-UZ-AYa" customClass="GIDSignInViewController" customModule="Videa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aqo-6N-F4X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSI-E4-8kv">
+                                <rect key="frame" x="43" y="165" width="289" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="connect youtube"/>
+                                <connections>
+                                    <action selector="signInGoogle:" destination="071-UZ-AYa" eventType="touchUpInside" id="hBS-K0-lOg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3MU-h2-dAS">
+                                <rect key="frame" x="164" y="348" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="logOutGoogle:" destination="071-UZ-AYa" eventType="touchUpInside" id="z7q-EQ-n5t"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="OhE-ct-ccO"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dO8-aJ-e5k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1031.2" y="-1199.2610837438424"/>
+        </scene>
         <!--Launch Screen View Controller-->
         <scene sceneID="JdE-Ml-lUh">
             <objects>
@@ -484,6 +518,7 @@
         <image name="Register Button" width="260" height="83"/>
         <image name="Start Button" width="260" height="83"/>
         <image name="Videa logo white" width="508" height="209"/>
+        <image name="connect youtube" width="670" height="214"/>
         <image name="email icon" width="64" height="46"/>
         <image name="onboarding 1" width="375" height="812"/>
         <image name="password icon" width="58" height="58"/>
@@ -491,7 +526,7 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="x8l-4r-2aa"/>
+        <segue reference="aj5-j8-D3Q"/>
         <segue reference="qYR-5w-4t8"/>
     </inferredMetricsTieBreakers>
 </document>
