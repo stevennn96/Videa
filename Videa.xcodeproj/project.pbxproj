@@ -30,18 +30,6 @@
 		7B34DB682133ED360007C2B1 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34DB672133ED360007C2B1 /* UIImage+Gif.swift */; };
 		7B99736B213568BB00DE40A5 /* SplashScreen.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7B99736A213568B800DE40A5 /* SplashScreen.gif */; };
 		B02235C92136972F00042526 /* achievementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02235C82136972F00042526 /* achievementCell.swift */; };
-		B0270E0B216CAF5B00D734A8 /* StatisticsBackup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0270E0A216CAF5B00D734A8 /* StatisticsBackup.storyboard */; };
-		B0E2B5BF21321A1900B6860F /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5BE21321A1900B6860F /* IntroductionViewController.swift */; };
-		B0E2B5C121321D8200B6860F /* ChallengesListIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5C021321D8200B6860F /* ChallengesListIntroViewController.swift */; };
-		B0E2B5C32132232900B6860F /* ChallengesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5C22132232900B6860F /* ChallengesListViewController.swift */; };
-		B0E2B5C52132248900B6860F /* MusicLevelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5C42132248900B6860F /* MusicLevelListViewController.swift */; };
-		B0E2B5C72132256300B6860F /* MusicLevelContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5C62132256300B6860F /* MusicLevelContentViewController.swift */; };
-		B0E2B5C92132BA3B00B6860F /* ComedyLevelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5C82132BA3B00B6860F /* ComedyLevelListViewController.swift */; };
-		B0E2B5CB2132BA5300B6860F /* ComedyLevelContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5CA2132BA5300B6860F /* ComedyLevelContentViewController.swift */; };
-		B0E2B5CD2132C7E900B6860F /* FoodLevelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5CC2132C7E900B6860F /* FoodLevelListViewController.swift */; };
-		B0E2B5CF2132C7FC00B6860F /* FoodLevelContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5CE2132C7FC00B6860F /* FoodLevelContentViewController.swift */; };
-		B0E2B5D12132DFF400B6860F /* HowToLevelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5D02132DFF400B6860F /* HowToLevelListViewController.swift */; };
-		B0E2B5D32132E00B00B6860F /* HowToLevelContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5D22132E00B00B6860F /* HowToLevelContentViewController.swift */; };
 		B0E2B5DD213408A800B6860F /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2B5DC213408A800B6860F /* LaunchScreenViewController.swift */; };
 		ED11621E21622BC900CEF6D5 /* HomeBackup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED11621D21622BC900CEF6D5 /* HomeBackup.storyboard */; };
 		ED116245216353D700CEF6D5 /* ChallengeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED116244216353D700CEF6D5 /* ChallengeListTableViewCell.swift */; };
@@ -63,6 +51,7 @@
 		ED364DEC2152323100460C5D /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED364DEB2152323100460C5D /* Home.storyboard */; };
 		ED3AE6B2216B408800A96013 /* MyChallengeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3AE6B1216B408800A96013 /* MyChallengeTableViewCell.swift */; };
 		ED3AE6B4216B490200A96013 /* MyChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3AE6B3216B490200A96013 /* MyChallenge.swift */; };
+		ED3AE6B6216DB68800A96013 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3AE6B5216DB68800A96013 /* TaskViewController.swift */; };
 		ED909054212EC07700E11589 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED90904B212E9BFA00E11589 /* StatisticsViewController.swift */; };
 		ED909055212EC0BE00E11589 /* ChannelDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED90904D212EA3FE00E11589 /* ChannelDetail.swift */; };
 		ED909056212EC0D400E11589 /* StatisticsDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED909050212EA6E000E11589 /* StatisticsDataViewController.swift */; };
@@ -101,18 +90,6 @@
 		7B99736421354A2800DE40A5 /* SettingPageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPageTableViewController.swift; sourceTree = "<group>"; };
 		7B99736A213568B800DE40A5 /* SplashScreen.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = SplashScreen.gif; sourceTree = "<group>"; };
 		B02235C82136972F00042526 /* achievementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = achievementCell.swift; sourceTree = "<group>"; };
-		B0270E0A216CAF5B00D734A8 /* StatisticsBackup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StatisticsBackup.storyboard; sourceTree = "<group>"; };
-		B0E2B5BE21321A1900B6860F /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
-		B0E2B5C021321D8200B6860F /* ChallengesListIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesListIntroViewController.swift; sourceTree = "<group>"; };
-		B0E2B5C22132232900B6860F /* ChallengesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesListViewController.swift; sourceTree = "<group>"; };
-		B0E2B5C42132248900B6860F /* MusicLevelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicLevelListViewController.swift; sourceTree = "<group>"; };
-		B0E2B5C62132256300B6860F /* MusicLevelContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicLevelContentViewController.swift; sourceTree = "<group>"; };
-		B0E2B5C82132BA3B00B6860F /* ComedyLevelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComedyLevelListViewController.swift; sourceTree = "<group>"; };
-		B0E2B5CA2132BA5300B6860F /* ComedyLevelContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComedyLevelContentViewController.swift; sourceTree = "<group>"; };
-		B0E2B5CC2132C7E900B6860F /* FoodLevelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodLevelListViewController.swift; sourceTree = "<group>"; };
-		B0E2B5CE2132C7FC00B6860F /* FoodLevelContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodLevelContentViewController.swift; sourceTree = "<group>"; };
-		B0E2B5D02132DFF400B6860F /* HowToLevelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToLevelListViewController.swift; sourceTree = "<group>"; };
-		B0E2B5D22132E00B00B6860F /* HowToLevelContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToLevelContentViewController.swift; sourceTree = "<group>"; };
 		B0E2B5DC213408A800B6860F /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		B0E2B60A21354E3B00B6860F /* tab bar red bawah.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab bar red bawah.png"; sourceTree = "<group>"; };
 		D5A344EF856C85A0C716FFB6 /* Pods-Videa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Videa.release.xcconfig"; path = "Pods/Target Support Files/Pods-Videa/Pods-Videa.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +113,7 @@
 		ED364DEB2152323100460C5D /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		ED3AE6B1216B408800A96013 /* MyChallengeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChallengeTableViewCell.swift; sourceTree = "<group>"; };
 		ED3AE6B3216B490200A96013 /* MyChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChallenge.swift; sourceTree = "<group>"; };
+		ED3AE6B5216DB68800A96013 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		ED90904B212E9BFA00E11589 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		ED90904D212EA3FE00E11589 /* ChannelDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelDetail.swift; sourceTree = "<group>"; };
 		ED909050212EA6E000E11589 /* StatisticsDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsDataViewController.swift; sourceTree = "<group>"; };
@@ -217,24 +195,6 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
-		B0E2B60E21355C1800B6860F /* ContentVC */ = {
-			isa = PBXGroup;
-			children = (
-				B0E2B5C42132248900B6860F /* MusicLevelListViewController.swift */,
-				B0E2B5BE21321A1900B6860F /* IntroductionViewController.swift */,
-				B0E2B5C021321D8200B6860F /* ChallengesListIntroViewController.swift */,
-				B0E2B5C22132232900B6860F /* ChallengesListViewController.swift */,
-				B0E2B5C62132256300B6860F /* MusicLevelContentViewController.swift */,
-				B0E2B5C82132BA3B00B6860F /* ComedyLevelListViewController.swift */,
-				B0E2B5CA2132BA5300B6860F /* ComedyLevelContentViewController.swift */,
-				B0E2B5CC2132C7E900B6860F /* FoodLevelListViewController.swift */,
-				B0E2B5CE2132C7FC00B6860F /* FoodLevelContentViewController.swift */,
-				B0E2B5D02132DFF400B6860F /* HowToLevelListViewController.swift */,
-				B0E2B5D22132E00B00B6860F /* HowToLevelContentViewController.swift */,
-			);
-			path = ContentVC;
-			sourceTree = "<group>";
-		};
 		ED1162432163535D00CEF6D5 /* Challenge */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,7 +234,6 @@
 				ED364DEB2152323100460C5D /* Home.storyboard */,
 				ED364DE92152310500460C5D /* Profile.storyboard */,
 				ED364DE721522E7D00460C5D /* Statistics.storyboard */,
-				B0270E0A216CAF5B00D734A8 /* StatisticsBackup.storyboard */,
 				ED11621D21622BC900CEF6D5 /* HomeBackup.storyboard */,
 			);
 			path = View;
@@ -283,9 +242,9 @@
 		ED364DED2152341900460C5D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				ED3AE6B5216DB68800A96013 /* TaskViewController.swift */,
 				ED364DDD2136459100460C5D /* TodoViewController.swift */,
 				6B9858A1212EA7B80081E017 /* HomeViewController.swift */,
-				B0E2B60E21355C1800B6860F /* ContentVC */,
 				ED11624F2163629D00CEF6D5 /* HomeViewControllerBackup.strings */,
 			);
 			path = Home;
@@ -498,7 +457,6 @@
 				7B154F4C2136538B00C12C8C /* animationVidea.gif in Resources */,
 				7B154F4A2136513A00C12C8C /* videa splashscreen.gif in Resources */,
 				ED11621E21622BC900CEF6D5 /* HomeBackup.storyboard in Resources */,
-				B0270E0B216CAF5B00D734A8 /* StatisticsBackup.storyboard in Resources */,
 				77E524052122D8C000EE54FD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,9 +551,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0E2B5C52132248900B6860F /* MusicLevelListViewController.swift in Sources */,
 				ED3AE6B4216B490200A96013 /* MyChallenge.swift in Sources */,
-				B0E2B5D12132DFF400B6860F /* HowToLevelListViewController.swift in Sources */,
 				6B4713582133D0D000E86519 /* ProfileAccountViewController.swift in Sources */,
 				ED1162492163580300CEF6D5 /* Challenge.swift in Sources */,
 				ED364DE021364F1100460C5D /* TodoTableViewCell.swift in Sources */,
@@ -603,19 +559,15 @@
 				ED364DDA2135A3A400460C5D /* Task.swift in Sources */,
 				ED909055212EC0BE00E11589 /* ChannelDetail.swift in Sources */,
 				ED116245216353D700CEF6D5 /* ChallengeListTableViewCell.swift in Sources */,
-				B0E2B5C92132BA3B00B6860F /* ComedyLevelListViewController.swift in Sources */,
 				7B34DB682133ED360007C2B1 /* UIImage+Gif.swift in Sources */,
 				6B47135D2134D41D00E86519 /* UserService.swift in Sources */,
-				B0E2B5C72132256300B6860F /* MusicLevelContentViewController.swift in Sources */,
+				ED3AE6B6216DB68800A96013 /* TaskViewController.swift in Sources */,
 				ED364DE22136774F00460C5D /* VideoDetail.swift in Sources */,
-				B0E2B5BF21321A1900B6860F /* IntroductionViewController.swift in Sources */,
 				6B09711D212BF4F800CD9878 /* LoginAccountViewController.swift in Sources */,
 				6B2D62C8213003EA0032EC74 /* ProfileViewController.swift in Sources */,
 				ED90906221351BF300E11589 /* TabBarViewController.swift in Sources */,
-				B0E2B5CF2132C7FC00B6860F /* FoodLevelContentViewController.swift in Sources */,
 				6997F7412133DE7300FA32E1 /* OnboardingViewController.swift in Sources */,
 				6BE40B6A21368D6000F978A7 /* TestSimpenDataViewController.swift in Sources */,
-				B0E2B5C121321D8200B6860F /* ChallengesListIntroViewController.swift in Sources */,
 				6B663521212C000E001137AD /* ForLoginViewController.swift in Sources */,
 				ED909054212EC07700E11589 /* StatisticsViewController.swift in Sources */,
 				B02235C92136972F00042526 /* achievementCell.swift in Sources */,
@@ -628,21 +580,17 @@
 				6B47135F2134D4FD00E86519 /* UserProfile.swift in Sources */,
 				6B9858A4212EA7B80081E017 /* HomeViewController.swift in Sources */,
 				6BE40B6C213696AE00F978A7 /* Gamification.swift in Sources */,
-				B0E2B5CB2132BA5300B6860F /* ComedyLevelContentViewController.swift in Sources */,
 				B0E2B5DD213408A800B6860F /* LaunchScreenViewController.swift in Sources */,
 				ED1162542164B90500CEF6D5 /* DetailTableViewController.swift in Sources */,
-				B0E2B5CD2132C7E900B6860F /* FoodLevelListViewController.swift in Sources */,
 				ED11624B21635C0A00CEF6D5 /* ChallengeCollectionViewCell.swift in Sources */,
 				ED90906821353A0500E11589 /* LevelUpAlertViewController.swift in Sources */,
 				ED364DDC2135A45100460C5D /* TaskTableViewCell.swift in Sources */,
 				ED1162472163548100CEF6D5 /* ChallengeList.swift in Sources */,
-				B0E2B5C32132232900B6860F /* ChallengesListViewController.swift in Sources */,
 				ED364DDE2136459100460C5D /* TodoViewController.swift in Sources */,
 				ED3AE6B2216B408800A96013 /* MyChallengeTableViewCell.swift in Sources */,
 				77E523FE2122D8C000EE54FD /* AppDelegate.swift in Sources */,
 				ED909058212FF66F00E11589 /* StatisticsDataTableViewCell.swift in Sources */,
 				ED909056212EC0D400E11589 /* StatisticsDataViewController.swift in Sources */,
-				B0E2B5D32132E00B00B6860F /* HowToLevelContentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -788,7 +736,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 56ZF7DLJQY;
+				DEVELOPMENT_TEAM = L2J3NC7X3D;
 				INFOPLIST_FILE = Videa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -808,7 +756,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 56ZF7DLJQY;
+				DEVELOPMENT_TEAM = L2J3NC7X3D;
 				INFOPLIST_FILE = Videa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (

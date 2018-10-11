@@ -10,30 +10,19 @@ import Foundation
 
 class Task{
     
-    var taskName: String?
-    var taskDone: Int?
-    var taskReq: Int?
-    var todoList: [Todo]
-    var videoLink: String?
+    var viewTarget: Int?
+    var viewCount: Int?
+    var likeTarget: Int?
+    var likeCount: Int?
+    var commentTarget: Int?
+    var commentCount: Int?
     
-    init(taskName: String, taskDone: Int, taskReq: Int, todoList: [Todo], videoLink: String) {
-        self.taskName = taskName
-        self.taskDone = taskDone
-        self.taskReq = taskReq
-        self.todoList = todoList
-        self.videoLink = videoLink
-    }
-}
-
-class Todo {
-    
-    var description: String?
-    var targetNumber: Int?
-    var completed: String?
-    
-    init(description: String, targetNumber: Int, completed: String) {
-        self.description = description
-        self.targetNumber = targetNumber
-        self.completed = completed
+    init(viewTarget: Int, viewCount: Int, likeTarget: Int, likeCount: Int, commentTarget: Int, commentCount: Int) {
+        self.viewTarget = viewTarget
+        self.viewCount = viewCount
+        self.likeTarget = likeTarget
+        self.likeCount = likeCount
+        self.commentTarget = commentTarget
+        self.commentCount = commentCount
     }
 }
