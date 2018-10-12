@@ -8,6 +8,8 @@
 
 import UIKit
 import WebKit
+import Firebase
+import FirebaseAuth
 
 class DetailTableViewController: UITableViewController {
 
@@ -35,7 +37,8 @@ class DetailTableViewController: UITableViewController {
         desc2TextView.text = desc2
         
         print("Detail \(largestIndex)")
-        theChallenge = MyChallenge(title: challengeTitle!, url: "", status: 0, task: Task(viewTarget: 100, viewCount: 0, likeTarget: 20, likeCount: 0, commentTarget: 5, commentCount: 0), index: largestIndex!+1)
+        
+        loadTaskData(title: challengeTitle!)
         
         let url = URL(string: "\(vidLink!)")
         youtubeVideoWebView.loadRequest(URLRequest(url: url!))
@@ -48,6 +51,26 @@ class DetailTableViewController: UITableViewController {
         joinButtonConstraints.append((self.joinButton?.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -20))!)
     }
 
+    func loadTaskData(title: String) {
+        print(title)
+        let dataRef = Database.database().reference().child("Fetch/Task/\(title)").observe(.value) { (snapshot) in
+            if snapshot.exists() {
+                
+                let data = snapshot.value as! NSDictionary
+                let key = snapshot.key
+                
+                let viewTarget = data["ViewTarget"] as! Int
+                let likeTarget = data["LikeTarget"] as! Int
+                let commentTarget = data["CommentTarget"] as! Int
+                
+                print("DATA \(data)")
+                print(key)
+                
+                self.theChallenge = MyChallenge(title: self.challengeTitle!, url: "", status: 0, task: Task(viewTarget: viewTarget, viewCount: 0, likeTarget: likeTarget, likeCount: 0, commentTarget: commentTarget, commentCount: 0), index: self.largestIndex!+1)
+            }
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.estimatedRowHeight = 300

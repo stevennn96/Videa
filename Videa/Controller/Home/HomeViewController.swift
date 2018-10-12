@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import GoogleSignIn
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -19,6 +20,15 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let signIn = GIDSignIn.sharedInstance()
+        
+        if (signIn!.hasAuthInKeychain()) {
+            print("Signed in");
+            GIDSignIn.sharedInstance()?.signInSilently()
+        } else {
+            print("Not signed in");
+        }
         
         if myChallenges.isEmpty {
             largestIndex = 0

@@ -14,6 +14,7 @@ class StatisticsViewController: UIViewController, UITextFieldDelegate, GIDSignIn
     
     
     @IBAction func signInButton(_ sender: Any) {
+        GIDSignIn.sharedInstance().scopes = ["https://www.googleapis.com/auth/youtube"]
         GIDSignIn.sharedInstance().signIn()
     }
     

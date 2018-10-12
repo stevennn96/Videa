@@ -467,14 +467,6 @@
                                     <action selector="signInGoogle:" destination="071-UZ-AYa" eventType="touchUpInside" id="hBS-K0-lOg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3MU-h2-dAS">
-                                <rect key="frame" x="164" y="348" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="logOutGoogle:" destination="071-UZ-AYa" eventType="touchUpInside" id="z7q-EQ-n5t"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="OhE-ct-ccO"/>

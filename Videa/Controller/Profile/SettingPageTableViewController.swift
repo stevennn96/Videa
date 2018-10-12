@@ -9,6 +9,7 @@
 import UIKit
 import MessageUI
 import FirebaseAuth
+import GoogleSignIn
 
 
 class SettingPageTableViewController: UITableViewController, MFMailComposeViewControllerDelegate {
@@ -39,8 +40,13 @@ class SettingPageTableViewController: UITableViewController, MFMailComposeViewCo
     
     @IBAction func logout(_ sender: Any) {
 
-        try! Auth.auth().signOut()
-
+        GIDSignIn.sharedInstance()?.signOut()
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
     }
     
     func configureMailController() -> MFMailComposeViewController {

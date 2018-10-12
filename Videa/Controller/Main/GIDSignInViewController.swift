@@ -7,16 +7,13 @@
 //
 
 import UIKit
+import Firebase
 import GoogleSignIn
 
 class GIDSignInViewController: UIViewController, GIDSignInUIDelegate {
 
     @IBAction func signInGoogle(_ sender: Any) {
         GIDSignIn.sharedInstance()?.signIn()
-    }
-    
-    @IBAction func logOutGoogle(_ sender: Any) {
-        GIDSignIn.sharedInstance()?.signOut()
     }
     
     override func viewDidLoad() {

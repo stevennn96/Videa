@@ -25,7 +25,7 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="HCu-OQ-2dN" kind="relationship" relationship="rootViewController" id="Tia-G5-gde"/>
+                        <segue destination="gcZ-NY-Owq" kind="relationship" relationship="rootViewController" id="mda-0i-yDA"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zaj-aT-Xsi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -37,7 +37,7 @@
             <objects>
                 <viewController storyboardIdentifier="StatisticsVC" id="HCu-OQ-2dN" customClass="StatisticsViewController" customModule="Videa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lzW-bM-AhB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQ2-qW-Qbe">
@@ -209,6 +209,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="1Np-PN-NCf"/>
                     </view>
+                    <navigationItem key="navigationItem" id="r5c-3j-NEF"/>
                     <connections>
                         <outlet property="accountView" destination="BIc-EN-n81" id="cS9-pC-BOu"/>
                         <outlet property="channelTitleLabel" destination="VfA-gX-v3Q" id="M06-ka-awA"/>
@@ -229,4 +230,7 @@
         <image name="statisticsIcon" width="16" height="16"/>
         <image name="toni" width="900" height="900"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="mda-0i-yDA"/>
+    </inferredMetricsTieBreakers>
 </document>
