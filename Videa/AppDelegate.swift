@@ -17,10 +17,20 @@ import GoogleSignIn
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
-        // ...
-        if let error = error {
-            // ...
-            return
+        
+        if error == nil {
+            GIDSignedInUser.accessToken = (GIDSignIn.sharedInstance()?.currentUser.authentication.accessToken)!
+            print(GIDSignedInUser.accessToken)
+            
+            getDetail { (success) in
+                if success {
+                    getPlaylistDetail()
+                    getSearchByDate()
+                    getSearchByView()
+                }
+            }
+        } else {
+            print("\(error?.localizedDescription)")
         }
         
         guard let authentication = user.authentication else { return }
@@ -42,12 +52,122 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     }
 
     var window: UIWindow?
-
+    
+    func getDetail(completion: (_ success: Bool) -> Void) {
+        getChannelDetail()
+        
+        while GIDSignedInUser.channelDetail == nil {
+            continue
+        }
+        
+        completion(true)
+    }
+    
+    func getChannelDetail() {
+        let url = URL(string: "https://www.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails,statistics&mine=true&access_token=\(GIDSignedInUser.accessToken)")
+        
+        let getChannelTask = URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            do {
+                GIDSignedInUser.channelDetail = try JSONDecoder().decode(ChannelDetail.self, from: data!)
+            } catch let error as NSError {
+                print(error)
+            }
+            
+            if GIDSignedInUser.channelDetail != nil {
+                
+                print("Channel Detail Retrieved")
+                
+                if GIDSignedInUser.channelDetail!.items?.count != 0 {
+                   
+                }
+                else {
+                    print("Channel detail empty")
+                }
+            }
+            else {
+                print("No channel detail found")
+            }
+        }
+        
+        getChannelTask.resume()
+    }
+    
+    func getPlaylistDetail() {
+        
+        let playlistId = GIDSignedInUser.channelDetail?.items![0].contentDetails?.relatedPlaylists?.uploads
+        let url = URL(string: "https://www.googleapis.com/youtube/v3/playlistItems?playlistId=\(playlistId!)&part=snippet,contentDetails&key=\(GIDSignedInUser.apiKey)")
+        
+        let getPlaylistTask = URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            do {
+                GIDSignedInUser.playlistDetail = try JSONDecoder().decode(PlaylistDetail.self, from: data!)
+            } catch let error as NSError {
+                print(error)
+            }
+            
+            if GIDSignedInUser.playlistDetail != nil {
+                print("Playlist Detail Retrieved")
+            }
+        }
+        
+        getPlaylistTask.resume()
+    }
+    
+    func getSearchByDate() {
+        
+        let channelId = GIDSignedInUser.channelDetail?.items![0].id
+        
+        let url = URL(string: "https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&order=date&channelId=\(channelId!)&key=\(GIDSignedInUser.apiKey)")
+        
+        let searchTask = URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            do {
+                
+                GIDSignedInUser.searchByDate = try JSONDecoder().decode(SearchDetail.self, from: data!)
+            } catch let error as NSError {
+                print(error)
+            }
+            
+            if GIDSignedInUser.searchByDate != nil {
+                print("Search By Date Retrieved")
+            }
+        }
+        
+        searchTask.resume()
+    }
+        
+    func getSearchByView() {
+        
+        let channelId = GIDSignedInUser.channelDetail?.items![0].id
+        
+        let url = URL(string: "https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&order=viewCount&channelId=\(channelId!)&key=AIzaSyCSSeFz17e2vePbWpS0_KWN7wHxWhCQoRU")
+        
+        let searchTask = URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            do {
+                
+                GIDSignedInUser.searchByView = try JSONDecoder().decode(SearchDetail.self, from: data!)
+            } catch let error as NSError {
+                print(error)
+            }
+            
+            if GIDSignedInUser.searchByView != nil {
+                print("Search By View Retrieved")
+            }
+        }
+        
+        searchTask.resume()
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         FirebaseApp.configure()
-        GIDSignIn.sharedInstance().scopes = ["https://www.googleapis.com/auth/youtube.readonly", "https://www.googleapis.com/auth/youtubepartner", "https://www.googleapis.com/auth/youtubepartner-channel-audit", "https://www.googleapis.com/auth/plus.login", "https://www.googleapis.com/auth/plus.me"]
+        GIDSignIn.sharedInstance().scopes = [
+            "https://www.googleapis.com/auth/youtube.readonly",
+            "https://www.googleapis.com/auth/yt-analytics.readonly",
+            "https://www.googleapis.com/auth/yt-analytics-monetary.readonly",
+            "https://www.googleapis.com/auth/youtube",
+            "https://www.googleapis.com/auth/youtubepartner",
+            "https://www.googleapis.com/auth/youtubepartner-channel-audit",
+            "https://www.googleapis.com/auth/plus.login",
+            "https://www.googleapis.com/auth/plus.me"]
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         

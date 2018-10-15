@@ -21,108 +21,81 @@ class StatisticsDataViewController: UIViewController, UITableViewDataSource, UIT
     
     var statisticsData: [StatisticsData] = []
     
-    var apiKey: String = "AIzaSyA614LZH2YQaHu3_hyXnEkOq2d9p0Bd0x8"
-    var accessToken: String = ""
     var channelTitle: String = ""
     var totalSubscribers: String = ""
     var totalViews: String = ""
     var userImageUrl: String = ""
     
-    var getChannelTask: URLSessionDataTask?
-    var urlData: Data?
+    var columnHeader = [ColumnHeader]()
+    var row = [Row]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if Auth.auth().currentUser != nil {
-            print("in")
-            // User is signed in.
-            // ...
-        } else {
-            print("out")
-            // No user is signed in.
-            // ...
-        }
-        
-        if GIDSignIn.sharedInstance()?.currentUser != nil {
-            print("GIDin")
-            accessToken = (GIDSignIn.sharedInstance()?.currentUser.authentication.accessToken)!
-            print(accessToken)
-        } else {
-            print("GIDout")
-        }
-        
-        let url = URL(string: "https://www.googleapis.com/youtube/v3/channels?part=snippet,contentDetails,statistics&mine=true&access_token=\(accessToken)")
-        
         var channelDetail: ChannelDetail?
         
-        getChannelTask = URLSession.shared.dataTask(with: url!) { (data, response, error) in
+        channelTitle = (GIDSignedInUser.channelDetail?.items![0].snippet?.title)!
+        totalSubscribers = (GIDSignedInUser.channelDetail?.items![0].statistics?.subscriberCount)!
+        userImageUrl = (GIDSignedInUser.channelDetail?.items![0].snippet?.thumbnails?.default?.url)!
+        
+        let subsInt: Int = Int(self.totalSubscribers)!
+        let fmt = NumberFormatter()
+        fmt.numberStyle = .decimal
+        fmt.locale = NSLocale(localeIdentifier: "id_ID") as Locale!
+        
+        var startDate = "2017-01-01"
+        var endDate = "2018-10-01"
+        
+        var statistics: Analytics?
+        
+        let url = URL(string: "https://youtubeanalytics.googleapis.com/v2/reports?dimensions=day&endDate=\(endDate)&ids=channel==MINE&metrics=views,subscribersGained,subscribersLost&startDate=\(startDate)&access_token=\(GIDSignedInUser.accessToken)")
+        
+        let getStatistics = URLSession.shared.dataTask(with: url!) { (data, response, error) in
             do {
-                channelDetail = try JSONDecoder().decode(ChannelDetail.self, from: data!)
-                self.urlData = data
+                print(response)
+                statistics = try JSONDecoder().decode(Analytics.self, from: data!)
             } catch let error as NSError {
                 print(error)
             }
             
-            if channelDetail != nil {
-                print(channelDetail!.items?.count)
+            if statistics != nil {
+                print("Statistics Retrieved")
+                print(GIDSignedInUser.accessToken)
+                print(statistics)
                 
-                if channelDetail!.items?.count != 0 {
-                    self.channelTitle = (channelDetail!.items![0].snippet?.title)!
-                    self.totalSubscribers = (channelDetail!.items![0].statistics?.subscriberCount)!
-                    self.totalViews = (channelDetail!.items![0].statistics?.viewCount)!
-                    self.userImageUrl = (channelDetail!.items![0].snippet?.thumbnails?.default?.url)!
-                    
-//                    self.userImage.layer.cornerRadius = self.userImage.frame.size.width/2
-//                    self.userImage.layer.cornerRadius = self.userImage.frame.size.height/2
-//                    self.userImage.clipsToBounds = true
-//
-//                    self.accountView.layer.shadowColor = UIColor.black.cgColor
-//                    self.accountView.layer.shadowOffset = CGSize(width: 0, height: 1.0)
-//                    self.accountView.layer.shadowOpacity = 0.6
-//                    self.accountView.layer.shadowRadius = 0.8
-                    
-                    print("CH: \(self.channelTitle)")
-                    print("CH: \(self.totalSubscribers)")
-                    DispatchQueue.main.async {
-                        self.channelTitleLabel.text = self.channelTitle
-                        self.userImage.downloaded(from: self.userImageUrl)
-                    }
-                    
-                    let subsInt: Int = Int(self.totalSubscribers)!
-                    let fmt = NumberFormatter()
-                    fmt.numberStyle = .decimal
-                    fmt.locale = NSLocale(localeIdentifier: "id_ID") as Locale!
-                    DispatchQueue.main.async {
-                        self.totalSubscribers = fmt.string(for: subsInt)!
-                    self.totalSubscribersLabel.text = "\(self.totalSubscribers)"
-                    }
-                    
-                    self.statisticsData.append(StatisticsData(date: "29/08/2018", totalSubscribers: "+39", totalViews: "+3.427"))
-                    self.statisticsData.append(StatisticsData(date: "28/08/2018", totalSubscribers: "+66", totalViews: "+4.265"))
-                    self.statisticsData.append(StatisticsData(date: "27/08/2018", totalSubscribers: "+59", totalViews: "+4.022"))
-                    self.statisticsData.append(StatisticsData(date: "26/08/2018", totalSubscribers: "+96", totalViews: "+5.758"))
-                    self.statisticsData.append(StatisticsData(date: "25/08/2018", totalSubscribers: "+63", totalViews: "+5.327"))
-                    self.statisticsData.append(StatisticsData(date: "24/08/2018", totalSubscribers: "+93", totalViews: "+4.902"))
-                    self.statisticsData.append(StatisticsData(date: "23/08/2018", totalSubscribers: "+91", totalViews: "+4.831"))
-                    
-                    DispatchQueue.main.async {
-                        self.statisticsDataTableView.reloadData()
-                    }
+                self.columnHeader = (statistics?.columnHeaders)!
+                self.row = (statistics?.rows)!
+                for i in self.columnHeader {
+                    print(i.name)
                 }
-                else {
-                    print("Channel detail empty")
+                for i in self.row {
+                    print("Date = \(i.date!)")
+                    print("View = \(i.views!)")
+                    print("SubscriberGained = \(i.subscribersGained!)")
+                    print("SubscriberLost = \(i.subscribersLost!)")
                 }
-            }
-            else {
-                print("No channel detail found")
             }
         }
         
-        getChannelTask?.resume()
+        getStatistics.resume()
         
+//        totalSubscribers = fmt.string(for: subsInt)!
+//
+//                            self.statisticsData.append(StatisticsData(date: "29/08/2018", totalSubscribers: "+39", totalViews: "+3.427"))
+//                            self.statisticsData.append(StatisticsData(date: "28/08/2018", totalSubscribers: "+66", totalViews: "+4.265"))
+//                            self.statisticsData.append(StatisticsData(date: "27/08/2018", totalSubscribers: "+59", totalViews: "+4.022"))
+//                            self.statisticsData.append(StatisticsData(date: "26/08/2018", totalSubscribers: "+96", totalViews: "+5.758"))
+//                            self.statisticsData.append(StatisticsData(date: "25/08/2018", totalSubscribers: "+63", totalViews: "+5.327"))
+//                            self.statisticsData.append(StatisticsData(date: "24/08/2018", totalSubscribers: "+93", totalViews: "+4.902"))
+//                            self.statisticsData.append(StatisticsData(date: "23/08/2018", totalSubscribers: "+91", totalViews: "+4.831"))
         
-        // Do any additional setup after loading the view.
+        DispatchQueue.main.async {
+            self.channelTitleLabel.text = self.channelTitle
+            self.totalSubscribersLabel.text = self.totalSubscribers
+            self.userImage.downloaded(from: self.userImageUrl)
+//            self.statisticsDataTableView.reloadData()
+        }
+        
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -137,16 +110,6 @@ class StatisticsDataViewController: UIViewController, UITableViewDataSource, UIT
         cell.setStatisticsData(statisticsData: data)
         return cell
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 

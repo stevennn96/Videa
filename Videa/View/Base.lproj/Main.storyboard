@@ -170,7 +170,6 @@
                         <outlet property="doneButton" destination="rRH-cM-UWN" id="iEp-cJ-WcV"/>
                         <outlet property="onboardingImageView" destination="eFb-nq-pxZ" id="CLb-sd-UOD"/>
                         <segue destination="imj-FA-pIE" kind="show" identifier="OnboardingDon" id="aj5-j8-D3Q"/>
-                        <segue destination="071-UZ-AYa" kind="show" identifier="OnboardingDone" id="IGa-A0-ePf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uwQ-bc-O1g" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -195,7 +194,7 @@
                     </view>
                     <connections>
                         <outlet property="gifBG" destination="cjC-eO-A6c" id="4pc-uO-ipB"/>
-                        <segue destination="vw8-lo-0OY" kind="show" identifier="SplashScreenToMainMenu" id="tNu-3l-BmE"/>
+                        <segue destination="071-UZ-AYa" kind="show" identifier="SplashScreenToMainMenu" id="spz-ua-wfh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FC0-ip-GUB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -459,8 +458,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background App Red Blur" translatesAutoresizingMaskIntoConstraints="NO" id="M5w-f7-IhH">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background App Red Blur" translatesAutoresizingMaskIntoConstraints="NO" id="M5w-f7-IhH">
+                                <rect key="frame" x="-4" y="0.0" width="382" height="812"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Videa logo white" translatesAutoresizingMaskIntoConstraints="NO" id="78d-7h-4bC">
@@ -475,14 +474,6 @@
                                     <action selector="signInGoogle:" destination="071-UZ-AYa" eventType="touchUpInside" id="hBS-K0-lOg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3MU-h2-dAS">
-                                <rect key="frame" x="313" y="78" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="logOutGoogle:" destination="071-UZ-AYa" eventType="touchUpInside" id="z7q-EQ-n5t"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Selamat Datang" translatesAutoresizingMaskIntoConstraints="NO" id="UYn-gY-0UK">
                                 <rect key="frame" x="67" y="602" width="240" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -494,7 +485,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dO8-aJ-e5k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1031.2" y="-1199.2610837438424"/>
+            <point key="canvasLocation" x="-1044" y="-1286"/>
         </scene>
         <!--Launch Screen View Controller-->
         <scene sceneID="JdE-Ml-lUh">
@@ -519,7 +510,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x82-hU-xel" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-298.39999999999998" y="-1176.3546798029556"/>
+            <point key="canvasLocation" x="-231" y="-672"/>
         </scene>
     </scenes>
     <resources>
@@ -533,9 +524,9 @@
         <image name="Start Button" width="260" height="83"/>
         <image name="Videa logo white" width="508" height="209"/>
         <image name="email icon" width="64" height="46"/>
-        <image name="onboarding 1" width="125" height="270"/>
+        <image name="onboarding 1" width="375" height="812"/>
         <image name="password icon" width="58" height="58"/>
-        <image name="profile icon" width="29" height="29"/>
+        <image name="profile icon" width="58" height="58"/>
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
