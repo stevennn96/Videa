@@ -20,14 +20,24 @@ class TaskViewController: UIViewController {
     @IBOutlet weak var commentLabel: UILabel!
     @IBOutlet weak var videoNameLabel: UILabel!
     @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var chooseVideoButton: UIButton!
+    @IBOutlet weak var deleteChallengeButton: UIBarButtonItem!
     
     var videoDetail: VideoDetail?
     var myChallenge: MyChallenge?
+    
+    @IBOutlet weak var viewTickImageView: UIImageView!
+    @IBOutlet weak var likeTickImageView: UIImageView!
+    @IBOutlet weak var commentTickImageView: UIImageView!
+    
     var apiKey = "AIzaSyA614LZH2YQaHu3_hyXnEkOq2d9p0Bd0x8"
     
     var challengeTitle: String?
+    var viewCount: Int?
     var viewTarget: Int?
+    var likeCount: Int?
     var likeTarget: Int?
+    var commentCount: Int?
     var commentTarget: Int?
     var videoUrl: String?
     
@@ -39,8 +49,11 @@ class TaskViewController: UIViewController {
         super.viewDidLoad()
         
         challengeTitle = myChallenge?.myChallengeTitle
+        viewCount = myChallenge?.myChallengeTask.viewCount
         viewTarget = myChallenge?.myChallengeTask.viewTarget
+        likeCount = myChallenge?.myChallengeTask.likeCount
         likeTarget = myChallenge?.myChallengeTask.likeTarget
+        commentCount = myChallenge?.myChallengeTask.commentCount
         commentTarget = myChallenge?.myChallengeTask.commentTarget
         videoUrl = myChallenge?.myChallengeUrl
         
@@ -72,35 +85,42 @@ class TaskViewController: UIViewController {
             
             DispatchQueue.main.async {
                 self.videoNameLabel.text = self.videoDetail?.items![0].snippet?.title
-                self.submitButton.isEnabled = true
+                self.checkTick()
             }
         }
         getVideoTask.resume()
     }
     
+    func checkTick() {
+        
+        var status = 0
+        
+        if self.viewCount! >= self.viewTarget! {
+            self.viewTickImageView.isHidden = false
+            status += 1
+        }
+        if self.likeCount! >= self.likeTarget! {
+            self.likeTickImageView.isHidden = false
+            status += 1
+        }
+        if self.commentCount! >= self.commentTarget! {
+            self.commentTickImageView.isHidden = false
+            status += 1
+        }
+        
+        if status == 3 {
+            chooseVideoButton.isEnabled = false
+            submitButton.isEnabled = false
+            deleteChallengeButton.isEnabled = false
+        } else {
+            chooseVideoButton.isEnabled = true
+            submitButton.isEnabled = true
+            deleteChallengeButton.isEnabled = true
+        }
+    }
+    
     @IBAction func submitVideo(_ sender: Any) {
-        
-        guard
-            let index = myChallenge?.index,
-            let challengeTitle = myChallenge?.myChallengeTitle,
-            let videoLink = self.videoUrl,
-            let viewCount = Int((videoDetail?.items![0].statistics?.viewCount)!),
-            let viewTarget = myChallenge?.myChallengeTask.viewTarget,
-            let likeCount = Int((videoDetail?.items![0].statistics?.likeCount)!),
-            let likeTarget = myChallenge?.myChallengeTask.likeTarget,
-            let commentCount = Int((videoDetail?.items![0].statistics?.commentCount)!),
-            let commentTarget = myChallenge?.myChallengeTask.commentTarget
-        else {
-            return
-        }
-        
-        saveChallengeData(index: index, title: challengeTitle, videoLink: videoLink, viewCount: viewCount, viewTarget: viewTarget, likeCount: likeCount, likeTarget: likeTarget, commentCount: commentCount, commentTarget: commentTarget) { (success) in
-            if success {
-                print("Berhasil")
-            } else {
-                print("Error")
-            }
-        }
+        showAlert()
     }
     
     @IBAction func unwindToMyTask(_ sender: UIStoryboardSegue) {
@@ -127,9 +147,65 @@ class TaskViewController: UIViewController {
             "commentTarget": commentTarget
             ] as [String : Any]
         
+        self.viewCount = viewCount
+        self.viewTarget = viewTarget
+        self.likeCount = likeCount
+        self.likeTarget = likeTarget
+        self.commentCount = commentCount
+        self.commentTarget = commentTarget
+        checkTick()
+        
         databaseRef.setValue(saveChallenge) { (error, ref) in
             completion(error == nil)
         }
+    }
+    
+    @IBAction func deleteChallengeData(_ sender: Any) {
+        
+        guard let uid = Auth.auth().currentUser?.uid else {return}
+        let databaseRef = Database.database().reference().child("users/challengeJoined/\(uid)/\((self.challengeTitle)!)")
+        
+        databaseRef.removeValue { (error, _) in
+            print(error)
+        }
+        
+        self.navigationController?.popToRootViewController(animated: false)
+    }
+    
+    func submitTheVideo() {
+        guard
+            let index = myChallenge?.index,
+            let challengeTitle = myChallenge?.myChallengeTitle,
+            let videoLink = self.videoUrl,
+            let viewCount = Int((videoDetail?.items![0].statistics?.viewCount)!),
+            let viewTarget = myChallenge?.myChallengeTask.viewTarget,
+            let likeCount = Int((videoDetail?.items![0].statistics?.likeCount)!),
+            let likeTarget = myChallenge?.myChallengeTask.likeTarget,
+            let commentCount = Int((videoDetail?.items![0].statistics?.commentCount)!),
+            let commentTarget = myChallenge?.myChallengeTask.commentTarget
+        else {
+                return
+        }
+        
+        saveChallengeData(index: index, title: challengeTitle, videoLink: videoLink, viewCount: viewCount, viewTarget: viewTarget, likeCount: likeCount, likeTarget: likeTarget, commentCount: commentCount, commentTarget: commentTarget) { (success) in
+            if success {
+                print("Berhasil")
+            } else {
+                print("Error")
+            }
+        }
+    }
+    
+    func showAlert() {
+        
+        let alert = UIAlertController(title: "Anda yakin memilih video \"\((self.videoNameLabel.text)!)\"", message: "Setelah menekan Pilih, anda telah setuju memilih video tersebut.", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Pilih", style: .default, handler: { (action) in
+            self.submitTheVideo()
+        }))
+        alert.addAction(UIAlertAction(title: "Batal", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
     }
 }
 

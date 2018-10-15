@@ -191,21 +191,43 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tick" translatesAutoresizingMaskIntoConstraints="NO" id="9fh-UF-DQc">
+                                <rect key="frame" x="322" y="295" width="18" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tick" translatesAutoresizingMaskIntoConstraints="NO" id="wGj-EJ-WRw">
+                                <rect key="frame" x="322" y="348" width="18" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tick" translatesAutoresizingMaskIntoConstraints="NO" id="Vec-Fa-0pf">
+                                <rect key="frame" x="322" y="401" width="18" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Xv2-ld-RhH"/>
                     </view>
                     <navigationItem key="navigationItem" title="My Task" id="fb3-TI-0Qy">
                         <barButtonItem key="backBarButtonItem" title=" " id="9Cd-bm-wsZ"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="L2a-D4-AxC">
+                            <connections>
+                                <action selector="deleteChallengeData:" destination="NeE-Qz-PNc" id="qRS-Zp-tkM"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="challengeTitleLabel" destination="R5C-NZ-fyu" id="OcX-fF-zWb"/>
+                        <outlet property="chooseVideoButton" destination="hdI-1Z-eqG" id="nni-JQ-JbS"/>
                         <outlet property="commentLabel" destination="Byd-yL-d5c" id="X2S-NU-HfO"/>
+                        <outlet property="commentTickImageView" destination="Vec-Fa-0pf" id="bVh-Po-Yuc"/>
+                        <outlet property="deleteChallengeButton" destination="L2a-D4-AxC" id="KZj-u8-e3N"/>
                         <outlet property="likeLabel" destination="TYP-tN-vZP" id="TeT-Sa-UkT"/>
+                        <outlet property="likeTickImageView" destination="wGj-EJ-WRw" id="bw8-vl-oee"/>
                         <outlet property="submitButton" destination="2dW-sr-hKD" id="p8Y-67-u5k"/>
                         <outlet property="videoNameLabel" destination="Je6-AZ-sTB" id="Qw9-xd-aX9"/>
                         <outlet property="videoWebView" destination="rb7-fO-Ivg" id="f3G-6m-cTP"/>
                         <outlet property="viewLabel" destination="ZZx-6a-TzH" id="2hR-th-WkA"/>
+                        <outlet property="viewTickImageView" destination="9fh-UF-DQc" id="2SA-P2-ccR"/>
                         <segue destination="1aV-KY-XNI" kind="show" identifier="TaskToMyVideo" id="Afh-Cd-Iw9"/>
                     </connections>
                 </viewController>
@@ -253,62 +275,62 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Introduction" translatesAutoresizingMaskIntoConstraints="NO" id="TSj-Tf-wAU">
-                                                    <rect key="frame" x="24" y="0.0" width="116" height="65"/>
+                                                    <rect key="frame" x="23" y="0.0" width="90" height="67.666666666666657"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Halo, Aku Rudi Widodo!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhs-zs-KGX">
-                                                    <rect key="frame" x="148" y="0.0" width="212" height="17"/>
+                                                    <rect key="frame" x="138" y="0.0" width="212" height="17"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ViewCount" translatesAutoresizingMaskIntoConstraints="NO" id="AHv-9R-yOg">
-                                                    <rect key="frame" x="148" y="21" width="15" height="15"/>
+                                                    <rect key="frame" x="138" y="21" width="15" height="15"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CommentCount" translatesAutoresizingMaskIntoConstraints="NO" id="Syx-x7-zJy">
-                                                    <rect key="frame" x="202" y="21" width="19" height="15"/>
+                                                    <rect key="frame" x="192" y="21" width="19" height="15"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LikesCount" translatesAutoresizingMaskIntoConstraints="NO" id="WsS-lm-xnW">
-                                                    <rect key="frame" x="260" y="21" width="15" height="15"/>
+                                                    <rect key="frame" x="250" y="21" width="15" height="15"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DislikesCount" translatesAutoresizingMaskIntoConstraints="NO" id="JjW-Bg-VWm">
-                                                    <rect key="frame" x="316" y="21" width="15" height="15"/>
+                                                    <rect key="frame" x="306" y="21" width="15" height="15"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="122" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uli-8P-8mz">
-                                                    <rect key="frame" x="164" y="21" width="27" height="15"/>
+                                                    <rect key="frame" x="154" y="21" width="27" height="15"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="21" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kd-Ch-1Kl">
-                                                    <rect key="frame" x="221" y="21" width="27" height="15"/>
+                                                    <rect key="frame" x="211" y="21" width="27" height="15"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yd9-R3-KvC">
-                                                    <rect key="frame" x="276" y="21" width="27" height="15"/>
+                                                    <rect key="frame" x="266" y="21" width="27" height="15"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7S-Z5-fch">
-                                                    <rect key="frame" x="333" y="21" width="27" height="15"/>
+                                                    <rect key="frame" x="323" y="21" width="27" height="15"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="VideoSeparator" translatesAutoresizingMaskIntoConstraints="NO" id="RWr-I1-4GZ">
-                                                    <rect key="frame" x="140" y="73" width="220" height="3"/>
+                                                    <rect key="frame" x="138" y="73" width="212" height="3"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
@@ -614,24 +636,25 @@
         </scene>
     </scenes>
     <resources>
-        <image name="3 of 3" width="305" height="11"/>
+        <image name="3 of 3" width="301" height="7"/>
         <image name="ChallengeCard" width="335" height="76"/>
         <image name="ChooseVideoBox" width="292" height="45"/>
-        <image name="CommentCount" width="13" height="13"/>
-        <image name="DislikesCount" width="13" height="12"/>
+        <image name="CommentCount" width="510" height="510"/>
+        <image name="DislikesCount" width="510" height="510"/>
         <image name="HomeIcon" width="13" height="16"/>
         <image name="HomeIconSelected" width="13" height="16"/>
         <image name="Introduction" width="1080" height="582"/>
-        <image name="LikesCount" width="13" height="12"/>
+        <image name="LikesCount" width="510" height="510"/>
         <image name="SortBy" width="22" height="19"/>
         <image name="SortByBox" width="375" height="104"/>
         <image name="SortView" width="375" height="44"/>
         <image name="SubmitVideoDark" width="331" height="44"/>
         <image name="SubmitVideoLight" width="331" height="44"/>
         <image name="TaskRectangle" width="335" height="34"/>
+        <image name="Tick" width="519" height="519"/>
         <image name="VideoBorder" width="335" height="196"/>
         <image name="VideoSeparator" width="204" height="1"/>
-        <image name="ViewCount" width="13" height="11"/>
+        <image name="ViewCount" width="510" height="510"/>
         <image name="introduction-1" width="375" height="203"/>
     </resources>
 </document>
