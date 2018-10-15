@@ -43,16 +43,27 @@ class StatisticsDataViewController: UIViewController, UITableViewDataSource, UIT
         fmt.numberStyle = .decimal
         fmt.locale = NSLocale(localeIdentifier: "id_ID") as Locale!
         
-        var startDate = "2017-01-01"
-        var endDate = "2018-10-01"
+        var startDate: String?
+        var endDate: String?
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        
+        endDate = formatter.string(from: Date())
+        print(endDate)
+        
+        var dayToAdd = DateComponents()
+        dayToAdd.day = -29
+        let date = Calendar.current.date(byAdding: dayToAdd, to: Date())!
+        startDate = formatter.string(from: date)
+        print(startDate)
         
         var statistics: Analytics?
         
-        let url = URL(string: "https://youtubeanalytics.googleapis.com/v2/reports?dimensions=day&endDate=\(endDate)&ids=channel==MINE&metrics=views,subscribersGained,subscribersLost&startDate=\(startDate)&access_token=\(GIDSignedInUser.accessToken)")
+        let url = URL(string: "https://youtubeanalytics.googleapis.com/v2/reports?dimensions=day&endDate=\(endDate!)&ids=channel==MINE&metrics=views,subscribersGained,subscribersLost&startDate=\(startDate!)&access_token=\(GIDSignedInUser.accessToken)")
         
         let getStatistics = URLSession.shared.dataTask(with: url!) { (data, response, error) in
             do {
-                print(response)
                 statistics = try JSONDecoder().decode(Analytics.self, from: data!)
             } catch let error as NSError {
                 print(error)
@@ -60,24 +71,40 @@ class StatisticsDataViewController: UIViewController, UITableViewDataSource, UIT
             
             if statistics != nil {
                 print("Statistics Retrieved")
-                print(GIDSignedInUser.accessToken)
-                print(statistics)
                 
                 self.columnHeader = (statistics?.columnHeaders)!
                 self.row = (statistics?.rows)!
+                self.row.reverse()
                 for i in self.columnHeader {
                     print(i.name)
                 }
+                
                 for i in self.row {
-                    print("Date = \(i.date!)")
-                    print("View = \(i.views!)")
-                    print("SubscriberGained = \(i.subscribersGained!)")
-                    print("SubscriberLost = \(i.subscribersLost!)")
+                    let subscriberChange = i.subscribersGained! - i.subscribersLost!
+                    var subscriberString: String?
+                    
+                    if subscriberChange == 0 {
+                        subscriberString = "\(subscriberChange)"
+                    } else if subscriberChange < 0 {
+                        subscriberString = "\(subscriberChange)"
+                    } else {
+                        subscriberString = "+\(subscriberChange)"
+                    }
+                    
+                    self.statisticsData.append(StatisticsData(date: i.date!, totalSubscribers: "\(subscriberString!)", totalViews: "+\(i.views!)"))
                 }
             }
         }
         
         getStatistics.resume()
+        
+        while statistics == nil {
+            continue
+        }
+        
+        
+        
+        
         
 //        totalSubscribers = fmt.string(for: subsInt)!
 //
@@ -93,7 +120,7 @@ class StatisticsDataViewController: UIViewController, UITableViewDataSource, UIT
             self.channelTitleLabel.text = self.channelTitle
             self.totalSubscribersLabel.text = self.totalSubscribers
             self.userImage.downloaded(from: self.userImageUrl)
-//            self.statisticsDataTableView.reloadData()
+            self.statisticsDataTableView.reloadData()
         }
         
     }
