@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             
             getDetail { (success) in
                 if success {
-                    getPlaylistDetail()
+//                    getPlaylistDetail()
                     getSearchByDate()
                     getSearchByView()
                 }

@@ -42,6 +42,7 @@ class StatisticsDataViewController: UIViewController, UITableViewDataSource, UIT
         let fmt = NumberFormatter()
         fmt.numberStyle = .decimal
         fmt.locale = NSLocale(localeIdentifier: "id_ID") as Locale!
+        totalSubscribers = fmt.string(for: subsInt)!
         
         var startDate: String?
         var endDate: String?
@@ -50,13 +51,11 @@ class StatisticsDataViewController: UIViewController, UITableViewDataSource, UIT
         formatter.dateFormat = "yyyy-MM-dd"
         
         endDate = formatter.string(from: Date())
-        print(endDate)
         
         var dayToAdd = DateComponents()
         dayToAdd.day = -29
         let date = Calendar.current.date(byAdding: dayToAdd, to: Date())!
         startDate = formatter.string(from: date)
-        print(startDate)
         
         var statistics: Analytics?
         
@@ -75,23 +74,30 @@ class StatisticsDataViewController: UIViewController, UITableViewDataSource, UIT
                 self.columnHeader = (statistics?.columnHeaders)!
                 self.row = (statistics?.rows)!
                 self.row.reverse()
-                for i in self.columnHeader {
-                    print(i.name)
-                }
                 
                 for i in self.row {
                     let subscriberChange = i.subscribersGained! - i.subscribersLost!
                     var subscriberString: String?
                     
                     if subscriberChange == 0 {
-                        subscriberString = "\(subscriberChange)"
+                        subscriberString = "\(fmt.string(for: subscriberChange)!)"
                     } else if subscriberChange < 0 {
-                        subscriberString = "\(subscriberChange)"
+                        subscriberString = "\(fmt.string(for: subscriberChange)!)"
                     } else {
-                        subscriberString = "+\(subscriberChange)"
+                        subscriberString = "+\(fmt.string(for: subscriberChange)!)"
                     }
                     
-                    self.statisticsData.append(StatisticsData(date: i.date!, totalSubscribers: "\(subscriberString!)", totalViews: "+\(i.views!)"))
+                    let iDate = i.date!
+                    let iDateFormatter = DateFormatter()
+                    iDateFormatter.dateFormat = "yyyy-MM-dd"
+                    let date = iDateFormatter.date(from: iDate)
+                    
+                    let newDateFormatter = DateFormatter()
+                    newDateFormatter.dateFormat = "EEEE, dd LLLL yyyy"
+                    
+                    let newDate = newDateFormatter.string(from: date!)
+                    
+                    self.statisticsData.append(StatisticsData(date: newDate, totalSubscribers: "\(subscriberString!)", totalViews: "+\(fmt.string(for: i.views!)!)"))
                 }
             }
         }
@@ -102,11 +108,6 @@ class StatisticsDataViewController: UIViewController, UITableViewDataSource, UIT
             continue
         }
         
-        
-        
-        
-        
-//        totalSubscribers = fmt.string(for: subsInt)!
 //
 //                            self.statisticsData.append(StatisticsData(date: "29/08/2018", totalSubscribers: "+39", totalViews: "+3.427"))
 //                            self.statisticsData.append(StatisticsData(date: "28/08/2018", totalSubscribers: "+66", totalViews: "+4.265"))
