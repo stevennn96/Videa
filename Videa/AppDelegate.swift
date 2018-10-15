@@ -116,7 +116,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         let channelId = GIDSignedInUser.channelDetail?.items![0].id
         
-        let url = URL(string: "https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&order=date&channelId=\(channelId!)&key=\(GIDSignedInUser.apiKey)")
+        let url = URL(string: "https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&order=date&maxResults=50&channelId=\(channelId!)&key=\(GIDSignedInUser.apiKey)")
         
         let searchTask = URLSession.shared.dataTask(with: url!) { (data, response, error) in
             do {
@@ -138,7 +138,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         let channelId = GIDSignedInUser.channelDetail?.items![0].id
         
-        let url = URL(string: "https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&order=viewCount&channelId=\(channelId!)&key=AIzaSyCSSeFz17e2vePbWpS0_KWN7wHxWhCQoRU")
+        let url = URL(string: "https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&order=viewCount&maxResults=50&channelId=\(channelId!)&key=AIzaSyCSSeFz17e2vePbWpS0_KWN7wHxWhCQoRU")
         
         let searchTask = URLSession.shared.dataTask(with: url!) { (data, response, error) in
             do {

@@ -182,7 +182,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                             let task = Task(viewTarget: viewTarget, viewCount: viewCount, likeTarget: likeTarget, likeCount: likeCount, commentTarget: commentTarget, commentCount: commentCount)
                             
                             let newChallenge = MyChallenge(title: title, url: videoLink, status: status, task: task, index: index)
-                            self.myChallenges.append(newChallenge)
+                            self.myChallenges.insert(newChallenge, at: 0)
                             DispatchQueue.main.async {
                                 self.myChallengeTableView.reloadData()
                             }
@@ -202,7 +202,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         cell.setMyChallenge(myChallenge: MyChallenge(title: myChallenges[indexPath.row].myChallengeTitle, url: myChallenges[indexPath.row].myChallengeUrl, status: myChallenges[indexPath.row].myChallengeStatus, task: myChallenges[indexPath.row].myChallengeTask, index: myChallenges[indexPath.row].index))
         
-        self.largestIndex = self.myChallenges.last!.index
+        self.largestIndex = self.myChallenges.first!.index
         print("Index \(self.largestIndex)")
         return cell
     }
