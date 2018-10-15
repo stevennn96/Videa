@@ -18,6 +18,7 @@
 		6B663521212C000E001137AD /* ForLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B663520212C000E001137AD /* ForLoginViewController.swift */; };
 		6B689571212EBE4F0096CC8B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B689570212EBE4F0096CC8B /* GoogleService-Info.plist */; };
 		6B9858A4212EA7B80081E017 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9858A1212EA7B80081E017 /* HomeViewController.swift */; };
+		6BCB77B22170B06200970DA0 /* QuickTips.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BCB77B12170B06200970DA0 /* QuickTips.storyboard */; };
 		6BE40B6A21368D6000F978A7 /* TestSimpenDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE40B6921368D6000F978A7 /* TestSimpenDataViewController.swift */; };
 		6BE40B6C213696AE00F978A7 /* Gamification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE40B6B213696AE00F978A7 /* Gamification.swift */; };
 		760FD2F7775061EB8091E2DB /* Pods_Videa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BFEB76E52A41DF9AB347DFC /* Pods_Videa.framework */; };
@@ -84,6 +85,7 @@
 		6B663520212C000E001137AD /* ForLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForLoginViewController.swift; sourceTree = "<group>"; };
 		6B689570212EBE4F0096CC8B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6B9858A1212EA7B80081E017 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		6BCB77B12170B06200970DA0 /* QuickTips.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuickTips.storyboard; sourceTree = "<group>"; };
 		6BE40B6921368D6000F978A7 /* TestSimpenDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSimpenDataViewController.swift; sourceTree = "<group>"; };
 		6BE40B6B213696AE00F978A7 /* Gamification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gamification.swift; sourceTree = "<group>"; };
 		77E523FA2122D8C000EE54FD /* Videa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Videa.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -254,6 +256,7 @@
 				ED364DE721522E7D00460C5D /* Statistics.storyboard */,
 				ED11621D21622BC900CEF6D5 /* HomeBackup.storyboard */,
 				ED81BF51216F410D003ABB42 /* MainBackup.storyboard */,
+				6BCB77B12170B06200970DA0 /* QuickTips.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				6B689571212EBE4F0096CC8B /* GoogleService-Info.plist in Resources */,
 				ED364DEC2152323100460C5D /* Home.storyboard in Resources */,
 				7B154F4C2136538B00C12C8C /* animationVidea.gif in Resources */,
+				6BCB77B22170B06200970DA0 /* QuickTips.storyboard in Resources */,
 				7B154F4A2136513A00C12C8C /* videa splashscreen.gif in Resources */,
 				ED11621E21622BC900CEF6D5 /* HomeBackup.storyboard in Resources */,
 				77E524052122D8C000EE54FD /* Main.storyboard in Resources */,
