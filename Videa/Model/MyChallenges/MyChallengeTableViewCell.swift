@@ -13,11 +13,13 @@ class MyChallengeTableViewCell: UITableViewCell {
     @IBOutlet weak var challengeCardImageView: UIImageView!
     @IBOutlet weak var challengeTitleLabel: UILabel!
     @IBOutlet weak var challengeStatusLabel: UILabel!
+    @IBOutlet weak var challengeStatusImageView: UIImageView!
     
     func setMyChallenge(myChallenge: MyChallenge) {
         
         challengeTitleLabel.text = myChallenge.myChallengeTitle
         challengeStatusLabel.text = "\(myChallenge.myChallengeStatus) dari 3 tugas terselesaikan"
+        challengeStatusImageView.image = UIImage(named: "\(myChallenge.myChallengeStatus) of 3")
     }
     
     override func awakeFromNib() {

@@ -14,37 +14,75 @@ import GoogleSignIn
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var myChallengeTableView: UITableView!
+    
     var selectedChallenge: MyChallenge?
     var myChallenges = [MyChallenge]()
     var largestIndex: Int?
     
+    var channelDetail: ChannelDetail?
+    var getChannelTask: URLSessionDataTask?
+    var urlData: Data?
+    var accessToken: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let signIn = GIDSignIn.sharedInstance()
-        
-        if (signIn!.hasAuthInKeychain()) {
-            print("Signed in");
-            GIDSignIn.sharedInstance()?.signInSilently()
-        } else {
-            print("Not signed in");
+        signInProcess { (success) in
+            if success {
+                getAccessToken()
+//                getChannelDetail()
+            } else {
+                print("Damn")
+            }
         }
+        
+        
         
         if myChallenges.isEmpty {
             largestIndex = 0
         }
         
+        print("YEAH \(myChallenges.count)")
         loadChallengeData()
+        print("YEAH2 \(myChallenges.count)")
         
         myChallengeTableView.delegate = self
         myChallengeTableView.dataSource = self
     }
     
-    @IBAction func addChallenge(_ sender: Any) {
-        performSegue(withIdentifier: "HomeToChallenge", sender: nil)
+    func signInProcess(completion: (_ success: Bool) -> Void) {
+        if (GIDSignIn.sharedInstance().hasAuthInKeychain()) {
+            print("Signed in");
+            DispatchQueue.main.async {
+                GIDSignIn.sharedInstance()?.signInSilently()
+            }
+            
+        } else {
+            print("Not signed in");
+        }
+        
+        if GIDSignIn.sharedInstance()?.currentUser != nil {
+            completion(true)
+        } else {
+            completion(false)
+        }
+    }
+    
+    func getAccessToken() {
+        if GIDSignIn.sharedInstance()?.currentUser != nil {
+            print("GIDin")
+            accessToken = (GIDSignIn.sharedInstance()?.currentUser.authentication.accessToken)!
+            print(accessToken)
+        } else {
+            print("GIDout")
+        }
     }
     
     
+    
+    @IBAction func addChallenge(_ sender: Any) {
+        performSegue(withIdentifier: "HomeToChallenge", sender: nil)
+    }
     
     @IBAction func unwindToHome(_ sender: UIStoryboardSegue) {
 
@@ -101,12 +139,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func loadChallengeData() {
+        
         guard let uid = Auth.auth().currentUser?.uid else {return}
         
         let ref = Database.database().reference().child("users/challengeJoined/\(uid)").queryOrdered(byChild: "index")
         let dataRef = ref.observe(.value) { (snapshot: DataSnapshot) in
             if snapshot.exists() {
-                
+                self.myChallenges.removeAll()
                 for i in snapshot.children.allObjects as! [DataSnapshot] {
                     let data = i.value
                     let key = i.key
@@ -126,26 +165,25 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                             let commentTarget = data2["commentTarget"] as! Int
                             let videoLink = data2["videoLink"] as! String
                             let index = data2["index"] as! Int
-                            print(index)
                             
                             var status = 0
-                            if viewCount == viewTarget {
+                            if viewCount >= viewTarget {
                                 status += 1
                             }
-                            if likeCount == likeTarget {
+                            if likeCount >= likeTarget {
                                 status += 1
                             }
-                            if commentCount == commentTarget {
+                            if commentCount >= commentTarget {
                                 status += 1
                             }
+                            
+                            print(title)
                             
                             let task = Task(viewTarget: viewTarget, viewCount: viewCount, likeTarget: likeTarget, likeCount: likeCount, commentTarget: commentTarget, commentCount: commentCount)
                             
                             let newChallenge = MyChallenge(title: title, url: videoLink, status: status, task: task, index: index)
                             self.myChallenges.append(newChallenge)
                             DispatchQueue.main.async {
-                                self.largestIndex = self.myChallenges.last!.index
-                                print("Largest \(self.largestIndex)")
                                 self.myChallengeTableView.reloadData()
                             }
                         }
@@ -164,6 +202,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         cell.setMyChallenge(myChallenge: MyChallenge(title: myChallenges[indexPath.row].myChallengeTitle, url: myChallenges[indexPath.row].myChallengeUrl, status: myChallenges[indexPath.row].myChallengeStatus, task: myChallenges[indexPath.row].myChallengeTask, index: myChallenges[indexPath.row].index))
         
+        self.largestIndex = self.myChallenges.last!.index
+        print("Index \(self.largestIndex)")
         return cell
     }
     
