@@ -22,9 +22,9 @@ class ProfileAccountViewController: UIViewController, UICollectionViewDataSource
     @IBOutlet weak var levelOutlet: UILabel!
     @IBOutlet weak var levelProgressBar: UIProgressView!
     
-        let array: [String] = ["like 500", "like3k lock", "like5k lock", "like10k lock", "sub1k lock", "sub1mi lock", "sub2k lock", "sub5k lock", "sub100k lock", "comment1 lock", "comment5 lock", "comment10 lock", "comment500 lock", "music5 lock", "music10 lock", "comedy5 lock", "comedy10 lock", "food5 lock", "food10 lock", "howto5 lock", "howto10 lock"]
+    var array = [String]()
     
-    let arrayLbl: [String] = ["Reach 500 Likes", "Reach 3K Likes", "Reach 5K Likes", "Reach 10K Likes", "Reach 1K Subs", "Reach 1 Mil subs", "Reach 2K Subs", "Reach 5K Subs", "Reach 100K Subs", "Reach 1K Comment", "Reach 5K Comment", "Reach 10K Comment", "Reach 500K Comment", "Complete 5 Music Challenge", "Complete 10 Music Challenge", "Complete 5 Comedy Challenge", "Complete 10 Comedy Challenge", "Complete 5 Food Challenge", "Complete 10 Food Challenge", "Complete 5 How To Challenge", "Complete 10 How To Challenge"]
+    let arrayLbl: [String] = ["Reach 1K Subs", "Reach 2K Subs", "Reach 5K Subs", "Reach 100K Subs", "Reach 1 Mil subs"]
     
     
     @IBAction func editProfile(_ sender: Any) {
@@ -44,6 +44,39 @@ class ProfileAccountViewController: UIViewController, UICollectionViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let subCount = GIDSignedInUser.channelDetail?.items![0].statistics?.subscriberCount
+        
+        guard let intSub = Int(subCount!) else {return}
+        
+        if intSub >= 1000 {
+            array.append("sub1k")
+        } else {
+            array.append("sub1klock")
+        }
+        
+        if intSub >= 2000 {
+            array.append("sub2k")
+        } else {
+            array.append("sub2klock")
+        }
+        
+        if intSub >= 5000 {
+            array.append("sub5k")
+        } else {
+            array.append("sub5klock")
+        }
+        
+        if intSub >= 100000 {
+            array.append("sub100k")
+        } else {
+            array.append("sub100klock")
+        }
+        
+        if intSub >= 1000000 {
+            array.append("sub1mi")
+        } else {
+            array.append("sub1milock")
+        }
         
         //progress bar size and color
         levelProgressBar.transform = levelProgressBar.transform.scaledBy(x: 1, y: 3)
@@ -85,18 +118,22 @@ class ProfileAccountViewController: UIViewController, UICollectionViewDataSource
     
     func bacaLevel() {
         guard let uid = Auth.auth().currentUser?.uid else{return}
-        postChild = Database.database().reference().child("Gamification/user/\(uid)").observe(.value) {(snapshot: DataSnapshot)in
+        postChild = Database.database().reference().child("users/level/\(uid)").observe(.value) {(snapshot: DataSnapshot)in
             if snapshot.exists() {
                 let data = snapshot.value as! NSDictionary
                 let key = snapshot.key
                 
-                let levelUser = data["levelUser"] as! String
+                let levelUser = data["level"]
                 
-                self.levelOutlet.text = "Lv \(levelUser)"
+                DispatchQueue.main.async {
+                    self.levelOutlet.text = "Lv \(levelUser!)"
+                }
+            } else {
+                DispatchQueue.main.async {
+                    self.levelOutlet.text = "Lv 1"
+                }
             }
         }
-        
-        
     }
     
     //Collection View

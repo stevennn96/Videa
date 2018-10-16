@@ -43,6 +43,7 @@ class DetailTableViewController: UITableViewController {
         print("Detail \(largestIndex)")
         
         loadTaskData(title: challengeTitle!)
+        checkChallenge(title: challengeTitle!)
         
         let url = URL(string: "\(vidLink!)")
         youtubeVideoWebView.loadRequest(URLRequest(url: url!))
@@ -81,6 +82,26 @@ class DetailTableViewController: UITableViewController {
         }
     }
     
+    func checkChallenge(title: String) {
+        
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let dataRef = Database.database().reference().child("users/challengeJoined/\(uid)/\(title)").observe(.value) { (snapshot) in
+            if snapshot.exists() {
+                
+                print("WOI")
+                DispatchQueue.main.async {
+                    self.joinButton?.isEnabled = false
+                }
+            } else {
+                
+                print("BOI")
+                DispatchQueue.main.async {
+                    self.joinButton?.isEnabled = true
+                }
+            }
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.estimatedRowHeight = 300
@@ -90,6 +111,8 @@ class DetailTableViewController: UITableViewController {
     override func viewWillLayoutSubviews() {
         self.joinButton!.clipsToBounds = true
         self.joinButton!.setImage(UIImage(named: "JoinChallenge"), for: .normal)
+        self.joinButton?.setImage(UIImage(named: "JoinChallengeGray"), for: .disabled)
+//        self.joinButton?.contentMode = .scaleAspectFit
         self.joinButton?.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate(joinButtonConstraints)

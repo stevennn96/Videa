@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 //                    getPlaylistDetail()
                     getSearchByDate()
                     getSearchByView()
+                    bacaLevel()
                 }
             }
         } else {
@@ -164,6 +165,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         searchTask.resume()
     }
 
+    func bacaLevel() {
+        guard let uid = Auth.auth().currentUser?.uid else{return}
+        let dataRef = Database.database().reference().child("users/level/\(uid)").observe(.value) {(snapshot: DataSnapshot)in
+            if snapshot.exists() {
+                print("User Level Retrieved")
+                
+                let data = snapshot.value as! NSDictionary
+                let key = snapshot.key
+                
+                let levelUser = data["level"] as! Int
+                
+                DispatchQueue.main.async {
+                    GIDSignedInUser.userLevel = levelUser
+                }
+            } else {
+                print("User Level Initialized")
+                
+                DispatchQueue.main.async {
+                    GIDSignedInUser.userLevel = 1
+                }
+            }
+        }
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         FirebaseApp.configure()

@@ -42,6 +42,8 @@ class TaskViewController: UIViewController {
     var commentTarget: Int?
     var videoUrl: String?
     
+    let transView = UIView()
+    
     @IBAction func chooseVideo(_ sender: Any) {
         performSegue(withIdentifier: "TaskToMyVideo", sender: self)
     }
@@ -59,9 +61,9 @@ class TaskViewController: UIViewController {
         videoUrl = myChallenge?.myChallengeUrl
         
         challengeTitleLabel.text = challengeTitle
-        viewLabel.text = "Dapat \(viewTarget!) Views"
-        likeLabel.text = "Dapat \(likeTarget!) Likes"
-        commentLabel.text = "Dapat \(commentTarget!) Comments"
+        viewLabel.text = "Dapat \(viewCount!) / \(viewTarget!) Views"
+        likeLabel.text = "Dapat \(likeCount!) / \(likeTarget!) Likes"
+        commentLabel.text = "Dapat \(commentCount!) / \(commentTarget!) Comments"
         
         if videoUrl != "" {
             loadChallenge()
@@ -87,14 +89,14 @@ class TaskViewController: UIViewController {
             
             DispatchQueue.main.async {
                 self.videoNameLabel.text = self.videoDetail?.items![0].snippet?.title
-                self.checkTick()
+                self.checkTick(type: 0)
                 self.guideLabel.isHidden = true
             }
         }
         getVideoTask.resume()
     }
     
-    func checkTick() {
+    func checkTick(type: Int) {
         
         var status = 0
         
@@ -115,11 +117,40 @@ class TaskViewController: UIViewController {
             chooseVideoButton.isEnabled = false
             submitButton.isEnabled = false
             deleteChallengeButton.isEnabled = false
+            
+            if type == 1 {
+                
+                let levelUp = UIButton(type: .custom)
+                let keyWindow = UIApplication.shared.keyWindow
+                
+                transView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+                transView.alpha = 0.5
+                transView.frame = CGRect(x: 0, y: 0, width: (keyWindow?.frame.width)!, height: (keyWindow?.frame.height)!)
+                
+                let width = transView.frame.width
+                let height = transView.frame.height
+                levelUp.frame = CGRect(x: width/2 - 150, y: height/2 - 150, width: 300, height: 300)
+                levelUp.setImage(UIImage(named: "LevelUp"), for: .normal)
+                
+                levelUp.addTarget(self, action: #selector(self.leveledUp), for: .touchUpInside)
+                
+                keyWindow?.addSubview(transView)
+                keyWindow?.addSubview(levelUp)
+                
+                GIDSignedInUser.userLevel += 1
+                saveUserLevel(level: GIDSignedInUser.userLevel)
+            }
         } else {
             chooseVideoButton.isEnabled = true
             submitButton.isEnabled = true
             deleteChallengeButton.isEnabled = true
         }
+    }
+    
+    @objc func leveledUp(_ sender: UIButton) {
+        
+        sender.removeFromSuperview()
+        transView.removeFromSuperview()
     }
     
     @IBAction func submitVideo(_ sender: Any) {
@@ -132,6 +163,18 @@ class TaskViewController: UIViewController {
             videoUrl = "http://www.youtube.com/embed/\(source.selectedVideoId!)"
             loadChallenge()
         }
+    }
+    
+    func saveUserLevel(level: Int) {
+        
+        guard let uid = Auth.auth().currentUser?.uid else {return}
+        let databaseRef = Database.database().reference().child("users/level/\(uid)")
+        
+        let saveLevel = [
+            "level": level
+        ] as [String: Any]
+        
+        databaseRef.setValue(saveLevel)
     }
     
     func saveChallengeData(index: Int, title: String, videoLink: String, viewCount: Int, viewTarget: Int, likeCount: Int, likeTarget: Int, commentCount: Int, commentTarget: Int, completion: @escaping ((_ success: Bool)->())) {
@@ -156,7 +199,7 @@ class TaskViewController: UIViewController {
         self.likeTarget = likeTarget
         self.commentCount = commentCount
         self.commentTarget = commentTarget
-        checkTick()
+        checkTick(type: 1)
         
         databaseRef.setValue(saveChallenge) { (error, ref) in
             completion(error == nil)
@@ -199,9 +242,8 @@ class TaskViewController: UIViewController {
         
         databaseRef.removeValue { (error, _) in
             print(error)
+            self.performSegue(withIdentifier: "MyTaskToHome", sender: self)
         }
-        
-        self.navigationController?.popToRootViewController(animated: false)
     }
     
     func showSubmitAlert() {

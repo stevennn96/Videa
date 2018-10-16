@@ -24,6 +24,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     var urlData: Data?
     var accessToken: String = ""
     
+    let blankFiller = UIImageView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,6 +48,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         myChallengeTableView.delegate = self
         myChallengeTableView.dataSource = self
+    }
+    
+    func fillBlank() {
+        
+        blankFiller.image = UIImage(named: "HomeBlankFiller")
+        blankFiller.frame = CGRect(x: self.view.frame.width/2 - 165, y: self.view.frame.height/2 - 95, width: 330, height: 190)
+        self.view.addSubview(blankFiller)
     }
     
     func applyLoadingScreen() {
@@ -108,7 +117,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     var quickTipsIndex = 0
     let quickTips = UIButton(type: .custom)
     let keyWindow = UIApplication.shared.keyWindow
-    let quickTipsImage = ["Quick Tips 1", "Quick Tips 2", "Quick Tips 3", "Quick Tips 4", "Quick Tips 5", "Quick Tips 6"]
+    let quickTipsImage = ["QuickTips1", "QuickTips2", "QuickTips3", "QuickTips4", "QuickTips5", "QuickTips6"]
+    
     @IBAction func viewQuickTips(_ sender: Any) {
         
         quickTipsIndex = 0
@@ -117,6 +127,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             self.quickTips.frame = CGRect(x: 0, y: 0, width: (self.keyWindow?.frame.width)!, height: (self.keyWindow?.frame.height)!)
             self.quickTips.setImage(UIImage(named: self.quickTipsImage[self.quickTipsIndex]), for: .normal)
+            self.quickTips.adjustsImageWhenHighlighted = false
             self.quickTipsIndex += 1
             
             self.keyWindow?.addSubview(self.quickTips)
@@ -174,6 +185,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             myChallengeTableView.reloadData()
         }
+        
+        if let source = sender.source as? TaskViewController {
+            
+        }
     }
     
     func saveChallengeData(index: Int, title: String, videoLink: String, viewCount: Int, viewTarget: Int, likeCount: Int, likeTarget: Int, commentCount: Int, commentTarget: Int, completion: @escaping ((_ success: Bool)->())) {
@@ -209,9 +224,15 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                     let data = i.value
                     let key = i.key
                     
+                    print("C \(snapshot.children.allObjects.count)")
                     let ref2 = Database.database().reference().child("users/challengeJoined/\(uid)/\(key)")
                     let dataRef2 = ref2.observe(.value, with: { (snapshot2: DataSnapshot) in
                         if snapshot2.exists() {
+                            
+                            if snapshot.children.allObjects.count == 1 {
+                                self.myChallenges.removeAll()
+                            }
+                            
                             let data2 = snapshot2.value as! NSDictionary
                             let key2 = snapshot2.key
                             
@@ -242,9 +263,17 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                             
                             let newChallenge = MyChallenge(title: title, url: videoLink, status: status, task: task, index: index)
                             self.myChallenges.insert(newChallenge, at: 0)
+                            print(newChallenge)
                             DispatchQueue.main.async {
+                                self.blankFiller.removeFromSuperview()
+                                print("A \(self.myChallenges.count)")
                                 self.myChallengeTableView.reloadData()
                             }
+                        } else {
+                            self.myChallenges.removeAll()
+                            self.fillBlank()
+                            print("B \(self.myChallenges.count)")
+                            self.myChallengeTableView.reloadData()
                         }
                     })
                 }

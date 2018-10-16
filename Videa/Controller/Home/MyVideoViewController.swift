@@ -15,6 +15,7 @@ class MyVideoViewController: UIViewController {
     @IBOutlet weak var orderLabel: UILabel!
     
     var myVideo = [MyVideo]()
+    var videoDetail: VideoDetail?
     var selectedVideoId: String?
     
     override func viewDidLoad() {
@@ -68,34 +69,33 @@ class MyVideoViewController: UIViewController {
             var videoLike: String?
             var videoDislike: String?
             
-            var videoDetail: VideoDetail?
             var newMyVideo: MyVideo!
             
             let url = URL(string: "https://www.googleapis.com/youtube/v3/videos?key=AIzaSyCSSeFz17e2vePbWpS0_KWN7wHxWhCQoRU&id=\(videoId!)&part=snippet,contentDetails,statistics")
             
             let getVideoTask = URLSession.shared.dataTask(with: url!) { (data, response, error) in
                 do {
-                    videoDetail = try JSONDecoder().decode(VideoDetail.self, from: data!)
+                    self.videoDetail = try JSONDecoder().decode(VideoDetail.self, from: data!)
                 } catch let error as NSError {
                     print(error)
                 }
                 
                 
-                videoTitle = videoDetail?.items![0].snippet?.title
-                videoImageUrl = videoDetail?.items![0].snippet?.thumbnails?.default?.url
-                videoView = videoDetail?.items![0].statistics?.viewCount
-                videoComment = videoDetail?.items![0].statistics?.commentCount
-                videoLike = videoDetail?.items![0].statistics?.likeCount
-                videoDislike = videoDetail?.items![0].statistics?.dislikeCount
+                videoTitle = self.videoDetail?.items![0].snippet?.title
+                videoImageUrl = self.videoDetail?.items![0].snippet?.thumbnails?.default?.url
+                videoView = self.videoDetail?.items![0].statistics?.viewCount
+                videoComment = self.videoDetail?.items![0].statistics?.commentCount
+                videoLike = self.videoDetail?.items![0].statistics?.likeCount
+                videoDislike = self.videoDetail?.items![0].statistics?.dislikeCount
                 
                 newMyVideo = MyVideo(imageUrl: videoImageUrl!, title: videoTitle!, viewCount: videoView!, commentCount: videoComment!, likeCount: videoLike!, dislikeCount: videoDislike!)
                 
-                print(newMyVideo.title)
                 self.myVideo.append(newMyVideo)
                 print("Video Detail Retrieved")
                 
                 DispatchQueue.main.async {
                     
+                    self.applyLoadingScreen()
                     self.myVideoTableView.reloadData()
                 }
             }
@@ -103,6 +103,28 @@ class MyVideoViewController: UIViewController {
             getVideoTask.resume()
             while videoDetail == nil {
                 continue
+            }
+        }
+    }
+    
+    func applyLoadingScreen() {
+        
+        let loadingImageView = UIImageView()
+        let keyWindow = UIApplication.shared.keyWindow
+        
+        DispatchQueue.main.async {
+            
+            loadingImageView.frame = CGRect(x: 0, y: 0, width: (keyWindow?.frame.width)!, height: (keyWindow?.frame.height)!)
+            loadingImageView.image = UIImage(named: "LoadingScreen")
+            
+            keyWindow?.addSubview(loadingImageView)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                while self.videoDetail == nil {
+                    continue
+                }
+                
+                loadingImageView.removeFromSuperview()
             }
         }
     }
