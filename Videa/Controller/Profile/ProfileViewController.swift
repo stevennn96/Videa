@@ -12,15 +12,14 @@ import FirebaseAuth
 import FirebaseDatabase
 import FirebaseStorage
 
-class ProfileViewController: UIViewController, UITextFieldDelegate{
-    
-
-    
+class ProfileViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate{
+      
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var usernameOutlet: UITextField!
     @IBOutlet weak var tapTochangeImage: UIButton!
     @IBOutlet weak var quotesOutlet: UITextField!
     
+
     var imagepicker: UIImagePickerController!
     
     override func viewDidLoad() {

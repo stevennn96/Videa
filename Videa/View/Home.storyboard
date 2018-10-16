@@ -656,7 +656,7 @@
         <image name="DislikesCount" width="510" height="510"/>
         <image name="HomeIcon" width="13" height="16"/>
         <image name="HomeIconSelected" width="13" height="16"/>
-        <image name="Introduction" width="1080" height="582"/>
+        <image name="Introduction" width="540" height="291"/>
         <image name="LikesCount" width="510" height="510"/>
         <image name="SortBy" width="22" height="19"/>
         <image name="SortByBox" width="375" height="104"/>
