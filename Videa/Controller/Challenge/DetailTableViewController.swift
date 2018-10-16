@@ -96,7 +96,7 @@ class DetailTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 2 {
             return 210
-        } else if indexPath.row == 4{
+        } else if indexPath.row == 5{
             return 80
         } else {
             return UITableViewAutomaticDimension
