@@ -26,6 +26,10 @@ class DetailTableViewController: UITableViewController {
     @IBOutlet weak var desc2TextView: UITextView!
     @IBOutlet weak var titleTextView: UITextView!
     @IBOutlet weak var youtubeVideoWebView: UIWebView!
+    @IBOutlet weak var viewTargetLabel: UILabel!
+    @IBOutlet weak var likeTargetLabel: UILabel!
+    @IBOutlet weak var commentTargetLabel: UILabel!
+    
     var joinButton: UIButton?
     var joinButtonConstraints = [NSLayoutConstraint]()
     
@@ -67,6 +71,12 @@ class DetailTableViewController: UITableViewController {
                 print(key)
                 
                 self.theChallenge = MyChallenge(title: self.challengeTitle!, url: "", status: 0, task: Task(viewTarget: viewTarget, viewCount: 0, likeTarget: likeTarget, likeCount: 0, commentTarget: commentTarget, commentCount: 0), index: self.largestIndex!+1)
+                
+                DispatchQueue.main.async {
+                    self.viewTargetLabel.text = "\(viewTarget)"
+                    self.likeTargetLabel.text = "\(likeTarget)"
+                    self.commentTargetLabel.text = "\(commentTarget)"
+                }
             }
         }
     }
@@ -96,7 +106,9 @@ class DetailTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 2 {
             return 210
-        } else if indexPath.row == 5{
+        } else if indexPath.row == 4 {
+            return 119
+        } else if indexPath.row == 5 {
             return 80
         } else {
             return UITableViewAutomaticDimension

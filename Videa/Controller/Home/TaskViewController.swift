@@ -13,6 +13,7 @@ import FirebaseAuth
 
 class TaskViewController: UIViewController {
 
+    @IBOutlet weak var guideLabel: UILabel!
     @IBOutlet weak var challengeTitleLabel: UITextView!
     @IBOutlet weak var videoWebView: UIWebView!
     @IBOutlet weak var viewLabel: UILabel!
@@ -65,6 +66,7 @@ class TaskViewController: UIViewController {
         if videoUrl != "" {
             loadChallenge()
         } else {
+            guideLabel.isHidden = false
             submitButton.isEnabled = false
         }
     }
@@ -86,6 +88,7 @@ class TaskViewController: UIViewController {
             DispatchQueue.main.async {
                 self.videoNameLabel.text = self.videoDetail?.items![0].snippet?.title
                 self.checkTick()
+                self.guideLabel.isHidden = true
             }
         }
         getVideoTask.resume()
