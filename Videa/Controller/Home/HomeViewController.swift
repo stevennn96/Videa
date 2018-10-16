@@ -79,6 +79,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             
         } else {
             print("Not signed in");
+            GIDSignIn.sharedInstance()?.signOut()
+            let firebaseAuth = Auth.auth()
+            do {
+                try firebaseAuth.signOut()
+            } catch let signOutError as NSError {
+                print ("Error signing out: %@", signOutError)
+            }
         }
         
         if GIDSignIn.sharedInstance()?.currentUser != nil {
