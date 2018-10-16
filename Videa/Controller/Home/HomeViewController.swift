@@ -60,7 +60,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             keyWindow?.addSubview(loadingImageView)
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                 while GIDSignedInUser.loadStatus < 3 {
                     continue
                 }
@@ -105,7 +105,39 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    var quickTipsIndex = 0
+    let quickTips = UIButton(type: .custom)
+    let keyWindow = UIApplication.shared.keyWindow
+    let quickTipsImage = ["Quick Tips 1", "Quick Tips 2", "Quick Tips 3", "Quick Tips 4", "Quick Tips 5", "Quick Tips 6"]
+    @IBAction func viewQuickTips(_ sender: Any) {
+        
+        quickTipsIndex = 0
+        
+        DispatchQueue.main.async {
+            
+            self.quickTips.frame = CGRect(x: 0, y: 0, width: (self.keyWindow?.frame.width)!, height: (self.keyWindow?.frame.height)!)
+            self.quickTips.setImage(UIImage(named: self.quickTipsImage[self.quickTipsIndex]), for: .normal)
+            self.quickTipsIndex += 1
+            
+            self.keyWindow?.addSubview(self.quickTips)
+            for i in (self.keyWindow?.subviews)! {
+                print(i)
+            }
+            
+            self.quickTips.addTarget(self, action: #selector(self.quickTipsClicked), for: .touchUpInside)
+        }
+    }
     
+    @objc func quickTipsClicked(_ sender: UIButton) {
+        
+        if quickTipsIndex < 6 {
+            quickTips.setImage(UIImage(named: quickTipsImage[self.quickTipsIndex]), for: .normal)
+            self.quickTipsIndex += 1
+        } else {
+            sender.removeFromSuperview()
+        }
+
+    }
     
     @IBAction func addChallenge(_ sender: Any) {
         performSegue(withIdentifier: "HomeToChallenge", sender: nil)
