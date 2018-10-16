@@ -44,6 +44,7 @@ class ProfileAccountViewController: UIViewController, UICollectionViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         //progress bar size and color
         levelProgressBar.transform = levelProgressBar.transform.scaledBy(x: 1, y: 3)
         levelProgressBar.progressTintColor = UIColor.orange

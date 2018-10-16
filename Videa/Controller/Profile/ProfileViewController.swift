@@ -13,16 +13,17 @@ import FirebaseDatabase
 import FirebaseStorage
 
 class ProfileViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate{
-      
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var usernameOutlet: UITextField!
     @IBOutlet weak var tapTochangeImage: UIButton!
-    @IBOutlet weak var quotesOutlet: UITextField!
+    @IBOutlet weak var quotesOutlet: UITextView!
     
 
     var imagepicker: UIImagePickerController!
     
     override func viewDidLoad() {
+        
         tapTochangeImage.addTarget(self, action: #selector(openImagePicker), for: .touchUpInside)
         imagepicker = UIImagePickerController()
         imagepicker.allowsEditing = true
@@ -36,8 +37,33 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         super.viewDidLoad()
     }
     
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+    //textview
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if(text == "\n"){
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
+    
+    //textview placeholder
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if(textView.text == "Your Favorite Quotes"){
+            textView.text = ""
+        };textView.becomeFirstResponder()
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if(textView.text == "")
+        {
+            textView.text = "Your Favorite Quotes"
+            quotesOutlet.textColor = UIColor.black
+        };textView.resignFirstResponder()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
