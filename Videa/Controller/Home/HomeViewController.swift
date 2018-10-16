@@ -60,7 +60,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             keyWindow?.addSubview(loadingImageView)
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
                 while GIDSignedInUser.loadStatus < 3 {
                     continue
                 }
