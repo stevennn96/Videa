@@ -120,7 +120,7 @@ class TaskViewController: UIViewController {
     }
     
     @IBAction func submitVideo(_ sender: Any) {
-        showAlert()
+        showSubmitAlert()
     }
     
     @IBAction func unwindToMyTask(_ sender: UIStoryboardSegue) {
@@ -162,14 +162,7 @@ class TaskViewController: UIViewController {
     
     @IBAction func deleteChallengeData(_ sender: Any) {
         
-        guard let uid = Auth.auth().currentUser?.uid else {return}
-        let databaseRef = Database.database().reference().child("users/challengeJoined/\(uid)/\((self.challengeTitle)!)")
-        
-        databaseRef.removeValue { (error, _) in
-            print(error)
-        }
-        
-        self.navigationController?.popToRootViewController(animated: false)
+        showDeleteAlert()
     }
     
     func submitTheVideo() {
@@ -196,12 +189,36 @@ class TaskViewController: UIViewController {
         }
     }
     
-    func showAlert() {
+    func deleteTheChallengeData() {
+        
+        guard let uid = Auth.auth().currentUser?.uid else {return}
+        let databaseRef = Database.database().reference().child("users/challengeJoined/\(uid)/\((self.challengeTitle)!)")
+        
+        databaseRef.removeValue { (error, _) in
+            print(error)
+        }
+        
+        self.navigationController?.popToRootViewController(animated: false)
+    }
+    
+    func showSubmitAlert() {
         
         let alert = UIAlertController(title: "Anda yakin memilih video \"\((self.videoNameLabel.text)!)\"", message: "Setelah menekan Pilih, anda telah setuju memilih video tersebut.", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Pilih", style: .default, handler: { (action) in
             self.submitTheVideo()
+        }))
+        alert.addAction(UIAlertAction(title: "Batal", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func showDeleteAlert() {
+        
+        let alert = UIAlertController(title: "Anda yakin ingin menghapus challenge \"\((self.challengeTitle)!)\"", message: "Setelah menekan Hapus, anda telah setuju memilih video tersebut.", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Hapus", style: .default, handler: { (action) in
+            self.deleteTheChallengeData()
         }))
         alert.addAction(UIAlertAction(title: "Batal", style: .cancel, handler: nil))
         
