@@ -11,6 +11,7 @@ import Firebase
 import FirebaseAuth
 import FirebaseDatabase
 import FirebaseStorage
+import Kingfisher
 
 class ProfileViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate{
     
@@ -19,7 +20,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     @IBOutlet weak var tapTochangeImage: UIButton!
     @IBOutlet weak var quotesOutlet: UITextView!
     
-
+    private var postChildListener: UInt?
     var imagepicker: UIImagePickerController!
     
     override func viewDidLoad() {
@@ -35,6 +36,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         imageView.layer.cornerRadius = imageView.frame.size.height/2
         imageView.clipsToBounds = true
         super.viewDidLoad()
+        bacaData()
     }
     
     
@@ -112,7 +114,6 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         
     }
 
-    
     func uploadProfileImage(_ image:UIImage, completion: @escaping ((_ url:URL?)->())) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         let storageRef = Storage.storage().reference().child("user/\(uid)")
@@ -150,6 +151,25 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         databaseRef.setValue(userObject) { error, ref in
             completion(error == nil)
         }
+    }
+    
+    func bacaData() {
+        guard let uid = Auth.auth().currentUser?.uid else {return}
+        postChildListener = Database.database().reference().child("users/profile/\(uid)").observe(.value) {(snapshot: DataSnapshot) in
+            if snapshot.exists() {
+                let data = snapshot.value as! NSDictionary
+                let key = snapshot.key
+                
+                let username = data["username"] as! String
+                let photoURL = data["photoURL"] as! String
+                let quotesP = data["quotes"] as! String
+                self.usernameOutlet.text = username
+                self.quotesOutlet.text = quotesP
+                self.quotesOutlet.textColor = UIColor.black
+                self.imageView.kf.setImage(with: URL(string: photoURL), placeholder: nil, options: nil, progressBlock: nil, completionHandler: {image, error, cacheType, imageUrl in }  )
+            }
+        }
+        
     }
     
 

@@ -79,6 +79,10 @@ class ProfileAccountViewController: UIViewController, UICollectionViewDataSource
         performSegue(withIdentifier: "ProfileToSettings", sender: nil)
     }
     
+    @IBAction func unwindToProfileAccount(_ sender: UIStoryboardSegue){
+        
+    }
+    
     func bacaLevel() {
         guard let uid = Auth.auth().currentUser?.uid else{return}
         postChild = Database.database().reference().child("Gamification/user/\(uid)").observe(.value) {(snapshot: DataSnapshot)in

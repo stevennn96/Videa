@@ -193,7 +193,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Your Favorite Quotes" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gb5-92-i4y">
-                                <rect key="frame" x="61" y="202" width="285" height="80"/>
+                                <rect key="frame" x="61" y="197" width="285" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" red="0.78048670291900635" green="0.78013616800308228" blue="0.80000984668731689" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -215,10 +215,11 @@
                         <outlet property="quotesOutlet" destination="gb5-92-i4y" id="Zn1-gT-45S"/>
                         <outlet property="tapTochangeImage" destination="CAb-lF-Md6" id="psR-bn-QIt"/>
                         <outlet property="usernameOutlet" destination="hZ9-dg-mnU" id="KTa-Qk-VTQ"/>
-                        <segue destination="Lbe-TP-mPm" kind="show" identifier="EditProfileSuccess" id="6bG-La-UOk"/>
+                        <segue destination="cQf-Mi-qkj" kind="unwind" identifier="EditProfileSuccess" unwindAction="unwindToProfileAccount:" id="VBA-pm-Ku1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="efw-tt-7ak" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="cQf-Mi-qkj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="468" y="2000.985221674877"/>
         </scene>
@@ -374,7 +375,4 @@
         <image name="logout icon" width="500" height="500"/>
         <image name="ubah profil" width="662" height="88"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="PBn-za-etj"/>
-    </inferredMetricsTieBreakers>
 </document>
