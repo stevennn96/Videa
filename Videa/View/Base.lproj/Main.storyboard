@@ -169,7 +169,7 @@
                     <connections>
                         <outlet property="doneButton" destination="rRH-cM-UWN" id="iEp-cJ-WcV"/>
                         <outlet property="onboardingImageView" destination="eFb-nq-pxZ" id="CLb-sd-UOD"/>
-                        <segue destination="imj-FA-pIE" kind="show" identifier="OnboardingDon" id="aj5-j8-D3Q"/>
+                        <segue destination="071-UZ-AYa" kind="show" identifier="OnboardingDone" id="JwL-4S-wId"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uwQ-bc-O1g" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -194,7 +194,7 @@
                     </view>
                     <connections>
                         <outlet property="gifBG" destination="cjC-eO-A6c" id="4pc-uO-ipB"/>
-                        <segue destination="071-UZ-AYa" kind="show" identifier="SplashScreenToMainMenu" id="spz-ua-wfh"/>
+                        <segue destination="vw8-lo-0OY" kind="show" identifier="SplashScreenToMainMenu" id="Wg6-Pg-i1n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FC0-ip-GUB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -524,13 +524,13 @@
         <image name="Start Button" width="260" height="83"/>
         <image name="Videa logo white" width="508" height="209"/>
         <image name="email icon" width="64" height="46"/>
-        <image name="onboarding 1" width="375" height="812"/>
+        <image name="onboarding 1" width="1125" height="2436"/>
         <image name="password icon" width="58" height="58"/>
         <image name="profile icon" width="58" height="58"/>
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aj5-j8-D3Q"/>
-        <segue reference="qYR-5w-4t8"/>
+        <segue reference="rsr-Xu-2bY"/>
+        <segue reference="fZ2-aV-B4E"/>
     </inferredMetricsTieBreakers>
 </document>

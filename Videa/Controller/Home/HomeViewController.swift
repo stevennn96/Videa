@@ -36,18 +36,38 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
         }
         
-        
-        
         if myChallenges.isEmpty {
             largestIndex = 0
         }
         
-        print("YEAH \(myChallenges.count)")
         loadChallengeData()
-        print("YEAH2 \(myChallenges.count)")
+        
+        applyLoadingScreen()
         
         myChallengeTableView.delegate = self
         myChallengeTableView.dataSource = self
+    }
+    
+    func applyLoadingScreen() {
+        
+        let loadingImageView = UIImageView()
+        let keyWindow = UIApplication.shared.keyWindow
+        
+        DispatchQueue.main.async {
+            
+            loadingImageView.frame = CGRect(x: 0, y: 0, width: (keyWindow?.frame.width)!, height: (keyWindow?.frame.height)!)
+            loadingImageView.image = UIImage(named: "LoadingScreen")
+            
+            keyWindow?.addSubview(loadingImageView)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                while GIDSignedInUser.loadStatus < 3 {
+                    continue
+                }
+                
+                loadingImageView.removeFromSuperview()
+            }
+        }
     }
     
     func signInProcess(completion: (_ success: Bool) -> Void) {
@@ -203,7 +223,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.setMyChallenge(myChallenge: MyChallenge(title: myChallenges[indexPath.row].myChallengeTitle, url: myChallenges[indexPath.row].myChallengeUrl, status: myChallenges[indexPath.row].myChallengeStatus, task: myChallenges[indexPath.row].myChallengeTask, index: myChallenges[indexPath.row].index))
         
         self.largestIndex = self.myChallenges.first!.index
-        print("Index \(self.largestIndex)")
+        print("Index \(self.largestIndex!)")
         return cell
     }
     
@@ -219,7 +239,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         if let destination = segue.destination as? ChallengeViewController {
             destination.largestIndex = largestIndex
-            print("Home \(largestIndex)")
+            print("Home \(largestIndex!)")
         }
     }
 }

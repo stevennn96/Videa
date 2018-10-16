@@ -14,7 +14,7 @@
         <scene sceneID="0YJ-Oa-Urw">
             <objects>
                 <navigationController id="ls2-c5-SX2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="ProfileIcon" selectedImage="ProfileIconSelected" id="pZN-bU-OFc"/>
+                    <tabBarItem key="tabBarItem" title="" image="ProfileIcon" selectedImage="ProfileIconSelected" id="hC1-Rf-3YU"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Xj2-WD-JjU">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -359,7 +359,7 @@
     </scenes>
     <resources>
         <image name="Icon Profile" width="120" height="130"/>
-        <image name="ProfileIcon" width="6" height="5"/>
+        <image name="ProfileIcon" width="90" height="90"/>
         <image name="ProfileIconSelected" width="18" height="18"/>
         <image name="Rectangle1" width="375" height="297"/>
         <image name="about icon" width="500" height="500"/>

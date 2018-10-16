@@ -33,6 +33,14 @@
             </objects>
             <point key="canvasLocation" x="-66" y="-466"/>
         </scene>
+        <!--QuickTips-->
+        <scene sceneID="Y4q-97-Dzs">
+            <objects>
+                <viewControllerPlaceholder storyboardName="QuickTips" id="C3R-K1-QoP" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qkv-NZ-2At" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-774" y="6"/>
+        </scene>
         <!--My Challenges-->
         <scene sceneID="QJf-2P-GNj">
             <objects>
@@ -93,6 +101,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="My Challenges" id="j3p-ZF-jeB">
                         <barButtonItem key="backBarButtonItem" title=" " id="m7h-Fa-yQb"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="play" id="JUu-6X-edR">
+                            <connections>
+                                <segue destination="C3R-K1-QoP" kind="show" id="2cU-jg-anD"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3bP-fp-jkh">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>

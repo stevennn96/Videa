@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
         
         if error == nil {
+            
             GIDSignedInUser.accessToken = (GIDSignIn.sharedInstance()?.currentUser.authentication.accessToken)!
             print(GIDSignedInUser.accessToken)
             
@@ -54,6 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     var window: UIWindow?
     
     func getDetail(completion: (_ success: Bool) -> Void) {
+        
         getChannelDetail()
         
         while GIDSignedInUser.channelDetail == nil {
@@ -75,6 +77,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             
             if GIDSignedInUser.channelDetail != nil {
                 
+                GIDSignedInUser.loadStatus += 1
                 print("Channel Detail Retrieved")
                 
                 if GIDSignedInUser.channelDetail!.items?.count != 0 {
@@ -105,6 +108,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             }
             
             if GIDSignedInUser.playlistDetail != nil {
+                
                 print("Playlist Detail Retrieved")
             }
         }
@@ -127,6 +131,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             }
             
             if GIDSignedInUser.searchByDate != nil {
+                
+                GIDSignedInUser.loadStatus += 1
                 print("Search By Date Retrieved")
             }
         }
@@ -149,6 +155,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             }
             
             if GIDSignedInUser.searchByView != nil {
+                
+                GIDSignedInUser.loadStatus += 1
                 print("Search By View Retrieved")
             }
         }

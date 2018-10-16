@@ -21,13 +21,18 @@ class StatisticsDataViewController: UIViewController, UITableViewDataSource, UIT
     
     var statisticsData: [StatisticsData] = []
     
+    var loaded = false
+    
     var channelTitle: String = ""
     var totalSubscribers: String = ""
     var totalViews: String = ""
     var userImageUrl: String = ""
     
+    var statistics: Analytics?
     var columnHeader = [ColumnHeader]()
     var row = [Row]()
+    
+    let fmt = NumberFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,10 +44,58 @@ class StatisticsDataViewController: UIViewController, UITableViewDataSource, UIT
         userImageUrl = (GIDSignedInUser.channelDetail?.items![0].snippet?.thumbnails?.default?.url)!
         
         let subsInt: Int = Int(self.totalSubscribers)!
-        let fmt = NumberFormatter()
+        
         fmt.numberStyle = .decimal
         fmt.locale = NSLocale(localeIdentifier: "id_ID") as Locale!
         totalSubscribers = fmt.string(for: subsInt)!
+        
+//        while statistics == nil {
+//            continue
+//        }
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(false)
+        
+        if loaded == false {
+        
+            applyLoadingScreen()
+            getStatisticsData()
+            
+            loaded = true
+        }
+    }
+    
+    func applyLoadingScreen() {
+        
+        let loadingImageView = UIImageView()
+        let keyWindow = UIApplication.shared.keyWindow
+
+        loadingImageView.frame = CGRect(x: 0, y: 0, width: (keyWindow?.frame.width)!, height: (keyWindow?.frame.height)!)
+        loadingImageView.image = UIImage(named: "LoadingScreen")
+        
+        keyWindow?.addSubview(loadingImageView)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            while self.statistics == nil {
+                continue
+            }
+            
+            print(self.statisticsData.count)
+            self.channelTitleLabel.text = self.channelTitle
+            self.totalSubscribersLabel.text = self.totalSubscribers
+            self.userImage.downloaded(from: self.userImageUrl)
+            self.userImage.layer.borderWidth = 1
+            self.userImage.layer.masksToBounds = false
+            self.userImage.layer.cornerRadius = self.userImage.frame.height/2
+            self.userImage.clipsToBounds = true
+            self.statisticsDataTableView.reloadData()
+            loadingImageView.removeFromSuperview()
+        }
+    }
+    
+    func getStatisticsData() {
         
         var startDate: String?
         var endDate: String?
@@ -57,22 +110,20 @@ class StatisticsDataViewController: UIViewController, UITableViewDataSource, UIT
         let date = Calendar.current.date(byAdding: dayToAdd, to: Date())!
         startDate = formatter.string(from: date)
         
-        var statistics: Analytics?
-        
         let url = URL(string: "https://youtubeanalytics.googleapis.com/v2/reports?dimensions=day&endDate=\(endDate!)&ids=channel==MINE&metrics=views,subscribersGained,subscribersLost&startDate=\(startDate!)&access_token=\(GIDSignedInUser.accessToken)")
         
         let getStatistics = URLSession.shared.dataTask(with: url!) { (data, response, error) in
             do {
-                statistics = try JSONDecoder().decode(Analytics.self, from: data!)
+                self.statistics = try JSONDecoder().decode(Analytics.self, from: data!)
             } catch let error as NSError {
                 print(error)
             }
             
-            if statistics != nil {
+            if self.statistics != nil {
                 print("Statistics Retrieved")
                 
-                self.columnHeader = (statistics?.columnHeaders)!
-                self.row = (statistics?.rows)!
+                self.columnHeader = (self.statistics?.columnHeaders)!
+                self.row = (self.statistics?.rows)!
                 self.row.reverse()
                 
                 for i in self.row {
@@ -80,11 +131,11 @@ class StatisticsDataViewController: UIViewController, UITableViewDataSource, UIT
                     var subscriberString: String?
                     
                     if subscriberChange == 0 {
-                        subscriberString = "\(fmt.string(for: subscriberChange)!)"
+                        subscriberString = "\(self.fmt.string(for: subscriberChange)!)"
                     } else if subscriberChange < 0 {
-                        subscriberString = "\(fmt.string(for: subscriberChange)!)"
+                        subscriberString = "\(self.fmt.string(for: subscriberChange)!)"
                     } else {
-                        subscriberString = "+\(fmt.string(for: subscriberChange)!)"
+                        subscriberString = "+\(self.fmt.string(for: subscriberChange)!)"
                     }
                     
                     let iDate = i.date!
@@ -97,33 +148,12 @@ class StatisticsDataViewController: UIViewController, UITableViewDataSource, UIT
                     
                     let newDate = newDateFormatter.string(from: date!)
                     
-                    self.statisticsData.append(StatisticsData(date: newDate, totalSubscribers: "\(subscriberString!)", totalViews: "+\(fmt.string(for: i.views!)!)"))
+                    self.statisticsData.append(StatisticsData(date: newDate, totalSubscribers: "\(subscriberString!)", totalViews: "+\(self.fmt.string(for: i.views!)!)"))
                 }
             }
         }
         
         getStatistics.resume()
-        
-        while statistics == nil {
-            continue
-        }
-        
-//
-//                            self.statisticsData.append(StatisticsData(date: "29/08/2018", totalSubscribers: "+39", totalViews: "+3.427"))
-//                            self.statisticsData.append(StatisticsData(date: "28/08/2018", totalSubscribers: "+66", totalViews: "+4.265"))
-//                            self.statisticsData.append(StatisticsData(date: "27/08/2018", totalSubscribers: "+59", totalViews: "+4.022"))
-//                            self.statisticsData.append(StatisticsData(date: "26/08/2018", totalSubscribers: "+96", totalViews: "+5.758"))
-//                            self.statisticsData.append(StatisticsData(date: "25/08/2018", totalSubscribers: "+63", totalViews: "+5.327"))
-//                            self.statisticsData.append(StatisticsData(date: "24/08/2018", totalSubscribers: "+93", totalViews: "+4.902"))
-//                            self.statisticsData.append(StatisticsData(date: "23/08/2018", totalSubscribers: "+91", totalViews: "+4.831"))
-        
-        DispatchQueue.main.async {
-            self.channelTitleLabel.text = self.channelTitle
-            self.totalSubscribersLabel.text = self.totalSubscribers
-            self.userImage.downloaded(from: self.userImageUrl)
-            self.statisticsDataTableView.reloadData()
-        }
-        
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

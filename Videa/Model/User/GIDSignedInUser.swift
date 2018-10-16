@@ -15,4 +15,5 @@ struct GIDSignedInUser {
     static var searchByDate: SearchDetail?
     static var searchByView: SearchDetail?
     static var apiKey = "AIzaSyCSSeFz17e2vePbWpS0_KWN7wHxWhCQoRU"
+    static var loadStatus = 0
 }
