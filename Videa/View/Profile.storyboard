@@ -38,7 +38,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="SettingPage" id="UGu-rk-yDQ" customClass="SettingPageTableViewController" customModule="Videa" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="7gR-bu-Z6A">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -138,7 +138,7 @@
             <objects>
                 <viewController id="Iby-gX-TrI" customClass="ProfileViewController" customModule="Videa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aLN-eK-Oo3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Username Outlet" translatesAutoresizingMaskIntoConstraints="NO" id="9i6-Do-E70">
@@ -170,7 +170,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Display name" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hZ9-dg-mnU">
                                 <rect key="frame" x="188" y="69" width="158" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" red="0.78048670291900635" green="0.78013616800308228" blue="0.80000984668731689" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
@@ -227,7 +227,7 @@
             <objects>
                 <viewController storyboardIdentifier="ProfileID" id="Lbe-TP-mPm" customClass="ProfileAccountViewController" customModule="Videa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aGu-NY-GOe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle1" translatesAutoresizingMaskIntoConstraints="NO" id="wAK-yD-6qz">
@@ -338,18 +338,11 @@
                         <viewLayoutGuide key="safeArea" id="VuM-FD-zqr"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="6D4-2j-Aoy">
-                        <barButtonItem key="backBarButtonItem" title=" " id="BNG-9Y-yvm"/>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="S0M-mg-kh3">
-                            <button key="customView" opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="o4d-kc-iEJ">
-                                <rect key="frame" x="275" y="0.0" width="84" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="setting with shadow">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="settingsButtonPressed:" destination="Lbe-TP-mPm" eventType="touchUpInside" id="wHm-MV-7cr"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="backBarButtonItem" title=" " id="898-5x-56H"/>
+                        <barButtonItem key="rightBarButtonItem" image="Setting" id="L0g-IF-Ivf">
+                            <connections>
+                                <action selector="settingsButtonPressed:" destination="Lbe-TP-mPm" id="FmV-iM-H9r"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -368,20 +361,20 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ProfileIcon" width="18" height="17"/>
+        <image name="ProfileIcon" width="18" height="18"/>
         <image name="ProfileIconSelected" width="18" height="18"/>
         <image name="Quotes outlet" width="1655" height="510"/>
         <image name="Rectangle1" width="375" height="297"/>
+        <image name="Setting" width="20" height="21"/>
         <image name="Username Outlet" width="1200" height="225"/>
         <image name="about icon" width="500" height="500"/>
         <image name="defaultprofilepicture" width="1524" height="976"/>
         <image name="edit profile-1" width="95" height="95"/>
         <image name="feedback icon" width="500" height="500"/>
         <image name="logout icon" width="500" height="500"/>
-        <image name="setting with shadow" width="84" height="82"/>
         <image name="ubah profil" width="662" height="88"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6bG-La-UOk"/>
+        <segue reference="PBn-za-etj"/>
     </inferredMetricsTieBreakers>
 </document>

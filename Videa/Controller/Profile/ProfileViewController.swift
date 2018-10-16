@@ -55,6 +55,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     func textViewDidBeginEditing(_ textView: UITextView) {
         if(textView.text == "Your Favorite Quotes"){
             textView.text = ""
+            quotesOutlet.textColor = UIColor.black
         };textView.becomeFirstResponder()
     }
     
@@ -62,7 +63,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         if(textView.text == "")
         {
             textView.text = "Your Favorite Quotes"
-            quotesOutlet.textColor = UIColor.black
+            quotesOutlet.textColor = #colorLiteral(red: 0.780488193, green: 0.7801764607, blue: 0.8018243313, alpha: 1)
         };textView.resignFirstResponder()
     }
     
