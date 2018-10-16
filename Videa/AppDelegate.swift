@@ -198,7 +198,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 UserService.currentUserProfile = nil
 
                 //Menu Screen
-                let controller = storyboard.instantiateViewController(withIdentifier: "SplashScreen")
+                let controller = storyboard.instantiateViewController(withIdentifier: "onboardingVC")
                 self.window?.rootViewController = controller
                 self.window?.makeKeyAndVisible()
             }

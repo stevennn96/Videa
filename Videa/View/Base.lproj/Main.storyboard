@@ -526,7 +526,7 @@
         <image name="email icon" width="64" height="46"/>
         <image name="onboarding 1" width="1125" height="2436"/>
         <image name="password icon" width="58" height="58"/>
-        <image name="profile icon" width="58" height="58"/>
+        <image name="profile icon" width="29" height="29"/>
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
