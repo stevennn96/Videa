@@ -277,6 +277,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                         }
                     })
                 }
+            } else {
+                self.myChallenges.removeAll()
+                self.fillBlank()
+                print("D \(self.myChallenges.count)")
+                self.myChallengeTableView.reloadData()
             }
         }
     }

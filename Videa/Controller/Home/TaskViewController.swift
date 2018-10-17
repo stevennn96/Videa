@@ -228,6 +228,11 @@ class TaskViewController: UIViewController {
         
         saveChallengeData(index: index, title: challengeTitle, videoLink: videoLink, viewCount: viewCount, viewTarget: viewTarget, likeCount: likeCount, likeTarget: likeTarget, commentCount: commentCount, commentTarget: commentTarget) { (success) in
             if success {
+                DispatchQueue.main.async {
+                    self.viewLabel.text = "Dapat \(viewCount) / \(viewTarget) Views"
+                    self.likeLabel.text = "Dapat \(likeCount) / \(likeTarget) Likes"
+                    self.commentLabel.text = "Dapat \(commentCount) / \(commentTarget) Comments"
+                }
                 print("Berhasil")
             } else {
                 print("Error")
