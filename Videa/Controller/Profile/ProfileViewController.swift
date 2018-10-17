@@ -108,10 +108,10 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UITextViewDe
                 changeRequest?.commitChanges { error in
                     if error == nil {
                         print("User display name changed!")
-                        
+                        self.completed = true
                         self.saveProfile(username: username, profileImageURL: url! , quotes: quotes) { success in
                             if success {
-                                self.completed = true
+                                
                                 return
                             }
                         }
