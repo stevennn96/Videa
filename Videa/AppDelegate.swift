@@ -23,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             GIDSignedInUser.accessToken = (GIDSignIn.sharedInstance()?.currentUser.authentication.accessToken)!
             print(GIDSignedInUser.accessToken)
             
+            applyLoadingScreen()
+            
             getDetail { (success) in
                 if success {
 //                    getPlaylistDetail()
@@ -121,7 +123,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         let channelId = GIDSignedInUser.channelDetail?.items![0].id
         
-        let url = URL(string: "https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&order=date&maxResults=50&channelId=\(channelId!)&key=\(GIDSignedInUser.apiKey)")
+        let url = URL(string: "https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&order=date&maxResults=20&channelId=\(channelId!)&key=\(GIDSignedInUser.apiKey)")
         
         let searchTask = URLSession.shared.dataTask(with: url!) { (data, response, error) in
             do {
@@ -145,7 +147,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         let channelId = GIDSignedInUser.channelDetail?.items![0].id
         
-        let url = URL(string: "https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&order=viewCount&maxResults=50&channelId=\(channelId!)&key=AIzaSyCSSeFz17e2vePbWpS0_KWN7wHxWhCQoRU")
+        let url = URL(string: "https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&order=viewCount&maxResults=20&channelId=\(channelId!)&key=AIzaSyCSSeFz17e2vePbWpS0_KWN7wHxWhCQoRU")
         
         let searchTask = URLSession.shared.dataTask(with: url!) { (data, response, error) in
             do {
@@ -165,6 +167,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         searchTask.resume()
     }
 
+    func applyLoadingScreen() {
+        
+        print("Loading")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
+            while GIDSignedInUser.loadStatus < 3 {
+                continue
+            }
+             
+            UIApplication.shared.keyWindow!.viewWithTag(36)!.removeFromSuperview()
+        }
+    }
+
+    
     func bacaLevel() {
         guard let uid = Auth.auth().currentUser?.uid else{return}
         let dataRef = Database.database().reference().child("users/level/\(uid)").observe(.value) {(snapshot: DataSnapshot)in

@@ -61,6 +61,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let loadingImageView = UIImageView()
         let keyWindow = UIApplication.shared.keyWindow
+        loadingImageView.tag = 36
         
         DispatchQueue.main.async {
             
@@ -68,14 +69,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             loadingImageView.image = UIImage(named: "LoadingScreen")
             
             keyWindow?.addSubview(loadingImageView)
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
-                while GIDSignedInUser.loadStatus < 3 {
-                    continue
-                }
-                
-                loadingImageView.removeFromSuperview()
-            }
         }
     }
     
