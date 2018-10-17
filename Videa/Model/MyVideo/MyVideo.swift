@@ -10,6 +10,7 @@ import Foundation
 
 class MyVideo {
     
+    var videoId: String?
     var imageUrl: String?
     var title: String?
     var viewCount: String?
@@ -17,7 +18,8 @@ class MyVideo {
     var likeCount: String?
     var dislikeCount: String?
     
-    init(imageUrl: String, title: String, viewCount: String, commentCount: String, likeCount: String, dislikeCount: String) {
+    init(id: String, imageUrl: String, title: String, viewCount: String, commentCount: String, likeCount: String, dislikeCount: String) {
+        self.videoId = id
         self.imageUrl = imageUrl
         self.title = title
         self.viewCount = viewCount

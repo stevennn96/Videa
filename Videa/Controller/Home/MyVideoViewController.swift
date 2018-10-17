@@ -15,13 +15,19 @@ class MyVideoViewController: UIViewController {
     @IBOutlet weak var orderLabel: UILabel!
     
     var myVideo = [MyVideo]()
+    var tmpVideos = [MyVideo]()
+    var videoIds = [String]()
     var videoDetail: VideoDetail?
     var selectedVideoId: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadVideo(order: "date")
+        loadVideo(order: "date") { (success) in
+            if success {
+//                self.myVideoTableView.reloadData()
+            }
+        }
         
         myVideoTableView.delegate = self
         myVideoTableView.dataSource = self
@@ -33,11 +39,19 @@ class MyVideoViewController: UIViewController {
         
         if sender.tag == 10 {
             order = "view"
-            loadVideo(order: order!)
+            loadVideo(order: "view") { (success) in
+                if success {
+//                    self.myVideoTableView.reloadData()
+                }
+            }
             orderLabel.text = "Terbanyak Ditonton"
         } else if sender.tag == 20 {
             order = "date"
-            loadVideo(order: order!)
+            loadVideo(order: "date") { (success) in
+                if success {
+//                    self.myVideoTableView.reloadData()
+                }
+            }
             orderLabel.text = "Paling Baru"
         }
         
@@ -48,7 +62,7 @@ class MyVideoViewController: UIViewController {
         sortView.isHidden = false
     }
     
-    func loadVideo(order: String){
+    func loadVideo(order: String, onComplete: @escaping (Bool) -> ()){
         
         myVideo.removeAll()
         
@@ -59,9 +73,12 @@ class MyVideoViewController: UIViewController {
             searchBy = GIDSignedInUser.searchByView
         }
         
+        
         for i in (searchBy?.items)! {
             let videoId = i.id?.videoId
+            videoIds.append(videoId!)
             print(videoId)
+            var vId: String?
             var videoImageUrl: String?
             var videoTitle: String?
             var videoView: String?
@@ -80,7 +97,7 @@ class MyVideoViewController: UIViewController {
                     print(error)
                 }
                 
-                
+                vId = self.videoDetail?.items![0].id
                 videoTitle = self.videoDetail?.items![0].snippet?.title
                 videoImageUrl = self.videoDetail?.items![0].snippet?.thumbnails?.default?.url
                 videoView = self.videoDetail?.items![0].statistics?.viewCount
@@ -88,15 +105,28 @@ class MyVideoViewController: UIViewController {
                 videoLike = self.videoDetail?.items![0].statistics?.likeCount
                 videoDislike = self.videoDetail?.items![0].statistics?.dislikeCount
                 
-                newMyVideo = MyVideo(imageUrl: videoImageUrl!, title: videoTitle!, viewCount: videoView!, commentCount: videoComment!, likeCount: videoLike!, dislikeCount: videoDislike!)
+                newMyVideo = MyVideo(id: vId!, imageUrl: videoImageUrl!, title: videoTitle!, viewCount: videoView!, commentCount: videoComment!, likeCount: videoLike!, dislikeCount: videoDislike!)
                 
-                self.myVideo.append(newMyVideo)
-                print("Video Detail Retrieved")
+                self.tmpVideos.append(newMyVideo)
+                print("Video Detail Retrieved ")
+                if self.tmpVideos.count == self.videoIds.count{
+                    for id in self.videoIds{
+                        for vid in self.tmpVideos{
+                            if vid.videoId == id {
+                                self.myVideo.append(vid)
+                            }
+                        }
+                    }
+                    DispatchQueue.main.async {
+                        self.myVideoTableView.reloadData()
+                    }
+                }
                 
                 DispatchQueue.main.async {
                     
+                    print("YO")
                     self.applyLoadingScreen()
-                    self.myVideoTableView.reloadData()
+//                    self.myVideoTableView.reloadData()
                 }
             }
             
@@ -105,6 +135,8 @@ class MyVideoViewController: UIViewController {
                 continue
             }
         }
+        
+        onComplete(true)
     }
     
     func applyLoadingScreen() {
