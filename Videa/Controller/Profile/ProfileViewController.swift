@@ -22,6 +22,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     
     private var postChildListener: UInt?
     var imagepicker: UIImagePickerController!
+    var completed = false
     
     override func viewDidLoad() {
         
@@ -37,6 +38,18 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         imageView.clipsToBounds = true
         super.viewDidLoad()
         bacaData()
+        
+        
+        self.getData(){ (success) in
+            // if success true
+            print("data")
+        }
+        
+    }
+    
+    func getData(onComplete: @escaping (Bool) -> ()){
+        //get data
+        onComplete(true)
     }
     
     
@@ -85,6 +98,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         guard let image = imageView.image else {return}
         guard let quotes = quotesOutlet.text else {return}
         
+        applyLoadingScreen()
         self.uploadProfileImage(image) { url in
             if url != nil {
                 let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
@@ -97,6 +111,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UITextViewDe
                         
                         self.saveProfile(username: username, profileImageURL: url! , quotes: quotes) { success in
                             if success {
+                                self.completed = true
                                 return
                             }
                         }
@@ -115,6 +130,8 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     }
 
     func uploadProfileImage(_ image:UIImage, completion: @escaping ((_ url:URL?)->())) {
+        
+        completed = false
         guard let uid = Auth.auth().currentUser?.uid else { return }
         let storageRef = Storage.storage().reference().child("user/\(uid)")
         
@@ -172,7 +189,27 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         
     }
     
-
+    func applyLoadingScreen() {
+        
+        let loadingImageView = UIImageView()
+        let keyWindow = UIApplication.shared.keyWindow
+        
+        DispatchQueue.main.async {
+            
+            loadingImageView.frame = CGRect(x: 0, y: 0, width: (keyWindow?.frame.width)!, height: (keyWindow?.frame.height)!)
+            loadingImageView.image = UIImage(named: "LoadingScreen")
+            
+            keyWindow?.addSubview(loadingImageView)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
+                while self.completed == false {
+                    continue
+                }
+                
+                loadingImageView.removeFromSuperview()
+            }
+        }
+    }
 }
 
 extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
